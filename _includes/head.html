@@ -2,8 +2,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 }}{% else %}{{ site.description | strip_html | normalize_whitespace | truncate: 160 }}{% endif %}">
 <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}"> <!-- base minima -->
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"> <!-- custom overrides -->
+<link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}"> <!-- syntax highlighting -->
 <link rel="alternate" type="application/atom+xml" title="{{ site.title }} Feed" href="{{ '/feed.xml' | relative_url }}">
 {% if site.url %}<link rel="canonical" href="{{ site.url }}{{ page.url }}">{% endif %}
 {% seo %}
