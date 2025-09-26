@@ -19,27 +19,18 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      JEKYLL_ENV: production
-      BUNDLE_WITHOUT: development
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1' # Match GitHub Pages runtime
-          bundler-cache: true
-
       - name: Configure Pages
         uses: actions/configure-pages@v5
-
-      - name: Build site
-        run: bundle exec jekyll build --trace
-
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: .
+          destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
