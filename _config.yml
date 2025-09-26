@@ -1,11 +1,9 @@
 # Site settings
 title: CDC Influenza Division Bioinformatics Workshop
 name: Bioinformatics Workshop
-description: Training materials for a bioinformatics workshop developed by the United\
-  States' Centers for Disease Control and Prevention's Influenza Division in collaboration\
-  with the Association of Public Health Laboratories.
-url: ""        # Set production URL later e.g. https://USERNAME.github.io/REPO
-baseurl: ""    # Repo name if using project pages, leave blank for user/org root
+description: Training materials for a bioinformatics workshop developed by the United States' Centers for Disease Control and Prevention's Influenza Division in collaboration with the Association of Public Health Laboratories.
+url: "https://cdcgov.github.io"   # production org Pages root
+baseurl: "/id-bioifx-workshop"     # project repo name (keep if this is NOT cdcgov.github.io repo)
 
 # Build settings
 theme: minima
