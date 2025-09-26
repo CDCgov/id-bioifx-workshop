@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Training materials for a bioinformatics workshop developed by the United\ States' Centers for Disease Control and Prevention's Influenza Division in collabor...">
+<title>CDC GitHub Practices for Open Source Projects | CDC Influenza Division Bioinformatics Workshop</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/syntax.css">
+<link rel="alternate" type="application/atom+xml" title="CDC Influenza Division Bioinformatics Workshop Feed" href="/feed.xml">
+<link rel="canonical" href="http://localhost:4000/open_practices/">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>CDC GitHub Practices for Open Source Projects | CDC Influenza Division Bioinformatics Workshop</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="CDC GitHub Practices for Open Source Projects" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Training materials for a bioinformatics workshop developed by the United\ States’ Centers for Disease Control and Prevention’s Influenza Division in collaboration\ with the Association of Public Health Laboratories." />
+<meta property="og:description" content="Training materials for a bioinformatics workshop developed by the United\ States’ Centers for Disease Control and Prevention’s Influenza Division in collaboration\ with the Association of Public Health Laboratories." />
+<link rel="canonical" href="http://localhost:4000/open_practices/" />
+<meta property="og:url" content="http://localhost:4000/open_practices/" />
+<meta property="og:site_name" content="CDC Influenza Division Bioinformatics Workshop" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CDC GitHub Practices for Open Source Projects" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Training materials for a bioinformatics workshop developed by the United\\ States’ Centers for Disease Control and Prevention’s Influenza Division in collaboration\\ with the Association of Public Health Laboratories.","headline":"CDC GitHub Practices for Open Source Projects","url":"http://localhost:4000/open_practices/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="site-title"><a href="/">CDC Influenza Division Bioinformatics Workshop</a></h1>
+      <!-- filepath: /Users/nbx0/repos/id-bioifx-workshop/_includes/nav.html -->
+<ul class="primary-nav">
+  <li><a href="/">Home</a></li>
+  <li class="lessons-group">
+    <details>
+      <summary>Lessons</summary>
+      <ul class="submenu">
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="/lessons/01-objectives/">Workshop Objectives</a></li>
+          
+        
+          
+            <li><a href="/lessons/06-computer-basics/">Computer Basics</a></li>
+          
+        
+          
+            <li><a href="/lessons/07-cli-intro/">Intro to Command Line Interface</a></li>
+          
+        
+          
+            <li><a href="/lessons/08-computer-setup-wsl/">Computer Setup (WSL)</a></li>
+          
+        
+          
+            <li><a href="/lessons/09-fastq-manipulation/">FASTQ Manipulation</a></li>
+          
+        
+          
+            <li><a href="/lessons/10-containers-registries/">Containers and Registries</a></li>
+          
+        
+          
+            <li><a href="/lessons/11-sequence-alignment-algorithms/">Sequence Alignment Algorithms</a></li>
+          
+        
+          
+            <li><a href="/lessons/12-mira-review/">MIRA Review & Test Data</a></li>
+          
+        
+          
+            <li><a href="/lessons/13-blast/">BLAST Fundamentals</a></li>
+          
+        
+          
+            <li><a href="/lessons/14-identifying-genetic-markers/">Identifying Genetic Markers</a></li>
+          
+        
+          
+            <li><a href="/lessons/15-phylogenetics/">Phylogenetics</a></li>
+          
+        
+          
+            <li><a href="/lessons/16-seqsender-practical/">SeqSender Practical</a></li>
+          
+        
+          
+            <li><a href="/lessons/17-quality-management-systems/">Quality Management Systems for Bioinformatics</a></li>
+          
+        
+          
+            <li><a href="/lessons/18-troubleshooting-bioinformatics/">Troubleshooting Bioinformatics</a></li>
+          
+        
+          
+            <li><a href="/lessons/19-workflow-pipelines/">Workflow Pipelines</a></li>
+          
+        
+          
+            <li><a href="/lessons/20-databases/">Databases</a></li>
+          
+        
+          
+            <li><a href="/search/">Search</a></li>
+          
+        
+      </ul>
+    </details>
+  </li>
+  <li><a href="/search/">Search</a></li>
+</ul>
+    </header>
+    <main class="site-content">
+      <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">CDC GitHub Practices for Open Source Projects</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="cdc-github-practices-for-open-source-projects">CDC GitHub Practices for Open Source Projects</h1>
+
+<p><strong>The <a href="https://github.com/CDCgov">CDCGov organization on GitHub</a> is designated for use by CDC programs to publish open source code.</strong> This is a set of practices to help programs release secure and compliant open source projects successfully. If you are interested in using GitHub for non-open source projects, please see information on our <a href="#cdc-enterprise">enterprise organization</a>.</p>
+
+<p>We designed these practices to be straightforward and helpful, and we <a href="#support-and-feedback">accept feedback</a> from the community on updating them. For <a href="#required-practices">Required Practices</a>, Projects that don’t adhere to the <a href="#required-practices">Required Practices</a> could be subject to <a href="#non-compliance-procedure">archival or removal</a>.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>Before you can publish your project, you must request access to be added to the CDCgov organization. Complete these steps:</p>
+
+<ol>
+  <li>Review the <a href="/rules_of_behavior/">Rules of Behavior</a>.</li>
+  <li>Confirm your <a href="#profile-setup">Github profile is setup</a> properly.</li>
+  <li>Complete the <a href="[https://forms.office.com/Pages/ResponsePage.aspx?id=aQjnnNtg_USr6NJ2cHf8j44WSiOI6uNOvdWse4I-C2NUNk43NzMwODJTRzA4NFpCUk1RRU83RTFNVi4u](https://servicedesk.cdc.gov/sp?id=sc_cat_item&amp;sys_id=ca066a881b11f8102954873fe54bcb4a)">project request form</a>.
+    <ul>
+      <li>This will require your CDC login, so if you don’t have a login, ask someone to request on your behalf, or <a href="#support-and-feedback">get in touch</a>.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>You should receive an email or notification when you are given access and your first repository should be setup for you. For subsequent projects, you will be able to create a repository in the organization using Github’s interface. The <a href="https://github.com/CDCgov/template">template repository</a> is maintained and an easy way to quick start your repository that complies with the guidelines. Once this is completed you’re ready to follow the required guidelines to publish code.</p>
+
+<h2 id="required-practices">Required Practices</h2>
+
+<p>You must follow these practices before you publish real code into your repository.</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Get Clearance.</strong> Always obtain clearance from your organization prior to setting up and publishing a repository.
+    <ul>
+      <li>GitHub is a third party service used by CDC to collaborate with the public. Official CDC health messages will always be distributed through www.cdc.gov and through appropriate channels, so make sure to plan your project along with your official public health program on cdc.gov.</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Naming.</strong> Set a meaningful project name and short description for your project. The form to do this is in your repositories settings.
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Add <a href="https://help.github.com/en/github/administering-a-repository/classifying-your-repository-with-topics">topics</a> to improve discovery and use of your project. For AI-related projects, the <a href="https://code.gov/federal-agencies/compliance/inventory-code">Code.gov Implementation Guidance to Federal Agencies Regarding Enterprise Data and Source Code Inventories</a> must be followed when setting topics.</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Create a README.</strong> Add a <code class="language-plaintext highlighter-rouge">README.md</code> file at the root with the following:
+    <ul>
+      <li>An overview of your project, including the purpose, goals and the team responsible.</li>
+      <li>A description of your development process in the <code class="language-plaintext highlighter-rouge">README.md</code> file. If your project is no longer active, mark it as <a href="https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/archiving-repositories">archived</a>.</li>
+      <li>Include the following notice sections. You can modify the verbiage and adapt as necessary based on your program need.
+        <ul class="task-list">
+          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://github.com/CDCgov/template#public-domain-standard-notice">Public Domain Standard Notice</a></li>
+          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://github.com/CDCgov/template#license-standard-notice">License Standard Notice</a></li>
+          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://github.com/CDCgov/template#privacy-standard-notice">Privacy Standard Notice</a></li>
+          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://github.com/CDCgov/template#contributing-standard-notice">Contributing Standard Notice</a></li>
+          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://github.com/CDCgov/template#records-management-standard-notice">Records Management Standard Notice</a></li>
+          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://github.com/CDCgov/template#additional-standard-notices">Additional Standard Notices</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Choose a license.</strong> Assign an open source license based on program need.
+    <ul>
+      <li>If you need help choosing a license, please review <a href="https://web.archive.org/web/20250306075939/https://www.techlab.cdc.gov/index.php/2012/03/27/open-source-development-for-public-health-informatics-historical-archive/">this article</a>, refer to existing CDCgov projects, or ask for consultation support in choosing a license.</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Security scanning and review.</strong>
+    <ul>
+      <li><strong>This is the final step before publishing and the most critical.</strong></li>
+      <li>All source code used within CDC systems must comply with all cybersecurity processes prior to production use, including static and dynamic scanning. The same applies to code published as open source.
+        <ul>
+          <li>If you are unsure about compliance, reach out to your organization’s security officers.</li>
+        </ul>
+      </li>
+      <li>Never commit sensitive information, including usernames, passwords, tokens, PII, PHI. To automate this, you can integrate pre-commit tools like <a href="https://github.com/cfpb/clouseau">Clouseau</a> to systematically review material before committing.
+        <ul>
+          <li>Make sure that the commit history of your Github repository also doesn’t have these things. In many cases it’s easier to start a new repository and push up the code that has all sensitive information removed as the first commit.</li>
+        </ul>
+      </li>
+      <li>Enable <a href="https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies">GitHub automated security alerts</a> and configure notification for the repo admin to see.</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Setup your profile.</strong> <a href="#profile-setup">Active project committers need to add profile info to help collaboration.</a>
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Two-factor authentication (2FA).</strong> <a href="https://docs.github.com/en/enterprise-server@2.21/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa">Project admins must secure their account with two-factor-authentication.</a></li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Maintain your repository.</strong> Once your repository is published, you must do the following to remain in compliance:
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Respond to critical security issues and communication from administrators.</strong> Ignoring security issues or not responding to communication from administrators can result in <a href="#non-compliance-procedure">archiving or removal</a>.</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Archive old projects.</strong> If you’re no longer updating the project or have moved it’s location, update your <code class="language-plaintext highlighter-rouge">README.md</code> file to let users know and <a href="https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/archiving-repositories">archive the repository</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="recommended-practices">Recommended Practices</h2>
+
+<p>Optional improvements to make your open source project more successful.</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Establish pull request templates to make it easier for contributors to send pull requests. For example <a href="https://github.com/CDCgov/SDP-Vocabulary-Service/blob/master/.github/PULL_REQUEST_TEMPLATE">SDP-V has a checklist for each PR to match their development practices.</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Agree on project conventions and include them in your <code class="language-plaintext highlighter-rouge">README.md</code> file. Depending on what type of project, this includes folder structure for data, linters, editor configuration (eg, <a href="https://github.com/CDCgov/MicrobeTrace/blob/master/.editorconfig">MicrobeTrace’s .editorconfig</a>). This will help improve the quality of your project and make it easier for others to contribute to your project.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Add support and community procedures. CDC does not provide warranty or official support for open source projects, but describing how you would like questions and issues will assist users of your project. If you use a wiki, or project board, or package manager, describe and link to that. Official contribution steps will make it easier for people outside of CDC to contribute to your project.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Include references to publications, presentations, and sites featuring your project.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Add an entry to <a href="https://open.cdc.gov">open.cdc.gov</a> to the <a href="https://open.cdc.gov/data.html">data</a>, <a href="https://open.cdc.gov/code.html">code</a>, <a href="https://open.cdc.gov/apis.html">api</a>, or <a href="https://open.cdc.gov/events.html">event</a> page to help people find your project on cdc.gov</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Add versions and tags describing major releases and milestones. For example, <a href="https://github.com/CDCgov/opencdc/releases/tag/v1.0.9">open.cdc.gov’s releases each time a new version is published to the web site</a> or <a href="https://github.com/CDCgov/geneflow/blob/master/CHANGELOG.md">geneflow’s changelog</a>.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Follow <a href="https://semver.org/">Semantic Versioning 2.0.0</a> when creating versions for your project.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Describe and test reproducible practices to install and build your project. For example, <a href="https://github.com/cdcai/injury_autocoding#code">injury_autocoding’s code section on running the project’s scripts</a>).</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Recognize contributors and existing resources that have helped the project. For example, <a href="https://github.com/CDCgov/fdns-ms-hl7-utils/blob/master/AUTHORS">fdns-ms-hl7-utils’ AUTHORS file</a>.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Automate build and test procedures to reduce the effort of outside contributors to send pull requests (eg, <a href="https://travis-ci.org/">Travis CI</a>, <a href="https://circleci.com/">Circle CI</a>, <a href="https://help.github.com/en/actions">GitHub Actions</a>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://opensource.guide/metrics/">Appropriately gather metrics</a> on how your project is used and incorporate this into your feature planning process.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://github.com/GSA/code-gov-open-source-toolkit/blob/master/toolkit_docs/documentation.md">Incorporate documentation into your development cycle</a>, and where possible, automate the generation of documentation so it is more likely to be up to date and useful to people interested in your project.</li>
+</ul>
+
+<h2 id="guidance">Guidance</h2>
+
+<h3 id="support-and-feedback">Support and Feedback</h3>
+
+<p>If you need additional support with your setting up project, or have any feedback or ideas about this guidance please <a href="https://github.com/CDCgov/template/issues">open an issue</a> or send an email to <a href="mailto:data@cdc.gov">data@cdc.gov</a>. We also accept pull requests if you want to directly edit the guidance.</p>
+
+<h3 id="non-compliance-procedure">Non-Compliance Procedure</h3>
+
+<p>Projects in this organization are reviewed occasionally for compliance with the <a href="#required-practices">Required Practices</a>. If your project is found to not be in compliance, you will be contacted by administrators to help bring your project into compliance. Projects that do not respond or that habitually fail to meet these practices will be archived or removed from the organization, depending on severity.</p>
+
+<h3 id="profile-setup">Profile Setup</h3>
+
+<p>Please make sure your profile is set up properly to help us work better together. Specifically, keep your profile up to date with:</p>
+
+<ul>
+  <li><strong>Name:</strong> Your first and last name.</li>
+  <li><strong>Company:</strong> Your government agency or contracting company. (If you also use GitHub for personal projects, consider specifying “CDC (work) + personal projects” to make it clear that some of your GitHub projects may be personal in nature.)</li>
+  <li><strong>Location:</strong> Your primary work location (city, state).</li>
+  <li><strong>Photo:</strong> A headshot photo, or an appropriate image that is unique to you.</li>
+</ul>
+
+<p>If you admin any projects, make sure to <a href="https://docs.github.com/en/enterprise-server@2.21/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa">secure your account with two-factor authentication (2FA)</a>. Although you probably already did this because you are smart.</p>
+
+<h3 id="open-source-checklist">Open Source Checklist</h3>
+
+<p>So you’ve decided to set up an open source project at CDC. Here are the steps to do that, in the most common order.</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Create a new project using the <a href="https://github.com/CDCgov/template">template repo</a>.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Update your readme.md following the <a href="https://github.com/CDCgov/template/blob/master/open_practices.md">CDC GitHub Practices for Open Source Projects</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Choose a license. Most projects are ASL2, but license should meet public health program need. See <a href="https://www.philab.cdc.gov/index.php/2012/03/27/open-source-development-for-public-health-informatics/">https://www.philab.cdc.gov/index.php/2012/03/27/open-source-development-for-public-health-informatics/</a> for more info on choosing a license.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Remove all sensitive info.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Talk with your ADI, ADS, and ISSO for review and clearance.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />After approval, create a GitHub user.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Fill out the <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=aQjnnNtg_USr6NJ2cHf8j44WSiOI6uNOvdWse4I-C2NUNk43NzMwODJTRzA4NFpCUk1RRU83RTFNVi4u">Request a Repo form</a> for a new repo on <a href="https://github.com/cdcgov">CDCGov</a> or <a href="https://github.com/cdcai">CDCai</a>.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />When you get an email or push alert that your repo is ready, push to GitHub</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Add an entry in <a href="https://open.cdc.gov">open.cdc.gov</a> on their <a href="https://open.cdc.gov/code.html">code page</a> to officially be linked from cdc.gov. This helps users find and use your project.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Keep your project up to date, when you’re finished flag it as <a href="https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/archiving-repositories">archived</a>.</li>
+</ul>
+
+<p><em>This checklist was adapted from the CDC IT Guard Rail and put here to help people who don’t have access to the intranet.</em></p>
+
+<h3 id="cdc-enterprise">CDC Enterprise</h3>
+
+<p>Our <a href="https://github.com/cdcent/">CDCent</a> organization is used for private, non-public projects so only CDC staff and approved outside collaborators work on these projects, you can request access through the <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=aQjnnNtg_USr6NJ2cHf8j44WSiOI6uNOvdWse4I-C2NUQjVJVDlKS1c0SlhQSUxLNVBaOEZCNUczVS4u">GitHub Enterprise Cloud form</a>.</p>
+
+<h3 id="reference-links">Reference Links</h3>
+
+<p>These are helpful links from across the Federal Government regarding open sourcing code.</p>
+
+<ul>
+  <li><a href="https://cfpb.github.io/">CFPB Open Tech</a></li>
+  <li><a href="https://engineering.18f.gov/">TTS Engineering Practices Guide</a></li>
+  <li><a href="https://github.com/18F/open-source-policy">18F Open Source Policy</a> and <a href="https://github.com/18F/open-source-policy/blob/master/practice.md">Practicing our open source policy</a></li>
+  <li><a href="https://government.github.com/">GitHub and Government: How agencies build software</a></li>
+  <li><a href="https://code.gov">code.gov</a></li>
+  <li><a href="https://github.com/GSA/code-gov-open-source-toolkit">Federal Source Code and Open Source Toolkit</a></li>
+  <li><a href="https://sourcecode.cio.gov/">Federal Source Code Policy (M-16-21)</a></li>
+  <li><a href="https://open.cdc.gov">openCDC</a></li>
+  <li><a href="https://playbook.cio.gov/">Digital Services Playbook</a></li>
+  <li><a href="https://www.cdc.gov/maso/policy/policy385.pdf">CDC/ATSDR Policy on Public Health Research and Nonresearch Data Management and Access</a>
+    <ul>
+      <li><a href="https://www.cdc.gov/maso/Policy/ReleasingData.pdf">CDC/ATSDR Policy on Releasing and Sharing Data</a> (old version, but still a useful reference)</li>
+    </ul>
+  </li>
+  <li><a href="https://www.cdc.gov/os/policies/docs/CDC-GA-2005-06_Clearance_of_Information_Products_Disseminated_Outside_for_Public_Use.pdf">Clearance of Information Products Disseminated Outside CDC for Public Use</a></li>
+  <li><a href="https://github.com/GSA/code-gov-open-source-toolkit">Federal Source Code Toolkit</a></li>
+</ul>
+
+  </div>
+
+</article>
+
+      
+    </main>
+    <footer class="site-footer" role="contentinfo">
+  <p>&copy; 2025 CDC Influenza Division Bioinformatics Workshop.</p>
+  <nav aria-label="Footer">
+    <ul class="footer-links">
+      <li><a href="/">Home</a></li>
+      
+        
+          <li><a href="/lessons/01-objectives/">Workshop Objectives</a></li>
+        
+      
+        
+          <li><a href="/lessons/06-computer-basics/">Computer Basics</a></li>
+        
+      
+        
+          <li><a href="/lessons/07-cli-intro/">Intro to Command Line Interface</a></li>
+        
+      
+        
+          <li><a href="/lessons/08-computer-setup-wsl/">Computer Setup (WSL)</a></li>
+        
+      
+        
+          <li><a href="/lessons/09-fastq-manipulation/">FASTQ Manipulation</a></li>
+        
+      
+        
+          <li><a href="/lessons/10-containers-registries/">Containers and Registries</a></li>
+        
+      
+        
+          <li><a href="/lessons/11-sequence-alignment-algorithms/">Sequence Alignment Algorithms</a></li>
+        
+      
+        
+          <li><a href="/lessons/12-mira-review/">MIRA Review & Test Data</a></li>
+        
+      
+        
+          <li><a href="/lessons/13-blast/">BLAST Fundamentals</a></li>
+        
+      
+        
+          <li><a href="/lessons/14-identifying-genetic-markers/">Identifying Genetic Markers</a></li>
+        
+      
+        
+          <li><a href="/lessons/15-phylogenetics/">Phylogenetics</a></li>
+        
+      
+        
+          <li><a href="/lessons/16-seqsender-practical/">SeqSender Practical</a></li>
+        
+      
+        
+          <li><a href="/lessons/17-quality-management-systems/">Quality Management Systems for Bioinformatics</a></li>
+        
+      
+        
+          <li><a href="/lessons/18-troubleshooting-bioinformatics/">Troubleshooting Bioinformatics</a></li>
+        
+      
+        
+          <li><a href="/lessons/19-workflow-pipelines/">Workflow Pipelines</a></li>
+        
+      
+        
+          <li><a href="/lessons/20-databases/">Databases</a></li>
+        
+      
+        
+      
+        
+          <li><a href="/search/">Search</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      <li><a href="/search/">Search</a></li>
+      <li><a href="/LICENSE">License</a></li>
+    </ul>
+  </nav>
+</footer>
+    <script src="/assets/js/copy-code.js"></script>
+    <script src="/assets/js/collapsible.js"></script>
+    <script src="/assets/js/navigation.js"></script>
+  </body>
+</html>

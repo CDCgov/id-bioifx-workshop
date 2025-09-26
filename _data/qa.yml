@@ -1,0 +1,47 @@
+# Central repository of Q&A interactive widgets.
+# Each key defines a question block referenced via: {% include qa.html id="<key>" %}
+# Fields:
+#   question: Text of the question (Markdown allowed)
+#   answers:  List of acceptable answers (strings). Whitespace & case are normalized.
+#   hint:     Optional hint shown after N failed attempts (default threshold = 2).
+#   success:  Feedback message when an answer is correct.
+#   failure:  Generic feedback for incorrect attempts before hint threshold.
+#   explanation: Optional longer text shown after a correct answer.
+#   show_hint_after: Optional integer attempts before showing hint (override global default).
+#   placeholder: Optional placeholder text for input box.
+
+list_ls_human:
+  question: "Which command lists files (including sizes) in long, human‑readable format in the current directory?"
+  answers:
+    - "ls -lh"
+    - "ls -l -h"
+    - "ls -hl"
+  hint: "Use the long listing flag and human‑readable size flag together. Order of flags can vary."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "The ls command with -l (long) and -h (human readable) shows detailed file info with readable sizes."
+  show_hint_after: 2
+  placeholder: ""
+
+print_working_directory:
+  question: "Which command prints the absolute path of your current working directory?"
+  answers:
+    - "pwd"
+  hint: "It's a three-letter command."
+  success: "Correct! ✅"
+  failure: "Not correct. Try again."
+  explanation: "pwd stands for 'print working directory'."
+
+show_hidden_all:
+  question: "Provide a single command to list ALL files (including hidden) in long human readable form, sorted by modification time (newest first)."
+  answers:
+    - "ls -laht"
+    - "ls -lhat"
+    - "ls -alth"
+    - "ls -alht"
+    - "ls -a l h t" # flexible ordering; normalization removes duplicate spaces
+  hint: "Combine: long, all, human readable, sort by time (newest first)."
+  success: "Yes! ✅"
+  failure: "Not quite; check that you included all needed flags (-l -a -h -t)."
+  explanation: "Ordering of short flags after ls is flexible; -t sorts by modification time, newest first."
+  show_hint_after: 3

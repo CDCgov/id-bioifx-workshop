@@ -1,0 +1,20 @@
+<button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+<script>
+function copyToClipboard(button) {
+    const codeBlock = button.previousElementSibling;
+    const range = document.createRange();
+    range.selectNode(codeBlock);
+    window.getSelection().removeAllRanges(); 
+    window.getSelection().addRange(range);
+    try {
+        document.execCommand('copy');
+        button.innerText = 'Copied!';
+    } catch (err) {
+        console.error('Failed to copy: ', err);
+    }
+    window.getSelection().removeAllRanges();
+    setTimeout(() => {
+        button.innerText = 'Copy';
+    }, 2000);
+}
+</script>

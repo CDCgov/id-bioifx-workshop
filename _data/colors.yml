@@ -1,0 +1,81 @@
+# filepath: /Users/nbx0/repos/id-bioifx-workshop/_data/colors.yml
+# Allowed color tokens (ONLY these hex values may be used across the project)
+# Grouped by palette families (dark → light)
+
+blue:
+  - "#032659"
+  - "#0057B7"
+  - "#3382CF"
+  - "#5796D9"
+  - "#87B5E3"
+  - "#B8D4ED"
+  - "#DBE8F7"
+  - "#ECF5FF"
+
+teal:
+  - "#125261"
+  - "#0081A1"
+  - "#00B1CE"
+  - "#7DDEEC"
+  - "#AEECF2"
+  - "#D5F7F9"
+  - "#EAF8F9"
+  - "#F4FCFC"
+
+purple:
+  - "#47264F"
+  - "#722161"
+  - "#8F4A8F"
+  - "#B278B2"
+  - "#D1ADD4"
+  - "#E8D6EB"
+  - "#F5EBF5"
+  - "#FAF7FB"
+
+orange:
+  - "#975722"
+  - "#DE8A05"
+  - "#FFB24D"
+  - "#FABF61"
+  - "#FCCF85"
+  - "#FCDBA6"
+  - "#FCEBC9"
+  - "#FDF7EB"
+
+coral:
+  - "#944521"
+  - "#FB7E38"
+  - "#DB5E2E"
+  - "#FF9C63"
+  - "#FCBF9C"
+  - "#FFD9C4"
+  - "#FFEBE0"
+  - "#FEF7F3"
+
+red:
+  - "#660F14"
+  - "#CC1B22"
+  - "#961C1C"
+  - "#F0695E"
+  - "#F5968F"
+  - "#FCBDB5"
+  - "#FCDEDB"
+  - "#FCF2F1"
+
+# Role mapping (reference these names in templates / CSS variables)
+roles:
+  bg:        "#F4FCFC"  # teal lightest
+  bg_alt:    "#DBE8F7"  # blue very light
+  text:      "#032659"  # blue darkest
+  text_alt:  "#47264F"  # purple darkest
+  border:    "#B8D4ED"  # blue mid-light
+  accent:    "#0057B7"  # primary action
+  accent_hover: "#3382CF"  # hover state
+  accent_alt:   "#00B1CE"  # secondary accent (teal)
+  code_bg:   "#EAF8F9"  # pale teal
+  warn:      "#DE8A05"  # orange primary
+  error:     "#CC1B22"  # red primary
+  success:   "#0081A1"  # teal strong
+  info:      "#3382CF"  # informational blue
+  highlight: "#FCEBC9"  # soft highlight
+  muted_bg:  "#FDF7EB"  # subtle panel

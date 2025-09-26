@@ -1,0 +1,63 @@
+{% assign qa = site.data.qa[include.id] %}
+{% if qa %}
+<div class="answer-checker" data-answers='{{ qa.answers | jsonify | escape }}' data-show-hint-after='{{ qa.show_hint_after | default: 2 }}'>
+  <p class="qa-question"><strong>Question:</strong> {{ qa.question | markdownify | strip }} </p>
+  <label for="qa-{{ include.id }}-input" class="visually-hidden">Answer input</label>
+  <input id="qa-{{ include.id }}-input" type="text" autocomplete="off" placeholder="{{ qa.placeholder | default: 'Type your answer' }}" style="width:100%;max-width:480px;padding:.55rem .6rem;border:1px solid var(--c-border);border-radius:4px;" aria-describedby="qa-{{ include.id }}-help">
+  <div id="qa-{{ include.id }}-help" style="font-size:.7rem;color:var(--c-text-alt);margin:.3rem 0 .75rem;">Attempt the answer; feedback will appear below.</div>
+  <div class="qa-actions" style="display:flex;gap:.5rem;flex-wrap:wrap;">
+    <button type="button" class="qa-check" style="background:var(--c-accent);color:#fff;border:none;padding:.55rem .9rem;border-radius:4px;font-weight:600;cursor:pointer;">Check</button>
+    <button type="button" class="qa-reset" style="background:var(--c-accent-alt);color:#fff;border:none;padding:.55rem .9rem;border-radius:4px;font-weight:600;cursor:pointer;">Reset</button>
+    <button type="button" class="qa-show-answer" style="background:var(--c-warn);color:#fff;border:none;padding:.55rem .9rem;border-radius:4px;font-weight:600;cursor:pointer;">Reveal</button>
+  </div>
+  <div class="qa-feedback" role="status" aria-live="polite" style="margin-top:.75rem;font-weight:600;"></div>
+  <div class="qa-explanation" style="margin-top:.75rem;display:none;font-size:.85rem;background:var(--c-muted-bg);border:1px solid var(--c-border);padding:.75rem .85rem;border-radius:6px;">{{ qa.explanation | markdownify }}</div>
+</div>
+<script>
+(function(){
+  const root = document.currentScript.previousElementSibling; // answer-checker div
+  if(!root || !root.classList.contains('answer-checker')) return;
+  const answers = JSON.parse(root.dataset.answers).map(a=>a.toLowerCase());
+  const showHintAfter = parseInt(root.dataset.showHintAfter,10);
+  const input = root.querySelector('input');
+  const btnCheck = root.querySelector('.qa-check');
+  const btnReset = root.querySelector('.qa-reset');
+  const btnReveal = root.querySelector('.qa-show-answer');
+  const feedback = root.querySelector('.qa-feedback');
+  const explanation = root.querySelector('.qa-explanation');
+  let attempts = 0; let done=false; let hinted=false;
+  function norm(s){return s.trim().replace(/\s+/g,' ').toLowerCase();}
+  function setFeedback(msg,state){
+    feedback.textContent = msg;
+    feedback.style.color = state==='correct' ? 'var(--c-success)' : state==='incorrect' ? 'var(--c-error)' : 'var(--c-text)';
+  }
+  function check(){
+    if(done) return;
+    const val = norm(input.value);
+    if(!val){ setFeedback('Enter an answer first.','neutral'); return; }
+    if(answers.includes(val)){
+      setFeedback('{{ qa.success | escape }}','correct');
+      explanation.style.display='block';
+      input.setAttribute('disabled','disabled');
+      done=true;
+    } else {
+      attempts++;
+      if(!hinted && attempts >= showHintAfter){
+        setFeedback('{{ qa.hint | escape }}','incorrect');
+        hinted=true;
+      } else {
+        setFeedback('{{ qa.failure | escape }}','incorrect');
+      }
+    }
+  }
+  function reset(){ attempts=0; hinted=false; done=false; input.removeAttribute('disabled'); input.value=''; setFeedback('', 'neutral'); explanation.style.display='none'; input.focus(); }
+  function reveal(){ if(done) return; setFeedback('Answer: '+answers[0],'neutral'); explanation.style.display='block'; done=true; input.setAttribute('disabled','disabled'); }
+  btnCheck.addEventListener('click', check);
+  btnReset.addEventListener('click', reset);
+  btnReveal.addEventListener('click', reveal);
+  input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); check(); }});
+})();
+</script>
+{% else %}
+<p style="color:var(--c-error);font-weight:600;">Q&A block '{{ include.id }}' not found.</p>
+{% endif %}

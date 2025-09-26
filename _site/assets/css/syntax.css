@@ -1,0 +1,46 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+pre {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+code {
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    padding: 2px 4px;
+}
+
+.highlight {
+    background-color: #e6f7ff;
+    border-left: 3px solid #007acc;
+    padding: 5px;
+}
+
+.collapsible {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+}

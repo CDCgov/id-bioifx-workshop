@@ -1,0 +1,19 @@
+# filepath: /Users/nbx0/repos/id-bioifx-workshop/_data/navigation.yml
+# Navigation data currently unused; dynamic nav generated from page front matter nav_order.
+# Legacy content retained for reference only.
+# - lessons:
+#     title: Lessons
+#     items:
+#         - title: Workshop Objectives
+#           url: /lessons/01-objectives
+#         - title: Data Preparation (removed)
+#           url: /lessons/02-data-prep
+#         - title: Alignment (removed)
+#           url: /lessons/03-alignment
+#         - title: Variant Calling (removed)
+#           url: /lessons/04-variant-calling
+#         - title: Summary (removed)
+#           url: /lessons/05-summary
+# - extras:
+#     title: Extras
+#     url: /extras/resources

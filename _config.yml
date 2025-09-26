@@ -1,0 +1,36 @@
+# Site settings
+title: CDC Influenza Division Bioinformatics Workshop
+name: Bioinformatics Workshop
+description: Training materials for a bioinformatics workshop developed by the United\
+  States' Centers for Disease Control and Prevention's Influenza Division in collaboration\
+  with the Association of Public Health Laboratories.
+url: ""        # Set production URL later e.g. https://USERNAME.github.io/REPO
+baseurl: ""    # Repo name if using project pages, leave blank for user/org root
+
+# Build settings
+theme: minima
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections (optional future expansion)
+# collections:
+#   lessons:
+#     output: true
+#     permalink: /lessons/:name/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
+  - extras/resources.md
+  - vendor
+
+# Keep site deterministic
+future: false

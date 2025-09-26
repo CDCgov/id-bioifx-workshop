@@ -1,0 +1,46 @@
+<div class="collapsible">
+  <button class="collapsible-button">Expand/Collapse Section</button>
+  <div class="collapsible-content">
+    <p>This is the content inside the collapsible section. You can place any information here, including text, images, or code snippets.</p>
+    <pre><code>print("Hello, Bioinformatics!")</code></pre>
+  </div>
+</div>
+
+<style>
+.collapsible {
+  margin: 10px 0;
+}
+
+.collapsible-button {
+  background-color: #f1f1f1;
+  color: #444;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.collapsible-content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+</style>
+
+<script>
+document.querySelectorAll('.collapsible-button').forEach(button => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('active');
+    const content = button.nextElementSibling;
+    if (content.style.display === 'block') {
+      content.style.display = 'none';
+    } else {
+      content.style.display = 'block';
+    }
+  });
+});
+</script>

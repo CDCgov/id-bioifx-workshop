@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      {% include nav.html %}
+    </header>
+    <main class="site-content">
+      <article class="lesson">
+        <header><h1>{{ page.title }}</h1></header>
+        <div class="lesson-body">{{ content }}</div>
+        {% if page.nav_order %}
+          {% assign prev_order = page.nav_order | minus: 1 %}
+          {% assign next_order = page.nav_order | plus: 1 %}
+          {% assign prev_page = site.pages | where: "nav_order", prev_order | first %}
+          {% assign next_page = site.pages | where: "nav_order", next_order | first %}
+          <nav class="lesson-nav">
+            {% if prev_page %}<a class="prev" href="{{ prev_page.url | relative_url }}">&larr; {{ prev_page.title }}</a>{% endif %}
+            {% if next_page %}<a class="next" href="{{ next_page.url | relative_url }}">{{ next_page.title }} &rarr;</a>{% endif %}
+          </nav>
+        {% endif %}
+      </article>
+    </main>
+    {% include footer.html %}
+    <script src="{{ '/assets/js/copy-code.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/collapsible.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
+  </body>
+</html>
