@@ -1,6 +1,6 @@
 # Bioinformatics Workshop Site
 
-Static training site built with Jekyll (GitHub Pages compatible). This README provides explicit steps to clone, install dependencies, run locally, and verify.
+Static training site built with Jekyll (GitHub Pages compatible).
 
 ## [Developer Guide](https://cdcgov.github.io/id-bioifx-workshop/developer-guide/)
 
