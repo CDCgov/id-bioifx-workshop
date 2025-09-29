@@ -3,7 +3,6 @@ layout: page
 title: Influenza Bioinformatics Workshop
 nav_order: 0
 ---
-<!-- filepath: /Users/nbx0/repos/id-bioifx-workshop/index.md -->
 
 <!-- This chunk of code creates a modal popup warning that the site is under development. -->
 <div id="dev-warning-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
