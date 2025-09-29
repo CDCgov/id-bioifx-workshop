@@ -32,12 +32,17 @@ ul { list-style:inside disc; }
 .site-header li a { padding:.35rem .6rem; border-radius:4px; font-size:.9rem; display:block; }
 .site-header li a:hover { background:var(--c-accent-hover); }
 
-.site-header ul.primary-nav { list-style:none; margin:0; padding:0; display:flex; gap:1rem; }
+.site-header ul.primary-nav { list-style:none; margin:0; padding:0; display:flex; gap:1rem; align-items:center; }
 .site-header ul.primary-nav > li { position:relative; }
-.site-header .lessons-group details { padding:.15rem .4rem; }
+.site-header .lessons-group details { padding:0; display:flex; align-items:center; }
+.site-header .lessons-group summary { cursor:pointer; list-style:none; font-weight:600; background: var(--c-accent-alt); color:#fff; padding:.35rem .6rem; border-radius:4px; font-size:.85rem; display:flex; align-items:center; line-height:1; }
 /* ensure multiple dropdowns align */
 .site-header .lessons-group + .lessons-group { margin-left:.5rem; }
-.site-header .lessons-group summary { cursor:pointer; list-style:none; font-weight:600; }
+.site-header .lessons-group summary:hover { background: var(--c-accent-hover); }
+/* Open state ensure summary stays highlighted */
+.site-header .lessons-group details[open] > summary { background: var(--c-accent-hover); }
+/* Remove inherited background on details when open to avoid extra block behind submenu */
+.site-header .lessons-group details[open] { background: transparent; }
 .site-header .lessons-group summary::-webkit-details-marker { display:none; }
 .site-header .lessons-group details[open] { background:var(--c-accent-hover); border-radius:4px; }
 .site-header .lessons-group ul.submenu { list-style:none; margin:.4rem 0 0; padding:.5rem .75rem; background:var(--c-bg-alt); border:1px solid var(--c-border); border-radius:var(--radius); display:flex; flex-direction:column; gap:.3rem; max-height:60vh; overflow:auto; min-width:14rem; z-index:1000; position:relative; }
@@ -59,7 +64,7 @@ ul { list-style:inside disc; }
 
 footer, .site-footer { border-top:1px solid var(--c-border); padding:2rem 1rem; font-size:.85rem; text-align:center; background:var(--c-bg-alt); color:var(--c-text); }
 .site-footer ul.footer-links { list-style:none; margin:.75rem 0 0; padding:0; display:flex; flex-wrap:wrap; gap:.75rem 1.25rem; justify-content:center; }
-.site-footer ul.footer-links a { color: var(--c-text); text-decoration:none; font-size:.8rem; }
+.site-footer ul.footer-links a { color: var (--c-text); text-decoration:none; font-size:.8rem; }
 .site-footer ul.footer-links a:hover { color: var(--c-accent); text-decoration:underline; }
 
 pre, code { font-family:var(--mono); font-size:.9rem; }
@@ -88,8 +93,11 @@ details.collapsible-md .collapsible-inner { padding:0 1rem 1rem; }
 details.collapsible-md table { margin:1rem 0; }
 /* Ensure first child spacing tidy */
 details.collapsible-md .collapsible-inner > *:first-child { margin-top:0; }
+/* Close button */
+details.collapsible-md button.collapse-close { margin-top:1rem; background:var(--c-accent-alt); color:#fff; border:none; padding:.5rem .85rem; border-radius:4px; font-size:.75rem; font-weight:600; letter-spacing:.5px; cursor:pointer; }
+details.collapsible-md button.collapse-close:hover,
+details.collapsible-md button.collapse-close:focus { background:var(--c-accent-hover); outline:2px solid var(--c-accent-hover); outline-offset:2px; }
 
-/* Tables & misc */
 table { border-collapse:collapse; width:100%; margin:1.5rem 0; }
 th, td { border:1px solid var(--c-border); padding:.5rem .6rem; text-align:left; }
 th { background:var(--c-bg-alt); }
@@ -148,3 +156,42 @@ details.collapsible[open] { background: var(--c-muted-bg); }
 /* Workshop */
 .workshop .meta { font-size:.85rem; color:var(--c-text-alt); margin-top:-.5rem; margin-bottom:1.25rem; }
 .workshop h1 { margin-top:0; }
+
+.github-link { margin-left:auto; display:flex; align-items:center; }
+.github-link a { display:flex; align-items:center; padding:.35rem .55rem; background:var(--c-accent-alt); border-radius:4px; }
+.github-link a:hover, .github-link a:focus { background:var(--c-accent-hover); outline:none; }
+.github-link svg { display:block; margin:0; }
+
+.search-link a { display:flex; align-items:center; padding:.35rem .55rem; background:var(--c-accent-alt); border-radius:4px; }
+.search-link a:hover, .search-link a:focus { background:var(--c-accent-hover); outline:none; }
+.search-link svg { display:block; margin:0; }
+
+/* Header alignment normalization */
+.site-header { align-items:center; }
+.site-header ul.primary-nav { align-items:center; }
+.site-header .lessons-group details { padding:0; display:flex; align-items:center; }
+.site-header .lessons-group summary { display:flex; align-items:center; line-height:1; }
+/* Unified interactive height */
+.site-header .primary-nav > li > a,
+.site-header .lessons-group summary,
+.search-link a,
+.github-link a { display:flex; align-items:center; height:32px; padding:0 .65rem; }
+/* Remove background on details container when open (keep on summary only) */
+.site-header .lessons-group details[open] { background:transparent; }
+/* Adjust icon svg vertical centering */
+.search-link svg, .github-link svg { margin:0; }
+/* Ensure submenu still positioned correctly */
+.site-header .lessons-group details > ul.submenu { margin-top:.5rem; }
+
+/* Developer Guide layout */
+.guide-layout { display:flex; gap:2rem; }
+.guide-toc { flex:0 0 230px; position:sticky; top:1rem; align-self:flex-start; max-height:calc(100vh - 2rem); overflow:auto; padding:.75rem .75rem 1rem; background:var(--c-bg-alt); border:1px solid var(--c-border); border-radius:var(--radius); font-size:.8rem; }
+.guide-toc ol { list-style:decimal; margin:0; padding-left:1.1rem; display:flex; flex-direction:column; gap:.4rem; }
+.guide-toc a { text-decoration:none; color:var(--c-text); }
+.guide-toc a:hover, .guide-toc a:focus { color:var(--c-accent); text-decoration:underline; }
+.guide-article { flex:1 1 auto; min-width:0; }
+.guide-article h2, .guide-article h3 { scroll-margin-top:90px; }
+@media (max-width:900px){
+  .guide-layout { flex-direction:column; }
+  .guide-toc { position:static; max-height:none; width:100%; }
+}

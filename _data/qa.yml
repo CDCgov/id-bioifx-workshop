@@ -10,6 +10,16 @@
 #   show_hint_after: Optional integer attempts before showing hint (override global default).
 #   placeholder: Optional placeholder text for input box.
 
+example-identifier:
+  question: "What does FASTQ store in addition to nucleotide sequence?"
+  answers: 
+    - "Per-base quality scores (and identifier headers)."
+    - "quality scores"
+  hint: "Think about sequencing confidence."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  show_hint_after: 2
+
 list_ls_human:
   question: "Which command lists files (including sizes) in long, human‑readable format in the current directory?"
   answers:
@@ -21,7 +31,6 @@ list_ls_human:
   failure: "Not quite. Try again."
   explanation: "The ls command with -l (long) and -h (human readable) shows detailed file info with readable sizes."
   show_hint_after: 2
-  placeholder: ""
 
 print_working_directory:
   question: "Which command prints the absolute path of your current working directory?"

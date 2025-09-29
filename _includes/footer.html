@@ -3,18 +3,8 @@
   <nav aria-label="Footer">
     <ul class="footer-links">
       <li><a href="{{ '/' | relative_url }}">Home</a></li>
-      {% for p in site.pages %}
-        {% if p.nav_order and p.nav_order > 0 %}
-          <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-      {% if site.workshops and site.workshops != empty %}
-        {% assign workshops_list = site.workshops | sort: 'workshop_order' %}
-        {% for w in workshops_list %}
-          <li><a href="{{ w.url | relative_url }}">{{ w.title }}</a></li>
-        {% endfor %}
-      {% endif %}
       <li><a href="{{ '/search/' | relative_url }}">Search</a></li>
+      <li><a href="{{ '/developer-guide/' | relative_url }}">Developer Guide</a></li>
       <li><a href="{{ '/LICENSE' | relative_url }}">License</a></li>
     </ul>
   </nav>
