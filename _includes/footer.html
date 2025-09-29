@@ -8,6 +8,12 @@
           <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
         {% endif %}
       {% endfor %}
+      {% if site.workshops and site.workshops != empty %}
+        {% assign workshops_list = site.workshops | sort: 'workshop_order' %}
+        {% for w in workshops_list %}
+          <li><a href="{{ w.url | relative_url }}">{{ w.title }}</a></li>
+        {% endfor %}
+      {% endif %}
       <li><a href="{{ '/search/' | relative_url }}">Search</a></li>
       <li><a href="{{ '/LICENSE' | relative_url }}">License</a></li>
     </ul>

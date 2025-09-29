@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      {% include nav.html %}
+    </header>
+    <main class="site-content">
+      <article class="workshop">
+        <header>
+          <h1>{{ page.title }}</h1>
+          {% if page.location or page.event_date %}
+          <p class="meta">
+            {% if page.location %}<strong>Location:</strong> {{ page.location }}{% endif %}
+            {% if page.location and page.event_date %} | {% endif %}
+            {% if page.event_date %}<strong>Date:</strong> {{ page.event_date | date: '%Y-%m-%d' }}{% endif %}
+          </p>
+          {% endif %}
+        </header>
+        <div class="workshop-body">
+          {{ content }}
+        </div>
+      </article>
+    </main>
+    {% include footer.html %}
+    <script src="{{ '/assets/js/copy-code.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/collapsible.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
+  </body>
+</html>

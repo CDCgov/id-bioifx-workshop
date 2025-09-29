@@ -17,10 +17,17 @@ plugins:
   - jekyll-sitemap
 
 # Collections (optional future expansion)
-# collections:
-#   lessons:
-#     output: true
-#     permalink: /lessons/:name/
+collections:
+  workshops:
+    output: true
+    permalink: /workshops/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: workshops
+    values:
+      layout: workshop
 
 exclude:
   - Gemfile

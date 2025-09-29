@@ -14,5 +14,18 @@
       </ul>
     </details>
   </li>
+  {% if site.workshops and site.workshops != empty %}
+  <li class="lessons-group">
+    <details>
+      <summary>Workshops</summary>
+      <ul class="submenu">
+        {% assign workshops_list = site.workshops | sort: 'workshop_order' %}
+        {% for w in workshops_list %}
+          <li><a href="{{ w.url | relative_url }}">{{ w.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </details>
+  </li>
+  {% endif %}
   <li><a href="{{ '/search/' | relative_url }}">Search</a></li>
 </ul>
