@@ -1,0 +1,257 @@
+---
+layout: none
+title: Authentication
+permalink: /auth/
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Supabase Auth – id-bioifx-workshop</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 560px; margin: 3rem auto; padding: 0 1rem; }
+    form, .card { border: 1px solid #ddd; padding: 1rem; border-radius: 12px; margin-bottom: 1rem; }
+    input, button { padding: .6rem .8rem; font-size: 1rem; }
+    input { width: 100%; margin: .4rem 0; }
+    .row { display: flex; gap: .5rem; flex-wrap: wrap; }
+    .muted { color: #666; font-size: .9rem; }
+    #authed { display:none; }
+  </style>
+</head>
+<body>
+  <h1>Sign up / Log in</h1>
+
+  <!-- Sign up -->
+  <form id="signup">
+    <h3>Create account</h3>
+    <input id="su-email" type="email" placeholder="Email" required />
+    <input id="su-password" type="password" placeholder="Password (min 6 chars)" required />
+    <button type="submit">Sign up</button>
+    <div class="muted" id="su-msg"></div>
+  </form>
+
+  <!-- Log in -->
+  <form id="login">
+    <h3>Log in</h3>
+    <input id="li-email" type="email" placeholder="Email" required />
+    <input id="li-password" type="password" placeholder="Password" required />
+    <div class="row">
+      <button type="submit">Log in</button>
+      <button type="button" id="magic">Send magic link</button>
+      <button type="button" id="reset">Send password reset</button>
+    </div>
+    <div class="muted" id="li-msg"></div>
+  </form>
+
+  <!-- Authed area -->
+  <div id="authed" class="card">
+    <h3>Welcome <span id="who"></span></h3>
+    <div class="muted">This block is hidden when logged out.</div>
+
+    <!-- Optional: profile editor (needs SQL & RLS from earlier step) -->
+    <div class="card">
+      <h4>Profile</h4>
+      <input id="full-name" type="text" placeholder="Full name" />
+      <div class="row">
+        <button id="save-profile" type="button">Save profile</button>
+        <button id="refresh-profile" type="button">Refresh</button>
+      </div>
+      <div class="muted" id="pf-msg"></div>
+    </div>
+
+    <button id="logout">Log out</button>
+  </div>
+
+  <script type="module">
+    import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+    // --- Replace these with your Supabase project values ---
+    const SUPABASE_URL = "https://txmfsvwgmznxrkwqeipm.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR4bWZzdndnbXpueHJrd3FlaXBtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkxNDkwODEsImV4cCI6MjA3NDcyNTA4MX0.XPMdMbnD3zXnyMU9wZsA4aeP7pnL_pxAYaptfzsdZmk";
+    // -------------------------------------------------------
+
+    // Verbose debug toggle
+    const DEBUG = true; // set false to silence
+    const t0 = performance.now();
+    function dbg(...args){ if(DEBUG) console.log('[auth]', ...args); }
+    function dbgTime(label){ if(DEBUG) console.log(`[auth +${(performance.now()-t0).toFixed(1)}ms] ${label}`); }
+
+    dbg('Script start. Location:', window.location.href);
+
+    // Your Pages base URL (used for redirects)
+    const PROD_BASE = "https://cdcgov.github.io/id-bioifx-workshop";
+    const BASE_PATH = "{{ site.baseurl }}"; // /id-bioifx-workshop
+    function siteBase(){
+      const local = (location.hostname === 'localhost' || location.hostname === '127.0.0.1');
+      dbg('Computed siteBase; local?', local, 'origin:', location.origin, 'BASE_PATH:', BASE_PATH);
+      if (local) return location.origin + BASE_PATH;
+      return PROD_BASE;
+    }
+    const PAGES_BASE = siteBase() + '/';
+    dbg('PAGES_BASE resolved to', PAGES_BASE);
+
+    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    dbg('Supabase client created with url', SUPABASE_URL);
+
+    // After successful auth, redirect to stored destination (if any)
+    async function redirectIfAuthed() {
+      dbgTime('redirectIfAuthed() invoked');
+      const { data: { session }, error } = await supabase.auth.getSession();
+      if(error) dbg('getSession error in redirectIfAuthed', error);
+      if (session) {
+        dbg('Session present. User id/email:', session.user?.id, session.user?.email);
+        const dest = sessionStorage.getItem('post_auth_redirect') || PAGES_BASE;
+        dbg('Destination chosen for redirect:', dest);
+        sessionStorage.removeItem('post_auth_redirect');
+        if (window.location.href !== dest) {
+          dbg('Redirecting now...');
+          window.location.replace(dest);
+        } else {
+          dbg('Already at destination; no redirect needed.');
+        }
+      } else {
+        dbg('No session yet in redirectIfAuthed');
+      }
+    }
+
+    // DOM refs
+    const signupForm = document.getElementById('signup');
+    const suEmail = document.getElementById('su-email');
+    const suPassword = document.getElementById('su-password');
+    const suMsg = document.getElementById('su-msg');
+
+    const loginForm = document.getElementById('login');
+    const liEmail = document.getElementById('li-email');
+    const liPassword = document.getElementById('li-password');
+    const liMsg = document.getElementById('li-msg');
+
+    const authed = document.getElementById('authed');
+    const who = document.getElementById('who');
+
+    const magicBtn = document.getElementById('magic');
+    const resetBtn = document.getElementById('reset');
+    const logoutBtn = document.getElementById('logout');
+
+    const fullName = document.getElementById('full-name');
+    const saveProfileBtn = document.getElementById('save-profile');
+    const refreshProfileBtn = document.getElementById('refresh-profile');
+    const pfMsg = document.getElementById('pf-msg');
+
+    function setStatus(el, text) { el.textContent = text || ""; }
+
+    // Sign up (email+password)
+    signupForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      dbg('Signup submit for email', suEmail.value);
+      setStatus(suMsg, "Creating account…");
+      const { error, data } = await supabase.auth.signUp({
+        email: suEmail.value,
+        password: suPassword.value,
+        options: {
+          emailRedirectTo: PAGES_BASE // after confirm, land back here
+        }
+      });
+      dbg('Signup result', { error, user: data?.user?.id });
+      setStatus(suMsg, error ? error.message : "Check your email to confirm, then log in.");
+      if (!error) signupForm.reset();
+    });
+
+    // Log in
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      dbg('Login submit for email', liEmail.value);
+      setStatus(liMsg, "Logging in…");
+      const { error, data } = await supabase.auth.signInWithPassword({
+        email: liEmail.value,
+        password: liPassword.value
+      });
+      dbg('Login result', { error, user: data?.user?.id });
+      setStatus(liMsg, error ? error.message : "Logged in.");
+      if (!error) loginForm.reset();
+    });
+
+    // Magic link (no password)
+    magicBtn.addEventListener('click', async () => {
+      if (!liEmail.value) { dbg('Magic link aborted: no email'); return setStatus(liMsg, "Enter your email first."); }
+      dbg('Requesting magic link for', liEmail.value);
+      setStatus(liMsg, "Sending magic link…");
+      const { error } = await supabase.auth.signInWithOtp({
+        email: liEmail.value,
+        options: { emailRedirectTo: PAGES_BASE }
+      });
+      dbg('Magic link result', error || 'ok');
+      setStatus(liMsg, error ? error.message : "Check your email for a sign-in link.");
+    });
+
+    // Password reset
+    resetBtn.addEventListener('click', async () => {
+      if (!liEmail.value) { dbg('Reset aborted: no email'); return setStatus(liMsg, "Enter your email first."); }
+      dbg('Sending reset email to', liEmail.value);
+      setStatus(liMsg, "Sending reset email…");
+      const { error } = await supabase.auth.resetPasswordForEmail(liEmail.value, { redirectTo: PAGES_BASE });
+      dbg('Reset result', error || 'ok');
+      setStatus(liMsg, error ? error.message : "Reset link sent. Check your inbox.");
+    });
+
+    // Show/hide authed UI
+    async function renderSession() {
+      dbgTime('renderSession() start');
+      const { data: { session }, error } = await supabase.auth.getSession();
+      if(error) dbg('getSession error in renderSession', error);
+      const user = session?.user || null;
+      dbg('Current session user', user ? { id: user.id, email: user.email } : null);
+      authed.style.display = user ? 'block' : 'none';
+      who.textContent = user?.email || "";
+      if (user) loadProfile();
+    }
+
+    supabase.auth.onAuthStateChange((event, session) => {
+      dbg('onAuthStateChange event', event, 'user:', session?.user?.id);
+      renderSession();
+      redirectIfAuthed();
+    });
+
+    // Logout
+    logoutBtn.addEventListener('click', async () => {
+      dbg('Logout clicked');
+      await supabase.auth.signOut();
+    });
+
+    // Profile CRUD (requires `profiles` table + RLS policies)
+    async function loadProfile() {
+      dbgTime('loadProfile()');
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) { dbg('loadProfile: no user'); return; }
+      const { data, error } = await supabase
+        .from('profiles')
+        .select('full_name')
+        .eq('id', user.id)
+        .single();
+      if (error) dbg('Profile load error', error);
+      if (!error && data) { fullName.value = data.full_name || ''; dbg('Profile loaded', data); }
+    }
+
+    saveProfileBtn.addEventListener('click', async () => {
+      dbg('Save profile clicked');
+      setStatus(pfMsg, "Saving…");
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) { dbg('Save profile aborted: no user'); return setStatus(pfMsg, "Not signed in."); }
+      const { error } = await supabase
+        .from('profiles')
+        .update({ full_name: fullName.value })
+        .eq('id', user.id);
+      dbg('Profile save result', error || 'ok');
+      setStatus(pfMsg, error ? error.message : "Saved.");
+    });
+
+    refreshProfileBtn.addEventListener('click', () => { dbg('Refresh profile clicked'); loadProfile(); });
+
+    // Initial paint
+    dbg('Initial render + redirect checks');
+    renderSession();
+    redirectIfAuthed();
+  </script>
+</body>
+</html>

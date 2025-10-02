@@ -8,7 +8,7 @@
       <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
       {% include nav.html %}
     </header>
-    <main class="site-content">
+    <main class="site-content" data-auth-protected>
       {{ content }}
       {% if page.nav_order %}
         {% assign prev_order = page.nav_order | minus: 1 %}
@@ -22,6 +22,34 @@
       {% endif %}
     </main>
     {% include footer.html %}
+
+    {% unless page.url contains 'auth.html' or page.public %}
+    <script type="module">
+      import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+      const SUPABASE_URL = 'https://txmfsvwgmznxrkwqeipm.supabase.co';
+      const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR4bWZzdndnbXpueHJrd3FlaXBtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkxNDkwODEsImV4cCI6MjA3NDcyNTA4MX0.XPMdMbnD3zXnyMU9wZsA4aeP7pnL_pxAYaptfzsdZmk';
+      const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      const BASE_PATH = '{{ site.baseurl }}'; // e.g. /id-bioifx-workshop
+      const PROD_BASE = '{{ site.url }}{{ site.baseurl }}';
+      function siteBase(){
+        if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+          return location.origin + BASE_PATH;
+        }
+        return PROD_BASE;
+      }
+      const authPage = siteBase() + '/auth/';
+      (async () => {
+        try {
+          const { data: { session } } = await supabase.auth.getSession();
+          if (!session) {
+            sessionStorage.setItem('post_auth_redirect', window.location.href);
+            window.location.replace(authPage);
+          }
+        } catch(e){ /* silent */ }
+      })();
+    </script>
+    {% endunless %}
+
     <script src="{{ '/assets/js/copy-code.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/collapsible.js' | relative_url }}"></script>
