@@ -1,1 +1,21 @@
-_site/
+# Google API credentials - DO NOT COMMIT
+credentials.json
+token.json
+last_form_id.txt
+
+# Python virtual environment
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Output files
+parsed_questions.json
+_site

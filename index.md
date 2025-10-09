@@ -25,7 +25,9 @@ Introduction text here
 - [US CDC Influenza Division](https://www.cdc.gov/ncird/divisions-offices/flu.html)
     - Kristine Lacek
     - Mandy Sullivan
+    - Julia Frederick
     - GAT peeps
+    - Marie Kirby
     - Becky Kondor
     - [Ben Rambo-Martin](https://github.com/nbx0)
 - [Association of Public Health Laboratories (APHL)](https://www.aphl.org)
