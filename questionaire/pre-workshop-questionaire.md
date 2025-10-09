@@ -217,7 +217,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 
 ## Bioinformatics Infrastructure
 
-### 36. What computing resources are available to your lab? (select all that apply)
+### 38. What computing resources are available to your lab? (select all that apply)
 
 - [ ] Standard desktop/laptop (Windows)
 - [ ] Standard desktop/laptop (Mac)
@@ -227,21 +227,21 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] Institutional shared server
 - [ ] None currently available
 
-### 37. What operating systems are your lab familiar with? (select all that apply)
+### 39. What operating systems are your lab familiar with? (select all that apply)
 
 - [ ] Windows
 - [ ] macOS
 - [ ] Linux (Ubuntu, CentOS, etc.)
 - [ ] Windows Subsystem for Linux (WSL)
 
-### 38. How proficient is your laboratory on the command-line (computer terminal)? (select one)
+### 40. How proficient is your laboratory on the command-line (computer terminal)? (select one)
 
 - [ ] No experience
 - [ ] Can follow written instructions / tutorials
 - [ ] Can write simple bash/shell scripts
 - [ ] Proficient with scripting (bash, Python, R) and environment management (conda, virtualenv)
 
-### 39. Programming/scripting languages used (select all that apply)
+### 41. Programming/scripting languages used (select all that apply)
 
 - [ ] None
 - [ ] Bash/Shell scripting
@@ -251,7 +251,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] Java
 - [ ] Other: 
 
-### 40. Version control / reproducibility tools (select all that apply)
+### 42. Version control / reproducibility tools (select all that apply)
 
 - [ ] Git / GitHub
 - [ ] Docker containers
@@ -264,7 +264,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 
 ## Sequence Assembly & Analysis
 
-### 41. Current bioinformatics tools for influenza NGS (select all that apply)
+### 43. Current bioinformatics tools for influenza NGS (select all that apply)
 
 **Read preprocessing:**
 - [ ] IRMA (CDC)
@@ -312,7 +312,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] Not applicable
 - [ ] Other: 
 
-### 42. Integrated / commercial analysis platforms currently used
+### 44. Integrated / commercial analysis platforms currently used
 
 - [ ] BaseSpace (Illumina)
 - [ ] CLC Genomics Workbench
@@ -325,7 +325,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] None
 - [ ] Other: 
 
-### 43. Workflow automation
+### 45. Workflow automation
 
 **Do you use automated/reproducible workflows?**
 
@@ -337,7 +337,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] No, manual step-by-step
 - [ ] Transitioning to automated workflows
 
-### 44. Reference genomes used
+### 46. Reference genomes used
 
 **Where do you obtain influenza reference sequences?**
 
@@ -352,7 +352,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 
 ## Phylogenetic & Clade Assignment
 
-### 45. Clade/subclade assignment tools (select all that apply)
+### 47. Clade/subclade assignment tools (select all that apply)
 
 - [ ] Nextclade (web or CLI)
 - [ ] OCTOFLU 
@@ -363,7 +363,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] Not currently performed
 - [ ] Other: 
 
-### 46. Multiple sequence alignment tools
+### 48. Multiple sequence alignment tools
 
 - [ ] MAFFT
 - [ ] Muscle
@@ -371,7 +371,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] Built into analysis software (Geneious, MEGA, etc.)
 - [ ] Other: 
 
-### 47. Phylogenetic tree construction methods used (select all that apply)
+### 49. Phylogenetic tree construction methods used (select all that apply)
 
 - [ ] Neighbor-Joining (NJ)
 - [ ] Maximum Likelihood (ML)
@@ -381,7 +381,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] Not currently performed
 - [ ] Other: 
 
-### 48. Phylogenetic software currently used (select all that apply)
+### 50. Phylogenetic software currently used (select all that apply)
 
 - [ ] Nextstrain / Augur
 - [ ] Nextclade
@@ -396,7 +396,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] None
 - [ ] Other: 
 
-### 49. Tree visualization and annotation
+### 51. Tree visualization and annotation
 
 - [ ] FigTree
 - [ ] ggtree (R package)
@@ -411,7 +411,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 
 ## Genetic Marker & Mutation Detection
 
-### 50. Genetic marker and mutation analysis performed (select all that apply)
+### 52. Genetic marker and mutation analysis performed (select all that apply)
 
 **Do you routinely screen for the following genetic markers and mutations?**
 
@@ -442,7 +442,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 
 ## Data Management & Sharing
 
-### 51. Sequence data storage
+### 53. Sequence data storage
 
 **Where do you store raw sequencing reads (FASTQ files)?**
 
@@ -455,7 +455,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 
 **Approximate current storage capacity:** 
 
-### 52. Sequence metadata management
+### 54. Sequence metadata management
 
 **How do you track sample metadata (collection date, location, patient demographics, etc.)?**
 
@@ -466,7 +466,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] Paper records only
 - [ ] Other: 
 
-### 53. Public database submission experience
+### 55. Public database submission experience
 
 **Which databases have you submitted influenza sequences to? (select all that apply)**
 
@@ -477,7 +477,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] None yet
 - [ ] Other: 
 
-### 54. Data submission tools/workflows used
+### 56. Data submission tools/workflows used
 
 - [ ] NCBI Submission Portal (web)
 - [ ] NCBI FTP upload
@@ -490,7 +490,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] Not yet submitting
 - [ ] Other: 
 
-### 55. Data sharing policies
+### 57. Data sharing policies
 
 **Are you able to share sequence data publicly in real-time?**
 
@@ -500,7 +500,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] Restrictions due to policy/ethics
 - [ ] Not sure
 
-### 56. Data governance & privacy
+### 58. Data governance & privacy
 
 **Do you have institutional policies for genomic data sharing and patient privacy?**
 
@@ -513,7 +513,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 
 ## Quality Management & Documentation
 
-### 57. Standard Operating Procedures (SOPs)
+### 59. Standard Operating Procedures (SOPs)
 
 **Do you have written SOPs for:**
 
@@ -524,7 +524,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] Data submission and archiving
 - [ ] None currently documented
 
-### 58. Quality assurance practices
+### 60. Quality assurance practices
 
 - [ ] Positive and negative controls in each run
 - [ ] Routine participation in proficiency testing / EQA programs
@@ -533,7 +533,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] Documented incident reporting and corrective actions
 - [ ] Not yet implemented
 
-### 59. Laboratory accreditation
+### 61. Laboratory accreditation
 
 - [ ] ISO 15189 (Medical laboratories)
 - [ ] ISO 17025 (Testing laboratories)
@@ -547,7 +547,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 
 ## Training & Support Needs
 
-### 60. Areas where you need additional training or support (select all that apply)
+### 62. Areas where you need additional training or support (select all that apply)
 
 **Wet lab / molecular:**
 - [ ] Advanced library preparation techniques
@@ -576,7 +576,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] Outbreak investigation and molecular epidemiology
 - [ ] Integration with phenotypic assay results
 
-### 61. Preferred training format
+### 63. Preferred training format
 
 - [ ] In-person hands-on workshop
 - [ ] Virtual instructor-led sessions
@@ -584,7 +584,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] One-on-one mentoring / consultation
 - [ ] Written protocols and documentation
 
-### 62. Primary goals for NGS capability (select top 3)
+### 64. Primary goals for NGS capability (select top 3)
 
 - [ ] Real-time surveillance and outbreak detection
 - [ ] Clade/strain characterization for vaccine strain selection
@@ -596,7 +596,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] Research and publications
 - [ ] Other: 
 
-### 63. Current challenges or obstacles (select all that apply)
+### 65. Current challenges or obstacles (select all that apply)
 
 - [ ] Limited funding for reagents/consumables
 - [ ] Lack of trained personnel
@@ -610,7 +610,7 @@ This questionnaire assesses your laboratory's capabilities for next-generation s
 - [ ] Integration with existing laboratory workflows
 - [ ] Other: 
 
-### 64. Additional comments or specific questions
+### 66. Additional comments or specific questions
 
 Please share any additional information about your laboratory's capabilities, challenges, or specific areas where you would like support:
 
