@@ -21,19 +21,19 @@ window.onload = function() {
 
 Introduction text here
 
+---
+
 ## Contributors
 - [US CDC Influenza Division](https://www.cdc.gov/ncird/divisions-offices/flu.html)
-    - Kristine Lacek
-    - Mandy Sullivan
-    - Julia Frederick
-    - GAT peeps
-    - Marie Kirby
+    - [Kristine Lacek](https://github.com/kristinelacek)
+    - [Norman Hassell](https://github.com/nhassell)
     - Becky Kondor
     - [Ben Rambo-Martin](https://github.com/nbx0)
 - [Association of Public Health Laboratories (APHL)](https://www.aphl.org)
+    - [Logan Fink](https://github.com/logan-fink)
+    - [Jared Johnson](https://github.com/DOH-JDJ0303)
+    - [Eugene Yeboah](https://github.com/euy03001)
     - Alisa Bochnowski
-    - Logan Fink
-    - Kristen Knipe
-    - Eugene Yeboah
+    - Maureen Sullivan
 
 ---
