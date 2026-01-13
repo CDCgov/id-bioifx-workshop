@@ -1,0 +1,136 @@
+<section class="activity activity--{{ include.variant | default: '1' }}">
+  <div class="activity-header">
+    <div class="activity-inner">
+      {{ include.title | markdownify }}
+    </div>
+  </div>
+
+  <div class="activity-overview">
+    <div class="activity-inner">
+      {{ include.overview | markdownify }}
+    </div>
+  </div>
+
+  <div class="activity-body">
+    <div class="activity-inner">
+      {{ include.content | markdownify }}
+    </div>
+  </div>
+</section>
+
+<style>
+/* ============================================================================
+   Activity Section (variants)
+   CDC-aligned palette:
+   - Primary (CDC Blue)   #1E5AA8
+   - Dark Blue            #153E75
+   - Slate                #4B5563
+   - Light BG             #F3F6FA
+   - Border               #D1D5DB
+   - Teal Accent          #2BA6A6
+   - Amber Warning        #F59E0B
+   ============================================================================ */
+
+.activity {
+  --activity-bleed: 2rem;
+  --activity-radius: 16px;
+
+  margin-left: calc(-1 * var(--activity-bleed));
+  margin-right: calc(-1 * var(--activity-bleed));
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  border-radius: var(--activity-radius);
+  overflow: hidden; /* important: clips inner backgrounds to rounded corners */
+
+  --section-bg: #153E75;
+  --section-accent: #ffffff;
+  --section-header-text: #ffffff;
+  --section-body-text: #020202;
+}
+
+
+
+/* Variant: primary (CDC blue family) */
+.activity--1 {
+  --section-bg: #153E75;
+  --section-accent: #ffffff;
+  --section-header-text: #ffffff;      /* header text */
+  --section-body-text: #020202;
+}
+
+/* Variant: info (teal accent, CDC-safe) */
+.activity--2 {
+  --section-bg: #1F6F74;        /* teal-leaning dark */
+  --section-accent: #2BA6A6;    /* info teal */
+  --section-header-text: #ffffff;      /* header text */
+  --section-body-text: #020202;
+}
+
+/* Variant: neutral (slate/gray) */
+.activity--3 {
+  --section-bg: #374151;        /* slate dark */
+  --section-accent: #4B5563;    /* slate */
+  --section-header-text: #ffffff;      /* header text */
+  --section-body-text: #020202;
+}
+
+/* Variant: warning (amber) */
+.activity--4 {
+  --section-bg: #7A4B00;        /* deep amber/brown for readable contrast */
+  --section-accent: #F59E0B;    /* warning amber */
+  --section-header-text: #ffffff;      /* header text */
+  --section-body-text: #020202;
+}
+
+/* Header */
+.activity-header {
+  font-size: 2rem;
+  background-color: var(--section-bg);
+  color: var(--section-header-text);
+  padding: 1.25rem 1rem;
+  font-weight: 600;
+  border-top: 4px solid var(--section-accent);
+
+  border-top-left-radius: var(--activity-radius);
+  border-top-right-radius: var(--activity-radius);
+}
+
+
+/* Overview (lighter than header) */
+.activity-overview {
+  background-color: color-mix(in srgb, var(--section-bg) 40%, white 60%);
+  color: var(--section-body-text);
+  padding: 1.25rem 1rem;
+
+  /* NEW: left accent matching header */
+  border: 2px solid var(--section-bg);
+
+}
+
+.activity-body {
+  background-color: color-mix(in srgb, var(--section-bg) 20%, white 80%);
+  color: var(--section-body-text);
+  padding: 1.5rem 1rem;
+
+  border-bottom-left-radius: var(--activity-radius);
+  border-bottom-right-radius: var(--activity-radius);
+}
+
+
+/* Inner width constraint */
+.activity-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Optional: make links match accent */
+.activity a {
+  color: color-mix(in srgb, var(--section-accent) 85%, white 15%);
+}
+.activity a:hover {
+  color: var(--section-accent);
+}
+
+
+</style>

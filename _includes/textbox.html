@@ -1,0 +1,57 @@
+<div class="textbox">
+  <div class="textbox-header">Record answer below</div>
+  <div
+    class="textbox-body"
+    contenteditable="true"
+    data-placeholder="..."></div>
+</div>
+
+<style>
+.textbox {
+  border: 2px solid var(--bs-border-color, #4b5563);
+  background-color: var(--bs-body-bg, #111827);
+  border-radius: 12px;
+  padding: 0;
+  margin: 1.25rem 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+/* Optional header */
+.textbox-header {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--bs-primary, #60a5fa);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Editable body */
+.textbox-body {
+  padding: 0.85rem 1rem;
+  min-height: 3.25rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--bs-body-color, #e5e7eb);
+  cursor: text;
+}
+
+/* Focus state */
+.textbox-body:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--bs-primary, #60a5fa);
+}
+
+/* Placeholder text */
+.textbox-body:empty::before {
+  content: attr(data-placeholder);
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+/* Subtle hover affordance */
+.textbox:hover {
+  border-color: var(--bs-primary, #60a5fa);
+}
+</style>
