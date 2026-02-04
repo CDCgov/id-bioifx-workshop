@@ -1,0 +1,65 @@
+<div class="answer-toggle">
+  <input
+    type="checkbox"
+    id="answer-{{ include.id }}"
+    class="answer-toggle-checkbox">
+
+  <label
+    for="answer-{{ include.id }}"
+    class="answer-toggle-label"></label>
+
+  <div class="answer-toggle-body">
+    {{ include.content | markdownify }}
+  </div>
+</div>
+
+<style>
+.answer-toggle {
+  border: 2px solid var(--bs-info, #2BA6A6);
+  border-radius: 12px;
+  background: rgba(13, 202, 240, 0.08);
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.answer-toggle-checkbox {
+  display: none;
+}
+
+.answer-toggle-label {
+  display: block;
+  padding: 0.65rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--bs-info, #2BA6A6);
+}
+
+.answer-toggle-label::before {
+  content: "Answer";
+}
+
+.answer-toggle-label::after {
+  content: "▸";
+  float: right;
+  transition: transform 0.15s ease;
+}
+
+.answer-toggle-checkbox:checked + .answer-toggle-label::after {
+  transform: rotate(90deg);
+}
+
+.answer-toggle-body {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  transition: max-height 0.25s ease, padding 0.2s ease;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.answer-toggle-checkbox:checked
+  + .answer-toggle-label
+  + .answer-toggle-body {
+  max-height: 100vh;
+  padding: 0.75rem 1rem 0.9rem;
+}
+</style>

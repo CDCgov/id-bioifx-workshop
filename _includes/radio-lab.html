@@ -1,0 +1,41 @@
+<div class="btn-group lab-radio" role="group">
+  <input type="radio" class="btn-check" name="radio-{{ include.id }}" id="radio-{{ include.id }}-yes" autocomplete="off">
+  <label class="lab-radio-btn" for="radio-{{ include.id }}-yes">Yes</label>
+
+  <input type="radio" class="btn-check" name="radio-{{ include.id }}" id="radio-{{ include.id }}-no" autocomplete="off">
+  <label class="lab-radio-btn" for="radio-{{ include.id }}-no">No</label>
+</div>
+
+
+<style>
+.lab-radio .btn-check {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lab-radio .lab-radio-btn {
+  display: inline-block;
+  border: 2px solid var(--bs-border-color, #4b5563);
+  background-color: transparent;
+  color: #030303;
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hover */
+.lab-radio .lab-radio-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Selected */
+.lab-radio .btn-check:checked + .lab-radio-btn {
+  border-color: var(--bs-primary, #0d6efd);
+  background-color: rgba(13, 110, 253, 0.15);
+  color: var(--bs-primary, #0d6efd);
+}
+
+</style>
