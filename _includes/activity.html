@@ -1,19 +1,28 @@
 <section class="activity activity--{{ include.variant | default: '1' }}">
-  <div class="activity-header">
+  <div class="activity-header" role="button" tabindex="0" aria-expanded="true" onclick="toggleActivity(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleActivity(this)}">
     <div class="activity-inner">
+      <span class="activity-chevron" aria-hidden="true">▾</span>
       {{ include.title | markdownify }}
     </div>
   </div>
 
-  <div class="activity-overview">
-    <div class="activity-inner">
-      {{ include.overview | markdownify }}
+  <div class="activity-collapsible">
+    <div class="activity-overview">
+      <div class="activity-inner">
+        {{ include.overview | markdownify }}
+      </div>
     </div>
-  </div>
 
-  <div class="activity-body">
-    <div class="activity-inner">
-      {{ include.content | markdownify }}
+    <div class="activity-body">
+      <div class="activity-inner">
+        {{ include.content | markdownify }}
+      </div>
+    </div>
+
+    <div class="activity-collapse-footer">
+      <button class="activity-collapse-btn" onclick="toggleActivity(this.closest('.activity').querySelector('.activity-header'))">
+        ▴ Collapse section
+      </button>
     </div>
   </div>
 </section>
@@ -94,6 +103,48 @@
 
   border-top-left-radius: var(--activity-radius);
   border-top-right-radius: var(--activity-radius);
+
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+.activity-header:hover {
+  filter: brightness(1.1);
+}
+
+/* Chevron indicator */
+.activity-chevron {
+  display: inline-block;
+  margin-right: 0.6rem;
+  transition: transform 0.25s ease;
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.activity.collapsed .activity-chevron {
+  transform: rotate(-90deg);
+}
+
+/* Collapsible wrapper */
+.activity-collapsible {
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+  max-height: 100000px; /* large enough for any content */
+  opacity: 1;
+}
+
+.activity.collapsed .activity-collapsible {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* When collapsed, give the header bottom rounding */
+.activity.collapsed .activity-header {
+  border-bottom-left-radius: var(--activity-radius);
+  border-bottom-right-radius: var(--activity-radius);
 }
 
 
@@ -113,8 +164,32 @@
   color: var(--section-body-text);
   padding: 1.5rem 1rem;
 
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Per-section collapse footer */
+.activity-collapse-footer {
+  background-color: color-mix(in srgb, var(--section-bg) 30%, white 70%);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-top: 1px solid color-mix(in srgb, var(--section-bg) 40%, white 60%);
   border-bottom-left-radius: var(--activity-radius);
   border-bottom-right-radius: var(--activity-radius);
+}
+
+.activity-collapse-btn {
+  background: var(--section-bg);
+  color: var(--section-header-text);
+  border: none;
+  border-radius: 6px;
+  padding: 0.35rem 1.2rem;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+.activity-collapse-btn:hover {
+  filter: brightness(1.2);
 }
 
 
@@ -132,5 +207,99 @@
   color: var(--section-accent);
 }
 
+/* ============================================================================
+   Expand / Collapse All toolbar
+   ============================================================================ */
+.activity-toolbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  background: #153E75;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+}
+
+.activity-toolbar button {
+  background: rgba(255,255,255,0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.activity-toolbar button:hover {
+  background: rgba(255,255,255,0.3);
+}
 
 </style>
+
+<!-- Toggle JS (injected once via guard) -->
+<script>
+if (!window._activityToggleReady) {
+  window._activityToggleReady = true;
+
+  /* Toggle a single activity section */
+  window.toggleActivity = function(headerEl) {
+    var section = headerEl.closest('.activity');
+    var isCollapsed = section.classList.toggle('collapsed');
+    headerEl.setAttribute('aria-expanded', !isCollapsed);
+    updateToolbarState();
+    /* If collapsing, scroll so the header is visible */
+    if (isCollapsed) {
+      headerEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  };
+
+  /* Expand / Collapse all */
+  function setAll(collapse) {
+    document.querySelectorAll('.activity').forEach(function(s) {
+      if (collapse) {
+        s.classList.add('collapsed');
+      } else {
+        s.classList.remove('collapsed');
+      }
+      var hdr = s.querySelector('.activity-header');
+      if (hdr) hdr.setAttribute('aria-expanded', !collapse);
+    });
+    updateToolbarState();
+  }
+
+  function updateToolbarState() {
+    var all = document.querySelectorAll('.activity');
+    var collapsed = document.querySelectorAll('.activity.collapsed');
+    var btnExpand = document.getElementById('activity-expand-all');
+    var btnCollapse = document.getElementById('activity-collapse-all');
+    if (btnExpand) btnExpand.disabled = collapsed.length === 0;
+    if (btnCollapse) btnCollapse.disabled = collapsed.length === all.length;
+  }
+
+  /* Inject the toolbar once on DOMContentLoaded */
+  document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelectorAll('.activity').length === 0) return;
+    if (document.getElementById('activity-toolbar')) return;
+
+    var bar = document.createElement('div');
+    bar.className = 'activity-toolbar';
+    bar.id = 'activity-toolbar';
+    bar.innerHTML =
+      '<span>Sections:</span>' +
+      '<button id="activity-expand-all" onclick="setAll(false)">▾ Expand All</button>' +
+      '<button id="activity-collapse-all" onclick="setAll(true)">▸ Collapse All</button>';
+    document.body.appendChild(bar);
+
+    /* expose setAll globally for inline onclick */
+    window.setAll = setAll;
+    updateToolbarState();
+  });
+}
+</script>
