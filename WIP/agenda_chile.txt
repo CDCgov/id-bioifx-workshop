@@ -1,0 +1,99 @@
+
+International Influenza Bioinformatics Workshop
+
+April 13-17, 2026
+Intercontinental Hotel Santiago
+Santiago, Chile 
+
+
+AGENDA - DAY 1
+MONDAY, APRIL 13, 2026
+Time	Agenda Item and Objective	Discussion Leader
+
+08:30-09:00 	Registration
+	
+09:00-09:30 	Welcome remarks
+Welcome remarks and participant introductions 	MOH, CDC (?), APHL
+09:30-10:00 	Course pre-test	
+10:00-10:30 	Course photo, Break	
+10:30-12:00 	Overview of Training, Vaccine Candidate Cycle Overview	CDC
+12:00-13:00	Lunch	
+13:00-13:45	Computer setup	
+13:45-15:15	Bioinformatics Programming Basics: Linux and BASH 	
+15:15-15:45	Break	
+15:45-17:30	Bioinformatics Programming Basics Cont.	
+17:30	Q&A	
+Adjourn		
+
+
+AGENDA-DAY 2
+TUESDAY APRIL 14, 2026
+Time	Agenda Item and Objective	Discussion Leader
+
+09:00-11:00 	Bioinformatics Programming Basics: Scripting
+	
+11:00-11:30	Break	
+11:30-12:30	Bioinformatics Tools, Environments and Installation
+	APHL consultants
+12:30-13:30	Lunch	
+13:30-15:30	Bioinformatics Tools, Environments Cont.	APHL consultants
+15:30-16:00	Break	
+16:00-17:00	Containers and Registries	APHL consultants
+
+17:00	Q&A	
+Adjourn		
+
+AGENDA-DAY 3
+WEDNESDAY, APRIL 15, 2026
+Time	Agenda Item and Objective	Discussion Leader
+
+09:00-10:30 	NGS File Manipulation, Genome Assembly and Pipelining
+	
+10:30-11:00	Break
+	
+11:00-13:00	NGS File Manipulation, Genome Assembly Cont.	
+13:00-14:00	Lunch	
+14:00-16:00	Sequence Alignment Algorithms and BLAST
+
+16:00-16:30	Break	
+16:30-17:30	Sequence Alignment Algorithms Cont. 	
+17:30	Q&A	
+Adjourn		
+
+
+AGENDA-DAY 4
+THURSDAY, APRIL 16, 2026
+Time	Agenda Item and Objective	Discussion Leader
+
+09:00-11:00 	Phylogenetics
+	
+11:00-11:30	Break
+	
+11:30-13:00	Phylogenetics Cont. 	
+13:00-14:00	Lunch	
+14:00-15:30	Genomic Epidemiology and Sampling
+
+		
+Adjourn		
+
+
+AGENDA-DAY 5
+FRIDAY, APRIL 17, 2026
+Time	Agenda Item and Objective	Discussion Leader
+
+09:00-09:30 	Quality Management Systems for Bioinformatics
+	
+09:30-10:00	Reporting
+	
+10:00-10:45	Troubleshooting Bioinformatics	
+10:45-11:15	Break	
+11:15-12:30	Workflow Pipeline and reporting practical	
+	Meeting wrap up and next steps
+
+	Course Evaluation and post-test
+
+	Closing remarks, certificate ceremony
+
+Adjourn		
+
+
