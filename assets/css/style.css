@@ -18,7 +18,7 @@
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 }
 * { box-sizing:border-box; }
-body { margin:0; font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; line-height:1.5; color:var(--c-text); background:var(--c-bg); }
+body { margin:0; font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; line-height:1.5; color:var(--c-text); background:var(--c-bg); font-size:1.125rem; }
 
 .site-header { background:var(--c-accent); color:#fff; padding:.75rem 1rem; display:flex; flex-wrap:wrap; align-items:center; gap:2rem; }
 .site-header a { color:#fff; text-decoration:none; }
@@ -103,6 +103,9 @@ th, td { border:1px solid var(--c-border); padding:.5rem .6rem; text-align:left;
 th { background:var(--c-bg-alt); }
 
 img { max-width:100%; height:auto; }
+
+/* Centered scaled images */
+.img-center { display:block; margin-left:auto; margin-right:auto; }
 
 blockquote { border-left:4px solid var(--c-accent); margin:1rem 0; padding:.5rem .9rem; background:var(--c-bg-alt); color:var(--c-text-alt); }
 
