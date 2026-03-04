@@ -54,3 +54,216 @@ show_hidden_all:
   failure: "Not quite; check that you included all needed flags (-l -a -h -t)."
   explanation: "Ordering of short flags after ls is flexible; -t sorts by modification time, newest first."
   show_hint_after: 3
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLI Introduction Exercises (06-cli-intro-exercises.md)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Exercise 1 — Manuals, Flags, Arguments
+practical_text_editor:
+  question: "Which of the commands listed above (ls, sort, head, vim, date, time) is a **text editor**?"
+  answers:
+    - "vim"
+  hint: "It's a modal editor often found on Linux systems by default."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`vim` is a powerful text editor available on virtually all Unix/Linux systems."
+  show_hint_after: 2
+
+practical_no_manual:
+  question: "Which of the commands listed above does **not** have a manual entry (via `man`)?"
+  answers:
+    - "time"
+  hint: "Try running `man` on each one — one of them will say 'No manual entry'."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`time` is typically a shell built-in (in bash/zsh), so it may not have a standalone man page. Use `help time` or `type time` instead."
+  show_hint_after: 2
+
+# Exercise 2 — Command Line Navigation
+practical_cd_home:
+  question: "What command changes directory to your home directory?"
+  answers:
+    - "cd ~"
+    - "cd"
+    - "cd $HOME"
+  hint: "The tilde character (~) is a shortcut for your home directory."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`cd ~`, `cd`, or `cd $HOME` all navigate to your home directory."
+  show_hint_after: 2
+
+practical_mkdir:
+  question: "What command creates a new directory called `2026-BIFX-TRAINING`?"
+  answers:
+    - "mkdir 2026-BIFX-TRAINING"
+  hint: "The command to make directories is `mkdir`."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`mkdir 2026-BIFX-TRAINING` creates the directory in your current location."
+  show_hint_after: 2
+
+# Exercise 4 — File Viewing and Manipulation (Part 1)
+practical_tail_20:
+  question: "What command outputs the last 20 lines of `samplesheet.csv` and writes them to `samplesheet_subset.csv`?"
+  answers:
+    - "tail -20 samplesheet.csv > samplesheet_subset.csv"
+    - "tail -n 20 samplesheet.csv > samplesheet_subset.csv"
+    - "tail -n20 samplesheet.csv > samplesheet_subset.csv"
+  hint: "Use `tail` with the `-n` or `-20` flag, then redirect with `>`."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`tail -n 20` (or `tail -20`) outputs the last 20 lines. The `>` operator redirects output to a file."
+  show_hint_after: 2
+
+practical_head_pipe_tail:
+  question: "What command using `head` piped into `tail` outputs only the 8th line of `samplesheet.csv`?"
+  answers:
+    - "head -8 samplesheet.csv | tail -1"
+    - "head -n 8 samplesheet.csv | tail -1"
+    - "head -n 8 samplesheet.csv | tail -n 1"
+    - "head -8 samplesheet.csv | tail -n 1"
+    - "head -n8 samplesheet.csv | tail -n1"
+  hint: "First get the first 8 lines with `head`, then use `tail -1` to get only the last line of that output."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`head -8` gets lines 1–8, then `tail -1` extracts just the 8th line."
+  show_hint_after: 2
+
+practical_sort_numeric:
+  question: "What command sorts `samplesheet.csv` numerically and redirects to `samplesheet_sorted.csv`?"
+  answers:
+    - "sort -n samplesheet.csv > samplesheet_sorted.csv"
+    - "sort --numeric-sort samplesheet.csv > samplesheet_sorted.csv"
+  hint: "Use `sort` with the `-n` flag for numeric sorting, then redirect."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`sort -n` sorts numerically rather than alphabetically."
+  show_hint_after: 2
+
+# Exercise 5 — File Viewing and Manipulation (Part 2)
+practical_append_redirect:
+  question: "What operator **appends** output to an existing file (without overwriting)?"
+  answers:
+    - ">>"
+  hint: "It uses the redirect character twice."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`>>` appends to a file, while `>` overwrites it."
+  show_hint_after: 2
+
+practical_overwrite_redirect:
+  question: "What operator **overwrites** a file with new output?"
+  answers:
+    - ">"
+  hint: "It's a single redirect character."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`>` redirects output and overwrites the target file."
+  show_hint_after: 2
+
+practical_rm_glob:
+  question: "What command removes `samplesheet_copy.csv` and `samplesheet_sorted.csv` using a glob, without removing `samplesheet.csv`?"
+  answers:
+    - "rm samplesheet_*.csv"
+    - "rm samplesheet_*"
+  hint: "Use `rm` with a glob pattern that matches the underscore in both filenames."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`rm samplesheet_*.csv` matches files starting with `samplesheet_` but not `samplesheet.csv` (which has no underscore)."
+  show_hint_after: 2
+
+# Exercise 6 — Searching and Text Processing (Part 1)
+practical_wc_lines:
+  question: "What command counts only the number of **lines** in `samplesheet.csv`?"
+  answers:
+    - "wc -l samplesheet.csv"
+  hint: "Use `wc` with the lines flag."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`wc -l` counts lines in a file."
+  show_hint_after: 2
+
+practical_wc_chars:
+  question: "What command counts the number of **characters** in `samplesheet.csv`?"
+  answers:
+    - "wc -m samplesheet.csv"
+    - "wc -c samplesheet.csv"
+  hint: "Use `wc` with the characters/bytes flag (`-m` or `-c`)."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`wc -m` counts characters and `wc -c` counts bytes. For ASCII files they give the same result."
+  show_hint_after: 2
+
+# Exercise 7 — Searching and Text Processing (Part 2)
+practical_grep_count:
+  question: "What command counts how many times `GGGGCGGGG` appears in `influenza.fasta`?"
+  answers:
+    - "grep -c GGGGCGGGG influenza.fasta"
+    - "grep GGGGCGGGG influenza.fasta | wc -l"
+    - "grep -c 'GGGGCGGGG' influenza.fasta"
+    - "grep 'GGGGCGGGG' influenza.fasta | wc -l"
+  hint: "Use `grep -c` to count matches, or pipe `grep` into `wc -l`."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`grep -c` returns the count of matching lines. Alternatively, pipe `grep` output into `wc -l`."
+  show_hint_after: 2
+
+# Exercise 8 — sed
+practical_sed_delimiter:
+  question: "When your find or replace string contains `/`, what alternative delimiter characters can you use with `sed`?"
+  answers:
+    - "%"
+    - "#"
+    - "% or #"
+    - "# or %"
+  hint: "Common alternatives include `%` and `#`."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "You can use any character as a `sed` delimiter. Common alternatives to `/` include `%`, `#`, `|`, and `@`."
+  show_hint_after: 2
+
+# Exercise 9 — Compression and Archives
+practical_gunzip:
+  question: "What command uncompresses a `.gz` file?"
+  answers:
+    - "gunzip"
+    - "gzip -d"
+  hint: "It's the reverse of `gzip`."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`gunzip` (or `gzip -d`) decompresses `.gz` files."
+  show_hint_after: 2
+
+practical_gzip:
+  question: "What command compresses a file with gzip?"
+  answers:
+    - "gzip"
+  hint: "It's a common compression utility that produces `.gz` files."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`gzip <filename>` compresses the file and adds the `.gz` extension."
+  show_hint_after: 2
+
+# Exercise 10 — Permissions and Ownership
+practical_chmod_remove_read:
+  question: "What `chmod` command **removes** read permission for the owner on `permissions.txt`?"
+  answers:
+    - "chmod u-r permissions.txt"
+    - "chmod a-r permissions.txt"
+  hint: "Use `chmod` with `u-r` (user minus read)."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`chmod u-r` removes the read (r) permission for the user/owner (u)."
+  show_hint_after: 2
+
+practical_chmod_add_read:
+  question: "What `chmod` command **adds** read permission back for the owner on `permissions.txt`?"
+  answers:
+    - "chmod u+r permissions.txt"
+    - "chmod a+r permissions.txt"
+  hint: "Use `chmod` with `u+r` (user plus read)."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`chmod u+r` adds the read (r) permission for the user/owner (u)."
+  show_hint_after: 2
