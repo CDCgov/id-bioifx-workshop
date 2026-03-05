@@ -1,0 +1,195 @@
+---
+title-block: false
+standalone: true
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Contents"
+    theme: minty
+    fontsize: 1rem
+    linestretch: 1.6
+    fig-cap-location: bottom
+    tbl-cap-location: top
+    embed-resources: true # output file is self-contained and sharable
+    
+execute:
+  freeze: false
+  echo: false
+  warning: false
+  error: false
+  message: false
+---
+
+```{python}
+#| label: config
+#| include: false
+
+from src.report import data, config, display
+from IPython.display import Markdown
+
+# ---- config & params -----
+cfg = config.load_config("_quarto.yml")
+params = config.parse_params(cfg)
+
+# ----  colors palette ----
+okabe_ito = [
+  "#E69F00", # orange
+  "#56B4E9", # sky blue
+  "#009E73", # bluish green
+  "#F0E442", # yellow
+  "#0072B2", # blue
+  "#D55E00", # vermillion
+  "#CC79A7", # reddish purple
+  "#999999"  # grey
+]
+
+df = data.load_inputs(params)
+```
+
+<!-- Title / Header -->
+
+::: {style="background-color: color-mix(in srgb, var(--bs-primary) 15%, white); padding: 1.5rem; border-radius: 6px;"}
+# National Influenza Genomic Surveillance Report
+
+:::: {.columns}
+::: {.column width="50%"}
+**Country**: {{< meta params.country.name >}} \
+**Influenza season**: {{< meta params.season >}} \
+:::
+
+::: {.column width="50%"}
+**Date of Report**: {{< meta params.date >}} \
+**Reporting period**: {{< meta params.period.start >}} – {{< meta params.period.end >}}
+:::
+::::
+:::
+
+## 1. Executive Summary
+
+This report summarizes influenza virus genomic surveillance conducted during the **{{< meta params.season >}}** influenza season in **{{< meta params.country.name >}}**. Surveillance integrates routine virological testing with whole-genome sequencing to monitor circulating influenza strains, genetic diversity, antiviral resistance markers, and phylogenetic relationships.
+
+#### Key findings:
+```{python}
+#| label: key_findings
+#| lst-cap: "Dominant clades exclude `Undetermined`."
+
+display.key_findings(df)
+```
+
+---
+
+## 2. Surveillance System and Sample Collection
+```{python}
+#| label: sample_collection
+
+display.sample_collection(df)
+```
+
+## 3. Virological Screening Results
+
+### 3.1 Total Specimens Tested
+```{python}
+display.total_specimens(df)
+```
+
+### 3.2 Influenza Type and Subtype Distribution
+
+```{python}
+display.subtype_summary(df)
+```
+
+---
+
+## 4. Sequencing Overview
+
+### 4.1 Sequencing Selection Criteria
+
+#### Specimens were selected for sequencing based on:
+```{python}
+display.sequencing_criteria(df)
+```
+
+### 4.2 Sequencing Output and Quality
+
+```{python}
+display.sequencing_output(df)
+```
+
+#### QC metrics:
+```{python}
+display.sequencing_qc(df)
+```
+
+## 5. Clade and Subclade Distribution
+
+```{python}
+#| results: asis
+display.clade_summary(df)
+```
+
+## 6. Antiviral Resistance Markers
+
+### 6.1 Neuraminidase H275Y (A(H1N1)pdm09)
+
+| Metric | Count |
+|------|------:|
+| A(H1N1)pdm09 genomes analyzed | |
+| Viruses with H275Y mutation | |
+| Percentage with H275Y | |
+
+**Interpretation:**  
+The H275Y substitution is associated with reduced susceptibility to oseltamivir.
+
+---
+
+## 7. Phylogenetic Analysis
+
+### 7.1 Methods
+
+- **Alignment:** **[e.g., MAFFT]**
+- **Phylogenetic inference:** **[e.g., IQ-TREE / FastTree]**
+- **Reference strains:** WHO vaccine reference strains for the **[season]** season
+- **Gene(s) analyzed:** ☐ HA ☐ NA ☐ Whole genome
+
+### 7.2 Phylogenetic Tree Summary
+
+- Circulating viruses clustered primarily with **[reference clade/strain]**
+- No major divergent clusters were observed ☐ / Divergent clusters were observed ☐
+- Genetic diversity was **[low / moderate / high]**
+
+---
+
+## 8. Data Sharing
+
+- Sequences submitted to: ☐ GISAID ☐ GenBank
+- Number of sequences shared: **[N]**
+- Accession IDs: **[range or link]**
+
+---
+
+## 9. Limitations
+
+- Sequencing coverage may not be fully representative of all regions.
+- Selection bias due to Ct-based sequencing thresholds.
+- Turnaround time varied during peak transmission periods.
+
+---
+
+## 10. Conclusions and Public Health Implications
+
+{{< meta params.conclusion >}}
+
+---
+
+## 11. Acknowledgements
+
+We acknowledge sentinel sites, laboratories, clinicians, and data contributors supporting influenza surveillance in {{< meta params.country.name >}}.
+
+---
+
+## 12. Contact Information
+
+**Institution:**  {{< meta params.institution >}} \
+**Email:**  {{< meta params.email >}} \
+**Phone:**  {{< meta params.phone >}} \
