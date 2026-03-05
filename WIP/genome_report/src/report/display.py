@@ -6,15 +6,19 @@ from src.report import data
 
 def _display_table(rows, cols: list[str] | None = None) -> str:
     df = pd.DataFrame(rows, columns=cols)
+    
+    for col in df.columns:
+        if df[col].apply(lambda x: isinstance(x, list)).any():
+            df[col] = df[col].apply(lambda x: ", ".join(map(str, x)) if isinstance(x, list) else x)
+    
     return df.to_html(index=False, header=cols is not None, border=0)
-
 
 def key_findings(df: pd.DataFrame) -> str:
     rows = [
         ["**Total Specimens**",            data.count_sample_ids(df, "tested")],
         ["**Influenza-positive specimens**", data.count_sample_ids(df, "positive")],
         ["**Viruses sequenced**",           data.count_sample_ids(df, "sequenced")],
-        ["**Dominant clades/subclades:**",  data.dominant_values(df[df["short_clade"] != "Undetermined"], "short_clade")],
+        ["**Dominant clades/subclades:**",  data.dominant_values(df[df["clade"] != "Undetermined"], "clade")],
     ]
     return _display_table(rows)
 
@@ -25,7 +29,7 @@ def sample_collection(df: pd.DataFrame) -> str:
         ["**Surviellance Systems**",   data.uniq(df, "surviellance_type")],
         ["**Specimen types**",         data.uniq(df, "sample_type")],
         ["**Collection mediums**",     data.uniq(df, "sample_medium")],
-        ["**Testing laboratories**",   data.uniq(df, "submitter")],
+        ["**Testing laboratories**",   data.uniq(df, "sample_submitter")],
         ["**Age groups included**",    f"{age_min:.0f} - {age_max:.0f}"],
         ["**Geographic coverage**",    data.uniq(df, "geographic_location")],
     ]
@@ -127,32 +131,56 @@ def sequencing_qc(df: pd.DataFrame) -> str:
 
 def clade_summary(df: pd.DataFrame) -> str:
     passed = df[df["pass_fail_reason"] == "Pass"].copy()
+    
+    # Filter to only rows where reference starts with A_HA or B_HA
+    passed = passed[passed["reference"].str.startswith(("A_HA", "B_HA"), na=False)]
+    
     if passed.empty:
         return "<p>No passing samples found.</p>"
-
+    
     unique = (
-        passed[["sample_id", "subtype", "short_clade"]]
+        passed[["sample_id", "subtype", "short_clade", "clade", "subclade"]]
         .drop_duplicates(subset="sample_id")
     )
-    unique["short_clade"] = unique["short_clade"].fillna("Undetermined")
-
+    
+    # Use clade as fallback if short_clade is NA, then "Undetermined" if both are NA
+    unique["short_clade"] = unique["short_clade"].fillna(unique["clade"]).fillna("Undetermined")
+    
+    # Append subclade with a forward slash if not NA
+    unique["short_clade"] = unique.apply(
+        lambda row: f"{row['short_clade']} / {row['subclade']}" if pd.notna(row["subclade"]) else row["short_clade"],
+        axis=1
+    )
+    
     html_parts = []
     for i, (subtype, group) in enumerate(unique.groupby("subtype"), start=1):
         total = group["sample_id"].nunique()
-
         clade_counts = (
             group["short_clade"]
             .value_counts()
             .sort_values(ascending=False)
         )
-
         rows = [
             (clade, count, round(count / total * 100, 1))
             for clade, count in clade_counts.items()
         ]
         rows.append(("Total", total, 100.0))
-
         table = pd.DataFrame(rows, columns=["Clade / Subclade", "Count", "Percentage (%)"]).to_html(index=False, border=0)
         html_parts.append(f"<h3>5.{i} Influenza {subtype}</h3>\n{table}")
-
+    
     display(HTML("\n\n".join(html_parts)))
+
+
+def sequence_submissions(df: pd.DataFrame) -> None:
+    passed = df[df["pass_fail_reason"] == "Pass"][["sample_id", "gisaid", "genbank"]].copy()
+    
+    passed = passed.drop_duplicates(subset="sample_id")
+    
+    if passed.empty:
+        display(HTML("<p>No sequence accessions available</p>"))
+        return
+    
+    columns = ["Sample", "GISAID Accession", "GenBank Accession"]
+    passed.columns = columns
+    
+    return _display_table(passed, cols=columns)

@@ -116,11 +116,6 @@ display.sequencing_criteria(df)
 display.sequencing_output(df)
 ```
 
-#### QC metrics:
-```{python}
-display.sequencing_qc(df)
-```
-
 ## 5. Clade and Subclade Distribution
 
 ```{python}
@@ -162,9 +157,10 @@ The H275Y substitution is associated with reduced susceptibility to oseltamivir.
 
 ## 8. Data Sharing
 
-- Sequences submitted to: ☐ GISAID ☐ GenBank
-- Number of sequences shared: **[N]**
-- Accession IDs: **[range or link]**
+```{python}
+#| style: "max-height: 400px; overflow-y: auto;"
+display.sequence_submissions(df)
+```
 
 ---
 

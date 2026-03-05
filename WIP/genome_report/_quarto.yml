@@ -36,6 +36,6 @@ params:
   # Narrative content
   # -------------------------
   conclusion:
-    - Genomic surveillance during the 2026 influenza season demonstrated ....,
+    - "**Update this in _quarto.yml!** Genomic surveillance during the 2026 influenza season demonstrated ....,
       supporting national and global influenza risk assessment and vaccine
-      strain selection processes.
+      strain selection processes."
