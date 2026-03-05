@@ -1,0 +1,1022 @@
+sample_id,total_reads,pass_qc,reads_mapped,reference,percent_reference_coverage,median_coverage,count_minor_snv_at_or_over_5_pct,pass_fail_reason,subtype,mira_module,runid,instrument,clade,short_clade,subclade
+3004125289_N8KIRZ8D_v1,825444,817697,121311,A_HA_H1,99.82,5922,8,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a.1,5a.2a.1,D.3
+3004125289_N8KIRZ8D_v1,825444,817697,141448,A_MP,100.0,11963,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125289_N8KIRZ8D_v1,825444,817697,108865,A_NA_N1,99.79,6518,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125289_N8KIRZ8D_v1,825444,817697,82702,A_NP,100.0,4460,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125289_N8KIRZ8D_v1,825444,817697,112138,A_NS,97.1,10981,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125289_N8KIRZ8D_v1,825444,817697,37456,A_PA,100.0,1161,2,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125289_N8KIRZ8D_v1,825444,817697,74421,A_PB1,100.0,1505,4,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125289_N8KIRZ8D_v1,825444,817697,61963,A_PB2,100.0,2006,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125302_N8KIRZA6_v1,527908,521609,60645,A_HA_H3,99.82,2835,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004125302_N8KIRZA6_v1,527908,521609,32908,A_MP,100.0,2904,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125302_N8KIRZA6_v1,527908,521609,61690,A_NA_N2,100.0,3784,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125302_N8KIRZA6_v1,527908,521609,50160,A_NP,100.0,2928,2,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125302_N8KIRZA6_v1,527908,521609,14275,A_NS,97.1,1497,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125302_N8KIRZA6_v1,527908,521609,39624,A_PA,100.0,1649,2,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125302_N8KIRZA6_v1,527908,521609,32400,A_PB1,100.0,1255,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125302_N8KIRZA6_v1,527908,521609,60505,A_PB2,100.0,2284,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125307_N8KIRZAV_v1,627490,620738,58452,A_HA_H3,99.82,2781,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004125307_N8KIRZAV_v1,627490,620738,155621,A_MP,100.0,13692,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125307_N8KIRZAV_v1,627490,620738,51278,A_NA_N2,100.0,3231,2,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125307_N8KIRZAV_v1,627490,620738,72499,A_NP,100.0,4374,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125307_N8KIRZAV_v1,627490,620738,46051,A_NS,97.1,4767,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125307_N8KIRZAV_v1,627490,620738,49530,A_PA,100.0,1996,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125307_N8KIRZAV_v1,627490,620738,41040,A_PB1,100.0,1572,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125307_N8KIRZAV_v1,627490,620738,51845,A_PB2,100.0,2030,3,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125325_N8KIRZDD_v1,763330,756652,98063,A_HA_H1,99.82,4698,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a.1,5a.2a.1,D.3
+3004125325_N8KIRZDD_v1,763330,756652,119199,A_MP,100.0,9905,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125325_N8KIRZDD_v1,763330,756652,107986,A_NA_N1,99.79,6145,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125325_N8KIRZDD_v1,763330,756652,89967,A_NP,100.0,5003,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125325_N8KIRZDD_v1,763330,756652,98134,A_NS,97.1,9558,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125325_N8KIRZDD_v1,763330,756652,39649,A_PA,100.0,961,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125325_N8KIRZDD_v1,763330,756652,70236,A_PB1,100.0,2431,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125325_N8KIRZDD_v1,763330,756652,89190,A_PB2,100.0,3068,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125328_N8KIRZDS_v1,553212,546573,70779,A_HA_H3,99.82,3258,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004125328_N8KIRZDS_v1,553212,546573,76405,A_MP,100.0,6685,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125328_N8KIRZDS_v1,553212,546573,63760,A_NA_N2,100.0,3879,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125328_N8KIRZDS_v1,553212,546573,45778,A_NP,100.0,2694,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125328_N8KIRZDS_v1,553212,546573,21743,A_NS,97.1,2238,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125328_N8KIRZDS_v1,553212,546573,54580,A_PA,100.0,2192,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125328_N8KIRZDS_v1,553212,546573,44330,A_PB1,100.0,1639,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125328_N8KIRZDS_v1,553212,546573,63938,A_PB2,100.0,2457,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125336_N8KIRZEW_v1,807716,799694,110256,A_HA_H3,99.82,5445,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004125336_N8KIRZEW_v1,807716,799694,125627,A_MP,100.0,10573,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125336_N8KIRZEW_v1,807716,799694,91984,A_NA_N2,100.0,5508,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125336_N8KIRZEW_v1,807716,799694,66617,A_NP,100.0,3869,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125336_N8KIRZEW_v1,807716,799694,39536,A_NS,97.1,3914,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125336_N8KIRZEW_v1,807716,799694,117226,A_PA,100.0,3983,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125336_N8KIRZEW_v1,807716,799694,97728,A_PB1,100.0,2591,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125336_N8KIRZEW_v1,807716,799694,128502,A_PB2,100.0,4555,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125339_N8KIRZFB_v1,912028,903452,124019,A_HA_H3,99.82,5925,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004125339_N8KIRZFB_v1,912028,903452,134937,A_MP,100.0,11251,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125339_N8KIRZFB_v1,912028,903452,90058,A_NA_N2,100.0,5183,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125339_N8KIRZFB_v1,912028,903452,93502,A_NP,100.0,5346,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125339_N8KIRZFB_v1,912028,903452,53993,A_NS,97.1,5400,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125339_N8KIRZFB_v1,912028,903452,147947,A_PA,100.0,4983,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125339_N8KIRZFB_v1,912028,903452,98658,A_PB1,100.0,3474,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125339_N8KIRZFB_v1,912028,903452,136326,A_PB2,100.0,4800,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125344_N8KIRZG0_v1,533478,527208,60327,A_HA_H3,99.82,2576,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004125344_N8KIRZG0_v1,533478,527208,74013,A_MP,100.0,6538,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125344_N8KIRZG0_v1,533478,527208,54850,A_NA_N2,100.0,3447,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125344_N8KIRZG0_v1,533478,527208,42769,A_NP,100.0,2554,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125344_N8KIRZG0_v1,533478,527208,41873,A_NS,97.1,4352,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125344_N8KIRZG0_v1,533478,527208,77397,A_PA,100.0,2920,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125344_N8KIRZG0_v1,533478,527208,33647,A_PB1,100.0,1186,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125344_N8KIRZG0_v1,533478,527208,56874,A_PB2,100.0,2083,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125405_N8KIRZOH_v1,739754,731943,95978,A_HA_H3,99.82,4704,9,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004125405_N8KIRZOH_v1,739754,731943,135787,A_MP,100.0,11358,9,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125405_N8KIRZOH_v1,739754,731943,92378,A_NA_N2,100.0,5623,16,Count of minor variants at or over 5% > 10,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125405_N8KIRZOH_v1,739754,731943,63809,A_NP,100.0,3688,10,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125405_N8KIRZOH_v1,739754,731943,42394,A_NS,97.1,4164,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125405_N8KIRZOH_v1,739754,731943,106351,A_PA,100.0,3990,17,Count of minor variants at or over 5% > 10,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125405_N8KIRZOH_v1,739754,731943,67617,A_PB1,100.0,2599,19,Count of minor variants at or over 5% > 10,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125405_N8KIRZOH_v1,739754,731943,87906,A_PB2,100.0,3381,12,Count of minor variants at or over 5% > 10,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125413_N8KIRZPL_v1,518150,513070,41858,A_HA_H3,99.82,1912,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004125413_N8KIRZPL_v1,518150,513070,55618,A_MP,100.0,4824,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125413_N8KIRZPL_v1,518150,513070,41045,A_NA_N2,100.0,2548,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125413_N8KIRZPL_v1,518150,513070,41863,A_NP,100.0,2434,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125413_N8KIRZPL_v1,518150,513070,24317,A_NS,97.1,2454,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125413_N8KIRZPL_v1,518150,513070,39961,A_PA,100.0,1603,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125413_N8KIRZPL_v1,518150,513070,29550,A_PB1,100.0,1110,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125413_N8KIRZPL_v1,518150,513070,50469,A_PB2,100.0,1860,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125414_N8KIRZPQ_v1,755292,748082,82460,A_HA_H3,99.82,3864,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004125414_N8KIRZPQ_v1,755292,748082,94350,A_MP,100.0,8015,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125414_N8KIRZPQ_v1,755292,748082,82742,A_NA_N2,100.0,4766,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125414_N8KIRZPQ_v1,755292,748082,68680,A_NP,100.0,3849,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125414_N8KIRZPQ_v1,755292,748082,46529,A_NS,97.1,4597,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125414_N8KIRZPQ_v1,755292,748082,98041,A_PA,100.0,2624,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125414_N8KIRZPQ_v1,755292,748082,70520,A_PB1,100.0,1836,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125414_N8KIRZPQ_v1,755292,748082,111065,A_PB2,100.0,2143,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125420_N8KIRZQL_v1,865668,856416,119171,A_HA_H3,99.82,5826,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004125420_N8KIRZQL_v1,865668,856416,140119,A_MP,100.0,11728,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125420_N8KIRZQL_v1,865668,856416,91294,A_NA_N2,100.0,5445,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125420_N8KIRZQL_v1,865668,856416,91845,A_NP,100.0,5320,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125420_N8KIRZQL_v1,865668,856416,44191,A_NS,97.1,4306,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125420_N8KIRZQL_v1,865668,856416,122847,A_PA,100.0,4411,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125420_N8KIRZQL_v1,865668,856416,90364,A_PB1,100.0,3329,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125420_N8KIRZQL_v1,865668,856416,126307,A_PB2,100.0,4784,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125421_N8KIRZQQ_v1,409530,404647,44951,A_HA_H3,99.82,2079,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004125421_N8KIRZQQ_v1,409530,404647,74463,A_MP,100.0,6633,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125421_N8KIRZQQ_v1,409530,404647,33271,A_NA_N2,100.0,2129,2,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125421_N8KIRZQQ_v1,409530,404647,29034,A_NP,100.0,1798,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125421_N8KIRZQQ_v1,409530,404647,24273,A_NS,97.1,2580,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125421_N8KIRZQQ_v1,409530,404647,25546,A_PA,100.0,1042,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125421_N8KIRZQQ_v1,409530,404647,18886,A_PB1,100.0,707,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125421_N8KIRZQQ_v1,409530,404647,26941,A_PB2,100.0,967,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125426_N8KIRZRE_v1,625892,617919,13181,A_HA_H3,99.82,637,2,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004125426_N8KIRZRE_v1,625892,617919,15686,A_MP,100.0,1347,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125426_N8KIRZRE_v1,625892,617919,18531,A_NA_N2,100.0,1138,2,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125426_N8KIRZRE_v1,625892,617919,6906,A_NP,100.0,411,2,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125426_N8KIRZRE_v1,625892,617919,1060,A_NS,97.1,120,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125426_N8KIRZRE_v1,625892,617919,13212,A_PA,100.0,572,3,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125426_N8KIRZRE_v1,625892,617919,1822,A_PB1,100.0,67,0,Median coverage < 100,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125426_N8KIRZRE_v1,625892,617919,10710,A_PB2,100.0,352,2,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125441_N8KIRZTI_v1,775194,767488,70199,A_HA_H1,99.82,3361,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a.1,5a.2a.1,D.3
+3004125441_N8KIRZTI_v1,775194,767488,89321,A_MP,100.0,7557,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125441_N8KIRZTI_v1,775194,767488,70104,A_NA_N1,99.79,4082,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125441_N8KIRZTI_v1,775194,767488,55516,A_NP,100.0,3145,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125441_N8KIRZTI_v1,775194,767488,64718,A_NS,97.1,6574,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125441_N8KIRZTI_v1,775194,767488,15000,A_PA,100.0,621,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125441_N8KIRZTI_v1,775194,767488,28118,A_PB1,100.0,998,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125441_N8KIRZTI_v1,775194,767488,60558,A_PB2,100.0,2141,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125442_N8KIRZTN_v1,753800,746193,105029,A_HA_H3,99.82,5126,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004125442_N8KIRZTN_v1,753800,746193,112354,A_MP,100.0,9312,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125442_N8KIRZTN_v1,753800,746193,83853,A_NA_N2,100.0,5000,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125442_N8KIRZTN_v1,753800,746193,83656,A_NP,100.0,4769,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125442_N8KIRZTN_v1,753800,746193,36773,A_NS,97.1,3575,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125442_N8KIRZTN_v1,753800,746193,115231,A_PA,100.0,4410,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125442_N8KIRZTN_v1,753800,746193,74540,A_PB1,100.0,2590,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125442_N8KIRZTN_v1,753800,746193,112393,A_PB2,100.0,4225,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125448_N8KIRZUG_v1,548096,541285,21558,A_HA_H1,99.82,1064,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a.1,5a.2a.1,D.3
+3004125448_N8KIRZUG_v1,548096,541285,25062,A_MP,100.0,2188,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125448_N8KIRZUG_v1,548096,541285,18247,A_NA_N1,99.79,1080,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125448_N8KIRZUG_v1,548096,541285,21242,A_NP,100.0,1182,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125448_N8KIRZUG_v1,548096,541285,17518,A_NS,97.1,1800,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125448_N8KIRZUG_v1,548096,541285,7314,A_PA,100.0,227,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125448_N8KIRZUG_v1,548096,541285,13575,A_PB1,100.0,395,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125448_N8KIRZUG_v1,548096,541285,16915,A_PB2,100.0,493,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125460_N8KIRZW4_v1,1014322,1004792,147037,A_HA_H1,99.82,7041,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a.1,5a.2a.1,D.3
+3004125460_N8KIRZW4_v1,1014322,1004792,157153,A_MP,100.0,12970,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125460_N8KIRZW4_v1,1014322,1004792,142101,A_NA_N1,99.79,7957,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125460_N8KIRZW4_v1,1014322,1004792,117443,A_NP,100.0,6500,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125460_N8KIRZW4_v1,1014322,1004792,120361,A_NS,97.1,11472,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125460_N8KIRZW4_v1,1014322,1004792,50415,A_PA,100.0,898,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125460_N8KIRZW4_v1,1014322,1004792,91732,A_PB1,100.0,3042,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125460_N8KIRZW4_v1,1014322,1004792,148276,A_PB2,100.0,3755,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125478_N8KIRZYM_v1,483938,475832,22320,A_HA_H3,99.82,1010,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004125478_N8KIRZYM_v1,483938,475832,38638,A_MP,100.0,3448,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125478_N8KIRZYM_v1,483938,475832,30204,A_NA_N2,100.0,1887,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125478_N8KIRZYM_v1,483938,475832,20043,A_NP,100.0,1188,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125478_N8KIRZYM_v1,483938,475832,18939,A_NS,97.1,1984,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125478_N8KIRZYM_v1,483938,475832,19491,A_PA,100.0,754,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125478_N8KIRZYM_v1,483938,475832,11957,A_PB1,100.0,443,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125478_N8KIRZYM_v1,483938,475832,23252,A_PB2,100.0,837,2,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125510_N8KIS032_v1,448242,441743,22925,A_HA_H1,99.82,1106,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a.1,5a.2a.1,D.3
+3004125510_N8KIS032_v1,448242,441743,38748,A_MP,100.0,3479,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125510_N8KIS032_v1,448242,441743,27388,A_NA_N1,99.79,1661,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125510_N8KIS032_v1,448242,441743,24451,A_NP,100.0,1424,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125510_N8KIS032_v1,448242,441743,29170,A_NS,97.1,3031,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125510_N8KIS032_v1,448242,441743,5781,A_PA,100.0,141,3,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125510_N8KIS032_v1,448242,441743,13131,A_PB1,100.0,344,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125510_N8KIS032_v1,448242,441743,21899,A_PB2,100.0,526,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125511_N8KIS037_v1,410460,405129,37,A_HA_H1,0.0,2,0,Less than 90% of reference covered;Median coverage < 100,N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004125511_N8KIS037_v1,410460,405129,393,A_NA_N1,14.01,25,0,Less than 90% of reference covered;Median coverage < 100,N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004125511_N8KIS037_v1,410460,405129,615,A_NP,94.32,37,0,Median coverage < 100,N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004125511_N8KIS037_v1,410460,405129,938,A_PB1,34.34,25,0,Less than 90% of reference covered;Median coverage < 100,N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004125532_N8KIS064_v1,947638,938387,133463,A_HA_H1,99.82,6471,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a.1,5a.2a.1,D.3
+3004125532_N8KIS064_v1,947638,938387,149104,A_MP,100.0,12503,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125532_N8KIS064_v1,947638,938387,123042,A_NA_N1,99.79,6904,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125532_N8KIS064_v1,947638,938387,104317,A_NP,100.0,5855,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125532_N8KIS064_v1,947638,938387,113486,A_NS,97.1,11075,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125532_N8KIS064_v1,947638,938387,72662,A_PA,100.0,2724,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125532_N8KIS064_v1,947638,938387,95892,A_PB1,100.0,3485,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125532_N8KIS064_v1,947638,938387,122254,A_PB2,100.0,4118,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125588_N8KIS0DW_v1,731144,723778,98516,A_HA_H3,99.82,4754,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004125588_N8KIS0DW_v1,731144,723778,119711,A_MP,100.0,9934,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125588_N8KIS0DW_v1,731144,723778,88314,A_NA_N2,100.0,5201,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125588_N8KIS0DW_v1,731144,723778,70233,A_NP,100.0,3974,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125588_N8KIS0DW_v1,731144,723778,33876,A_NS,97.1,3311,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125588_N8KIS0DW_v1,731144,723778,112528,A_PA,100.0,4138,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125588_N8KIS0DW_v1,731144,723778,76054,A_PB1,100.0,2823,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004125588_N8KIS0DW_v1,731144,723778,108518,A_PB2,100.0,4104,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166252_N8KIWD9O_v1,1463148,1447516,126703,A_HA_H3,99.82,5892,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166252_N8KIWD9O_v1,1463148,1447516,216737,A_MP,100.0,17597,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166252_N8KIWD9O_v1,1463148,1447516,169608,A_NA_N2,100.0,9776,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166252_N8KIWD9O_v1,1463148,1447516,110991,A_NP,100.0,6282,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166252_N8KIWD9O_v1,1463148,1447516,155092,A_NS,97.1,14518,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166252_N8KIWD9O_v1,1463148,1447516,162224,A_PA,100.0,5454,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166252_N8KIWD9O_v1,1463148,1447516,126873,A_PB1,100.0,4322,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166252_N8KIWD9O_v1,1463148,1447516,160505,A_PB2,100.0,5119,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166253_N8KIWD9T_v1,1618286,1602345,166663,A_HA_H3,99.82,7889,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166253_N8KIWD9T_v1,1618286,1602345,247713,A_MP,100.0,20525,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166253_N8KIWD9T_v1,1618286,1602345,185802,A_NA_N2,100.0,10931,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166253_N8KIWD9T_v1,1618286,1602345,143860,A_NP,100.0,8178,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166253_N8KIWD9T_v1,1618286,1602345,88559,A_NS,97.1,8593,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166253_N8KIWD9T_v1,1618286,1602345,214927,A_PA,100.0,5503,2,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166253_N8KIWD9T_v1,1618286,1602345,164564,A_PB1,100.0,3585,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166253_N8KIWD9T_v1,1618286,1602345,228371,A_PB2,100.0,3463,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166254_N8KIWD9Y_v1,1375188,1355948,40699,A_HA_H3,99.82,1984,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166254_N8KIWD9Y_v1,1375188,1355948,97840,A_MP,100.0,8523,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166254_N8KIWD9Y_v1,1375188,1355948,65696,A_NA_N2,100.0,4059,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166254_N8KIWD9Y_v1,1375188,1355948,46471,A_NP,100.0,2766,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166254_N8KIWD9Y_v1,1375188,1355948,45238,A_NS,97.1,4542,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166254_N8KIWD9Y_v1,1375188,1355948,69111,A_PA,100.0,2344,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166254_N8KIWD9Y_v1,1375188,1355948,44744,A_PB1,100.0,1389,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166254_N8KIWD9Y_v1,1375188,1355948,47434,A_PB2,100.0,1209,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166255_N8KIWDA3_v1,1838564,1819786,243298,A_HA_H3,99.82,11331,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166255_N8KIWDA3_v1,1838564,1819786,272652,A_MP,100.0,22236,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166255_N8KIWDA3_v1,1838564,1819786,222193,A_NA_N2,100.0,12687,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166255_N8KIWDA3_v1,1838564,1819786,182312,A_NP,100.0,10070,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166255_N8KIWDA3_v1,1838564,1819786,90115,A_NS,97.1,8506,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166255_N8KIWDA3_v1,1838564,1819786,226583,A_PA,100.0,7836,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166255_N8KIWDA3_v1,1838564,1819786,201271,A_PB1,100.0,5890,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166255_N8KIWDA3_v1,1838564,1819786,302026,A_PB2,100.0,8058,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166256_N8KIWDA8_v1,1425220,1411216,122480,A_HA_H3,99.82,5836,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166256_N8KIWDA8_v1,1425220,1411216,222212,A_MP,100.0,18925,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166256_N8KIWDA8_v1,1425220,1411216,158649,A_NA_N2,100.0,9413,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166256_N8KIWDA8_v1,1425220,1411216,129492,A_NP,100.0,7409,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166256_N8KIWDA8_v1,1425220,1411216,76002,A_NS,97.1,7536,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166256_N8KIWDA8_v1,1425220,1411216,122788,A_PA,100.0,4768,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166256_N8KIWDA8_v1,1425220,1411216,122199,A_PB1,100.0,4419,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166256_N8KIWDA8_v1,1425220,1411216,187414,A_PB2,100.0,5580,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166257_N8KIWDAD_v1,1640266,1621664,136136,A_HA_H3,99.82,6365,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166257_N8KIWDAD_v1,1640266,1621664,285349,A_MP,100.0,23461,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166257_N8KIWDAD_v1,1640266,1621664,159226,A_NA_N2,100.0,9392,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166257_N8KIWDAD_v1,1640266,1621664,154375,A_NP,100.0,8746,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166257_N8KIWDAD_v1,1640266,1621664,115586,A_NS,97.1,11146,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166257_N8KIWDAD_v1,1640266,1621664,161176,A_PA,100.0,5106,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166257_N8KIWDAD_v1,1640266,1621664,78249,A_PB1,100.0,2001,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166257_N8KIWDAD_v1,1640266,1621664,336355,A_PB2,100.0,5475,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166258_N8KIWDAI_v1,1490310,1471288,127110,A_HA_H3,99.82,6032,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166258_N8KIWDAI_v1,1490310,1471288,159628,A_MP,100.0,13505,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166258_N8KIWDAI_v1,1490310,1471288,81038,A_NA_N2,100.0,4909,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166258_N8KIWDAI_v1,1490310,1471288,117659,A_NP,100.0,6736,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166258_N8KIWDAI_v1,1490310,1471288,37920,A_NS,97.1,3767,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166258_N8KIWDAI_v1,1490310,1471288,109929,A_PA,100.0,4332,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166258_N8KIWDAI_v1,1490310,1471288,41403,A_PB1,100.0,1481,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166258_N8KIWDAI_v1,1490310,1471288,115140,A_PB2,100.0,4076,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166259_N8KIWDAN_v1,940030,930014,80106,A_HA_H3,99.82,3791,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166259_N8KIWDAN_v1,940030,930014,99620,A_MP,100.0,8289,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166259_N8KIWDAN_v1,940030,930014,71450,A_NA_N2,100.0,4289,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166259_N8KIWDAN_v1,940030,930014,52392,A_NP,100.0,2971,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166259_N8KIWDAN_v1,940030,930014,48240,A_NS,97.1,4653,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166259_N8KIWDAN_v1,940030,930014,66722,A_PA,100.0,2310,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166259_N8KIWDAN_v1,940030,930014,43049,A_PB1,100.0,1554,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166259_N8KIWDAN_v1,940030,930014,74397,A_PB2,100.0,2588,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166260_N8KIWDAS_v1,1780934,1763398,239303,A_HA_H3,99.82,10355,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166260_N8KIWDAS_v1,1780934,1763398,271357,A_MP,100.0,20461,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166260_N8KIWDAS_v1,1780934,1763398,219590,A_NA_N2,100.0,11947,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166260_N8KIWDAS_v1,1780934,1763398,178106,A_NP,100.0,9404,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166260_N8KIWDAS_v1,1780934,1763398,94616,A_NS,97.1,8456,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166260_N8KIWDAS_v1,1780934,1763398,209562,A_PA,100.0,7467,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166260_N8KIWDAS_v1,1780934,1763398,201180,A_PB1,100.0,6392,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166260_N8KIWDAS_v1,1780934,1763398,295548,A_PB2,100.0,6562,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166261_N8KIWDAX_v1,1481420,1466755,86690,A_HA_H3,99.82,4023,2,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166261_N8KIWDAX_v1,1481420,1466755,231713,A_MP,100.0,19647,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166261_N8KIWDAX_v1,1481420,1466755,143520,A_NA_N2,100.0,8705,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166261_N8KIWDAX_v1,1481420,1466755,82171,A_NP,100.0,4802,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166261_N8KIWDAX_v1,1481420,1466755,101863,A_NS,97.1,10019,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166261_N8KIWDAX_v1,1481420,1466755,107899,A_PA,100.0,2495,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166261_N8KIWDAX_v1,1481420,1466755,93786,A_PB1,100.0,392,8,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166261_N8KIWDAX_v1,1481420,1466755,168703,A_PB2,100.0,1717,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166262_N8KIWDB2_v1,1861650,1842468,250878,A_HA_H1,99.82,11683,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a.1,5a.2a.1,D.3
+3004166262_N8KIWDB2_v1,1861650,1842468,311912,A_MP,100.0,25276,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166262_N8KIWDB2_v1,1861650,1842468,247512,A_NA_N1,99.79,14058,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166262_N8KIWDB2_v1,1861650,1842468,247039,A_NP,100.0,13379,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166262_N8KIWDB2_v1,1861650,1842468,233624,A_NS,97.1,22414,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166262_N8KIWDB2_v1,1861650,1842468,98893,A_PA,100.0,3008,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166262_N8KIWDB2_v1,1861650,1842468,146772,A_PB1,100.0,4946,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166262_N8KIWDB2_v1,1861650,1842468,233030,A_PB2,100.0,6621,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166263_N8KIWDB7_v1,1552668,1534867,147902,A_HA_H1,99.82,7050,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a.1,5a.2a.1,D.3
+3004166263_N8KIWDB7_v1,1552668,1534867,239313,A_MP,100.0,20433,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166263_N8KIWDB7_v1,1552668,1534867,160228,A_NA_N1,99.79,9694,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166263_N8KIWDB7_v1,1552668,1534867,158507,A_NP,100.0,8901,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166263_N8KIWDB7_v1,1552668,1534867,186502,A_NS,97.1,18535,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166263_N8KIWDB7_v1,1552668,1534867,43070,A_PA,100.0,1710,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166263_N8KIWDB7_v1,1552668,1534867,91711,A_PB1,100.0,3355,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166263_N8KIWDB7_v1,1552668,1534867,163527,A_PB2,100.0,5805,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166264_N8KIWDBC_v1,0,0,0,Undetermined,0.0,0,0,Fail,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166265_N8KIWDBH_v1,1263902,1240209,260,B_HA,25.88,45,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166265_N8KIWDBH_v1,1263902,1240209,38,B_NA,0.0,3,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166265_N8KIWDBH_v1,1263902,1240209,907,B_NS,97.87,69,0,Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166265_N8KIWDBH_v1,1263902,1240209,120,B_PA,0.0,3,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166265_N8KIWDBH_v1,1263902,1240209,344,B_PB1,24.92,37,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166266_N8KIWDBM_v1,1448344,1422096,4736,B_HA,99.49,237,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,V1A.3a.2,,C.5.6
+3004166266_N8KIWDBM_v1,1448344,1422096,989,B_MP,87.97,79,1,Less than 90% of reference covered;Median coverage < 100,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166266_N8KIWDBM_v1,1448344,1422096,42,B_NA,0.0,3,0,Less than 90% of reference covered;Median coverage < 100,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166266_N8KIWDBM_v1,1448344,1422096,1215,B_NP,100.0,59,0,Median coverage < 100,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166266_N8KIWDBM_v1,1448344,1422096,2815,B_NS,99.32,229,2,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166266_N8KIWDBM_v1,1448344,1422096,85,B_PA,0.0,3,0,Less than 90% of reference covered;Median coverage < 100,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166266_N8KIWDBM_v1,1448344,1422096,356,B_PB1,0.0,11,0,Less than 90% of reference covered;Median coverage < 100,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166266_N8KIWDBM_v1,1448344,1422096,1728,B_PB2,69.04,74,1,Less than 90% of reference covered;Median coverage < 100,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166267_N8KIWDBR_v1,0,0,0,Undetermined,0.0,0,0,Fail,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166268_N8KIWDBW_v1,930768,917542,64103,B_HA,99.49,2764,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,V1A.3a.2,,C.5.6
+3004166268_N8KIWDBW_v1,930768,917542,27715,B_MP,94.47,2104,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166268_N8KIWDBW_v1,930768,917542,18851,B_NA,100.0,977,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166268_N8KIWDBW_v1,930768,917542,31082,B_NP,100.0,1413,2,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166268_N8KIWDBW_v1,930768,917542,54736,B_NS,99.32,4258,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166268_N8KIWDBW_v1,930768,917542,28610,B_PA,100.0,1041,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166268_N8KIWDBW_v1,930768,917542,33736,B_PB1,99.82,1009,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166268_N8KIWDBW_v1,930768,917542,36503,B_PB2,100.0,1070,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166269_N8KIWDC1_v1,1401510,1384073,189304,B_HA,99.49,7772,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,V1A.3a.2,,C.5.6
+3004166269_N8KIWDC1_v1,1401510,1384073,86456,B_MP,94.47,7110,2,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166269_N8KIWDC1_v1,1401510,1384073,76792,B_NA,100.0,4340,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166269_N8KIWDC1_v1,1401510,1384073,104309,B_NP,100.0,5044,2,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166269_N8KIWDC1_v1,1401510,1384073,105513,B_NS,99.32,8596,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166269_N8KIWDC1_v1,1401510,1384073,93824,B_PA,100.0,3608,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166269_N8KIWDC1_v1,1401510,1384073,121294,B_PB1,99.82,3700,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166269_N8KIWDC1_v1,1401510,1384073,118980,B_PB2,100.0,3685,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166271_N8KIWDCB_v1,0,0,0,Undetermined,0.0,0,0,Fail,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166272_N8KIWDCG_v1,431178,421877,64,B_HA,0.0,3,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166273_N8KIWDCL_v1,1413602,1386071,9159,B_HA,99.49,407,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,V1A.3a.2,,C.5.6
+3004166273_N8KIWDCL_v1,1413602,1386071,4477,B_MP,94.47,283,3,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166273_N8KIWDCL_v1,1413602,1386071,13274,B_NA,100.0,427,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166273_N8KIWDCL_v1,1413602,1386071,17506,B_NP,100.0,809,2,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166273_N8KIWDCL_v1,1413602,1386071,21490,B_NS,99.32,1655,2,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166273_N8KIWDCL_v1,1413602,1386071,981,B_PA,90.14,40,0,Median coverage < 100,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166273_N8KIWDCL_v1,1413602,1386071,2848,B_PB1,99.82,90,1,Median coverage < 100,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166273_N8KIWDCL_v1,1413602,1386071,762,B_PB2,31.52,3,0,Less than 90% of reference covered;Median coverage < 100,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166274_N8KIWDCQ_v1,0,0,0,Undetermined,0.0,0,0,Fail,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166275_N8KIWDCV_v1,2162944,2144673,253933,A_HA_H1,99.82,11847,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a,5a.2a,C.1.9
+3004166275_N8KIWDCV_v1,2162944,2144673,434578,A_MP,100.0,34555,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166275_N8KIWDCV_v1,2162944,2144673,296497,A_NA_N1,99.79,16154,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166275_N8KIWDCV_v1,2162944,2144673,250723,A_NP,100.0,13474,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166275_N8KIWDCV_v1,2162944,2144673,360770,A_NS,97.1,33173,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166275_N8KIWDCV_v1,2162944,2144673,69323,A_PA,100.0,2342,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166275_N8KIWDCV_v1,2162944,2144673,150375,A_PB1,100.0,4935,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166275_N8KIWDCV_v1,2162944,2144673,266588,A_PB2,100.0,4900,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166276_N8KIWDD0_v1,0,0,0,Undetermined,0.0,0,0,Fail,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166277_N8KIWDD5_v1,27304,27063,4246,B_HA,99.49,156,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,V1A.3a.2,,C.5.6
+3004166277_N8KIWDD5_v1,27304,27063,3515,B_MP,94.47,254,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166277_N8KIWDD5_v1,27304,27063,3534,B_NA,100.0,186,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166277_N8KIWDD5_v1,27304,27063,4392,B_NP,100.0,207,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166277_N8KIWDD5_v1,27304,27063,2051,B_NS,99.32,156,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166277_N8KIWDD5_v1,27304,27063,2164,B_PA,100.0,75,0,Median coverage < 100,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166277_N8KIWDD5_v1,27304,27063,2903,B_PB1,99.82,92,0,Median coverage < 100,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166277_N8KIWDD5_v1,27304,27063,2362,B_PB2,100.0,85,0,Median coverage < 100,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166278_N8KIWDDA_v1,1873486,1855616,272642,A_HA_H1,99.82,12700,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a,5a.2a,C.1.9
+3004166278_N8KIWDDA_v1,1873486,1855616,360723,A_MP,100.0,28516,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166278_N8KIWDDA_v1,1873486,1855616,252542,A_NA_N1,99.79,14016,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166278_N8KIWDDA_v1,1873486,1855616,222256,A_NP,100.0,12065,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166278_N8KIWDDA_v1,1873486,1855616,272087,A_NS,97.1,24934,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166278_N8KIWDDA_v1,1873486,1855616,55554,A_PA,100.0,2172,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166278_N8KIWDDA_v1,1873486,1855616,158226,A_PB1,100.0,5485,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166278_N8KIWDDA_v1,1873486,1855616,211035,A_PB2,100.0,7264,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166279_N8KIWDDF_v1,500,498,34,B_HA,0.0,1,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166279_N8KIWDDF_v1,500,498,28,B_MP,0.0,2,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166279_N8KIWDDF_v1,500,498,24,B_NA,0.0,1,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166279_N8KIWDDF_v1,500,498,33,B_NP,0.0,1,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166279_N8KIWDDF_v1,500,498,32,B_NS,0.0,2,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166279_N8KIWDDF_v1,500,498,62,B_PA,0.0,3,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166279_N8KIWDDF_v1,500,498,49,B_PB1,0.0,1,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166279_N8KIWDDF_v1,500,498,44,B_PB2,0.0,2,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166280_N8KIWDDK_v1,1915042,1896279,242926,A_HA_H1,99.82,11201,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a,5a.2a,C.1.9
+3004166280_N8KIWDDK_v1,1915042,1896279,355397,A_MP,100.0,27913,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166280_N8KIWDDK_v1,1915042,1896279,254051,A_NA_N1,99.79,13954,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166280_N8KIWDDK_v1,1915042,1896279,237915,A_NP,100.0,12842,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166280_N8KIWDDK_v1,1915042,1896279,307624,A_NS,97.1,28064,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166280_N8KIWDDK_v1,1915042,1896279,93244,A_PA,100.0,3419,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166280_N8KIWDDK_v1,1915042,1896279,116991,A_PB1,100.0,3699,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166280_N8KIWDDK_v1,1915042,1896279,177370,A_PB2,100.0,5689,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166281_N8KIWDDP_v1,1501090,1483529,256348,B_HA,99.49,11185,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,V1A.3a.2,,C.5.6
+3004166281_N8KIWDDP_v1,1501090,1483529,146933,B_MP,94.47,11371,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166281_N8KIWDDP_v1,1501090,1483529,88123,B_NA,100.0,4744,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166281_N8KIWDDP_v1,1501090,1483529,157381,B_NP,100.0,7574,2,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166281_N8KIWDDP_v1,1501090,1483529,166549,B_NS,99.32,13392,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166281_N8KIWDDP_v1,1501090,1483529,82588,B_PA,100.0,3170,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166281_N8KIWDDP_v1,1501090,1483529,133592,B_PB1,99.82,4269,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166281_N8KIWDDP_v1,1501090,1483529,131395,B_PB2,100.0,5287,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166282_N8KIWDDU_v1,1292,1280,118,A_HA_H1,0.0,5,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166282_N8KIWDDU_v1,1292,1280,263,A_MP,3.67,18,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166282_N8KIWDDU_v1,1292,1280,134,A_NA_N1,0.0,6,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166282_N8KIWDDU_v1,1292,1280,169,A_NP,0.0,9,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166282_N8KIWDDU_v1,1292,1280,224,A_NS,0.0,18,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166282_N8KIWDDU_v1,1292,1280,71,A_PA,0.0,4,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166282_N8KIWDDU_v1,1292,1280,100,A_PB1,0.0,1,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166282_N8KIWDDU_v1,1292,1280,129,A_PB2,0.0,3,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166283_N8KIWDDZ_v1,1644380,1629325,326475,B_HA,99.49,12286,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,V1A.3a.2,,C.5.6
+3004166283_N8KIWDDZ_v1,1644380,1629325,115701,B_MP,94.47,8044,2,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166283_N8KIWDDZ_v1,1644380,1629325,165333,B_NA,100.0,8400,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166283_N8KIWDDZ_v1,1644380,1629325,211163,B_NP,100.0,9576,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166283_N8KIWDDZ_v1,1644380,1629325,381535,B_NS,99.32,28382,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166283_N8KIWDDZ_v1,1644380,1629325,52514,B_PA,100.0,1787,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166283_N8KIWDDZ_v1,1644380,1629325,107645,B_PB1,99.82,2196,2,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166283_N8KIWDDZ_v1,1644380,1629325,124788,B_PB2,100.0,4498,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166284_N8KIWDE4_v1,0,0,0,Undetermined,0.0,0,0,Fail,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166285_N8KIWDE9_v1,0,0,0,Undetermined,0.0,0,0,Fail,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166286_N8KIWDEE_v1,1310100,1296611,170640,A_HA_H1,99.82,7828,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a,5a.2a,C.1.9
+3004166286_N8KIWDEE_v1,1310100,1296611,242793,A_MP,100.0,19003,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166286_N8KIWDEE_v1,1310100,1296611,176762,A_NA_N1,99.79,9689,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166286_N8KIWDEE_v1,1310100,1296611,142759,A_NP,100.0,7654,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166286_N8KIWDEE_v1,1310100,1296611,177152,A_NS,97.1,16222,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166286_N8KIWDEE_v1,1310100,1296611,67104,A_PA,100.0,1056,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166286_N8KIWDEE_v1,1310100,1296611,109759,A_PB1,100.0,3371,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166286_N8KIWDEE_v1,1310100,1296611,167167,A_PB2,100.0,4113,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166287_N8KIWDEJ_v1,1302934,1289501,202082,B_HA,99.49,7724,1,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,V1A.3a.2,,C.5.6
+3004166287_N8KIWDEJ_v1,1302934,1289501,164052,B_MP,94.47,11408,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166287_N8KIWDEJ_v1,1302934,1289501,159870,B_NA,100.0,7959,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166287_N8KIWDEJ_v1,1302934,1289501,200145,B_NP,100.0,8891,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166287_N8KIWDEJ_v1,1302934,1289501,74307,B_NS,99.32,5841,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166287_N8KIWDEJ_v1,1302934,1289501,91814,B_PA,100.0,3209,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166287_N8KIWDEJ_v1,1302934,1289501,166946,B_PB1,99.82,4859,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166287_N8KIWDEJ_v1,1302934,1289501,133799,B_PB2,100.0,4668,0,Pass,BVIC,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166288_N8KIWDEO_v1,0,0,0,Undetermined,0.0,0,0,Fail,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166289_N8KIWDET_v1,2241368,2218597,250715,A_HA_H1,99.82,11885,2,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a.1,5a.2a.1,D.3
+3004166289_N8KIWDET_v1,2241368,2218597,376599,A_MP,100.0,30308,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166289_N8KIWDET_v1,2241368,2218597,287717,A_NA_N1,99.79,15555,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166289_N8KIWDET_v1,2241368,2218597,235745,A_NP,100.0,12850,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166289_N8KIWDET_v1,2241368,2218597,311950,A_NS,97.1,28774,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166289_N8KIWDET_v1,2241368,2218597,192000,A_PA,100.0,4729,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166289_N8KIWDET_v1,2241368,2218597,172905,A_PB1,100.0,3671,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166289_N8KIWDET_v1,2241368,2218597,323245,A_PB2,100.0,4350,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166290_N8KIWDEY_v1,7238,7182,867,B_HA,38.62,22,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166290_N8KIWDEY_v1,7238,7182,843,B_MP,73.13,38,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166290_N8KIWDEY_v1,7238,7182,881,B_NA,46.95,28,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166290_N8KIWDEY_v1,7238,7182,806,B_NP,22.76,24,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166290_N8KIWDEY_v1,7238,7182,277,B_NS,0.0,16,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166290_N8KIWDEY_v1,7238,7182,777,B_PA,12.56,18,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166290_N8KIWDEY_v1,7238,7182,1039,B_PB1,31.55,18,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166290_N8KIWDEY_v1,7238,7182,608,B_PB2,4.97,12,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166291_N8KIWDF3_v1,0,0,0,Undetermined,0.0,0,0,Fail,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166292_N8KIWDF8_v1,1475152,1460609,215454,A_HA_H1,99.82,9959,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a,5a.2a,C.1.9
+3004166292_N8KIWDF8_v1,1475152,1460609,274502,A_MP,100.0,21398,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166292_N8KIWDF8_v1,1475152,1460609,202625,A_NA_N1,99.79,11233,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166292_N8KIWDF8_v1,1475152,1460609,171339,A_NP,100.0,9181,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166292_N8KIWDF8_v1,1475152,1460609,218563,A_NS,97.1,19609,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166292_N8KIWDF8_v1,1475152,1460609,53048,A_PA,100.0,1938,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166292_N8KIWDF8_v1,1475152,1460609,116597,A_PB1,100.0,3451,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166292_N8KIWDF8_v1,1475152,1460609,166582,A_PB2,100.0,5353,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166293_N8KIWDFD_v1,1756052,1741773,249415,A_HA_H1,99.82,11552,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a,5a.2a,C.1.9
+3004166293_N8KIWDFD_v1,1756052,1741773,396791,A_MP,100.0,30881,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166293_N8KIWDFD_v1,1756052,1741773,217119,A_NA_N1,99.79,12109,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166293_N8KIWDFD_v1,1756052,1741773,233563,A_NP,100.0,12228,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166293_N8KIWDFD_v1,1756052,1741773,322155,A_NS,97.1,29234,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166293_N8KIWDFD_v1,1756052,1741773,29781,A_PA,100.0,1043,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166293_N8KIWDFD_v1,1756052,1741773,104591,A_PB1,100.0,3500,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166293_N8KIWDFD_v1,1756052,1741773,129100,A_PB2,100.0,4255,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166294_N8KIWDFI_v1,2166686,2144553,241555,A_HA_H3,99.82,10972,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166294_N8KIWDFI_v1,2166686,2144553,342376,A_MP,100.0,27129,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166294_N8KIWDFI_v1,2166686,2144553,222154,A_NA_N2,100.0,12542,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166294_N8KIWDFI_v1,2166686,2144553,214257,A_NP,100.0,11732,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166294_N8KIWDFI_v1,2166686,2144553,108165,A_NS,97.1,10247,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166294_N8KIWDFI_v1,2166686,2144553,272503,A_PA,100.0,7839,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166294_N8KIWDFI_v1,2166686,2144553,212033,A_PB1,100.0,6248,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166294_N8KIWDFI_v1,2166686,2144553,332957,A_PB2,100.0,7069,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166295_N8KIWDFN_v1,1640754,1624701,183611,A_HA_H3,99.82,8170,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166295_N8KIWDFN_v1,1640754,1624701,284947,A_MP,100.0,22471,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166295_N8KIWDFN_v1,1640754,1624701,225988,A_NA_N2,100.0,11506,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166295_N8KIWDFN_v1,1640754,1624701,215661,A_NP,100.0,11512,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166295_N8KIWDFN_v1,1640754,1624701,93171,A_NS,97.1,8333,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166295_N8KIWDFN_v1,1640754,1624701,242091,A_PA,100.0,5691,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166295_N8KIWDFN_v1,1640754,1624701,125984,A_PB1,100.0,3578,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166295_N8KIWDFN_v1,1640754,1624701,193521,A_PB2,100.0,5861,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166296_N8KIWDFS_v1,2278,2269,342,A_HA_H3,0.0,13,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166296_N8KIWDFS_v1,2278,2269,408,A_MP,18.94,25,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166296_N8KIWDFS_v1,2278,2269,261,A_NA_N2,0.0,12,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166296_N8KIWDFS_v1,2278,2269,243,A_NP,0.0,12,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166296_N8KIWDFS_v1,2278,2269,156,A_NS,0.0,8,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166296_N8KIWDFS_v1,2278,2269,267,A_PA,0.0,7,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166296_N8KIWDFS_v1,2278,2269,186,A_PB1,0.0,5,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166296_N8KIWDFS_v1,2278,2269,292,A_PB2,0.0,7,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166297_N8KIWDFX_v1,486,483,60,A_HA_H3,0.0,2,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166297_N8KIWDFX_v1,486,483,90,A_MP,0.0,5,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166297_N8KIWDFX_v1,486,483,58,A_NA_N2,0.0,2,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166297_N8KIWDFX_v1,486,483,41,A_NP,0.0,3,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166297_N8KIWDFX_v1,486,483,58,A_PA,0.0,2,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166297_N8KIWDFX_v1,486,483,42,A_PB1,0.0,1,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166297_N8KIWDFX_v1,486,483,34,A_PB2,0.0,2,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166298_N8KIWDG2_v1,1783424,1771977,224099,A_HA_H3,99.82,10371,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166298_N8KIWDG2_v1,1783424,1771977,287288,A_MP,100.0,23126,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166298_N8KIWDG2_v1,1783424,1771977,199927,A_NA_N2,100.0,11577,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166298_N8KIWDG2_v1,1783424,1771977,241497,A_NP,100.0,13052,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166298_N8KIWDG2_v1,1783424,1771977,93591,A_NS,97.1,8699,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166298_N8KIWDG2_v1,1783424,1771977,224666,A_PA,100.0,8431,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166298_N8KIWDG2_v1,1783424,1771977,182914,A_PB1,100.0,6168,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166298_N8KIWDG2_v1,1783424,1771977,259678,A_PB2,100.0,9082,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166299_N8KIWDG7_v1,184876,183220,21411,A_HA_H3,99.82,559,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166299_N8KIWDG7_v1,184876,183220,28512,A_MP,100.0,1310,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166299_N8KIWDG7_v1,184876,183220,22402,A_NA_N2,100.0,669,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166299_N8KIWDG7_v1,184876,183220,17364,A_NP,100.0,568,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166299_N8KIWDG7_v1,184876,183220,8703,A_NS,97.1,464,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166299_N8KIWDG7_v1,184876,183220,24967,A_PA,100.0,350,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166299_N8KIWDG7_v1,184876,183220,17652,A_PB1,100.0,266,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166299_N8KIWDG7_v1,184876,183220,23565,A_PB2,100.0,418,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166300_N8KIWDGC_v1,2072474,2053918,294197,A_HA_H3,99.82,13396,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166300_N8KIWDGC_v1,2072474,2053918,353811,A_MP,100.0,27761,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166300_N8KIWDGC_v1,2072474,2053918,234870,A_NA_N2,100.0,13386,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166300_N8KIWDGC_v1,2072474,2053918,238322,A_NP,100.0,12767,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166300_N8KIWDGC_v1,2072474,2053918,126111,A_NS,97.1,11574,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166300_N8KIWDGC_v1,2072474,2053918,254526,A_PA,100.0,9117,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166300_N8KIWDGC_v1,2072474,2053918,206204,A_PB1,100.0,7229,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166300_N8KIWDGC_v1,2072474,2053918,295733,A_PB2,100.0,10687,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166301_N8KIWDGH_v1,2176528,2155439,189742,A_HA_H3,99.82,8590,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166301_N8KIWDGH_v1,2176528,2155439,375986,A_MP,100.0,28934,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166301_N8KIWDGH_v1,2176528,2155439,218000,A_NA_N2,100.0,12061,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166301_N8KIWDGH_v1,2176528,2155439,241398,A_NP,100.0,12859,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166301_N8KIWDGH_v1,2176528,2155439,181808,A_NS,97.1,16365,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166301_N8KIWDGH_v1,2176528,2155439,367494,A_PA,100.0,5740,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166301_N8KIWDGH_v1,2176528,2155439,172217,A_PB1,100.0,4592,3,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166301_N8KIWDGH_v1,2176528,2155439,311695,A_PB2,100.0,5049,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166302_N8KIWDGM_v1,192,192,22,A_MP,0.0,1,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166302_N8KIWDGM_v1,192,192,20,A_NA_N2,0.0,1,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166302_N8KIWDGM_v1,192,192,22,A_NP,0.0,2,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166302_N8KIWDGM_v1,192,192,28,A_PB2,0.0,1,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166303_N8KIWDGR_v1,35762,35456,4798,A_HA_H3,99.82,215,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,3C.2a1b.2a.2a.3a.1,2a.3a.1,J.2
+3004166303_N8KIWDGR_v1,35762,35456,6506,A_MP,100.0,523,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166303_N8KIWDGR_v1,35762,35456,4339,A_NA_N2,100.0,243,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166303_N8KIWDGR_v1,35762,35456,4604,A_NP,100.0,248,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166303_N8KIWDGR_v1,35762,35456,2333,A_NS,97.1,217,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166303_N8KIWDGR_v1,35762,35456,4259,A_PA,100.0,153,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166303_N8KIWDGR_v1,35762,35456,3265,A_PB1,100.0,116,1,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166303_N8KIWDGR_v1,35762,35456,4512,A_PB2,100.0,149,0,Pass,H3N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166335_N8KIWDL7_v1,34690,34390,5042,A_HA_H1,99.82,173,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a.1,5a.2a.1,D.3
+3004166335_N8KIWDL7_v1,34690,34390,4728,A_MP,100.0,288,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166335_N8KIWDL7_v1,34690,34390,4396,A_NA_N1,99.79,186,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166335_N8KIWDL7_v1,34690,34390,3519,A_NP,100.0,143,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166335_N8KIWDL7_v1,34690,34390,3653,A_NS,97.1,262,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166335_N8KIWDL7_v1,34690,34390,3319,A_PA,92.42,55,0,Median coverage < 100,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166335_N8KIWDL7_v1,34690,34390,2191,A_PB1,87.47,44,0,Less than 90% of reference covered;Median coverage < 100,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166335_N8KIWDL7_v1,34690,34390,5435,A_PB2,100.0,109,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3004166336_N8KIWDLC_v1,1224,1215,168,A_HA_H1,0.0,6,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166336_N8KIWDLC_v1,1224,1215,224,A_MP,0.0,16,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166336_N8KIWDLC_v1,1224,1215,134,A_NA_N1,0.0,5,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166336_N8KIWDLC_v1,1224,1215,121,A_NP,0.0,5,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166336_N8KIWDLC_v1,1224,1215,150,A_NS,0.0,12,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166336_N8KIWDLC_v1,1224,1215,96,A_PA,0.0,3,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166336_N8KIWDLC_v1,1224,1215,97,A_PB1,0.0,3,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3004166336_N8KIWDLC_v1,1224,1215,163,A_PB2,0.0,4,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470428_N90M7F9J_v1,794082,783247,70648,A_HA_H9,100.0,3353,138,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470428_N90M7F9J_v1,794082,783247,198882,A_MP,100.0,17343,56,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470428_N90M7F9J_v1,794082,783247,239397,A_NA_N2,99.36,15587,111,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470428_N90M7F9J_v1,794082,783247,45042,A_NP,100.0,2593,131,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470428_N90M7F9J_v1,794082,783247,55619,A_NS,97.1,5622,48,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470428_N90M7F9J_v1,794082,783247,47402,A_PA,100.0,1669,34,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470428_N90M7F9J_v1,794082,783247,34582,A_PB1,100.0,1302,116,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470428_N90M7F9J_v1,794082,783247,70850,A_PB2,100.0,2340,152,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470429_N90M7F9K_v1,608298,600463,84154,A_HA_H9,100.0,4073,137,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470429_N90M7F9K_v1,608298,600463,201731,A_MP,100.0,17958,57,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470429_N90M7F9K_v1,608298,600463,120013,A_NA_N2,99.36,7755,112,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470429_N90M7F9K_v1,608298,600463,25299,A_NP,100.0,1452,130,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470429_N90M7F9K_v1,608298,600463,53451,A_NS,97.1,5298,43,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470429_N90M7F9K_v1,608298,600463,22273,A_PA,100.0,793,40,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470429_N90M7F9K_v1,608298,600463,18477,A_PB1,100.0,631,7,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470429_N90M7F9K_v1,608298,600463,33321,A_PB2,100.0,753,6,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470430_N90M7F9L_v1,623642,615359,84646,A_HA_H9,100.0,4484,7,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470430_N90M7F9L_v1,623642,615359,96289,A_MP,100.0,8122,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470430_N90M7F9L_v1,623642,615359,73610,A_NA_N2,99.36,4541,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470430_N90M7F9L_v1,623642,615359,85783,A_NP,100.0,4971,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470430_N90M7F9L_v1,623642,615359,44771,A_NS,97.1,4539,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470430_N90M7F9L_v1,623642,615359,40311,A_PA,100.0,349,37,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470430_N90M7F9L_v1,623642,615359,62322,A_PB1,100.0,2105,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470430_N90M7F9L_v1,623642,615359,112800,A_PB2,100.0,3991,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470431_N90M7F9M_v1,656946,645895,76352,A_HA_H9,100.0,3692,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470431_N90M7F9M_v1,656946,645895,125842,A_MP,100.0,10699,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470431_N90M7F9M_v1,656946,645895,92777,A_NA_N2,99.36,5871,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470431_N90M7F9M_v1,656946,645895,60919,A_NP,100.0,3485,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470431_N90M7F9M_v1,656946,645895,72108,A_NS,97.1,7235,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470431_N90M7F9M_v1,656946,645895,60782,A_PA,100.0,2407,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470431_N90M7F9M_v1,656946,645895,55171,A_PB1,100.0,2058,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470431_N90M7F9M_v1,656946,645895,76620,A_PB2,100.0,2628,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470432_N90M7F9N_v1,1219016,1201107,120410,A_HA_H9,100.0,5627,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470432_N90M7F9N_v1,1219016,1201107,275358,A_MP,100.0,23942,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470432_N90M7F9N_v1,1219016,1201107,155393,A_NA_N2,99.36,10015,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470432_N90M7F9N_v1,1219016,1201107,116542,A_NP,100.0,6896,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470432_N90M7F9N_v1,1219016,1201107,155261,A_NS,97.1,16135,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470432_N90M7F9N_v1,1219016,1201107,98441,A_PA,100.0,3975,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470432_N90M7F9N_v1,1219016,1201107,84668,A_PB1,100.0,3125,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470432_N90M7F9N_v1,1219016,1201107,134065,A_PB2,100.0,4239,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470433_N90M7F9O_v1,1259534,1246170,390713,A_HA_H9,100.0,20581,135,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470433_N90M7F9O_v1,1259534,1246170,165862,A_MP,100.0,14254,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470433_N90M7F9O_v1,1259534,1246170,129622,A_NA_N2,99.36,8094,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470433_N90M7F9O_v1,1259534,1246170,71240,A_NP,100.0,4101,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470433_N90M7F9O_v1,1259534,1246170,107653,A_NS,97.1,10981,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470433_N90M7F9O_v1,1259534,1246170,108670,A_PA,100.0,4351,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470433_N90M7F9O_v1,1259534,1246170,98718,A_PB1,100.0,3677,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470433_N90M7F9O_v1,1259534,1246170,145159,A_PB2,100.0,5580,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470434_N90M7F9P_v1,1115160,1102919,48453,A_HA_H5,99.82,1452,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470434_N90M7F9P_v1,1115160,1102919,207973,A_MP,100.0,18357,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470434_N90M7F9P_v1,1115160,1102919,113557,A_NA_N1,95.54,5841,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470434_N90M7F9P_v1,1115160,1102919,163945,A_NP,100.0,9545,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470434_N90M7F9P_v1,1115160,1102919,212930,A_NS,97.1,22063,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470434_N90M7F9P_v1,1115160,1102919,72268,A_PA,100.0,2985,2,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470434_N90M7F9P_v1,1115160,1102919,69567,A_PB1,100.0,1771,1,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470434_N90M7F9P_v1,1115160,1102919,100268,A_PB2,100.0,3542,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470435_N90M7F9Q_v1,102434,101477,379,A_MP,35.13,27,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470435_N90M7F9Q_v1,102434,101477,64,A_PB1,0.0,5,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470435_N90M7F9Q_v1,102434,101477,591,A_PB2,11.71,150,0,Less than 90% of reference covered,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470436_N90M7F9R_v1,718192,708860,32204,A_HA_H9,100.0,1035,10,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470436_N90M7F9R_v1,718192,708860,202790,A_MP,100.0,17003,59,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470436_N90M7F9R_v1,718192,708860,95866,A_NA_N2,99.36,6276,114,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470436_N90M7F9R_v1,718192,708860,55804,A_NP,100.0,3225,21,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470436_N90M7F9R_v1,718192,708860,130718,A_NS,97.1,13996,44,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470436_N90M7F9R_v1,718192,708860,54525,A_PA,100.0,1420,161,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470436_N90M7F9R_v1,718192,708860,63405,A_PB1,100.0,1514,185,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470436_N90M7F9R_v1,718192,708860,22229,A_PB2,100.0,441,12,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470437_N90M7F9S_v1,653270,644267,78333,A_HA_H9,100.0,3900,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470437_N90M7F9S_v1,653270,644267,115892,A_MP,100.0,9571,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470437_N90M7F9S_v1,653270,644267,82600,A_NA_N2,99.36,5058,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470437_N90M7F9S_v1,653270,644267,82245,A_NP,100.0,4688,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470437_N90M7F9S_v1,653270,644267,70088,A_NS,97.1,6932,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470437_N90M7F9S_v1,653270,644267,25936,A_PA,88.75,172,2,Less than 90% of reference covered,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470437_N90M7F9S_v1,653270,644267,54200,A_PB1,100.0,1946,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470437_N90M7F9S_v1,653270,644267,111521,A_PB2,100.0,4135,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470438_N90M7F9T_v1,860230,849334,97229,A_HA_H9,100.0,4986,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470438_N90M7F9T_v1,860230,849334,132444,A_MP,100.0,11188,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470438_N90M7F9T_v1,860230,849334,106513,A_NA_N2,99.36,6529,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470438_N90M7F9T_v1,860230,849334,113404,A_NP,100.0,6437,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470438_N90M7F9T_v1,860230,849334,64737,A_NS,97.1,6490,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470438_N90M7F9T_v1,860230,849334,48510,A_PA,100.0,411,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470438_N90M7F9T_v1,860230,849334,74298,A_PB1,100.0,2640,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470438_N90M7F9T_v1,860230,849334,148944,A_PB2,100.0,5544,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470439_N90M7F9U_v1,992590,980066,89824,A_HA_H9,100.0,4469,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470439_N90M7F9U_v1,992590,980066,180324,A_MP,100.0,15554,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470439_N90M7F9U_v1,992590,980066,102041,A_NA_N2,99.36,6479,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470439_N90M7F9U_v1,992590,980066,53790,A_NP,100.0,3196,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470439_N90M7F9U_v1,992590,980066,100463,A_NS,97.1,10159,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470439_N90M7F9U_v1,992590,980066,68874,A_PA,100.0,2714,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470439_N90M7F9U_v1,992590,980066,55658,A_PB1,100.0,2102,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470439_N90M7F9U_v1,992590,980066,94446,A_PB2,100.0,3344,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470440_N90M7F9V_v1,906062,896590,67736,A_HA_H9,100.0,3369,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470440_N90M7F9V_v1,906062,896590,199264,A_MP,100.0,16883,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470440_N90M7F9V_v1,906062,896590,101023,A_NA_N2,99.36,6409,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470440_N90M7F9V_v1,906062,896590,119220,A_NP,100.0,6978,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470440_N90M7F9V_v1,906062,896590,129496,A_NS,97.1,13122,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470440_N90M7F9V_v1,906062,896590,68861,A_PA,97.77,263,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470440_N90M7F9V_v1,906062,896590,55331,A_PB1,100.0,1690,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470440_N90M7F9V_v1,906062,896590,131338,A_PB2,100.0,4109,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470441_N90M7F9W_v1,1606098,1582587,131372,A_HA_H9,100.0,5635,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470441_N90M7F9W_v1,1606098,1582587,385594,A_MP,100.0,32828,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470441_N90M7F9W_v1,1606098,1582587,203626,A_NA_N2,99.36,12825,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470441_N90M7F9W_v1,1606098,1582587,232263,A_NP,100.0,13408,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470441_N90M7F9W_v1,1606098,1582587,214137,A_NS,97.1,22078,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470441_N90M7F9W_v1,1606098,1582587,144727,A_PA,100.0,468,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470441_N90M7F9W_v1,1606098,1582587,20108,A_PB1,100.0,155,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470441_N90M7F9W_v1,1606098,1582587,157467,A_PB2,100.0,3994,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470442_N90M7F9X_v1,1212222,1199688,83447,A_HA_H9,100.0,1615,7,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470442_N90M7F9X_v1,1212222,1199688,334822,A_MP,100.0,25629,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470442_N90M7F9X_v1,1212222,1199688,102671,A_NA_N2,99.36,6498,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470442_N90M7F9X_v1,1212222,1199688,142779,A_NP,100.0,8071,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470442_N90M7F9X_v1,1212222,1199688,206734,A_NS,97.1,21204,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470442_N90M7F9X_v1,1212222,1199688,81314,A_PA,100.0,766,5,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470442_N90M7F9X_v1,1212222,1199688,42756,A_PB1,100.0,946,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470442_N90M7F9X_v1,1212222,1199688,39871,A_PB2,100.0,588,5,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470443_N90M7F9Y_v1,621718,614694,44033,A_HA_H9,100.0,1393,6,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470443_N90M7F9Y_v1,621718,614694,153162,A_MP,100.0,12391,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470443_N90M7F9Y_v1,621718,614694,71498,A_NA_N2,99.36,4418,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470443_N90M7F9Y_v1,621718,614694,91275,A_NP,100.0,5252,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470443_N90M7F9Y_v1,621718,614694,89010,A_NS,97.1,9220,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470443_N90M7F9Y_v1,621718,614694,55205,A_PA,100.0,673,5,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470443_N90M7F9Y_v1,621718,614694,47862,A_PB1,100.97,781,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470443_N90M7F9Y_v1,621718,614694,41826,A_PB2,100.0,803,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470444_N90M7F9Z_v1,656000,648566,43473,A_HA_H9,100.0,1098,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470444_N90M7F9Z_v1,656000,648566,181853,A_MP,100.0,13423,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470444_N90M7F9Z_v1,656000,648566,59775,A_NA_N2,99.36,3604,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470444_N90M7F9Z_v1,656000,648566,68053,A_NP,100.0,3836,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470444_N90M7F9Z_v1,656000,648566,108353,A_NS,97.1,11148,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470444_N90M7F9Z_v1,656000,648566,60191,A_PA,100.0,491,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470444_N90M7F9Z_v1,656000,648566,51594,A_PB1,100.0,442,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470444_N90M7F9Z_v1,656000,648566,55351,A_PB2,100.0,281,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470445_N90M7FA0_v1,557462,550862,36637,A_HA_H9,100.0,877,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470445_N90M7FA0_v1,557462,550862,138292,A_MP,100.0,10401,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470445_N90M7FA0_v1,557462,550862,47932,A_NA_N2,99.36,2904,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470445_N90M7FA0_v1,557462,550862,60597,A_NP,100.0,3356,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470445_N90M7FA0_v1,557462,550862,86122,A_NS,97.1,8636,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470445_N90M7FA0_v1,557462,550862,48747,A_PA,100.0,402,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470445_N90M7FA0_v1,557462,550862,30621,A_PB1,100.0,577,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470445_N90M7FA0_v1,557462,550862,33568,A_PB2,100.0,325,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470446_N90M7FA1_v1,608620,602329,37430,A_HA_H9,100.0,933,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470446_N90M7FA1_v1,608620,602329,161671,A_MP,100.0,12339,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470446_N90M7FA1_v1,608620,602329,52241,A_NA_N2,99.36,3026,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470446_N90M7FA1_v1,608620,602329,70104,A_NP,100.0,3960,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470446_N90M7FA1_v1,608620,602329,101311,A_NS,97.1,10123,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470446_N90M7FA1_v1,608620,602329,55541,A_PA,100.0,431,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470446_N90M7FA1_v1,608620,602329,37493,A_PB1,100.0,334,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470446_N90M7FA1_v1,608620,602329,53795,A_PB2,100.0,341,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470447_N90M7FA2_v1,1383596,1368000,46266,A_HA_H5,99.82,1675,3,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470447_N90M7FA2_v1,1383596,1368000,260513,A_MP,100.0,23145,3,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470447_N90M7FA2_v1,1383596,1368000,161650,A_NA_N1,95.54,9413,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470447_N90M7FA2_v1,1383596,1368000,167495,A_NP,100.0,9721,1,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470447_N90M7FA2_v1,1383596,1368000,252060,A_NS,97.1,25625,1,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470447_N90M7FA2_v1,1383596,1368000,111123,A_PA,100.0,4358,1,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470447_N90M7FA2_v1,1383596,1368000,122898,A_PB1,100.0,4060,2,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470447_N90M7FA2_v1,1383596,1368000,104206,A_PB2,100.0,3506,2,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470448_N90M7FA3_v1,1493436,1477803,53362,A_HA_H5,99.82,2169,3,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470448_N90M7FA3_v1,1493436,1477803,262383,A_MP,100.0,23748,3,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470448_N90M7FA3_v1,1493436,1477803,162130,A_NA_N1,95.54,9775,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470448_N90M7FA3_v1,1493436,1477803,170980,A_NP,100.0,10092,1,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470448_N90M7FA3_v1,1493436,1477803,251916,A_NS,97.1,26316,1,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470448_N90M7FA3_v1,1493436,1477803,126998,A_PA,100.0,5207,1,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470448_N90M7FA3_v1,1493436,1477803,143094,A_PB1,100.0,4982,2,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470448_N90M7FA3_v1,1493436,1477803,125259,A_PB2,100.0,4608,2,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470449_N90M7FA4_v1,1573814,1556808,53398,A_HA_H5,99.82,1097,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470449_N90M7FA4_v1,1573814,1556808,369146,A_MP,100.0,32073,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470449_N90M7FA4_v1,1573814,1556808,206101,A_NA_N1,95.54,8761,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470449_N90M7FA4_v1,1573814,1556808,190465,A_NP,100.0,10759,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470449_N90M7FA4_v1,1573814,1556808,329855,A_NS,97.1,33987,2,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470449_N90M7FA4_v1,1573814,1556808,155888,A_PA,100.0,2183,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470449_N90M7FA4_v1,1573814,1556808,127169,A_PB1,100.0,2246,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470449_N90M7FA4_v1,1573814,1556808,69211,A_PB2,100.0,325,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470450_N90M7FA5_v1,1164980,1152530,81042,A_HA_H5,99.82,2271,1,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470450_N90M7FA5_v1,1164980,1152530,279640,A_MP,100.0,25111,25,Count of minor variants at or over 5% > 10,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470450_N90M7FA5_v1,1164980,1152530,141433,A_NA_N1,95.54,6879,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470450_N90M7FA5_v1,1164980,1152530,137079,A_NP,100.0,8194,14,Count of minor variants at or over 5% > 10,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470450_N90M7FA5_v1,1164980,1152530,204723,A_NS,97.1,21603,66,Count of minor variants at or over 5% > 10,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470450_N90M7FA5_v1,1164980,1152530,82208,A_PA,100.0,3014,36,Count of minor variants at or over 5% > 10,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470450_N90M7FA5_v1,1164980,1152530,107403,A_PB1,100.0,2504,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470450_N90M7FA5_v1,1164980,1152530,65978,A_PB2,100.0,2031,21,Count of minor variants at or over 5% > 10,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470451_N90M7FA6_v1,1209472,1195980,75775,A_HA_H5,99.82,2519,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470451_N90M7FA6_v1,1209472,1195980,249682,A_MP,100.0,21557,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470451_N90M7FA6_v1,1209472,1195980,164707,A_NA_N1,95.54,7495,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470451_N90M7FA6_v1,1209472,1195980,127777,A_NP,100.0,7488,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470451_N90M7FA6_v1,1209472,1195980,179417,A_NS,97.1,18504,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470451_N90M7FA6_v1,1209472,1195980,143044,A_PA,100.0,3532,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470451_N90M7FA6_v1,1209472,1195980,124500,A_PB1,100.0,3451,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470451_N90M7FA6_v1,1209472,1195980,91861,A_PB2,100.0,1831,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470452_N90M7FA7_v1,2189002,2165178,157939,A_HA_H9,100.0,7144,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470452_N90M7FA7_v1,2189002,2165178,511872,A_MP,100.0,41206,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470452_N90M7FA7_v1,2189002,2165178,216399,A_NA_N2,99.36,13119,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470452_N90M7FA7_v1,2189002,2165178,295788,A_NP,100.0,17091,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470452_N90M7FA7_v1,2189002,2165178,335261,A_NS,97.1,33462,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470452_N90M7FA7_v1,2189002,2165178,251726,A_PA,100.0,3330,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470452_N90M7FA7_v1,2189002,2165178,173425,A_PB1,100.0,4470,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470452_N90M7FA7_v1,2189002,2165178,128378,A_PB2,100.0,2371,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470453_N90M7FA8_v1,3163130,3127707,207822,A_HA_H9,100.0,9158,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470453_N90M7FA8_v1,3163130,3127707,758168,A_MP,100.0,61218,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470453_N90M7FA8_v1,3163130,3127707,294104,A_NA_N2,99.36,17851,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470453_N90M7FA8_v1,3163130,3127707,434604,A_NP,100.0,25146,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470453_N90M7FA8_v1,3163130,3127707,505451,A_NS,97.1,50848,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470453_N90M7FA8_v1,3163130,3127707,360285,A_PA,100.0,4094,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470453_N90M7FA8_v1,3163130,3127707,251628,A_PB1,100.0,5697,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470453_N90M7FA8_v1,3163130,3127707,202897,A_PB2,100.0,3198,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470454_N90M7FA9_v1,3160624,3128499,206385,A_HA_H9,100.0,7251,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470454_N90M7FA9_v1,3160624,3128499,772182,A_MP,100.0,62647,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470454_N90M7FA9_v1,3160624,3128499,359386,A_NA_N2,99.36,21934,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470454_N90M7FA9_v1,3160624,3128499,457860,A_NP,100.0,25948,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470454_N90M7FA9_v1,3160624,3128499,448426,A_NS,97.1,45808,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470454_N90M7FA9_v1,3160624,3128499,302468,A_PA,100.0,5187,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470454_N90M7FA9_v1,3160624,3128499,219152,A_PB1,100.0,3869,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470454_N90M7FA9_v1,3160624,3128499,197321,A_PB2,100.0,2824,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470455_N90M7FAA_v1,2589174,2561221,182946,A_HA_H9,100.0,7077,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470455_N90M7FAA_v1,2589174,2561221,536372,A_MP,100.0,42684,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470455_N90M7FAA_v1,2589174,2561221,253748,A_NA_N2,99.36,15466,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470455_N90M7FAA_v1,2589174,2561221,314815,A_NP,100.0,18106,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470455_N90M7FAA_v1,2589174,2561221,347746,A_NS,97.1,34898,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470455_N90M7FAA_v1,2589174,2561221,259193,A_PA,100.0,4013,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470455_N90M7FAA_v1,2589174,2561221,285319,A_PB1,100.0,4286,9,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470455_N90M7FAA_v1,2589174,2561221,260991,A_PB2,100.0,2746,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470456_N90M7FAB_v1,4128590,4082573,368953,A_HA_H9,100.0,16609,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470456_N90M7FAB_v1,4128590,4082573,736464,A_MP,100.0,61499,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470456_N90M7FAB_v1,4128590,4082573,458270,A_NA_N2,99.36,28076,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470456_N90M7FAB_v1,4128590,4082573,492864,A_NP,100.0,28566,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470456_N90M7FAB_v1,4128590,4082573,470841,A_NS,97.1,48116,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470456_N90M7FAB_v1,4128590,4082573,442532,A_PA,100.0,9483,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470456_N90M7FAB_v1,4128590,4082573,515639,A_PB1,100.0,14587,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470456_N90M7FAB_v1,4128590,4082573,426434,A_PB2,100.0,8689,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470457_N90M7FAC_v1,4385682,4331254,345468,A_HA_H9,100.0,14240,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470457_N90M7FAC_v1,4385682,4331254,943537,A_MP,100.0,75879,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470457_N90M7FAC_v1,4385682,4331254,400341,A_NA_N2,99.36,24198,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470457_N90M7FAC_v1,4385682,4331254,645887,A_NP,100.0,36735,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470457_N90M7FAC_v1,4385682,4331254,689314,A_NS,97.1,68880,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470457_N90M7FAC_v1,4385682,4331254,554689,A_PA,100.0,11663,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470457_N90M7FAC_v1,4385682,4331254,303692,A_PB1,100.0,8146,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470457_N90M7FAC_v1,4385682,4331254,259136,A_PB2,100.0,6943,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470458_N90M7FAD_v1,927866,917093,66899,A_HA_H9,100.0,2151,138,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470458_N90M7FAD_v1,927866,917093,215122,A_MP,100.0,16789,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470458_N90M7FAD_v1,927866,917093,98618,A_NA_N2,99.36,6235,119,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470458_N90M7FAD_v1,927866,917093,126410,A_NP,100.0,7438,10,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470458_N90M7FAD_v1,927866,917093,143307,A_NS,97.1,14286,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470458_N90M7FAD_v1,927866,917093,109839,A_PA,100.0,1809,112,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470458_N90M7FAD_v1,927866,917093,49206,A_PB1,100.0,1006,51,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470458_N90M7FAD_v1,927866,917093,62537,A_PB2,100.0,1247,141,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470459_N90M7FAE_v1,1013314,1000503,67452,A_HA_H9,100.0,2487,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470459_N90M7FAE_v1,1013314,1000503,270944,A_MP,100.0,21729,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470459_N90M7FAE_v1,1013314,1000503,90287,A_NA_N2,99.36,5729,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470459_N90M7FAE_v1,1013314,1000503,142366,A_NP,100.0,8474,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470459_N90M7FAE_v1,1013314,1000503,189090,A_NS,97.1,19209,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470459_N90M7FAE_v1,1013314,1000503,106776,A_PA,100.0,1746,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470459_N90M7FAE_v1,1013314,1000503,48908,A_PB1,100.0,1077,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470459_N90M7FAE_v1,1013314,1000503,59824,A_PB2,100.0,1623,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470460_N90M7FAF_v1,1125036,1110479,102422,A_HA_H9,100.0,5362,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470460_N90M7FAF_v1,1125036,1110479,170071,A_MP,100.0,14437,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470460_N90M7FAF_v1,1125036,1110479,176405,A_NA_N2,99.36,11352,131,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470460_N90M7FAF_v1,1125036,1110479,172830,A_NP,100.0,10301,37,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470460_N90M7FAF_v1,1125036,1110479,114278,A_NS,97.1,11397,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470460_N90M7FAF_v1,1125036,1110479,66149,A_PA,100.0,2678,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470460_N90M7FAF_v1,1125036,1110479,137287,A_PB1,100.0,5323,204,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470460_N90M7FAF_v1,1125036,1110479,139752,A_PB2,100.0,5138,153,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470461_N90M7FAG_v1,1714322,1687866,178443,A_HA_H9,100.0,8781,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470461_N90M7FAG_v1,1714322,1687866,323465,A_MP,100.0,27680,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470461_N90M7FAG_v1,1714322,1687866,191576,A_NA_N2,99.36,11933,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470461_N90M7FAG_v1,1714322,1687866,177175,A_NP,100.0,10164,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470461_N90M7FAG_v1,1714322,1687866,209229,A_NS,97.1,20989,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470461_N90M7FAG_v1,1714322,1687866,201236,A_PA,100.0,7745,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470461_N90M7FAG_v1,1714322,1687866,154704,A_PB1,100.0,5690,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470461_N90M7FAG_v1,1714322,1687866,211423,A_PB2,100.0,7157,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470462_N90M7FAH_v1,2356116,2330669,42653,A_HA_H5,99.82,1447,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470462_N90M7FAH_v1,2356116,2330669,325549,A_MP,100.0,28603,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470462_N90M7FAH_v1,2356116,2330669,142355,A_NA_N1,95.54,7542,1,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470462_N90M7FAH_v1,2356116,2330669,276443,A_NP,100.0,16049,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470462_N90M7FAH_v1,2356116,2330669,248768,A_NS,97.1,26076,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470462_N90M7FAH_v1,2356116,2330669,47472,A_PA,100.0,1987,2,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470462_N90M7FAH_v1,2356116,2330669,31075,A_PB1,100.0,1008,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470462_N90M7FAH_v1,2356116,2330669,51405,A_PB2,100.0,2049,1,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470463_N90M7FAI_v1,3211426,3182528,192489,A_HA_H5,99.82,7703,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470463_N90M7FAI_v1,3211426,3182528,686073,A_MP,100.0,59702,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470463_N90M7FAI_v1,3211426,3182528,385901,A_NA_N1,95.54,20960,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470463_N90M7FAI_v1,3211426,3182528,441071,A_NP,100.0,25373,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470463_N90M7FAI_v1,3211426,3182528,644625,A_NS,97.1,65910,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470463_N90M7FAI_v1,3211426,3182528,206438,A_PA,100.0,5553,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470463_N90M7FAI_v1,3211426,3182528,283845,A_PB1,100.0,9360,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470463_N90M7FAI_v1,3211426,3182528,240918,A_PB2,100.0,5545,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470464_N90M7FAJ_v1,3924558,3880620,402989,A_HA_H5,99.82,17153,1,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470464_N90M7FAJ_v1,3924558,3880620,668645,A_MP,100.0,57299,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470464_N90M7FAJ_v1,3924558,3880620,364207,A_NA_N1,99.79,22054,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470464_N90M7FAJ_v1,3924558,3880620,344350,A_NP,100.0,20075,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470464_N90M7FAJ_v1,3924558,3880620,431150,A_NS,97.1,43475,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470464_N90M7FAJ_v1,3924558,3880620,489733,A_PA,100.0,16293,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470464_N90M7FAJ_v1,3924558,3880620,466511,A_PB1,100.0,16509,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470464_N90M7FAJ_v1,3924558,3880620,586618,A_PB2,100.0,17457,1,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470465_N90M7FAK_v1,715422,708118,77158,A_HA_H5,99.82,3043,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470465_N90M7FAK_v1,715422,708118,120156,A_MP,100.0,10426,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470465_N90M7FAK_v1,715422,708118,71064,A_NA_N1,99.79,4365,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470465_N90M7FAK_v1,715422,708118,75586,A_NP,100.0,4461,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470465_N90M7FAK_v1,715422,708118,98079,A_NS,97.1,9831,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470465_N90M7FAK_v1,715422,708118,76866,A_PA,100.0,2929,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470465_N90M7FAK_v1,715422,708118,81334,A_PB1,100.0,2865,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470465_N90M7FAK_v1,715422,708118,84873,A_PB2,100.0,3149,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470466_N90M7FAL_v1,636108,628740,65485,A_HA_H9,100.0,3302,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470466_N90M7FAL_v1,636108,628740,138398,A_MP,100.0,9471,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470466_N90M7FAL_v1,636108,628740,57130,A_NA_N2,99.36,3673,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470466_N90M7FAL_v1,636108,628740,77939,A_NP,100.0,4677,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470466_N90M7FAL_v1,636108,628740,76737,A_NS,97.1,7926,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470466_N90M7FAL_v1,636108,628740,47637,A_PA,100.0,1791,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470466_N90M7FAL_v1,636108,628740,79249,A_PB1,100.0,2208,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470466_N90M7FAL_v1,636108,628740,68977,A_PB2,100.0,2395,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470467_N90M7FAM_v1,826472,816143,24586,A_HA_H9,100.0,490,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470467_N90M7FAM_v1,826472,816143,254756,A_MP,100.0,17894,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470467_N90M7FAM_v1,826472,816143,27276,A_NA_N2,99.36,1604,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470467_N90M7FAM_v1,826472,816143,128303,A_NP,100.0,7723,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470467_N90M7FAM_v1,826472,816143,141779,A_NS,97.1,14232,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470467_N90M7FAM_v1,826472,816143,40537,A_PA,100.0,160,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470467_N90M7FAM_v1,826472,816143,93428,A_PB1,100.0,945,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470467_N90M7FAM_v1,826472,816143,73480,A_PB2,99.87,64,2,Median coverage < 100,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470468_N90M7FAN_v1,719038,712518,69709,A_HA_H5,99.82,3337,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470468_N90M7FAN_v1,719038,712518,115572,A_MP,100.0,10373,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470468_N90M7FAN_v1,719038,712518,70900,A_NA_N1,99.79,4392,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470468_N90M7FAN_v1,719038,712518,77665,A_NP,100.0,4664,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470468_N90M7FAN_v1,719038,712518,84824,A_NS,97.1,8801,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470468_N90M7FAN_v1,719038,712518,72029,A_PA,100.0,1757,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470468_N90M7FAN_v1,719038,712518,81564,A_PB1,100.0,1591,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470468_N90M7FAN_v1,719038,712518,110800,A_PB2,100.0,1618,0,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470469_N90M7FAO_v1,1130490,1117672,29075,A_HA_H5,99.82,940,6,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470469_N90M7FAO_v1,1130490,1117672,289830,A_MP,100.0,25542,128,Count of minor variants at or over 5% > 10,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470469_N90M7FAO_v1,1130490,1117672,27772,A_NA_N1,95.54,1210,2,Pass,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470469_N90M7FAO_v1,1130490,1117672,213187,A_NP,100.0,12770,140,Count of minor variants at or over 5% > 10,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470469_N90M7FAO_v1,1130490,1117672,169212,A_NS,97.1,18029,148,Count of minor variants at or over 5% > 10,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470469_N90M7FAO_v1,1130490,1117672,59359,A_PA,100.0,2270,358,Count of minor variants at or over 5% > 10,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470469_N90M7FAO_v1,1130490,1117672,75179,A_PB1,100.0,2304,367,Count of minor variants at or over 5% > 10,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470469_N90M7FAO_v1,1130490,1117672,78174,A_PB2,100.0,2695,337,Count of minor variants at or over 5% > 10,H5N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470470_N90M7FAP_v1,674986,667725,51127,A_HA_H9,100.0,2219,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470470_N90M7FAP_v1,674986,667725,155809,A_MP,100.0,12991,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470470_N90M7FAP_v1,674986,667725,75412,A_NA_N2,99.36,4699,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470470_N90M7FAP_v1,674986,667725,91078,A_NP,100.0,5301,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470470_N90M7FAP_v1,674986,667725,101211,A_NS,97.1,10234,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470470_N90M7FAP_v1,674986,667725,60722,A_PA,100.0,1446,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470470_N90M7FAP_v1,674986,667725,55758,A_PB1,100.0,1537,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470470_N90M7FAP_v1,674986,667725,59885,A_PB2,100.0,1451,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470471_N90M7FAQ_v1,864600,855489,65114,A_HA_H9,100.0,2883,5,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470471_N90M7FAQ_v1,864600,855489,187173,A_MP,100.0,15116,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470471_N90M7FAQ_v1,864600,855489,93705,A_NA_N2,99.36,5694,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470471_N90M7FAQ_v1,864600,855489,121421,A_NP,100.0,6901,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470471_N90M7FAQ_v1,864600,855489,120110,A_NS,97.1,11966,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470471_N90M7FAQ_v1,864600,855489,84964,A_PA,100.0,1975,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470471_N90M7FAQ_v1,864600,855489,82689,A_PB1,100.0,2601,5,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470471_N90M7FAQ_v1,864600,855489,67070,A_PB2,100.0,1926,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470472_N90M7FAR_v1,682948,675660,44776,A_HA_H9,100.0,1476,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470472_N90M7FAR_v1,682948,675660,173421,A_MP,100.0,13543,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470472_N90M7FAR_v1,682948,675660,80289,A_NA_N2,99.36,4858,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470472_N90M7FAR_v1,682948,675660,101653,A_NP,100.0,5757,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470472_N90M7FAR_v1,682948,675660,100668,A_NS,97.1,10230,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470472_N90M7FAR_v1,682948,675660,68089,A_PA,100.0,1249,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470472_N90M7FAR_v1,682948,675660,37381,A_PB1,100.0,1037,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470472_N90M7FAR_v1,682948,675660,40458,A_PB2,100.0,864,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470473_N90M7FAS_v1,1011344,1001836,69307,A_HA_H9,100.0,2292,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470473_N90M7FAS_v1,1011344,1001836,233802,A_MP,100.0,17829,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470473_N90M7FAS_v1,1011344,1001836,92911,A_NA_N2,99.36,5631,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470473_N90M7FAS_v1,1011344,1001836,132974,A_NP,100.0,7443,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470473_N90M7FAS_v1,1011344,1001836,164738,A_NS,97.1,16188,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470473_N90M7FAS_v1,1011344,1001836,111549,A_PA,100.0,1980,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470473_N90M7FAS_v1,1011344,1001836,75709,A_PB1,100.0,1583,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470473_N90M7FAS_v1,1011344,1001836,76155,A_PB2,100.0,1171,5,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470474_N90M7FAT_v1,997292,987627,78638,A_HA_H9,100.0,3062,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470474_N90M7FAT_v1,997292,987627,241422,A_MP,100.0,19069,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470474_N90M7FAT_v1,997292,987627,106145,A_NA_N2,99.36,6425,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470474_N90M7FAT_v1,997292,987627,136649,A_NP,100.0,7745,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470474_N90M7FAT_v1,997292,987627,132066,A_NS,97.1,12885,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470474_N90M7FAT_v1,997292,987627,104632,A_PA,100.0,2433,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470474_N90M7FAT_v1,997292,987627,60583,A_PB1,100.0,2005,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470474_N90M7FAT_v1,997292,987627,97636,A_PB2,100.0,3081,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470475_N90M7FAU_v1,733168,726068,1580,A_HA_H9,100.0,53,0,Median coverage < 100,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470475_N90M7FAU_v1,733168,726068,22566,A_MP,100.0,1447,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470475_N90M7FAU_v1,733168,726068,8145,A_NA_N2,99.36,467,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470475_N90M7FAU_v1,733168,726068,3403,A_NP,100.0,200,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470475_N90M7FAU_v1,733168,726068,4766,A_NS,97.1,500,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470475_N90M7FAU_v1,733168,726068,8962,A_PA,58.67,37,0,Less than 90% of reference covered;Median coverage < 100,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470475_N90M7FAU_v1,733168,726068,31454,A_PB1,100.0,116,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470475_N90M7FAU_v1,733168,726068,34270,A_PB2,41.58,42,1,Less than 90% of reference covered;Median coverage < 100,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470476_N90M7FAV_v1,1178562,1161593,91918,A_HA_H9,100.0,3910,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470476_N90M7FAV_v1,1178562,1161593,305071,A_MP,100.0,26409,58,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470476_N90M7FAV_v1,1178562,1161593,100588,A_NA_N2,99.36,6258,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470476_N90M7FAV_v1,1178562,1161593,95765,A_NP,100.0,5463,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470476_N90M7FAV_v1,1178562,1161593,253573,A_NS,97.1,25837,80,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470476_N90M7FAV_v1,1178562,1161593,87688,A_PA,100.0,3106,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470476_N90M7FAV_v1,1178562,1161593,74701,A_PB1,100.0,2514,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470476_N90M7FAV_v1,1178562,1161593,115659,A_PB2,100.0,2376,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470477_N90M7FAW_v1,1179778,1164741,112252,A_HA_H9,100.0,4755,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470477_N90M7FAW_v1,1179778,1164741,277446,A_MP,100.0,22264,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470477_N90M7FAW_v1,1179778,1164741,95433,A_NA_N2,99.36,5978,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470477_N90M7FAW_v1,1179778,1164741,213783,A_NP,100.0,12384,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470477_N90M7FAW_v1,1179778,1164741,177115,A_NS,97.1,17641,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470477_N90M7FAW_v1,1179778,1164741,72135,A_PA,100.0,2731,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470477_N90M7FAW_v1,1179778,1164741,95483,A_PB1,100.0,3465,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470477_N90M7FAW_v1,1179778,1164741,87731,A_PB2,100.0,2272,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470478_N90M7FAX_v1,1299542,1281551,83170,A_HA_H9,100.0,3923,136,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470478_N90M7FAX_v1,1299542,1281551,268077,A_MP,100.0,22755,59,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470478_N90M7FAX_v1,1299542,1281551,203465,A_NA_N2,99.36,12807,132,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470478_N90M7FAX_v1,1299542,1281551,179115,A_NP,100.0,10302,138,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470478_N90M7FAX_v1,1299542,1281551,244181,A_NS,97.1,24810,80,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470478_N90M7FAX_v1,1299542,1281551,96047,A_PA,100.0,3305,180,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470478_N90M7FAX_v1,1299542,1281551,48270,A_PB1,100.0,1728,188,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470478_N90M7FAX_v1,1299542,1281551,114236,A_PB2,100.0,4140,166,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470479_N90M7FAY_v1,1385824,1369370,107834,A_HA_H9,100.0,4743,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470479_N90M7FAY_v1,1385824,1369370,251848,A_MP,100.0,20835,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470479_N90M7FAY_v1,1385824,1369370,157572,A_NA_N2,99.36,9603,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470479_N90M7FAY_v1,1385824,1369370,190660,A_NP,100.0,11009,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470479_N90M7FAY_v1,1385824,1369370,161456,A_NS,97.1,16375,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470479_N90M7FAY_v1,1385824,1369370,146344,A_PA,100.0,3694,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470479_N90M7FAY_v1,1385824,1369370,136212,A_PB1,100.0,4131,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470479_N90M7FAY_v1,1385824,1369370,103433,A_PB2,100.0,2507,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470480_N90M7FAZ_v1,584242,577659,47382,A_HA_H9,100.0,2197,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470480_N90M7FAZ_v1,584242,577659,116802,A_MP,100.0,9715,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470480_N90M7FAZ_v1,584242,577659,59291,A_NA_N2,99.36,3612,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470480_N90M7FAZ_v1,584242,577659,86207,A_NP,100.0,4973,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470480_N90M7FAZ_v1,584242,577659,73860,A_NS,97.1,7242,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470480_N90M7FAZ_v1,584242,577659,59858,A_PA,100.0,1713,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470480_N90M7FAZ_v1,584242,577659,53429,A_PB1,100.0,1947,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470480_N90M7FAZ_v1,584242,577659,54491,A_PB2,100.0,1821,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470481_N90M7FB0_v1,1018776,1004991,104637,A_HA_H9,100.0,5125,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470481_N90M7FB0_v1,1018776,1004991,186745,A_MP,100.0,15886,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470481_N90M7FB0_v1,1018776,1004991,122393,A_NA_N2,99.36,7594,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470481_N90M7FB0_v1,1018776,1004991,84444,A_NP,100.0,4886,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470481_N90M7FB0_v1,1018776,1004991,96447,A_NS,97.1,9621,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470481_N90M7FB0_v1,1018776,1004991,91194,A_PA,100.0,3487,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470481_N90M7FB0_v1,1018776,1004991,79540,A_PB1,100.0,2949,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470481_N90M7FB0_v1,1018776,1004991,135369,A_PB2,100.0,4806,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470482_N90M7FB1_v1,870994,860459,47118,A_HA_H9,100.0,2395,15,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470482_N90M7FB1_v1,870994,860459,87535,A_MP,100.0,7497,61,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470482_N90M7FB1_v1,870994,860459,59523,A_NA_N2,99.36,3717,13,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470482_N90M7FB1_v1,870994,860459,45538,A_NP,100.0,2637,32,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470482_N90M7FB1_v1,870994,860459,70456,A_NS,97.1,7183,81,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470482_N90M7FB1_v1,870994,860459,35187,A_PA,100.0,1480,157,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470482_N90M7FB1_v1,870994,860459,45042,A_PB1,100.0,1701,46,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470482_N90M7FB1_v1,870994,860459,38859,A_PB2,100.0,1307,20,Count of minor variants at or over 5% > 10,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470483_N90M7FB2_v1,853116,840932,92988,A_HA_H9,100.0,4481,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470483_N90M7FB2_v1,853116,840932,167891,A_MP,100.0,14342,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470483_N90M7FB2_v1,853116,840932,107921,A_NA_N2,99.36,6788,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470483_N90M7FB2_v1,853116,840932,80091,A_NP,100.0,4593,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470483_N90M7FB2_v1,853116,840932,102989,A_NS,97.1,10521,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470483_N90M7FB2_v1,853116,840932,80569,A_PA,100.0,3099,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470483_N90M7FB2_v1,853116,840932,74110,A_PB1,100.0,2788,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470483_N90M7FB2_v1,853116,840932,114975,A_PB2,100.0,3914,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470484_N90M7FB3_v1,1160626,1144249,137141,A_HA_H9,100.0,6663,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470484_N90M7FB3_v1,1160626,1144249,227140,A_MP,100.0,19225,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470484_N90M7FB3_v1,1160626,1144249,149458,A_NA_N2,99.36,9251,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470484_N90M7FB3_v1,1160626,1144249,106961,A_NP,100.0,6099,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470484_N90M7FB3_v1,1160626,1144249,136195,A_NS,97.1,13593,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470484_N90M7FB3_v1,1160626,1144249,103764,A_PA,100.0,3953,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470484_N90M7FB3_v1,1160626,1144249,98474,A_PB1,100.0,3754,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470484_N90M7FB3_v1,1160626,1144249,141405,A_PB2,100.0,4675,0,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470485_N90M7FB4_v1,1303596,1285945,142627,A_HA_H9,100.0,5783,9,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470485_N90M7FB4_v1,1303596,1285945,337689,A_MP,100.0,28748,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470485_N90M7FB4_v1,1303596,1285945,151783,A_NA_N2,99.36,9573,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470485_N90M7FB4_v1,1303596,1285945,131170,A_NP,100.0,7508,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470485_N90M7FB4_v1,1303596,1285945,195029,A_NS,97.1,19983,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470485_N90M7FB4_v1,1303596,1285945,92704,A_PA,100.0,3413,4,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470485_N90M7FB4_v1,1303596,1285945,66769,A_PB1,100.0,2393,5,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470485_N90M7FB4_v1,1303596,1285945,117759,A_PB2,100.0,3093,9,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470486_N90M7FB5_v1,770470,760920,38521,A_HA_H9,100.0,608,9,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470486_N90M7FB5_v1,770470,760920,228082,A_MP,100.0,18003,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470486_N90M7FB5_v1,770470,760920,42754,A_NA_N2,99.36,2538,2,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470486_N90M7FB5_v1,770470,760920,83645,A_NP,100.0,4699,1,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470486_N90M7FB5_v1,770470,760920,129890,A_NS,97.1,13194,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470486_N90M7FB5_v1,770470,760920,52611,A_PA,100.0,809,8,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470486_N90M7FB5_v1,770470,760920,56885,A_PB1,100.0,560,6,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032470486_N90M7FB5_v1,770470,760920,99545,A_PB2,100.0,154,3,Pass,H9N2,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032563002_N90M7FC8_v1,1643624,1629926,205752,A_HA_H1,99.82,9244,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a.1,5a.2a.1,D.3
+3032563002_N90M7FC8_v1,1643624,1629926,310566,A_MP,100.0,23705,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FC8_v1,1643624,1629926,227870,A_NA_N1,99.79,11935,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FC8_v1,1643624,1629926,163462,A_NP,100.0,8502,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FC8_v1,1643624,1629926,286365,A_NS,97.1,25469,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FC8_v1,1643624,1629926,126462,A_PA,100.0,4796,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FC8_v1,1643624,1629926,103513,A_PB1,100.0,3615,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FC8_v1,1643624,1629926,161288,A_PB2,100.0,5440,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FC9_v1,0,0,0,Undetermined,0.0,0,0,Fail,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032563002_N90M7FCA_v1,1573508,1559035,208610,A_HA_H1,99.82,10029,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a.1,5a.2a.1,D.3
+3032563002_N90M7FCA_v1,1573508,1559035,284118,A_MP,100.0,23392,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FCA_v1,1573508,1559035,215820,A_NA_N1,99.79,12139,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FCA_v1,1573508,1559035,166623,A_NP,100.0,9141,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FCA_v1,1573508,1559035,249283,A_NS,97.1,23857,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FCA_v1,1573508,1559035,127816,A_PA,100.0,5205,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FCA_v1,1573508,1559035,111427,A_PB1,100.0,4073,1,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FCA_v1,1573508,1559035,157282,A_PB2,100.0,5723,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FCB_v1,156,155,40,A_HA_H1,0.0,2,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032563002_N90M7FCB_v1,156,155,26,A_MP,0.0,2,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032563002_N90M7FCB_v1,156,155,24,A_NP,0.0,1,0,Less than 90% of reference covered;Median coverage < 100,Undetermined,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,Undetermined,Undetermined,Undetermined
+3032563002_N90M7FCC_v1,359976,357629,45057,A_HA_H1,99.82,1206,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,6B.1A.5a.2a.1,5a.2a.1,D.3
+3032563002_N90M7FCC_v1,359976,357629,66529,A_MP,100.0,3299,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FCC_v1,359976,357629,52037,A_NA_N1,99.79,1536,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FCC_v1,359976,357629,35369,A_NP,100.0,1167,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FCC_v1,359976,357629,53285,A_NS,97.1,2830,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FCC_v1,359976,357629,23312,A_PA,100.0,503,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FCC_v1,359976,357629,21776,A_PB1,100.0,447,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
+3032563002_N90M7FCC_v1,359976,357629,37595,A_PB2,100.0,736,0,Pass,H1N1,MIRA-NF-v2.0.0 illumina-flu default-config,example_mira_output,illumina,,,
