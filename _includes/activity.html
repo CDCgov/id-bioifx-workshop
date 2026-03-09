@@ -1,6 +1,7 @@
 <section class="activity activity--{{ include.variant | default: '1' }}">
   <div class="activity-header" role="button" tabindex="0" aria-expanded="true" onclick="toggleActivity(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleActivity(this)}">
     <div class="activity-inner">
+      {% if include.icon %}<img class="activity-header-icon" src="{{ include.icon }}" alt="">{% endif %}
       <span class="activity-chevron" aria-hidden="true">▾</span>
       {{ include.title | markdownify }}
     </div>
@@ -197,6 +198,20 @@
 .activity-inner {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+/* Header icon (right-aligned) */
+.activity-header .activity-inner {
+  display: flex;
+  align-items: center;
+}
+.activity-header-icon {
+  width: 20%;
+  max-width: 140px;
+  margin-right: 0.75rem;
+  border-radius: 8px;
+  flex-shrink: 0;
+  pointer-events: none;
 }
 
 /* Optional: make links match accent */
