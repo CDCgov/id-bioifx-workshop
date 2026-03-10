@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: lesson
 title: Computer Basics
-nav_order: 2
+nav_order: 3
 ---
 
 {% capture section_overview_1 %}
@@ -13,6 +13,8 @@ Understanding how computers work is essential for bioinformaticians who need to 
 {% capture section_body_1 %}
 
 ## **Why Computer Architecture Matters for Bioinformatics**
+
+
 
 Bioinformatics workflows often involve:
 - Processing **gigabytes to terabytes** of sequencing data
@@ -33,6 +35,18 @@ Understanding the underlying hardware helps you:
 <strong>Key insight:</strong> Most bioinformatics bottlenecks come from either <strong>memory limitations</strong> (not enough RAM) or <strong>I/O bottlenecks</strong> (slow disk reads/writes), not CPU speed.
 </div>
 
+### Module Objectives
+- Basic computer architecture
+- BIOS/UEFI
+- Introduce Operating Systems (OS)
+- Understand how to use Linux on Windows 
+- What is a virtual machine is?
+- How do operating systems differ?
+- What does *nix means for bioinformatics?
+- Install WSL on windows machines, access command prompt from MacOS 
+
+![Module Objectives]({{ site.baseurl }}/assets/images/presentation2-img05.png){: width="75%"}
+
 {% endcapture %}
 
 
@@ -48,6 +62,7 @@ A visual overview of how the major components of a computer system relate to eac
 ## **Computer Architecture Overview**
 
 The diagram below shows the main components of a computer and how they interact:
+
 
 <style>
   /* ============================================================================
@@ -475,6 +490,7 @@ The CPU is the "brain" of the computer. Understanding CPU architecture helps opt
 
 ## **The CPU (Central Processing Unit)**
 
+
 ### 3.1 What the CPU does
 
 The CPU executes instructions — the fundamental operations that make up all software. For bioinformatics, this includes:
@@ -688,6 +704,8 @@ The operating system manages hardware resources and provides the environment whe
 
 ## **Operating System**
 
+![Operating Systems]({{ site.baseurl }}/assets/images/presentation2-img08.png){: width="75%"}
+
 ### 6.1 Role of the OS
 
 The operating system:
@@ -711,6 +729,44 @@ Most bioinformatics tools are designed for Linux:
 </div>
 
 ### 6.3 Key OS concepts
+
+**Command Line Interface:**
+
+Much of bioinformatics is done in a Linux (or Unix) OS — collectively called *nix. Unix and Linux are built around a command-line–focused design for system control, automation, and scripting.
+
+![Command Line Interface]({{ site.baseurl }}/assets/images/presentation2-img10.png){: width="75%"}
+
+**CLI Terminology:**
+
+![CLI Terminology]({{ site.baseurl }}/assets/images/presentation2-img11.png){: width="75%"}
+
+- **Shell** — The program that interprets command-line input and runs commands (bash, zsh, PowerShell)
+- **Prompt** — Text displayed by the shell indicating it is ready to accept a command
+- **Command** — A program or instruction typed into the shell to perform an action
+- **Flag (or option)** — A modifier added to a command that changes how it behaves
+
+![Filesystem and Permissions]({{ site.baseurl }}/assets/images/presentation2-img12.png){: width="75%"}
+
+- **Directory** — A location in the filesystem used to organize files
+- **Path** — The exact location of a file or directory in the filesystem
+- **Permissions** — Rules that control who can read, write, or execute a file or directory
+
+**Linux Filesystem:**
+
+Linux treats most things like files — one consistent way to access resources:
+- Regular files (documents, programs)
+- Directories
+- Devices (`/dev`)
+- System information (`/proc`)
+
+All files exist under one root directory:
+```
+/
+├── home/
+├── etc/
+├── var/
+└── dev/
+```
 
 **File systems:**
 - Linux uses paths like `/home/user/data/`
@@ -754,6 +810,11 @@ Practical guidance for choosing hardware and computational resources for bioinfo
 {% capture section_body_7 %}
 
 ## **Putting It All Together**
+
+### Bioinformatics and the Command Line
+
+![Bioinformatics and CLI]({{ site.baseurl }}/assets/images/presentation2-img19.png){: width="25%"}
+
 
 ### 7.1 Minimum specs for bioinformatics
 
@@ -804,10 +865,88 @@ Before running a pipeline:
 
 {% endcapture %}
 
-{% include activity.html variant="1" title="Part 1: Why This Matters" overview=section_overview_1 content=section_body_1 %}
+{% capture section_overview_8 %}
+
+Networks connect computers and devices, while servers provide shared resources and services.
+
+{% endcapture %}
+
+{% capture section_body_8 %}
+
+## **Networks and Servers**
+
+![Networks and Servers]({{ site.baseurl }}/assets/images/presentation2-img09.png){: width="25%"}
+
+A **network** is a system that connects computers and devices, allowing them to share data, resources, and services through wired or wireless communication links.
+
+A **server** is a computer system designed to provide resources or services—such as data, applications, or network functions—to other devices over a network.
+
+- Optimized for reliability and continuous operation
+- Handle requests from clients, managing tasks:
+  - Data storage
+  - Application hosting
+  - Authentication
+  - Communication between systems
+
+{% endcapture %}
+
+{% capture section_overview_9 %}
+
+Set up command-line access on your computer: macOS Terminal, Windows WSL, or Linux Terminal.
+
+{% endcapture %}
+
+{% capture section_body_9 %}
+
+## **Practical: Command-Line on Your Computer**
+
+### macOS
+
+![macOS icon]({{ site.baseurl }}/assets/images/presentation2-img22.png){: width="75%"}
+
+1. Press **Command (⌘) + Spacebar** to open Spotlight
+2. Type **Terminal**
+3. Press **Return** to open it
+4. A command prompt will appear on your screen
+
+### Windows
+
+![Windows icon]({{ site.baseurl }}/assets/images/presentation2-img21.png){: width="75%"}
+
+1. Run **PowerShell** as Administrator
+2. Run the following command in PowerShell:
+   ```powershell
+   wsl --install
+   ```
+3. Restart your computer
+4. Reopen PowerShell and enter the following commands:
+   ```powershell
+   wsl --set-default-version 2
+   wsl --install -d Ubuntu-24.04
+   ```
+5. Following successful installation, an Ubuntu terminal should pop up
+6. Enter a username that will be exclusive for WSL. Press Enter and then enter a password
+7. A command prompt will appear on your screen
+
+### Linux
+
+![Linux icon]({{ site.baseurl }}/assets/images/presentation2-img23.png){: width="75%"}
+
+1. Open the **Applications** or **Activities** menu (top-left or bottom-left, depending on your system)
+2. Search for **Terminal**, **Console**, or **Xterm** (names vary by distribution)
+3. Click the icon to launch it
+4. A command prompt will appear on your screen
+
+![Terminal prompt example]({{ site.baseurl }}/assets/images/presentation2-img24.png){: width="75%"}
+
+{% endcapture %}
+
+{% include activity.html variant="1" title="Part 1: Why This Matters" overview=section_overview_1 content=section_body_1 icon="/id-bioifx-workshop/assets/images/presentation2-img01.png" %}
 {% include activity.html variant="2" title="Part 2: Architecture Overview" overview=section_overview_2 content=section_body_2 %}
 {% include activity.html variant="3" title="Part 3: The CPU" overview=section_overview_3 content=section_body_3 %}
 {% include activity.html variant="1" title="Part 4: Memory (RAM)" overview=section_overview_4 content=section_body_4 %}
 {% include activity.html variant="2" title="Part 5: Storage" overview=section_overview_5 content=section_body_5 %}
 {% include activity.html variant="3" title="Part 6: Operating System" overview=section_overview_6 content=section_body_6 %}
 {% include activity.html variant="1" title="Part 7: Practical Applications" overview=section_overview_7 content=section_body_7 %}
+{% include activity.html variant="2" title="Part 8: Networks & Servers" overview=section_overview_8 content=section_body_8 %}
+{% include activity.html variant="3" title="Part 9: CLI Setup" overview=section_overview_9 content=section_body_9 %}
