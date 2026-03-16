@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Containers and Registries
-nav_order: 6
+nav_order: 10
 ---
 
 {% capture section_overview_1 %}
