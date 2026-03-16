@@ -1,6 +1,6 @@
 ---
 layout: page
 title: BLAST Fundamentals
-nav_order: 9
+nav_order: 13
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Genome Assembly and MIRA-NF
-nav_order: 7
+nav_order: 11
 ---
 
 
