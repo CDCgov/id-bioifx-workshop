@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MIRA Review & Test Data
+title: Multiple Sequence Alignment
 nav_order: 8
 ---
 
