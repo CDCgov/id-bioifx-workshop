@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Quality Management Systems for Bioinformatics
-nav_order: 13
+title: Quality Management Systems for Bioinformatics and Troubleshooting
+nav_order: 17
 ---
 
-version control...
