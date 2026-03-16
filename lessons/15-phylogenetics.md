@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: lesson
 title: Phylogenetics
 nav_order: 15
 ---
