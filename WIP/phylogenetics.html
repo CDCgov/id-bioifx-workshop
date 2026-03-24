@@ -193,6 +193,11 @@
   <script src="phylogenetics_files/libs/quarto-diagram/mermaid.min.js"></script>
   <script src="phylogenetics_files/libs/quarto-diagram/mermaid-init.js"></script>
   <link href="phylogenetics_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
+  <link href="phylogenetics_files/libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+  <script src="phylogenetics_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+  <script src="phylogenetics_files/libs/d3-4.10.2/d3.min.js"></script>
+  <link href="phylogenetics_files/libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet">
+  <script src="phylogenetics_files/libs/collapsibleTree-binding-0.1.8/collapsibleTree.js"></script>
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -210,6 +215,43 @@ Norman Hassell
 </div>
 </div>
 
+</section>
+<section class="slide level2">
+
+<style>
+/* collapsibleTree / d3 tooltip */
+div.tooltip,
+.d3-tip,
+.tooltip {
+  color: #111 !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  font-size: 16px !important;
+  text-shadow: none !important;
+  
+  /* key: do NOT force these */
+  opacity: auto;
+  visibility: auto;
+}
+
+/* in case links or spans inside tooltip inherit slide theme colors */
+div.tooltip *,
+.d3-tip *,
+.tooltip * {
+  color: #111 !important;
+  fill: #111 !important;
+}
+
+/* More specific: only node labels (safer) */
+.reveal .html-widget .node text {
+  fill: #ffffff !important;
+}
+
+/* Edit Tooltip Position */
+.reveal .html-widget .tooltip,
+.reveal .html-widget .d3-tip {
+  transform: translate(-10px, -10px);  /* adjust as needed */
+}
+</style>
 </section>
 <section>
 <section id="section-1-overview" class="title-slide slide level1 center">
@@ -516,6 +558,23 @@ All good!  Set up of conda complete.</code></pre>
 <img data-src="images/presentation/07-subclades.png" width="1167" class="r-stretch"></section>
 <section id="clades-in-seasonal-influenza-cont." class="slide level2">
 <h2>Clades in Seasonal Influenza (cont.)</h2>
+
+<img data-src="images/presentation/type-subtype-clades-subclades.png" class="r-stretch"><aside class="notes">
+<p>As a refresh, for levels of classification for flu. We are first assessing the overall type, for seasonal flu that is type A and B. We further split seasonal flu types into subtypes and lineages, which are related to the HA+NA combinations of the virus. We can then further separate the HA into clades (which are larger) genetic groupings, and then finally into subclades.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="clades-in-seasonal-influenza-cont.-1" class="slide level2">
+<h2>Clades in Seasonal Influenza (cont.)</h2>
 <p>Defining a subclade in Nextstrain (<a href="https://docs.nextstrain.org/projects/augur/en/stable/usage/cli/clades.html"><code>augur clades</code> command</a>):</p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -613,7 +672,7 @@ All good!  Set up of conda complete.</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="clades-in-seasonal-influenza-cont.-1" class="slide level2 smaller">
+<section id="clades-in-seasonal-influenza-cont.-2" class="slide level2 smaller">
 <h2>Clades in Seasonal Influenza (cont.)</h2>
 <p>Subclade K example:</p>
 <div class="columns">
@@ -747,7 +806,7 @@ All good!  Set up of conda complete.</code></pre>
 <li>However, a new alias may be given earlier in the case of a rapid expansion or special designation.</li>
 </ul>
 <aside class="notes">
-<p>The system Shortening (aliasing) of names generally occurs after three hierarchical levels (i.e.&nbsp;D for C.1.1.1), but a new alias may be given earlier in the case of a rapid expansion or special designation.</p>
+<p>Shortening (aliasing) of names generally occurs after three hierarchical levels (i.e.&nbsp;D for C.1.1.1), but a new alias may be given earlier in the case of a rapid expansion or special designation.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -759,7 +818,97 @@ All good!  Set up of conda complete.</code></pre>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/irv.70230">The full publication on the nomenclature system.</a></p></li></ol></aside></section></section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/irv.70230">The full publication on the nomenclature system.</a></p></li></ol></aside></section>
+<section id="example-of-implementation-using-h3n2-ha" class="slide level2 smaller">
+<h2>Example of Implementation Using H3N2 HA</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">library</span>(networkD3)</span>
+<span id="cb7-2"><a href=""></a><span class="fu">library</span>(data.tree)</span>
+<span id="cb7-3"><a href=""></a><span class="fu">library</span>(htmlwidgets)</span>
+<span id="cb7-4"><a href=""></a><span class="fu">library</span>(collapsibleTree)</span>
+<span id="cb7-5"><a href=""></a><span class="fu">library</span>(yaml)</span>
+<span id="cb7-6"><a href=""></a><span class="fu">library</span>(viridis)</span>
+<span id="cb7-7"><a href=""></a></span>
+<span id="cb7-8"><a href=""></a><span class="co"># Create tree via a nested yaml string</span></span>
+<span id="cb7-9"><a href=""></a>yaml <span class="ot">&lt;-</span> <span class="st">"</span></span>
+<span id="cb7-10"><a href=""></a><span class="st">name: A (3C)</span></span>
+<span id="cb7-11"><a href=""></a><span class="st">A.2 (3C.2):</span></span>
+<span id="cb7-12"><a href=""></a><span class="st">  B (*A.2.1):</span></span>
+<span id="cb7-13"><a href=""></a><span class="st">    B.1:</span></span>
+<span id="cb7-14"><a href=""></a><span class="st">      B.1.1:</span></span>
+<span id="cb7-15"><a href=""></a><span class="st">      B.1.2:</span></span>
+<span id="cb7-16"><a href=""></a><span class="st">        B.1.2.1:</span></span>
+<span id="cb7-17"><a href=""></a><span class="st">          D (*B.1.2.1.2):</span></span>
+<span id="cb7-18"><a href=""></a><span class="st">        E (*B.1.2.2):</span></span>
+<span id="cb7-19"><a href=""></a><span class="st">          E.1:</span></span>
+<span id="cb7-20"><a href=""></a><span class="st">            F (*E.1.1):</span></span>
+<span id="cb7-21"><a href=""></a><span class="st">              F.1:</span></span>
+<span id="cb7-22"><a href=""></a><span class="st">                F.1.1:</span></span>
+<span id="cb7-23"><a href=""></a><span class="st">            G (*E.1.2):</span></span>
+<span id="cb7-24"><a href=""></a><span class="st">              G.1:</span></span>
+<span id="cb7-25"><a href=""></a><span class="st">                G.1.1:</span></span>
+<span id="cb7-26"><a href=""></a><span class="st">                  G.1.1.1:</span></span>
+<span id="cb7-27"><a href=""></a><span class="st">                  G.1.1.2:</span></span>
+<span id="cb7-28"><a href=""></a><span class="st">                G.1.2:</span></span>
+<span id="cb7-29"><a href=""></a><span class="st">                G.1.3:</span></span>
+<span id="cb7-30"><a href=""></a><span class="st">                  G.1.3.1:</span></span>
+<span id="cb7-31"><a href=""></a><span class="st">                    J (*G.1.3.1.1):</span></span>
+<span id="cb7-32"><a href=""></a><span class="st">                      J.1:</span></span>
+<span id="cb7-33"><a href=""></a><span class="st">                        J.1.1:</span></span>
+<span id="cb7-34"><a href=""></a><span class="st">                      J.2:</span></span>
+<span id="cb7-35"><a href=""></a><span class="st">                        J.2.1:</span></span>
+<span id="cb7-36"><a href=""></a><span class="st">                        J.2.2:</span></span>
+<span id="cb7-37"><a href=""></a><span class="st">                        J.2.3:</span></span>
+<span id="cb7-38"><a href=""></a><span class="st">                        J.2.4:</span></span>
+<span id="cb7-39"><a href=""></a><span class="st">                          K (*J.2.4.1):</span></span>
+<span id="cb7-40"><a href=""></a><span class="st">                        J.2.5:</span></span>
+<span id="cb7-41"><a href=""></a><span class="st">                      J.3:</span></span>
+<span id="cb7-42"><a href=""></a><span class="st">                      J.4:</span></span>
+<span id="cb7-43"><a href=""></a><span class="st">                  G.1.3.2:</span></span>
+<span id="cb7-44"><a href=""></a><span class="st">              G.2:</span></span>
+<span id="cb7-45"><a href=""></a><span class="st">                G.2.1:</span></span>
+<span id="cb7-46"><a href=""></a><span class="st">                G.2.2:</span></span>
+<span id="cb7-47"><a href=""></a><span class="st">              G.3:</span></span>
+<span id="cb7-48"><a href=""></a><span class="st">              G.4:</span></span>
+<span id="cb7-49"><a href=""></a><span class="st">          E.2:</span></span>
+<span id="cb7-50"><a href=""></a><span class="st">  B.2:</span></span>
+<span id="cb7-51"><a href=""></a><span class="st">  B.3:</span></span>
+<span id="cb7-52"><a href=""></a><span class="st">  B.4:</span></span>
+<span id="cb7-53"><a href=""></a><span class="st">A.3 (3C.3):</span></span>
+<span id="cb7-54"><a href=""></a><span class="st">  C (*A.3.1):</span></span>
+<span id="cb7-55"><a href=""></a><span class="st">    C.1</span></span>
+<span id="cb7-56"><a href=""></a><span class="st">  A.3.2:</span></span>
+<span id="cb7-57"><a href=""></a><span class="st">"</span></span>
+<span id="cb7-58"><a href=""></a></span>
+<span id="cb7-59"><a href=""></a><span class="co"># Load the yaml tree into a list</span></span>
+<span id="cb7-60"><a href=""></a>h3List <span class="ot">&lt;-</span> <span class="fu">yaml.load</span>(yaml)</span>
+<span id="cb7-61"><a href=""></a></span>
+<span id="cb7-62"><a href=""></a><span class="co"># Transform into a data.tree object</span></span>
+<span id="cb7-63"><a href=""></a>h3Node <span class="ot">&lt;-</span> <span class="fu">as.Node</span>(h3List, <span class="at">interpretNullAsList =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-64"><a href=""></a></span>
+<span id="cb7-65"><a href=""></a><span class="co"># Assign a vector of colors for nodes</span></span>
+<span id="cb7-66"><a href=""></a>h3Colors <span class="ot">&lt;-</span> viridis<span class="sc">::</span><span class="fu">turbo</span>(h3Node<span class="sc">$</span>totalCount)</span>
+<span id="cb7-67"><a href=""></a></span>
+<span id="cb7-68"><a href=""></a><span class="co"># Assign colors to tree nodes</span></span>
+<span id="cb7-69"><a href=""></a>i <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb7-70"><a href=""></a>h3Node<span class="sc">$</span><span class="fu">Do</span>(<span class="cf">function</span>(node) {</span>
+<span id="cb7-71"><a href=""></a>  node<span class="sc">$</span>color <span class="ot">&lt;-</span> h3Colors[i]</span>
+<span id="cb7-72"><a href=""></a>  i <span class="ot">&lt;&lt;-</span> i <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb7-73"><a href=""></a>})</span>
+<span id="cb7-74"><a href=""></a></span>
+<span id="cb7-75"><a href=""></a><span class="co"># Display collapsible tree</span></span>
+<span id="cb7-76"><a href=""></a><span class="fu">collapsibleTree</span>(h3Node,</span>
+<span id="cb7-77"><a href=""></a>                <span class="at">fill =</span> <span class="st">"color"</span>,</span>
+<span id="cb7-78"><a href=""></a>                <span class="at">tooltip =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="collapsibleTree html-widget html-fill-item" id="htmlwidget-4da4cfb2361f95ece9ce" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-4da4cfb2361f95ece9ce">{"x":{"data":{"name":"A (3C)","fill":"#30123BFF","WeightOfNode":24,"children":[{"name":"A.2 (3C.2)","fill":"#372365FF","WeightOfNode":23,"children":[{"name":"B (*A.2.1)","fill":"#3D3489FF","WeightOfNode":20,"children":[{"name":"B.1","fill":"#4144A9FF","WeightOfNode":20,"children":[{"name":"B.1.1","fill":"#4454C4FF","WeightOfNode":1},{"name":"B.1.2","fill":"#4664DAFF","WeightOfNode":19,"children":[{"name":"B.1.2.1","fill":"#4772EAFF","WeightOfNode":1,"children":[{"name":"D (*B.1.2.1.2)","fill":"#4681F7FF","WeightOfNode":1}]},{"name":"E (*B.1.2.2)","fill":"#4490FEFF","WeightOfNode":18,"children":[{"name":"E.1","fill":"#3D9EFEFF","WeightOfNode":17,"children":[{"name":"F (*E.1.1)","fill":"#33ADF7FF","WeightOfNode":1,"children":[{"name":"F.1","fill":"#28BBECFF","WeightOfNode":1,"children":[{"name":"F.1.1","fill":"#1FC8DEFF","WeightOfNode":1}]}]},{"name":"G (*E.1.2)","fill":"#1AD4CFFF","WeightOfNode":16,"children":[{"name":"G.1","fill":"#18DEC0FF","WeightOfNode":12,"children":[{"name":"G.1.1","fill":"#1DE7B2FF","WeightOfNode":2,"children":[{"name":"G.1.1.1","fill":"#29EFA2FF","WeightOfNode":1},{"name":"G.1.1.2","fill":"#3AF590FF","WeightOfNode":1}]},{"name":"G.1.2","fill":"#4FF97CFF","WeightOfNode":1},{"name":"G.1.3","fill":"#65FD69FF","WeightOfNode":9,"children":[{"name":"G.1.3.1","fill":"#7DFF56FF","WeightOfNode":8,"children":[{"name":"J (*G.1.3.1.1)","fill":"#91FF48FF","WeightOfNode":8,"children":[{"name":"J.1","fill":"#A2FC3CFF","WeightOfNode":1,"children":[{"name":"J.1.1","fill":"#B2F936FF","WeightOfNode":1}]},{"name":"J.2","fill":"#C1F334FF","WeightOfNode":5,"children":[{"name":"J.2.1","fill":"#D0EA34FF","WeightOfNode":1},{"name":"J.2.2","fill":"#DCE137FF","WeightOfNode":1},{"name":"J.2.3","fill":"#E8D639FF","WeightOfNode":1},{"name":"J.2.4","fill":"#F1CA3AFF","WeightOfNode":1,"children":[{"name":"K (*J.2.4.1)","fill":"#F8BE39FF","WeightOfNode":1}]},{"name":"J.2.5","fill":"#FCB136FF","WeightOfNode":1}]},{"name":"J.3","fill":"#FEA230FF","WeightOfNode":1},{"name":"J.4","fill":"#FE922AFF","WeightOfNode":1}]}]},{"name":"G.1.3.2","fill":"#FB8022FF","WeightOfNode":1}]}]},{"name":"G.2","fill":"#F76F1AFF","WeightOfNode":2,"children":[{"name":"G.2.1","fill":"#F15D13FF","WeightOfNode":1},{"name":"G.2.2","fill":"#EA4F0DFF","WeightOfNode":1}]},{"name":"G.3","fill":"#E2420AFF","WeightOfNode":1},{"name":"G.4","fill":"#D83706FF","WeightOfNode":1}]}]},{"name":"E.2","fill":"#CC2B04FF","WeightOfNode":1}]}]}]}]},{"name":"B.2","fill":"#BE2102FF","WeightOfNode":1},{"name":"B.3","fill":"#B01901FF","WeightOfNode":1},{"name":"B.4","fill":"#A01101FF","WeightOfNode":1}]},{"name":"A.3 (3C.3)","fill":"#8D0A01FF","WeightOfNode":1,"children":[{"name":"A.3.2","fill":"#7A0403FF","WeightOfNode":1}]}]},"options":{"hierarchy":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":true,"collapsed":true,"zoomable":true,"margin":{"top":20,"bottom":20,"left":55,"right":85}}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section></section>
 <section>
 <section id="section-2-tree-building-overview" class="title-slide slide level1 center">
 <h1>Section 2: Tree Building Overview</h1>
@@ -774,10 +923,15 @@ All good!  Set up of conda complete.</code></pre>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
     A[Sequence selection and filtering]
+    style A text-align:center
     B[Multiple sequence alignment]
+    style B text-align:center
     C[Model selection]
+    style C text-align:center
     D[Tree inference]
+    style D text-align:center
     E[Tree evaluation and visualization]
+    style E text-align:center
 
     A --&gt;  |The data that is &lt;br/&gt; included is **important**| B
     B --&gt; C 
@@ -858,12 +1012,12 @@ All good!  Set up of conda complete.</code></pre>
 <li class="fragment"><p>Country specific questions?</p></li>
 <li class="fragment"><p>Timing of a newly emerged variant?</p>
 <ul>
-<li class="fragment"><em>Be especially careful here. This requires intensive analysis and scrutiny. Preferably using bayesian methods.</em></li>
+<li class="fragment"><em>Be especially careful here. This requires intensive analysis and scrutiny. Understand the limitations of analysis.</em></li>
 </ul></li>
 </ul></li>
 </ul>
 <aside class="notes">
-<p>When starting the process of building a tree there are many things to consider. But the primary actions should revolve around including sequences with high data quality and making sure your sequence selection is appropriate for the question you are trying to address. Selection will be drastically different whether your question is focused around global surveillance, a targeted regional analysis, a country specific question, or the timing of a newly emerged variant. This last question requires especially careful consideration in dataset selection and would be most appropriate to complete using Bayesian methods, such as the BEAST software suite.</p>
+<p>When starting the process of building a tree there are many things to consider. But the primary actions should revolve around including sequences with high data quality and making sure your sequence selection is appropriate for the question you are trying to address. Selection will be drastically different whether your question is focused around global surveillance, a targeted regional analysis, a country specific question, or the timing of a newly emerged variant. This last question requires especially careful consideration in dataset selection and the limitations of the analysis should be well understood.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -920,7 +1074,7 @@ All good!  Set up of conda complete.</code></pre>
 <h2>Model Selection</h2>
 <p>Assuming nucleotide sequence data as input:</p>
 <ul>
-<li>Jukes-Cantor (simplest model)</li>
+<li>Jukes-Cantor (simplest model)<sup>1</sup></li>
 <li>HKY</li>
 <li>TN93</li>
 <li>GTR (Model implemented in Nextstrain flu pipelines)</li>
@@ -938,7 +1092,7 @@ All good!  Set up of conda complete.</code></pre>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Model references can be found <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/irv.70230"><strong>here</strong></a></p></li></ol></aside></section>
 <section id="tree-inference---algorithms" class="slide level2">
 <h2>Tree Inference - Algorithms</h2>
 <p>Distance Based:</p>
@@ -973,6 +1127,8 @@ All good!  Set up of conda complete.</code></pre>
 <li><a href="https://cme.h-its.org/exelixis/web/software/raxml/">RAxML</a></li>
 <li><a href="https://morgannprice.github.io/fasttree/">FastTree</a></li>
 <li><a href="https://iqtree.github.io/">IQ-TREE (Nextstrain Default)</a></li>
+<li><a href="https://github.com/iqtree/cmaple">cmaple (Standalone program and within IQ-TREE using<br>
+<code>--pathogen</code> flag)</a></li>
 </ul>
 <aside class="notes">
 <p>Common software implementing tree building methods are MEGA, which provides a robust toolkit in a graphical user interface and other command line tools such as RAxML, FastTree, and IQ-TREE. With IQ-TREE being the maximum likelihood implemented in Nexstrain tree building defaults.</p>
@@ -988,7 +1144,7 @@ All good!  Set up of conda complete.</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="tree-evaluation-and-visualization" class="slide level2">
+<section id="tree-evaluation-and-visualization" class="slide level2 smaller">
 <h2>Tree Evaluation and Visualization</h2>
 <ul>
 <li><a href="https://docs.nextstrain.org/projects/auspice/en/stable/">Nextstrain (auspice)</a></li>
@@ -997,6 +1153,7 @@ All good!  Set up of conda complete.</code></pre>
 <li><a href="https://tree.bio.ed.ac.uk/software/figtree/">FigTree</a></li>
 <li><a href="https://itol.embl.de/">ITOL</a></li>
 <li><a href="https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/algorithms-in-bioinformatics/software/dendroscope/">Dendroscope</a></li>
+<li><a href="https://www.phylosoft.org/archaeopteryx/">archaeopteryx</a></li>
 <li>Programmatic libraries:
 <ul>
 <li><a href="https://etetoolkit.org/">ETE Toolkit</a></li>
@@ -1143,15 +1300,15 @@ All good!  Set up of conda complete.</code></pre>
 <p>Open the example narrative file <code>/profiles/gisaid/custom.md</code> in VS Code.<br>
 </p>
 <p>At the top of the file is the narrative header:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href=""></a><span class="co">---</span></span>
-<span id="cb7-2"><a href=""></a><span class="an">title:</span><span class="co"> Custom Local Hosted Narrative</span></span>
-<span id="cb7-3"><a href=""></a><span class="an">authors:</span><span class="co"> Norman Hassell</span></span>
-<span id="cb7-4"><a href=""></a><span class="an">date:</span><span class="co"> "2026-03-02"</span></span>
-<span id="cb7-5"><a href=""></a><span class="an">dataset:</span><span class="co"> "https://nextstrain.org/custom/h3n2/ha"</span></span>
-<span id="cb7-6"><a href=""></a><span class="an">abstract:</span><span class="co"> "</span></span>
-<span id="cb7-7"><a href=""></a><span class="co">Custom narrative of custom build</span></span>
-<span id="cb7-8"><a href=""></a><span class="co">"</span></span>
-<span id="cb7-9"><a href=""></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href=""></a><span class="co">---</span></span>
+<span id="cb8-2"><a href=""></a><span class="an">title:</span><span class="co"> Custom Local Hosted Narrative</span></span>
+<span id="cb8-3"><a href=""></a><span class="an">authors:</span><span class="co"> Norman Hassell</span></span>
+<span id="cb8-4"><a href=""></a><span class="an">date:</span><span class="co"> "2026-03-02"</span></span>
+<span id="cb8-5"><a href=""></a><span class="an">dataset:</span><span class="co"> "https://nextstrain.org/custom/h3n2/ha"</span></span>
+<span id="cb8-6"><a href=""></a><span class="an">abstract:</span><span class="co"> "</span></span>
+<span id="cb8-7"><a href=""></a><span class="co">Custom narrative of custom build</span></span>
+<span id="cb8-8"><a href=""></a><span class="co">"</span></span>
+<span id="cb8-9"><a href=""></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>For local builds, you will have the prefix <code>https://nextstrain.org</code> followed by your build file name with underscores replaced by the <code>/</code> character (ie. <code>custom_h3n2_ha.json</code> dataset becomes <code>https://nextstrain.org/custom/h3n2/ha</code>)</p>
 <aside class="notes">
 <p>Open the example narrative file in VS Code. At the top of the file is the narrative header. This header contains the title of your narrative, the authors, the data set link, and the abstract that you would like displayed for your narrative.</p>
@@ -1174,11 +1331,11 @@ All good!  Set up of conda complete.</code></pre>
 <section id="components-of-a-narrative-basic-slides" class="slide level2">
 <h2>Components of a Narrative: Basic Slides</h2>
 <p>Basic slides are set up by providing copied links as first level headers:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown code-overflow-wrap number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href=""></a><span class="fu"># [Custom Dataset Slide](https://nextstrain.org/custom/h3n2/ha?d=tree,map,frequencies&amp;f_sample_type=sample&amp;p=grid)</span></span>
-<span id="cb8-2"><a href=""></a></span>
-<span id="cb8-3"><a href=""></a>Example of a basic slide view.</span>
-<span id="cb8-4"><a href=""></a></span>
-<span id="cb8-5"><a href=""></a>The slide is filtered to a "Sample Type" of "sample".</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown code-overflow-wrap number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href=""></a><span class="fu"># [Custom Dataset Slide](https://nextstrain.org/custom/h3n2/ha?d=tree,map,frequencies&amp;f_sample_type=sample&amp;p=grid)</span></span>
+<span id="cb9-2"><a href=""></a></span>
+<span id="cb9-3"><a href=""></a>Example of a basic slide view.</span>
+<span id="cb9-4"><a href=""></a></span>
+<span id="cb9-5"><a href=""></a>The slide is filtered to a "Sample Type" of "sample".</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="components-of-a-narrative-basic-slides-result" class="slide level2">
 <h2>Components of a Narrative: Basic Slides (Result)</h2>
@@ -1188,9 +1345,9 @@ All good!  Set up of conda complete.</code></pre>
 <h2>Components of a Narrative: Animations</h2>
 <p>Timeline animations can be used in narratives by copying the link associated with the animation.</p>
 <p>The link will briefly show after clicking the “Play ▶️” button underneath the “Date Range” toolbar.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown code-overflow-wrap number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href=""></a><span class="fu"># [Custom Dataset Animations](https://nextstrain.org/custom/h3n2/ha?animate=2024-06-04,2025-12-20,0,0,30000&amp;d=map&amp;f_sample_type=sample&amp;p=full)</span></span>
-<span id="cb9-2"><a href=""></a></span>
-<span id="cb9-3"><a href=""></a>Animations can be captured.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource markdown code-overflow-wrap number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href=""></a><span class="fu"># [Custom Dataset Animations](https://nextstrain.org/custom/h3n2/ha?animate=2024-06-04,2025-12-20,0,0,30000&amp;d=map&amp;f_sample_type=sample&amp;p=full)</span></span>
+<span id="cb10-2"><a href=""></a></span>
+<span id="cb10-3"><a href=""></a>Animations can be captured.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="components-of-a-narrative-animations-result" class="slide level2">
 <h2>Components of a Narrative: Animations (Result)</h2>
@@ -1199,19 +1356,19 @@ All good!  Set up of conda complete.</code></pre>
 <section id="components-of-a-narrative-images" class="slide level2">
 <h2>Components of a Narrative: Images</h2>
 <p>Images can be imbedded into the narrative sidebar or main display from direct links or <a href="https://www.base64-image.de/">base64 conversion</a>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource markdown code-overflow-wrap number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href=""></a><span class="fu"># [Image Embedding](https://nextstrain.org/custom/h3n2/ha)</span></span>
-<span id="cb10-2"><a href=""></a></span>
-<span id="cb10-3"><a href=""></a>Images can be embedded from the web in the side panel.</span>
-<span id="cb10-4"><a href=""></a></span>
-<span id="cb10-5"><a href=""></a><span class="al">![](https://www.esrf.fr/files/live/sites/www/files/news/general-old/general-2009/Influenza-Virus.jpg)</span></span>
-<span id="cb10-6"><a href=""></a></span>
-<span id="cb10-7"><a href=""></a><span class="in">```auspiceMainDisplayMarkdown</span></span>
-<span id="cb10-8"><a href=""></a><span class="in">### Or in the main body display via the `auspiceMainDisplayMarkdown` section.</span></span>
-<span id="cb10-9"><a href=""></a></span>
-<span id="cb10-10"><a href=""></a><span class="in">For main body markdown display.</span></span>
-<span id="cb10-11"><a href=""></a></span>
-<span id="cb10-12"><a href=""></a><span class="in">![Flu](https://www.embl.org/news/wp-content/uploads/2020/04/INFLUENZA_EDIT.jpg)</span></span>
-<span id="cb10-13"><a href=""></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource markdown code-overflow-wrap number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href=""></a><span class="fu"># [Image Embedding](https://nextstrain.org/custom/h3n2/ha)</span></span>
+<span id="cb11-2"><a href=""></a></span>
+<span id="cb11-3"><a href=""></a>Images can be embedded from the web in the side panel.</span>
+<span id="cb11-4"><a href=""></a></span>
+<span id="cb11-5"><a href=""></a><span class="al">![](https://www.esrf.fr/files/live/sites/www/files/news/general-old/general-2009/Influenza-Virus.jpg)</span></span>
+<span id="cb11-6"><a href=""></a></span>
+<span id="cb11-7"><a href=""></a><span class="in">```auspiceMainDisplayMarkdown</span></span>
+<span id="cb11-8"><a href=""></a><span class="in">### Or in the main body display via the `auspiceMainDisplayMarkdown` section.</span></span>
+<span id="cb11-9"><a href=""></a></span>
+<span id="cb11-10"><a href=""></a><span class="in">For main body markdown display.</span></span>
+<span id="cb11-11"><a href=""></a></span>
+<span id="cb11-12"><a href=""></a><span class="in">![Flu](https://www.embl.org/news/wp-content/uploads/2020/04/INFLUENZA_EDIT.jpg)</span></span>
+<span id="cb11-13"><a href=""></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="components-of-a-narrative-images-results" class="slide level2">
 <h2>Components of a Narrative: Images (Results)</h2>
@@ -1234,12 +1391,12 @@ All good!  Set up of conda complete.</code></pre>
 <h2>Narrative Exercise</h2>
 <p>Before moving on to the exercise open a new terminal in the<br>
 <code>seasonal-flu-demo</code> folder and enter into a new nextstrain shell session:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href=""></a><span class="ex">nextstrain</span> shell .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href=""></a><span class="ex">nextstrain</span> shell .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Then, run another build using the following command:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href=""></a><span class="ex">nextstrain</span> build . <span class="at">--configfile</span> profiles/gisaid/custom_gisaid_global.yaml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href=""></a><span class="ex">nextstrain</span> build . <span class="at">--configfile</span> profiles/gisaid/custom_gisaid_global.yaml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Repeat this process for a third build.</p>
 <p>Open a new terminal, enter a nextstrain shell, and execute the following:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href=""></a><span class="ex">nextstrain</span> build . <span class="at">--configfile</span> profiles/gisaid/custom_gisaid_norefs.yaml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href=""></a><span class="ex">nextstrain</span> build . <span class="at">--configfile</span> profiles/gisaid/custom_gisaid_norefs.yaml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="narrative-exercise-1" class="slide level2 smaller">
 <h2>Narrative Exercise</h2>
