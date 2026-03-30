@@ -1,7 +1,9 @@
 ---
-layout: lesson
+layout: page
 title: BLAST Fundamentals
-nav_order: 13
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/13-blast/
 ---
 
 {% capture section_overview_1 %}

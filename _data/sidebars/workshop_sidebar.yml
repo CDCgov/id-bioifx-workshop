@@ -1,0 +1,121 @@
+entries:
+- title: sidebar
+  product: CDC Bioinformatics Workshop
+  folders:
+
+  - title: Overview
+    output: web
+    folderitems:
+
+    - title: Home
+      url: /
+      output: web
+      type: homepage
+
+    - title: Workshop Objectives
+      url: /lessons/01-objectives/
+      output: web
+
+    - title: Training Overview
+      url: /lessons/02-overview-vcm/
+      output: web
+
+  - title: Computer Fundamentals
+    output: web
+    folderitems:
+
+    - title: Computer Basics
+      url: /lessons/03-computer-basics/
+      output: web
+
+    - title: Computer Setup (WSL)
+      url: /lessons/04-computer-setup-wsl/
+      output: web
+
+    - title: Intro to CLI
+      url: /lessons/05-cli-intro/
+      output: web
+
+    - title: CLI Exercises
+      url: /lessons/06-cli-intro-exercises/
+      output: web
+
+  - title: Programming
+    output: web
+    folderitems:
+
+    - title: Intro to Bioinformatics Programming
+      url: /lessons/07-bifx-programming/
+      output: web
+
+    - title: Programming Exercises
+      url: /lessons/08-bifx-programming-exercises/
+      output: web
+
+  - title: Environments & Containers
+    output: web
+    folderitems:
+
+    - title: Computer Environments
+      url: /lessons/09-computer-environments/
+      output: web
+
+    - title: Containers and Registries
+      url: /lessons/10-containers-registries/
+      output: web
+
+  - title: Genomics & Analysis
+    output: web
+    folderitems:
+
+    - title: Genome Assembly
+      url: /lessons/11-genome-assembly/
+      output: web
+
+    - title: Sequence Alignment
+      url: /lessons/12-sequence-alignment/
+      output: web
+
+    - title: BLAST Fundamentals
+      url: /lessons/13-blast/
+      output: web
+
+    - title: Identifying Genetic Markers
+      url: /lessons/14-identifying-genetic-markers/
+      output: web
+
+  - title: Phylogenetics & Epi
+    output: web
+    folderitems:
+
+    - title: Phylogenetics
+      url: /lessons/15-phylogenetics/
+      output: web
+
+    - title: Genomic Epidemiology
+      url: /lessons/16-genomic-epi/
+      output: web
+
+  - title: Quality & Reporting
+    output: web
+    folderitems:
+
+    - title: Quality Management Systems
+      url: /lessons/17-quality-management-systems/
+      output: web
+
+    - title: Reporting with Quarto
+      url: /lessons/18-reporting/
+      output: web
+
+    - title: Workflow Pipelines
+      url: /lessons/19-workflow-pipelines/
+      output: web
+
+  - title: Workshops
+    output: web
+    folderitems:
+
+    - title: All Workshops
+      url: /workshops/
+      output: web

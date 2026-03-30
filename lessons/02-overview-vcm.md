@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Training Overview - Influenza Vaccine Composition
-nav_order: 2
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/02-overview-vcm/
 ---
 
 <style>

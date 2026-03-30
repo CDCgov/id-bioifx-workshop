@@ -1,8 +1,11 @@
 ---
 title: "2026 | Santiago, Chile"
+layout: page
 workshop_order: 1
 location: Santiago, Chile
 event_date: 2026-April-13
+sidebar: workshop_sidebar
+topnav: topnav
 ---
 
 <details class="collapsible-md">

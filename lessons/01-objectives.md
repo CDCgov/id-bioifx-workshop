@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Workshop Objectives
-nav_order: 1
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/01-objectives/
 ---
 <!-- filepath: /Users/nbx0/repos/id-bioifx-workshop/lessons/01-objectives.md -->
 

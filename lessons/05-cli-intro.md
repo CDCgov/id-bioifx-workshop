@@ -1,7 +1,9 @@
 ---
-layout: lesson
+layout: page
 title: Intro to Command Line Interface
-nav_order: 5
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/05-cli-intro/
 ---
 
 {% capture section_overview_1 %}

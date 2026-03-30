@@ -1,0 +1,23 @@
+topnav:
+- title: Topnav
+  items:
+    - title: Lessons
+      url: /lessons/01-objectives/
+    - title: Workshops
+      url: /workshops/
+    - title: GitHub
+      external_url: https://github.com/cdcgov/id-bioifx-workshop
+
+topnav_dropdowns:
+- title: Topnav dropdowns
+  folders:
+    - title: Quick Links
+      folderitems:
+        - title: Computer Basics
+          url: /lessons/03-computer-basics/
+        - title: CLI Introduction
+          url: /lessons/05-cli-intro/
+        - title: Genome Assembly
+          url: /lessons/11-genome-assembly/
+        - title: Phylogenetics
+          url: /lessons/15-phylogenetics/

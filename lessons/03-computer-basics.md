@@ -1,7 +1,9 @@
 ---
-layout: lesson
+layout: page
 title: Computer Basics
-nav_order: 3
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/03-computer-basics/
 ---
 
 {% capture section_overview_1 %}

@@ -1,5 +1,7 @@
 ---
 layout: page
 title: Phylogenetics
-nav_order: 16
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/16-genomic-epi/
 ---

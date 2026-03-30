@@ -1,7 +1,9 @@
 ---
 title: Developer Guide
 permalink: /developer-guide/
-layout: default
+layout: page
+sidebar: workshop_sidebar
+topnav: topnav
 ---
 <!-- filepath: /Users/nbx0/repos/id-bioifx-workshop/DEVELOPER_GUIDE.md -->
 # Developer Guide

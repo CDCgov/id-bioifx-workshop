@@ -1,7 +1,9 @@
 ---
-layout: lesson
+layout: page
 title: Intro to Bioinformatics Programming
-nav_order: 7
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/07-bifx-programming/
 ---
 
 {% capture section_overview_1 %}

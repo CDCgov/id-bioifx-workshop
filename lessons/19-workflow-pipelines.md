@@ -1,5 +1,7 @@
 ---
 layout: page
 title: Workflow Pipelines
-nav_order: 15
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/19-workflow-pipelines/
 ---

@@ -1,7 +1,9 @@
 ---
-layout: lesson
+layout: page
 title: "Bioinformatics Programming – Exercises"
-nav_order: 8
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/08-bifx-programming-exercises/
 ---
 
 <style>

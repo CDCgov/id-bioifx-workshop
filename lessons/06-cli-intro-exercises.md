@@ -1,7 +1,9 @@
 ---
-layout: lesson
+layout: page
 title: "CLI Introduction – Exercises"
-nav_order: 6
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/06-cli-intro-exercises/
 ---
 
 <style>

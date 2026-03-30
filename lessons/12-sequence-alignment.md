@@ -1,7 +1,9 @@
 ---
-layout: lesson
+layout: page
 title: Sequence Alignment Overview
-nav_order: 12
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/12-sequence-alignment/
 ---
 
 {% capture section_overview_1 %}

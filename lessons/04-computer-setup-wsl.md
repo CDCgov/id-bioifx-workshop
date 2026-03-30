@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Computer Setup (WSL)
-nav_order: 4
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/04-computer-setup-wsl/
 ---
 
 {% capture section_overview_1 %}

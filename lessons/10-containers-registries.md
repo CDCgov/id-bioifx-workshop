@@ -1,7 +1,9 @@
 ---
-layout: lesson
+layout: page
 title: Containers and Registries
-nav_order: 10
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/10-containers-registries/
 ---
 
 {% capture section_overview_1 %}
