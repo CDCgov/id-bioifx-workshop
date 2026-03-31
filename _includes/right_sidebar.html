@@ -32,12 +32,13 @@ $(document).ready(function() {
     var level = parseInt(this.tagName.charAt(1));
 
     if (level === 2) {
-      // Create a top-level li with a toggle link and a nested ul for children
+      // Create a top-level li with separate link and toggle caret
       currentH2Li = $('<li></li>');
-      var a = $('<a></a>').attr('href', '#' + id);
-      a.append($('<span></span>'));
-      a.append(document.createTextNode($this.text()));
-      currentH2Li.append(a);
+      var wrapper = $('<div class="right-toc-h2"></div>');
+      var a = $('<a></a>').attr('href', '#' + id).text($this.text());
+      var caret = $('<span class="right-toc-caret"></span>');
+      wrapper.append(a).append(caret);
+      currentH2Li.append(wrapper);
       currentSubUl = $('<ul></ul>').hide();
       currentH2Li.append(currentSubUl);
       rightToc.append(currentH2Li);
@@ -56,26 +57,29 @@ $(document).ready(function() {
   // Remove empty sub-uls (h2s with no h3 children)
   rightToc.find('ul').each(function() {
     if ($(this).children().length === 0) {
-      $(this).prev('a').find('span').remove();
+      $(this).prev('.right-toc-h2').find('.right-toc-caret').remove();
       $(this).remove();
     }
   });
 
-  // Toggle h3 sub-lists when clicking h2 caret/link
-  rightToc.on('click', '> li > a', function(e) {
-    var $subUl = $(this).next('ul');
+  // Clicking the caret toggles the sub-list (does NOT navigate)
+  rightToc.on('click', '.right-toc-caret', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var $parentLi = $(this).closest('li');
+    var $subUl = $parentLi.children('ul');
     if ($subUl.length) {
-      e.preventDefault();
-      e.stopPropagation();
-      var $parentLi = $(this).parent();
       $parentLi.toggleClass('active');
       $subUl.slideToggle(300);
+    }
+  });
 
-      // Navigate to the heading
-      var target = $(this.getAttribute('href'));
-      if (target.length) {
-        $('html, body').animate({ scrollTop: target.offset().top - 10 }, 300);
-      }
+  // Clicking the h2 link text navigates to the section
+  rightToc.on('click', '.right-toc-h2 > a', function(e) {
+    e.preventDefault();
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+      $('html, body').animate({ scrollTop: target.offset().top - 10 }, 300);
     }
   });
 

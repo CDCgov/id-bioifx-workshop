@@ -4,16 +4,7 @@
 $( document ).ready(function() {
   // Handler for .ready() called.
 
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
+/* Inline TOC removed — right sidebar provides the TOC now */
 
 /* Insert "Return to Table of Contents" link + "Collapse Section" button after each h2 section */
 var headings = $('.post-content h2');
@@ -32,7 +23,8 @@ if (headings.length > 1) {
 
     // Build the controls row AFTER the wrapper (always visible)
     var controls = $('<p class="toc-return"></p>');
-    var tocLink = $('<a href="#toc"><i class="fa fa-arrow-up"></i> Return to Table of Contents</a>');
+    var tocLink = $('<a href="#"><i class="fa fa-arrow-up"></i> Return to Top</a>');
+    tocLink.on('click', function(e) { e.preventDefault(); $('html, body').animate({ scrollTop: 0 }, 300); });
     var collapseBtn = $('<button class="btn-collapse-section"><i class="fa fa-chevron-up"></i> Collapse Section</button>');
     controls.append(tocLink).append(collapseBtn);
     sectionDiv.after(controls);
@@ -64,6 +56,6 @@ if (headings.length > 1) {
 });
 </script>
 
-<div id="toc"></div>
+
 
 {% comment %} Copyright 2021 Google LLC {% endcomment %}

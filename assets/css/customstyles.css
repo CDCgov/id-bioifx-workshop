@@ -601,32 +601,47 @@ ul#mysidebar {
     margin: 1px 0;
 }
 
-.right-toc-nav > li > a {
+.right-toc-h2 {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+}
+
+.right-toc-h2 > a {
+    flex: 1;
     font-size: 13px;
     line-height: 20px;
     padding: 4px 10px;
     display: block;
     color: #333;
     text-decoration: none;
-    background-color: #f1f1f1;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.right-toc-nav > li > a > span {
-    float: right;
+.right-toc-h2 > a:hover {
+    background-color: #347DBE;
+    color: #f5f5f5;
+}
+
+.right-toc-caret {
+    cursor: pointer;
+    padding: 4px 10px;
     font-size: 19px;
     font-weight: bolder;
+    color: #333;
+    user-select: none;
 }
 
-.right-toc-nav > li > a > span:after {
+.right-toc-caret:after {
     content: '\25be';
 }
 
-.right-toc-nav > li.active > a > span:after {
+.right-toc-nav > li.active .right-toc-caret:after {
     content: '\25b4';
 }
 
-.right-toc-nav > li > a:hover,
-.right-toc-nav > li.active > a {
+.right-toc-caret:hover {
     background-color: #347DBE;
     color: #f5f5f5;
 }
