@@ -1,0 +1,116 @@
+<ul id="right-toc" class="nav right-toc-nav">
+  <li class="sidebarTitle">On This Page</li>
+</ul>
+
+<script>
+$(document).ready(function() {
+  var rightToc = $('#right-toc');
+  var headings = $('.post-content').find('h2, h3');
+
+  if (headings.length === 0) {
+    $('#tg-sb-right-sidebar').hide();
+    var $content = $('#tg-sb-content');
+    if ($content.hasClass('col-md-8')) {
+      $content.removeClass('col-md-8').addClass('col-md-10');
+    } else if ($content.hasClass('col-md-10')) {
+      $content.removeClass('col-md-10').addClass('col-md-12');
+    }
+    return;
+  }
+
+  // Build nested TOC: h2s are top-level, h3s nest inside
+  var currentH2Li = null;
+  var currentSubUl = null;
+
+  headings.each(function() {
+    var $this = $(this);
+    var id = $this.attr('id');
+    if (!id) {
+      id = $this.text().toLowerCase().replace(/[^\w]+/g, '-').replace(/-$/, '');
+      $this.attr('id', id);
+    }
+    var level = parseInt(this.tagName.charAt(1));
+
+    if (level === 2) {
+      // Create a top-level li with a toggle link and a nested ul for children
+      currentH2Li = $('<li></li>');
+      var a = $('<a></a>').attr('href', '#' + id);
+      a.append($('<span></span>'));
+      a.append(document.createTextNode($this.text()));
+      currentH2Li.append(a);
+      currentSubUl = $('<ul></ul>').hide();
+      currentH2Li.append(currentSubUl);
+      rightToc.append(currentH2Li);
+    } else if (level === 3) {
+      var li = $('<li></li>');
+      var a = $('<a></a>').attr('href', '#' + id).text($this.text());
+      li.append(a);
+      if (currentSubUl) {
+        currentSubUl.append(li);
+      } else {
+        rightToc.append(li);
+      }
+    }
+  });
+
+  // Remove empty sub-uls (h2s with no h3 children)
+  rightToc.find('ul').each(function() {
+    if ($(this).children().length === 0) {
+      $(this).prev('a').find('span').remove();
+      $(this).remove();
+    }
+  });
+
+  // Toggle h3 sub-lists when clicking h2 caret/link
+  rightToc.on('click', '> li > a', function(e) {
+    var $subUl = $(this).next('ul');
+    if ($subUl.length) {
+      e.preventDefault();
+      e.stopPropagation();
+      var $parentLi = $(this).parent();
+      $parentLi.toggleClass('active');
+      $subUl.slideToggle(300);
+
+      // Navigate to the heading
+      var target = $(this.getAttribute('href'));
+      if (target.length) {
+        $('html, body').animate({ scrollTop: target.offset().top - 10 }, 300);
+      }
+    }
+  });
+
+  // Smooth scroll for sub-items
+  rightToc.on('click', 'ul li a', function(e) {
+    e.preventDefault();
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+      $('html, body').animate({ scrollTop: target.offset().top - 10 }, 300);
+    }
+  });
+
+  // Scrollspy — highlight active section & auto-expand
+  var allLinks = rightToc.find('a');
+  $(window).on('scroll', function() {
+    var scrollPos = $(window).scrollTop() + 80;
+    var current = '';
+    headings.each(function() {
+      if ($(this).offset().top <= scrollPos) {
+        current = '#' + $(this).attr('id');
+      }
+    });
+    allLinks.parent('li').removeClass('active-item');
+    if (current) {
+      var $activeLink = allLinks.filter('[href="' + current + '"]');
+      $activeLink.parent('li').addClass('active-item');
+      // Auto-expand parent h2 section if a child h3 is active
+      var $parentUl = $activeLink.closest('ul');
+      if ($parentUl.length && !$parentUl.is('#right-toc')) {
+        if ($parentUl.is(':hidden')) {
+          $parentUl.slideDown(300);
+          $parentUl.parent('li').addClass('active');
+        }
+      }
+    }
+  });
+});
+</script>

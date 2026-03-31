@@ -43,8 +43,14 @@
         $(document).ready(function() {
             $("#tg-sb-link").click(function() {
                 $("#tg-sb-sidebar").toggle();
-                $("#tg-sb-content").toggleClass('col-md-9');
-                $("#tg-sb-content").toggleClass('col-md-12');
+                var hasRightSidebar = $("#tg-sb-right-sidebar").is(':visible');
+                if (hasRightSidebar) {
+                    $("#tg-sb-content").toggleClass('col-md-8');
+                    $("#tg-sb-content").toggleClass('col-md-10');
+                } else {
+                    $("#tg-sb-content").toggleClass('col-md-10');
+                    $("#tg-sb-content").toggleClass('col-md-12');
+                }
                 $("#tg-sb-icon").toggleClass('fa-toggle-on');
                 $("#tg-sb-icon").toggleClass('fa-toggle-off');
             });
@@ -78,20 +84,40 @@
 <div class="container">
   <div id="main">
     <!-- Content Row -->
-    <div class="row">
+    <div class="row" style="display:flex; flex-wrap:wrap;">
         {% assign content_col_size = "col-md-12" %}
+        {% assign show_right_sidebar = true %}
+        {% if page.toc == false or page.hide_right_sidebar %}
+            {% assign show_right_sidebar = false %}
+        {% endif %}
+
         {% unless page.hide_sidebar %}
             <!-- Sidebar Column -->
-            <div class="col-md-3" id="tg-sb-sidebar">
+            <div class="col-md-2" id="tg-sb-sidebar">
                 {% include sidebar.html %}
             </div>
-            {% assign content_col_size = "col-md-9" %}
+            {% if show_right_sidebar %}
+                {% assign content_col_size = "col-md-8" %}
+            {% else %}
+                {% assign content_col_size = "col-md-10" %}
+            {% endif %}
+        {% else %}
+            {% if show_right_sidebar %}
+                {% assign content_col_size = "col-md-10" %}
+            {% endif %}
         {% endunless %}
 
         <!-- Content Column -->
         <div class="{{content_col_size}}" id="tg-sb-content">
             {{content}}
         </div>
+
+        {% if show_right_sidebar %}
+        <!-- Right Sidebar Column (Table of Contents) -->
+        <div class="col-md-2" id="tg-sb-right-sidebar">
+            {% include right_sidebar.html %}
+        </div>
+        {% endif %}
     <!-- /.row -->
 </div>
 <!-- /.container -->
