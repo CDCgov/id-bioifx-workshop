@@ -552,6 +552,7 @@ ul#mysidebar {
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
     border-radius:5px;
+    background-color: transparent;
 }
 
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
@@ -1327,4 +1328,62 @@ h4.panel-title {
     .collapse.in{
         display:block !important;
     }
+}
+
+/* Copy button for code blocks */
+.copy-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    border: none;
+    background: #4e6e8e;
+    color: #fff;
+    font-size: .7rem;
+    padding: .4rem .55rem;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+pre:hover .copy-btn {
+    opacity: 1;
+}
+.copy-btn:hover {
+    background: #3b5669;
+}
+.copy-btn:disabled {
+    opacity: .6;
+    cursor: default;
+}
+
+/* Collapse Section button */
+.toc-return {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 1.5em;
+    padding-top: 0.75em;
+    border-top: 1px solid #e0e0e0;
+}
+.btn-collapse-section {
+    border: 1px solid #4e6e8e;
+    background: transparent;
+    color: #4e6e8e;
+    font-size: .78rem;
+    padding: .3rem .6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+}
+.btn-collapse-section:hover {
+    background: #4e6e8e;
+    color: #fff;
+}
+.btn-collapse-section i {
+    margin-right: 3px;
 }

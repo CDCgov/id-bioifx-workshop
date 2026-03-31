@@ -15,6 +15,52 @@ $('#toc').on('click', 'a', function() {
   return false
 })
 
+/* Insert "Return to Table of Contents" link + "Collapse Section" button after each h2 section */
+var headings = $('.post-content h2');
+if (headings.length > 1) {
+  // Process in reverse so DOM changes don't affect later iterations
+  $(headings.get().reverse()).each(function() {
+    var h2 = $(this);
+
+    // Collect all sibling elements between this h2 and the next h2
+    var sectionContent = h2.nextUntil('h2');
+    if (!sectionContent.length) return;
+
+    // Wrap them in a collapsible div
+    sectionContent.wrapAll('<div class="section-collapsible"></div>');
+    var sectionDiv = h2.next('.section-collapsible');
+
+    // Build the controls row AFTER the wrapper (always visible)
+    var controls = $('<p class="toc-return"></p>');
+    var tocLink = $('<a href="#toc"><i class="fa fa-arrow-up"></i> Return to Table of Contents</a>');
+    var collapseBtn = $('<button class="btn-collapse-section"><i class="fa fa-chevron-up"></i> Collapse Section</button>');
+    controls.append(tocLink).append(collapseBtn);
+    sectionDiv.after(controls);
+
+    // Toggle collapse
+    collapseBtn.on('click', function() {
+      var btn = $(this);
+      var isCollapsing = sectionDiv.is(':visible');
+
+      if (isCollapsing) {
+        // Capture button position in viewport before collapse
+        var btnViewportTop = btn[0].getBoundingClientRect().top;
+
+        sectionDiv.slideUp(300).promise().done(function() {
+          // Restore button to same viewport position
+          var btnViewportTopAfter = btn[0].getBoundingClientRect().top;
+          var drift = btnViewportTopAfter - btnViewportTop;
+          $(window).scrollTop($(window).scrollTop() + drift);
+        });
+        btn.html('<i class="fa fa-chevron-down"></i> Expand Section');
+      } else {
+        sectionDiv.slideDown(300);
+        btn.html('<i class="fa fa-chevron-up"></i> Collapse Section');
+      }
+    });
+  });
+}
+
 });
 </script>
 

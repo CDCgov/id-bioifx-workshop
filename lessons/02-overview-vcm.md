@@ -5,20 +5,7 @@ sidebar: workshop_sidebar
 topnav: topnav
 permalink: /lessons/02-overview-vcm/
 ---
-
-<style>
-.activity:first-of-type .activity-body,
-.activity:first-of-type .activity-overview {
-  background-color: #ffffff;
-}
-</style>
-
-{% capture section_overview_1 %}
-Introductions, Course Objectives, and a Review of the Influenza Vaccine Composition Cycle.
-{% endcapture %}
-
-{% capture section_body_1 %}
-## **Training Overview**
+## Training Overview
 
 Introductions, Course Objectives, and a Review of the Influenza Vaccine Composition Cycle.
 
@@ -32,14 +19,8 @@ Introductions, Course Objectives, and a Review of the Influenza Vaccine Composit
 ![Faculty 3]({{ site.baseurl }}/assets/images/overview-vcm-img01.png){: width="25%" .img-center}
 ![Faculty 3]({{ site.baseurl }}/assets/images/overview-vcm-img06.png){: width="25%" .img-center}
 ![Faculty 4]({{ site.baseurl }}/assets/images/overview-vcm-img07.png){: width="25%" .img-center}
-{% endcapture %}
 
-{% capture section_overview_2 %}
-Key learning goals for trainees covering data submission, genomic surveillance, informatic analyses, and command-line skills.
-{% endcapture %}
-
-{% capture section_body_2 %}
-## **Training Objectives**
+## Training Objectives
 
 - Trainees should be able to **productionalize submission of timely, high-quality data** to GISAID, NCBI.
 - Trainees should be able to **produce genomic surveillance reports** describing circulating subtypes and clades in their country.
@@ -51,14 +32,8 @@ Key learning goals for trainees covering data submission, genomic surveillance, 
 
 ![Training Objectives - Publication]({{ site.baseurl }}/assets/images/overview-vcm-img11.png){: width="25%" .img-left} 
 ![Training Objectives - Public Health]({{ site.baseurl }}/assets/images/overview-vcm-img13.png){: width="25%" .img-right}
-{% endcapture %}
 
-{% capture section_overview_3 %}
-A brief overview of influenza virus characteristics relevant to bioinformatics analysis.
-{% endcapture %}
-
-{% capture section_body_3 %}
-## **Influenza Bioinformatics**
+## Influenza Bioinformatics
 
 - **Influenza A and B**
 - **8 segments**
@@ -68,14 +43,8 @@ A brief overview of influenza virus characteristics relevant to bioinformatics a
 - Influenza circulates year-round globally with alternating peaks in NH and SH flu seasons
 
 ![Influenza Global Circulation]({{ site.baseurl }}/assets/images/overview-vcm-img15.png){: width="50%" .img-center}
-{% endcapture %}
 
-{% capture section_overview_4 %}
-Understanding the timeline and process for updating the seasonal influenza vaccine, including CVV development and manufacturing.
-{% endcapture %}
-
-{% capture section_body_4 %}
-## **Vaccine Composition**
+## Vaccine Composition
 
 Vaccine antigen must be updated most years.
 
@@ -159,14 +128,7 @@ Influenza vaccine manufacturing timelines (for NH).
 
 *Source and thanks: Dr. J. McCauley*
 
-{% endcapture %}
-
-{% capture section_overview_5 %}
-Data quality considerations, timeliness requirements, and importance of original specimens for CVV development.
-{% endcapture %}
-
-{% capture section_body_5 %}
-## **Timeliness and Quality**
+## Timeliness and Quality
 
 - CDC performs year-round risk assessment to begin early CVV development on several potential clades.
 - Genetic analysis to see change in clade dynamics and substitutions emerging in HA and NA proteins.
@@ -184,14 +146,7 @@ Data quality considerations, timeliness requirements, and importance of original
 - **Global vaccine preparedness and public health protection:** Receiving original specimens strengthens CDC's role in global influenza surveillance and risk assessment, supporting evidence-based recommendations for VCM and manufacturers and ultimately improving the effectiveness of seasonal and pandemic influenza vaccines.
 - **CONTINUE SHIPPING SPECIMENS TO CDC IN ADDITION TO SEQUENCING DISTINCT SAMPLES**
 
-{% endcapture %}
-
-{% capture section_overview_6 %}
-US influenza surveillance data, vaccine composition recommendations, and sequencing guidance.
-{% endcapture %}
-
-{% capture section_body_6 %}
-## **US 2024-2025 National Surveillance**
+## US 2024-2025 National Surveillance
 
 - **A(H1N1)pdm09** – 5a.2a and 5a.2a.1 co-circulated; change in HA subclade over the season
 - **A(H3N2)** – Nearly all HA clade 2a.3a.1, subclade J.2 (New vaccine)
@@ -224,14 +179,8 @@ For more information: [Influenza Vaccine Composition for the 2025-2026 U.S. Infl
 - Viral isolate from clinical sample = High quantity of viral RNA but may have passage induced mutation
 
 ![Sample Selection 2]({{ site.baseurl }}/assets/images/overview-vcm-img38.png){: width="25%" .img-center}
-{% endcapture %}
 
-{% capture section_overview_7 %}
-Sequencing guidance, power analyses for detecting rare viruses, establishing predominance, and identifying changes in proportion.
-{% endcapture %}
-
-{% capture section_body_7 %}
-## **Sequencing Guidance and Power Analyses**
+## Sequencing Guidance and Power Analyses
 
 
 ### Key Assumptions
@@ -333,14 +282,8 @@ If Submission Goals are met – at the National Level:
 | **AA group level** | NO HA subgroup >50% in any month | NO HA subgroup >50% in any month | NO HA subgroup >50% in any month |
 
 ![Monthly Predominance Analysis]({{ site.baseurl }}/assets/images/overview-vcm-img55.png){: width="100%"}
-{% endcapture %}
 
-{% capture section_overview_8 %}
-A summary of key takeaways from the training.
-{% endcapture %}
-
-{% capture section_body_8 %}
-## **Key Takeaways**
+## Key Takeaways
 
 - This training will provide **valuable skills** for influenza bioinformatics.
 - Sample selection should be **random, Ct < 28**.
@@ -348,13 +291,4 @@ A summary of key takeaways from the training.
 - **Original specimens** are necessary for characterization, CVV development.
 
 ![Key Takeaways 2]({{ site.baseurl }}/assets/images/overview-vcm-img57.png){: width="25%" .img-center}
-{% endcapture %}
 
-{% include activity.html variant="1" title="Training Overview" overview=section_overview_1 content=section_body_1 %}
-{% include activity.html variant="2" title="Training Objectives" overview=section_overview_2 content=section_body_2 %}
-{% include activity.html variant="3" title="Influenza Bioinformatics" overview=section_overview_3 content=section_body_3 %}
-{% include activity.html variant="1" title="Vaccine Composition Process" overview=section_overview_4 content=section_body_4 %}
-{% include activity.html variant="2" title="Timeliness, Quality & Specimens" overview=section_overview_5 content=section_body_5 %}
-{% include activity.html variant="3" title="US Surveillance & Vaccine" overview=section_overview_6 content=section_body_6 %}
-{% include activity.html variant="1" title="Sequencing Guidance & Power Analyses" overview=section_overview_7 content=section_body_7 %}
-{% include activity.html variant="2" title="Key Takeaways" overview=section_overview_8 content=section_body_8 %}

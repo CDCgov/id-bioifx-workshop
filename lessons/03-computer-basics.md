@@ -5,16 +5,7 @@ sidebar: workshop_sidebar
 topnav: topnav
 permalink: /lessons/03-computer-basics/
 ---
-
-{% capture section_overview_1 %}
-
-Understanding how computers work is essential for bioinformaticians who need to optimize pipelines, troubleshoot performance issues, and choose appropriate computational resources.
-
-{% endcapture %}
-
-{% capture section_body_1 %}
-
-## **Why Computer Architecture Matters for Bioinformatics**
+## Why Computer Architecture Matters for Bioinformatics
 
 
 
@@ -49,19 +40,7 @@ Understanding the underlying hardware helps you:
 
 ![Module Objectives]({{ site.baseurl }}/assets/images/presentation2-img05.png){: width="75%"}
 
-{% endcapture %}
-
-
-
-{% capture section_overview_2 %}
-
-A visual overview of how the major components of a computer system relate to each other.
-
-{% endcapture %}
-
-{% capture section_body_2 %}
-
-## **Computer Architecture Overview**
+## Computer Architecture Overview
 
 The diagram below shows the main components of a computer and how they interact:
 
@@ -478,19 +457,7 @@ The diagram below shows the main components of a computer and how they interact:
 })();
 </script>
 
-{% endcapture %}
-
-
-
-{% capture section_overview_3 %}
-
-The CPU is the "brain" of the computer. Understanding CPU architecture helps optimize multi-threaded bioinformatics tools.
-
-{% endcapture %}
-
-{% capture section_body_3 %}
-
-## **The CPU (Central Processing Unit)**
+## The CPU (Central Processing Unit)
 
 
 ### 3.1 What the CPU does
@@ -553,19 +520,7 @@ sysctl -n hw.ncpu          # Total threads
 sysctl -n hw.physicalcpu   # Physical cores
 ```
 
-{% endcapture %}
-
-
-
-{% capture section_overview_4 %}
-
-RAM (Random Access Memory) is the computer's working memory. It's often the limiting factor for bioinformatics workflows.
-
-{% endcapture %}
-
-{% capture section_body_4 %}
-
-## **Memory (RAM)**
+## Memory (RAM)
 
 ### 4.1 What RAM does
 
@@ -632,19 +587,7 @@ When RAM is limited:
 4. **Split input files** — Process in chunks, merge results
 5. **Use a cluster/cloud** — Rent machines with more RAM
 
-{% endcapture %}
-
-
-
-{% capture section_overview_5 %}
-
-Storage holds data permanently, but speed varies dramatically between disk types.
-
-{% endcapture %}
-
-{% capture section_body_5 %}
-
-## **Storage (Disk)**
+## Storage (Disk)
 
 ### 5.1 Storage types
 
@@ -692,19 +635,7 @@ rm testfile
 3. **Clean up intermediate files** — BAM files from failed runs, temp files, etc.
 4. **Archive completed projects** — Move to cheaper HDD or tape storage
 
-{% endcapture %}
-
-
-
-{% capture section_overview_6 %}
-
-The operating system manages hardware resources and provides the environment where bioinformatics tools run.
-
-{% endcapture %}
-
-{% capture section_body_6 %}
-
-## **Operating System**
+## Operating System
 
 ![Operating Systems]({{ site.baseurl }}/assets/images/presentation2-img08.png){: width="75%"}
 
@@ -799,19 +730,7 @@ uname -r
 neofetch   # if installed, fun visualization
 ```
 
-{% endcapture %}
-
-
-
-{% capture section_overview_7 %}
-
-Practical guidance for choosing hardware and computational resources for bioinformatics work.
-
-{% endcapture %}
-
-{% capture section_body_7 %}
-
-## **Putting It All Together**
+## Putting It All Together
 
 ### Bioinformatics and the Command Line
 
@@ -865,17 +784,7 @@ Before running a pipeline:
 - [ ] Have I set appropriate **thread counts** for my CPU?
 - [ ] Do I know where **temp files** will be written?
 
-{% endcapture %}
-
-{% capture section_overview_8 %}
-
-Networks connect computers and devices, while servers provide shared resources and services.
-
-{% endcapture %}
-
-{% capture section_body_8 %}
-
-## **Networks and Servers**
+## Networks and Servers
 
 ![Networks and Servers]({{ site.baseurl }}/assets/images/presentation2-img09.png){: width="25%"}
 
@@ -890,17 +799,7 @@ A **server** is a computer system designed to provide resources or services—su
   - Authentication
   - Communication between systems
 
-{% endcapture %}
-
-{% capture section_overview_9 %}
-
-Set up command-line access on your computer: macOS Terminal, Windows WSL, or Linux Terminal.
-
-{% endcapture %}
-
-{% capture section_body_9 %}
-
-## **Practical: Command-Line on Your Computer**
+## Practical: Command-Line on Your Computer
 
 ### macOS
 
@@ -941,14 +840,3 @@ Set up command-line access on your computer: macOS Terminal, Windows WSL, or Lin
 
 ![Terminal prompt example]({{ site.baseurl }}/assets/images/presentation2-img24.png){: width="75%"}
 
-{% endcapture %}
-
-{% include activity.html variant="1" title="Part 1: Why This Matters" overview=section_overview_1 content=section_body_1 icon="/id-bioifx-workshop/assets/images/presentation2-img01.png" %}
-{% include activity.html variant="2" title="Part 2: Architecture Overview" overview=section_overview_2 content=section_body_2 %}
-{% include activity.html variant="3" title="Part 3: The CPU" overview=section_overview_3 content=section_body_3 %}
-{% include activity.html variant="1" title="Part 4: Memory (RAM)" overview=section_overview_4 content=section_body_4 %}
-{% include activity.html variant="2" title="Part 5: Storage" overview=section_overview_5 content=section_body_5 %}
-{% include activity.html variant="3" title="Part 6: Operating System" overview=section_overview_6 content=section_body_6 %}
-{% include activity.html variant="1" title="Part 7: Practical Applications" overview=section_overview_7 content=section_body_7 %}
-{% include activity.html variant="2" title="Part 8: Networks & Servers" overview=section_overview_8 content=section_body_8 %}
-{% include activity.html variant="3" title="Part 9: CLI Setup" overview=section_overview_9 content=section_body_9 %}
