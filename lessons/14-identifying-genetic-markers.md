@@ -1,5 +1,7 @@
 ---
 layout: page
 title: Identifying Genetic Markers
-nav_order: 14
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/14-identifying-genetic-markers/
 ---

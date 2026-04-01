@@ -2,7 +2,9 @@
 layout: page
 title: Search
 permalink: /search/
-nav_order: 98
+sidebar: workshop_sidebar
+topnav: topnav
+search: exclude
 ---
 
 # Site Search

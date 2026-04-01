@@ -1,15 +1,11 @@
 ---
-layout: lesson
+layout: page
 title: Intro to Command Line Interface
-nav_order: 5
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/05-cli-intro/
 ---
-
-{% capture section_overview_1 %}
-An introduction to BASH, module objectives, and key terminal definitions.
-{% endcapture %}
-
-{% capture section_body_1 %}
-## **Introduction to BASH**
+## Introduction to BASH
 
 ### A tour of command line navigation and 100 BASH commands.
 
@@ -25,14 +21,8 @@ An introduction to BASH, module objectives, and key terminal definitions.
 ### Practical Component
 
 Module will alternate between lecture and practice. Practical materials available at [https://cdcgov.github.io/id-bioifx-workshop/](https://cdcgov.github.io/id-bioifx-workshop/)
-{% endcapture %}
 
-{% capture section_overview_2 %}
-Core terminal definitions: command prompt, directories, paths, flags, and arguments.
-{% endcapture %}
-
-{% capture section_body_2 %}
-## **Command Line Navigation: Review**
+## Command Line Navigation: Review
 
 - **Command prompt:** Text displayed by the shell indicating it is ready to accept a command
 - **Directory:** Folder
@@ -80,14 +70,8 @@ head –n 5 file.txt
 - There are programs that help you use programs!
   - `man` — full manual pages
   - `--help` — quick flag reference
-{% endcapture %}
 
-{% capture section_overview_3 %}
-Navigating the filesystem: ls, cd, mkdir, rmdir, tree, special symbols, relative vs absolute paths.
-{% endcapture %}
-
-{% capture section_body_3 %}
-## **Command Line Navigation: Moving in the Filesystem**
+## Command Line Navigation: Moving in the Filesystem
 
 | Command | Description |
 |---------|-------------|
@@ -131,21 +115,15 @@ Navigating the filesystem: ls, cd, mkdir, rmdir, tree, special symbols, relative
 - Does NOT start with `/`
 - Depends on where you are (`pwd`)
 - Example: `data/sample.fastq`
-{% endcapture %}
 
-{% capture section_overview_4 %}
-Intermediate directory management, special symbols, input/output operators, and shorthand.
-{% endcapture %}
-
-{% capture section_body_4 %}
-## **Intermediate Directory Management**
+## Intermediate Directory Management
 
 - `du` : Disk usage summary (`-h` flag suggested)
 - `df` : Display disk space usage for all file-systems mounted by OS
 
 ![du and df examples]({{ site.baseurl }}/assets/images/presentation3-img08.png){: width="75%"}
 
-## **Command Line Special Symbols & Shorthand**
+## Command Line Special Symbols & Shorthand
 
 ### Directories and Pathing
 
@@ -192,14 +170,8 @@ Builtins include special symbols and words that are reserved. Type `help` to see
 
 ![Tab and newline characters]({{ site.baseurl }}/assets/images/presentation3-img15.png){: width="75%"}
 ![Special character example]({{ site.baseurl }}/assets/images/presentation3-img16.png){: width="75%"}
-{% endcapture %}
 
-{% capture section_overview_5 %}
-File viewing, sorting, piping, copying, moving, and deleting files.
-{% endcapture %}
-
-{% capture section_body_5 %}
-## **File Viewing and Manipulation**
+## File Viewing and Manipulation
 
 ### Viewing Files
 
@@ -272,14 +244,8 @@ To remove a directory AND everything in it, use the recursive flag:
 rm –r directory
 ```
 ![rm -r example]({{ site.baseurl }}/assets/images/presentation3-img29.png){: width="100%"}
-{% endcapture %}
 
-{% capture section_overview_6 %}
-Downloading files from the web with wget and curl.
-{% endcapture %}
-
-{% capture section_body_6 %}
-## **Network and Downloads (Part 1)**
+## Network and Downloads (Part 1)
 
 | Command | Description |
 |---------|-------------|
@@ -295,15 +261,7 @@ Downloading files from the web with wget and curl.
 
 ![wget vs curl]({{ site.baseurl }}/assets/images/presentation3-img31.png){: width="50%"}
 
-
-{% endcapture %}
-
-{% capture section_overview_7 %}
-Text processing with wc, cut, uniq, grep, sed, and regular expressions.
-{% endcapture %}
-
-{% capture section_body_7 %}
-## **Searching and Text Processing**
+## Searching and Text Processing
 
 ### wc, cut, uniq
 
@@ -410,14 +368,8 @@ Regular expressions are pattern matching tools used by `grep`, `sed`, and other 
 
 ![Regex reference]({{ site.baseurl }}/assets/images/presentation3-img45.png){: width="75%" .img-center}
 ![Regex examples]({{ site.baseurl }}/assets/images/presentation3-img46.png){: width="75%" .img-center}
-{% endcapture %}
 
-{% capture section_overview_8 %}
-Intermediate text processing with diff, comm, tr, xargs, and a real-world example.
-{% endcapture %}
-
-{% capture section_body_8 %}
-## **Intermediate Text Processing**
+## Intermediate Text Processing
 
 | Command | Description |
 |---------|-------------|
@@ -437,14 +389,8 @@ Need a "sample_type" column — replace (sed) end of line (`$`) with `,Test`:
 ![Real world example 1]({{ site.baseurl }}/assets/images/presentation3-img49.png){: width="100%"}
 
 ![Real world example 2]({{ site.baseurl }}/assets/images/presentation3-img50.png){: width="100%"}
-{% endcapture %}
 
-{% capture section_overview_9 %}
-Networking, SSH, SCP, and remote connections.
-{% endcapture %}
-
-{% capture section_body_9 %}
-## **Networking and Downloads (Part 2)**
+## Networking and Downloads (Part 2)
 
 | Command | Description |
 |---------|-------------|
@@ -457,14 +403,8 @@ Networking, SSH, SCP, and remote connections.
 ![Networking commands]({{ site.baseurl }}/assets/images/presentation3-img52.png){: width="75%" .img-center}
 
 ![SSH example]({{ site.baseurl }}/assets/images/presentation3-img53.png){: width="75%" .img-center}
-{% endcapture %}
 
-{% capture section_overview_10 %}
-Compression and archiving: tar, gzip, zip, zcat, gunzip, unzip.
-{% endcapture %}
-
-{% capture section_body_10 %}
-## **Compression and Archives**
+## Compression and Archives
 
 ### Why Compress?
 
@@ -512,14 +452,8 @@ Compression and archiving: tar, gzip, zip, zcat, gunzip, unzip.
 ![zcat examples]({{ site.baseurl }}/assets/images/presentation3-img62.png){: width="75%"}
 
 ![zcat piping]({{ site.baseurl }}/assets/images/presentation3-img63.png){: width="75%"}
-{% endcapture %}
 
-{% capture section_overview_11 %}
-File permissions, ownership, and common administrative commands.
-{% endcapture %}
-
-{% capture section_body_11 %}
-## **Permissions and Ownership**
+## Permissions and Ownership
 
 ### Core Concepts
 
@@ -565,14 +499,8 @@ Add values to set permissions:
 | `groups` | Show group memberships |
 | `passwd` | Change user password |
 | `su` | Switch user |
-{% endcapture %}
 
-{% capture section_overview_12 %}
-System information and process management tools.
-{% endcapture %}
-
-{% capture section_body_12 %}
-## **System Info & Process Management**
+## System Info & Process Management
 
 | Command | Description |
 |---------|-------------|
@@ -585,18 +513,4 @@ System information and process management tools.
 > Ever need to cancel what you just ran? **Ctrl + C**
 
 ![top/htop example]({{ site.baseurl }}/assets/images/presentation3-img67.png){: width="100%"}
-{% endcapture %}
-
-{% include activity.html variant="1" title="Introduction & Objectives" overview=section_overview_1 content=section_body_1 icon="/id-bioifx-workshop/assets/images/presentation3-img01.png" %}
-{% include activity.html variant="2" title="CLI Review: Definitions" overview=section_overview_2 content=section_body_2 icon="/id-bioifx-workshop/assets/images/presentation3-img01.png" %}
-{% include activity.html variant="3" title="Filesystem Navigation" overview=section_overview_3 content=section_body_3 icon="/id-bioifx-workshop/assets/images/presentation3-img01.png" %}
-{% include activity.html variant="1" title="Symbols & Shorthand" overview=section_overview_4 content=section_body_4 icon="/id-bioifx-workshop/assets/images/presentation3-img01.png" %}
-{% include activity.html variant="2" title="File Viewing & Manipulation" overview=section_overview_5 content=section_body_5 icon="/id-bioifx-workshop/assets/images/presentation3-img01.png" %}
-{% include activity.html variant="3" title="Network & Downloads" overview=section_overview_6 content=section_body_6 icon="/id-bioifx-workshop/assets/images/presentation3-img54.png" %}
-{% include activity.html variant="1" title="Searching & Text Processing" overview=section_overview_7 content=section_body_7 icon="/id-bioifx-workshop/assets/images/presentation3-img40.png" %}
-{% include activity.html variant="2" title="Intermediate Text Processing" overview=section_overview_8 content=section_body_8 icon="/id-bioifx-workshop/assets/images/presentation3-img01.png" %}
-{% include activity.html variant="3" title="Networking Part 2" overview=section_overview_9 content=section_body_9 icon="/id-bioifx-workshop/assets/images/presentation3-img54.png" %}
-{% include activity.html variant="1" title="Compression & Archives" overview=section_overview_10 content=section_body_10 icon="/id-bioifx-workshop/assets/images/presentation3-img56.png" %}
-{% include activity.html variant="2" title="Permissions & Ownership" overview=section_overview_11 content=section_body_11 icon="/id-bioifx-workshop/assets/images/presentation3-img65.png" %}
-{% include activity.html variant="3" title="System Info & Processes" overview=section_overview_12 content=section_body_12 icon="/id-bioifx-workshop/assets/images/presentation3-img01.png" %}
 

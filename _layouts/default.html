@@ -1,29 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+<head>
     {% include head.html %}
-  </head>
-  <body>
-    <header class="site-header">
-      <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-      {% include nav.html %}
-    </header>
-    <main class="site-content">
-      {{ content }}
-      {% if page.nav_order %}
-        {% assign prev_order = page.nav_order | minus: 1 %}
-        {% assign next_order = page.nav_order | plus: 1 %}
-        {% assign prev_page = site.pages | where: "nav_order", prev_order | first %}
-        {% assign next_page = site.pages | where: "nav_order", next_order | first %}
-        <nav class="lesson-nav">
-          {% if prev_page %}<a class="prev" href="{{ prev_page.url | relative_url }}">&larr; {{ prev_page.title }}</a>{% endif %}
-          {% if next_page %}<a class="next" href="{{ next_page.url | relative_url }}">{{ next_page.title }} &rarr;</a>{% endif %}
-        </nav>
-      {% endif %}
-    </main>
-    {% include footer.html %}
-    <script src="{{ '/assets/js/copy-code.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/collapsible.js' | relative_url }}"></script>
-  </body>
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                var hasRightSidebar = $("#tg-sb-right-sidebar").is(':visible');
+                if (hasRightSidebar) {
+                    $("#tg-sb-content").toggleClass('col-md-8');
+                    $("#tg-sb-content").toggleClass('col-md-10');
+                } else {
+                    $("#tg-sb-content").toggleClass('col-md-10');
+                    $("#tg-sb-content").toggleClass('col-md-12');
+                }
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    {% if page.datatable == true %}
+    <!-- Include the standard DataTables bits -->
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+    <!-- First, this walks through the tables that occur between ...-begin
+         and ...-end and add the "datatable" class to them.
+         Then it invokes DataTable's standard initializer
+         Credit here: http://www.beardedhacker.com/blog/2015/08/28/add-class-attribute-to-markdown-table/
+      -->
+    <script>
+      $(document).ready(function(){
+          $('div.datatable-begin').nextUntil('div.datatable-end', 'table').addClass('display');
+          $('table.display').DataTable( {
+              paging: true,
+              stateSave: true,
+              searching: true
+          });
+       });
+    </script>
+    {% endif %}
+
+</head>
+<body>
+{% include topnav.html %}
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row" style="display:flex; flex-wrap:wrap;">
+        {% assign content_col_size = "col-md-12" %}
+        {% assign show_right_sidebar = true %}
+        {% if page.toc == false or page.hide_right_sidebar %}
+            {% assign show_right_sidebar = false %}
+        {% endif %}
+
+        {% unless page.hide_sidebar %}
+            <!-- Sidebar Column -->
+            <div class="col-md-2" id="tg-sb-sidebar">
+                {% include sidebar.html %}
+            </div>
+            {% if show_right_sidebar %}
+                {% assign content_col_size = "col-md-8" %}
+            {% else %}
+                {% assign content_col_size = "col-md-10" %}
+            {% endif %}
+        {% else %}
+            {% if show_right_sidebar %}
+                {% assign content_col_size = "col-md-10" %}
+            {% endif %}
+        {% endunless %}
+
+        <!-- Content Column -->
+        <div class="{{content_col_size}}" id="tg-sb-content">
+            {{content}}
+        </div>
+
+        {% if show_right_sidebar %}
+        <!-- Right Sidebar Column (Table of Contents) -->
+        <div class="col-md-2" id="tg-sb-right-sidebar">
+            {% include right_sidebar.html %}
+        </div>
+        {% endif %}
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+{% if site.google_analytics %}
+{% include google_analytics.html %}
+{% endif %}
 </html>
+
+{% comment %} Copyright 2021 Google LLC {% endcomment %}

@@ -1,11 +1,9 @@
-<footer class="site-footer" role="contentinfo">
-  <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}.</p>
-  <nav aria-label="Footer">
-    <ul class="footer-links">
-      <li><a href="{{ '/' | relative_url }}">Home</a></li>
-      <li><a href="{{ '/search/' | relative_url }}">Search</a></li>
-      <li><a href="{{ '/developer-guide/' | relative_url }}">Developer Guide</a></li>
-      <li><a href="{{ '/LICENSE' | relative_url }}">License</a></li>
-    </ul>
-  </nav>
+<footer>
+  <div class="row">
+    <div class="col-lg-12 footer">
+      &copy;{{ site.time | date: "%Y" }} {{ site.company_name | default: site.title }}. All rights reserved. <br />
+      {% if page.last_updated %}<span>Page last updated:</span> {{page.last_updated}}<br/>{% endif %}
+      Site last generated: {{ site.time | date: "%b %-d, %Y" }}
+    </div>
+  </div>
 </footer>

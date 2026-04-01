@@ -1,13 +1,26 @@
 # Site settings
 title: CDC Influenza Division Bioinformatics Workshop
-name: Bioinformatics Workshop
+name: Influenza Bioinformatics Workshop
+site_title: CDC Influenza Bioinformatics Workshop
+topnav_title: Influenza Bioinformatics Workshop
 description: Training materials for a bioinformatics workshop developed by the United States' Centers for Disease Control and Prevention's Influenza Division in collaboration with the Association of Public Health Laboratories.
+company_name: US CDC Influenza Division
 url: "https://cdcgov.github.io"   # production org Pages root
 baseurl: "/id-bioifx-workshop"     # project repo name (keep if this is NOT cdcgov.github.io repo)
 
+output: web
+
+github_editme_path: cdcgov/id-bioifx-workshop/blob/main/
+
+feedback_disable: true
+
 # Build settings
-theme: minima
 markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+  syntax_highlighter: rouge
 highlighter: rouge
 permalink: pretty
 
@@ -21,21 +34,50 @@ collections:
   workshops:
     output: true
     permalink: /workshops/:name/
+  tooltips:
+    output: false
 
 defaults:
   - scope:
       path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      comments: false
+      search: true
+      sidebar: workshop_sidebar
+      topnav: topnav
+  - scope:
+      path: "lessons"
+      type: "pages"
+    values:
+      layout: "page"
+      comments: false
+      search: true
+      sidebar: workshop_sidebar
+      topnav: topnav
+  - scope:
+      path: ""
       type: workshops
     values:
-      layout: workshop
+      layout: page
+      sidebar: workshop_sidebar
+      topnav: topnav
+
+sidebars:
+  - workshop_sidebar
 
 exclude:
+  - .idea/
+  - .gitignore
   - Gemfile
   - Gemfile.lock
   - node_modules
   - README.md
   - extras/resources.md
   - vendor
+  - scripts
+  - __pycache__
 
 # Keep site deterministic
 future: false

@@ -1,0 +1,9 @@
+topnav:
+- title: Topnav
+  items:
+    - title: Lessons
+      url: /lessons/01-objectives/
+    - title: Workshops
+      url: /workshops/
+    - title: GitHub
+      external_url: https://github.com/cdcgov/id-bioifx-workshop

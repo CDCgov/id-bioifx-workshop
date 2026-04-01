@@ -1,18 +1,11 @@
 ---
 layout: page
 title: Computer Setup (WSL)
-nav_order: 4
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/04-computer-setup-wsl/
 ---
-
-{% capture section_overview_1 %}
-
-Before installing WSL, confirm your Windows version meets the minimum requirements.
-
-{% endcapture %}
-
-{% capture section_body_1 %}
-
-## **Prerequisites**
+## Prerequisites
 
 ### 1.1 Check your Windows version
 
@@ -32,19 +25,7 @@ Key benefits:
 - Install and run bioinformatics software natively
 - Access the Windows filesystem from Linux and vice-versa
 
-{% endcapture %}
-
-
-
-{% capture section_overview_2 %}
-
-Install WSL2 and the Ubuntu 20.04 distribution via PowerShell.
-
-{% endcapture %}
-
-{% capture section_body_2 %}
-
-## **Install WSL2 and Ubuntu**
+## Install WSL2 and Ubuntu
 
 ### 2.1 Open PowerShell as Administrator
 
@@ -87,19 +68,7 @@ An Ubuntu terminal should open automatically:
 
 ![Ubuntu setup prompt](https://cdcgov.github.io/MIRA/articles/images/ubuntu_setub_1.png)
 
-{% endcapture %}
-
-
-
-{% capture section_overview_3 %}
-
-Create your Linux user account inside the new Ubuntu installation.
-
-{% endcapture %}
-
-{% capture section_body_3 %}
-
-## **User Account Setup**
+## User Account Setup
 
 ### 3.1 Create your WSL user account
 
@@ -122,19 +91,7 @@ where `nbx0` is replaced by your username and `L349232` by your computer name.
 
 Restart one more time to finalize the setup.
 
-{% endcapture %}
-
-
-
-{% capture section_overview_4 %}
-
-Verify WSL is working and learn how to access it day-to-day.
-
-{% endcapture %}
-
-{% capture section_body_4 %}
-
-## **Post-Install Verification**
+## Post-Install Verification
 
 ### 4.1 Open Ubuntu
 
@@ -185,9 +142,3 @@ Inside WSL you have two main locations:
 - [WSL Troubleshooting](https://cdcgov.github.io/MIRA/articles/troubleshooting.html)
 - [WSL FAQ](https://learn.microsoft.com/en-us/windows/wsl/faq)
 
-{% endcapture %}
-
-{% include activity.html variant="1" title="Part 1: Prerequisites" overview=section_overview_1 content=section_body_1 %}
-{% include activity.html variant="2" title="Part 2: Install WSL2 and Ubuntu" overview=section_overview_2 content=section_body_2 %}
-{% include activity.html variant="3" title="Part 3: User Account Setup" overview=section_overview_3 content=section_body_3 %}
-{% include activity.html variant="1" title="Part 4: Post-Install Verification" overview=section_overview_4 content=section_body_4 %}

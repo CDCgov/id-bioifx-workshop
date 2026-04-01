@@ -1,7 +1,9 @@
 ---
-layout: lesson
+layout: page
 title: Genome Assembly and MIRA-NF
-nav_order: 11
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/11-genome-assembly/
 ---
 
 

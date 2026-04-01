@@ -2,7 +2,8 @@
 layout: page
 title: Workshops
 permalink: /workshops/
-nav_order: 200
+sidebar: workshop_sidebar
+topnav: topnav
 ---
 
 # Workshops

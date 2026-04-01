@@ -1,6 +1,5 @@
 # Bioinformatics Workshop Site
 
-Static training site built with Jekyll (GitHub Pages compatible).
 
 ## [Developer Guide](https://cdcgov.github.io/id-bioifx-workshop/developer-guide/)
 

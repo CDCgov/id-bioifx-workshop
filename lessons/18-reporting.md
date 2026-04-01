@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Reporting with Quarto
-nav_order: 18
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/18-reporting/
 ---
 

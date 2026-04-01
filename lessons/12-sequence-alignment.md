@@ -1,14 +1,10 @@
 ---
-layout: lesson
+layout: page
 title: Sequence Alignment Overview
-nav_order: 12
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/12-sequence-alignment/
 ---
-
-{% capture section_overview_1 %}
-Sequence Alignment Basics
-{% endcapture %}
-
-{% capture section_body_1 %}
 ## Global Sequence Alignment
 - Aligns sequences end to end
 - Forces alignment across the full length of both sequences
@@ -32,13 +28,7 @@ Sequence Alignment Basics
 
 **GENOME ASSEMBLY**
 - `Fastq -> fasta`
-{% endcapture %}
 
-{% capture section_overview_2 %}
-Pairwise Sequence Alignment
-{% endcapture %}
-
-{% capture section_body_2 %}
 ## Pairwise Sequence Alignment
 
 - Compares two sequences at a time
@@ -52,13 +42,7 @@ Pairwise Sequence Alignment
   - Comparing a read to a reference
   - Gene-to-gene comparisons
   - Similarity scoring
-{% endcapture %}
 
-{% capture section_overview_3 %}
-Multiple Sequence Alignment
-{% endcapture %}
-
-{% capture section_body_3 %}
 ## Multiple Sequence Alignment
 
 - Aligns three or more sequences simultaneously
@@ -75,31 +59,13 @@ Multiple Sequence Alignment
   - Compare viral genomes across samples
   - Build phylogenetic trees
   - Identify conserved primer or target regions
-{% endcapture %}
 
-{% capture section_overview_4 %}
-References
-{% endcapture %}
-
-{% capture section_body_4 %}
 ## References
 
 - **What is a reference?**
   - A reference sequence serves as a standardized baseline for sequence comparisons.
-{% endcapture %}
 
-{% capture section_overview_5 %}
-Coordinate Space
-{% endcapture %}
-
-{% capture section_body_5 %}
 ## Coordinate Space
 
 - **Coordinate space** is very important for discussing alignments. It defines the positioning and boundaries of a sequence, allowing researchers to pinpoint exactly where mutations, genes, or other features are located relative to a reference.
-{% endcapture %}
 
-{% include activity.html variant="1" title="Sequence Alignment Basics" overview=section_overview_1 content=section_body_1 icon="/id-bioifx-workshop/assets/images/presentation3-img01.png" %}
-{% include activity.html variant="2" title="Pairwise Sequence Alignment" overview=section_overview_2 content=section_body_2 icon="/id-bioifx-workshop/assets/images/presentation3-img01.png" %}
-{% include activity.html variant="3" title="Multiple Sequence Alignment" overview=section_overview_3 content=section_body_3 icon="/id-bioifx-workshop/assets/images/presentation3-img01.png" %}
-{% include activity.html variant="1" title="References" overview=section_overview_4 content=section_body_4 icon="/id-bioifx-workshop/assets/images/presentation3-img01.png" %}
-{% include activity.html variant="2" title="Coordinate Space" overview=section_overview_5 content=section_body_5 icon="/id-bioifx-workshop/assets/images/presentation3-img01.png" %}

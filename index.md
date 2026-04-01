@@ -1,38 +1,68 @@
 ---
 layout: page
 title: Influenza Bioinformatics Workshop
-nav_order: 0
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /
 ---
-
-<!-- This chunk of code creates a modal popup warning that the site is under development. -->
-<div id="dev-warning-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
-    <div style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 300px; border-radius: 5px; text-align: center;">
-        <h3 style="color: #ff6b35;">⚠️ Under Development</h3>
-        <p>This site is currently under development.</p>
-        <button onclick="document.getElementById('dev-warning-modal').style.display='none'" style="background-color: #007cba; color: white; border: none; padding: 10px 20px; border-radius: 3px; cursor: pointer;">OK</button>
-    </div>
-</div>
-<script>
-window.onload = function() {
-    document.getElementById('dev-warning-modal').style.display = 'block';
-}
-</script>
-<!-- End of modal popup code -->
 
 Introduction text here
 
 ---
 
-## Contributors
-- [US CDC Influenza Division](https://www.cdc.gov/ncird/divisions-offices/flu.html)
-    - [Kristine Lacek](https://github.com/kristinelacek) [![ORCID iD](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-6247-5082)
-    - [Norman Hassell](https://github.com/nhassell)
-    - Becky Kondor
-    - [Ben Rambo-Martin](https://github.com/nbx0) [![ORCID iD](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-8591-3954)
-- [Association of Public Health Laboratories (APHL)](https://www.aphl.org)
-    - [Logan Fink](https://github.com/logan-fink)
-    - [Jared Johnson](https://github.com/DOH-JDJ0303)
-    - Alisa Bochnowski
-    - Maureen Sullivan
+
+<div class="team-section" markdown="0">
+
+<h3><a href="{{ site.baseurl }}/lessons/faculty/">Faculty</a></h3>
+
+<div class="team-grid">
+  <span class="team-member">
+    <a href="https://github.com/kristinelacek"><img src="https://github.com/kristinelacek.png?s=200" alt="Kristine Lacek" width="200" height="200"></a>
+    <a href="https://orcid.org/0000-0002-6247-5082">Kristine Lacek, MS</a>
+    <a href="https://www.cdc.gov/flu/index.html" class="affiliation cdc">CDC</a>
+  </span>
+  <span class="team-member">
+    <a href="https://github.com/nhassell"><img src="https://github.com/nhassell.png?s=200" alt="Norman Hassell" width="200" height="200"></a>
+    <span>Norman Hassell, MS</span>
+    <a href="https://www.cdc.gov/flu/index.html" class="affiliation cdc">CDC</a>
+  </span>
+  <span class="team-member">
+    <a href="https://github.com/nbx0"><img src="https://github.com/nbx0.png?s=200" alt="Ben Rambo-Martin" width="200" height="200"></a>
+    <a href="https://orcid.org/0000-0002-8591-3954">Ben Rambo-Martin, PhD</a>
+    <a href="https://www.cdc.gov/flu/index.html" class="affiliation cdc">CDC</a>
+  </span>
+  <span class="team-member">
+    <a href="https://github.com/logan-fink"><img src="https://github.com/logan-fink.png?s=200" alt="Logan Fink" width="100" height="100"></a>
+    <span>Logan Fink, PhD</span>
+    <a href="https://www.aphl.org/Pages/default.aspx" class="affiliation aphl">APHL</a>
+  </span>
+  <span class="team-member">
+    <a href="https://github.com/DOH-JDJ0303"><img src="https://github.com/DOH-JDJ0303.png?s=200" alt="Jared Johnson" width="100" height="100"></a>
+    <span>Jared Johnson, PhD</span>
+    <a href="https://www.aphl.org/Pages/default.aspx" class="affiliation aphl">APHL</a>
+  </span>
+  <span class="team-member">
+    <img src="https://ui-avatars.com/api/?name=Maureen+Sullivan&background=5097BA&color=fff&size=200&rounded=true" alt="Maureen Sullivan" width="100" height="100">
+    <span>Maureen Sullivan, PhD</span>
+    <a href="https://www.aphl.org/Pages/default.aspx" class="affiliation aphl">APHL</a>
+  </span>
+</div>
+
+<h3>Technical Support</h3>
+
+<div class="team-grid">
+  <span class="team-member">
+    <img src="https://ui-avatars.com/api/?name=Becky+Kondor&background=5097BA&color=fff&size=200&rounded=true" alt="Becky Kondor" width="100" height="100">
+    <span>Becky Kondor, PhD</span>
+    <a href="https://www.cdc.gov/flu/index.html" class="affiliation cdc">CDC</a>
+  </span>
+  <span class="team-member">
+    <img src="https://ui-avatars.com/api/?name=Alisa+Bochnowski&background=5097BA&color=fff&size=200&rounded=true" alt="Alisa Bochnowski" width="100" height="100">
+    <span>Alisa Bochnowski, PHD</span>
+    <a href="https://www.aphl.org/Pages/default.aspx" class="affiliation aphl">APHL</a>
+  </span>
+</div>
+
+</div>
 
 ---

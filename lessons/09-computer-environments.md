@@ -1,5 +1,7 @@
 ---
-layout: lesson
+layout: page
 title: Containers and Registries
-nav_order: 9
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/09-computer-environments/
 ---

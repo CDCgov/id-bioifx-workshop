@@ -1,18 +1,11 @@
 ---
-layout: lesson
+layout: page
 title: Containers and Registries
-nav_order: 10
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/10-containers-registries/
 ---
-
-{% capture section_overview_1 %}
-
-This section walks through installing <code>venv</code> and <code>micromamba</code> for use in later sections.
-
-{% endcapture %}
-
-{% capture section_body_1 %}
-
-## **Installing Micromamba**
+## Installing Micromamba
 
 The steps below will install <code>micromamba</code> into your <code>$HOME</code> directory. Skip to [Installing Venv](#installing-venv) if you plan to use an existing installation of <code>micromamba</code>, <code>mamba</code>, <code>conda</code>, or <code>miniconda</code>.
 
@@ -34,7 +27,7 @@ Reset your shell:
 
 <pre><code class="language-bash">micromamba config append channels bioconda</code></pre>
 
-## **Installing Venv**
+## Installing Venv
 
 This process checks whether `venv` is available via your system-wide Python. If not, you will install Python (with `venv`) inside a `micromamba` environment (suitable for non-root users).
 
@@ -46,23 +39,7 @@ This process checks whether `venv` is available via your system-wide Python. If 
 
 <pre><code class="language-bash">micromamba create -n py311_env python=3.11</code></pre>
 
-{% endcapture %}
-
-
-
-
-
-
-{% capture section_overview_2 %}
-
-This activity highlights differences in how <code>venv</code> and <code>micromamba</code> create *isolated* environments.
-
-> Attempt each step below before exposing the answer.
-
-{% endcapture%}
-
-{% capture section_body_2 %}
-## **Getting Started**
+## Getting Started
 
 ### 2.1 Record the path to your base python3 executable
 
@@ -71,7 +48,7 @@ This activity highlights differences in how <code>venv</code> and <code>micromam
 <!-- TEXTBOX -->
 {% include textbox.html %}
 
-## **Venv Environments**
+## Venv Environments
 
 ### 2.2 Create and activate a new venv
 
@@ -97,7 +74,22 @@ You can revert to a clean state with: <code>deactivate; rm -rf venv_test_1/</cod
 <!-- ANSWER -->
 {% capture answer_content %}
 Your venv uses the same Python executable as your base install.
-{% endcapture %}
+
+## Testing a new script (venv)
+
+### 3.1 Download the test script and data
+
+<pre><code class="language-bash">curl https://github.com/DOH-JDJ0303/binfx-hub/raw/refs/heads/main/docs/presentations/2026/International_Influenza_Workshop/pt2_script.py -o pt2_script.py
+curl https://github.com/DOH-JDJ0303/binfx-hub/raw/refs/heads/main/docs/presentations/2026/International_Influenza_Workshop/pt2_data_1.csv -o pt2_data_1.csv
+curl https://github.com/DOH-JDJ0303/binfx-hub/raw/refs/heads/main/docs/presentations/2026/International_Influenza_Workshop/pt2_data_2.csv -o pt2_data_2.csv
+</code></pre>
+
+### 3.2 Create and activate venv_test_2
+
+<!-- ANSWER -->
+{% capture answer_content %}
+<pre><code class="language-bash">python3 -m venv venv_test_2
+source venv_test_2/bin/activate</code></pre>
 
 {% include answer.html id="2.5.1" content=answer_content %}
 
@@ -143,29 +135,9 @@ Your `mamba_test_1` environment should use a different Python executable than re
 {% endcapture %}
 
 
-{% capture section_overview_3 %}
 
-This section shows how <code>pip</code> can silently alter already-installed packages.
 
-{% endcapture %}
 
-{% capture section_body_3 %}
-## **Testing a new script (venv)**
-
-### 3.1 Download the test script and data
-
-<pre><code class="language-bash">curl https://github.com/DOH-JDJ0303/binfx-hub/raw/refs/heads/main/docs/presentations/2026/International_Influenza_Workshop/pt2_script.py -o pt2_script.py
-curl https://github.com/DOH-JDJ0303/binfx-hub/raw/refs/heads/main/docs/presentations/2026/International_Influenza_Workshop/pt2_data_1.csv -o pt2_data_1.csv
-curl https://github.com/DOH-JDJ0303/binfx-hub/raw/refs/heads/main/docs/presentations/2026/International_Influenza_Workshop/pt2_data_2.csv -o pt2_data_2.csv
-</code></pre>
-
-### 3.2 Create and activate venv_test_2
-
-<!-- ANSWER -->
-{% capture answer_content %}
-<pre><code class="language-bash">python3 -m venv venv_test_2
-source venv_test_2/bin/activate</code></pre>
-{% endcapture %}
 
 {% include answer.html id="3.2" content=answer_content %} 
 
@@ -309,7 +281,3 @@ Try the test script one last time after making your decision about `scanpy`:
 {% include answer.html id="3.10" content=answer_content %}
 
 {% endcapture %}
-
-{% include activity.html variant="1" title="Part 1: Installing Venv and Micromamba" overview=section_overview_1 content=section_body_1 %}
-{% include activity.html variant="2" title="Part 2: Environment Isolation" overview=section_overview_2 content=section_body_2 %}
-{% include activity.html variant="3" title="Part 3: Silent Changes" overview=section_overview_3 content=section_body_3 %}

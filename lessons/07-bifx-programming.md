@@ -1,15 +1,11 @@
 ---
-layout: lesson
+layout: page
 title: Intro to Bioinformatics Programming
-nav_order: 7
+sidebar: workshop_sidebar
+topnav: topnav
+permalink: /lessons/07-bifx-programming/
 ---
-
-{% capture section_overview_1 %}
-Bioinformatics programming basics, scripting, and functionality
-{% endcapture %}
-
-{% capture section_body_1 %}
-## **Introduction to Bioinformatics Programming**
+## Introduction to Bioinformatics Programming
 
 ### Key Points
 
@@ -19,23 +15,9 @@ Presenter Name
 
 ![Presentation4 Img01]({{ site.baseurl }}/assets/images/presentation4-img01.png){: width="75%"}
 
-{% endcapture %}
+## Disclaimer
 
-{% capture section_overview_2 %}
-Key concepts for Disclaimer.
-{% endcapture %}
-
-{% capture section_body_2 %}
-## **Disclaimer**
-
-{% endcapture %}
-
-{% capture section_overview_3 %}
-Trainees will learn scripting basics applicable to any programming language or infrastructure: variables, loops, logic gates, functions, and shebang lines
-{% endcapture %}
-
-{% capture section_body_3 %}
-## **Module Objectives**
+## Module Objectives
 
 ### Key Points
 
@@ -44,14 +26,7 @@ Trainees will learn scripting basics applicable to any programming language or i
 - Trainees will understand parallel processing and its utility in optimizing runtime
 - Trainees will learn pipe, pipelining, and how it applies to productionalized bioinformatics and ad hoc analyses
 
-{% endcapture %}
-
-{% capture section_overview_4 %}
-Commands can be run interactively
-{% endcapture %}
-
-{% capture section_body_4 %}
-## **Bash Scripting**
+## Bash Scripting
 
 ### Key Points
 
@@ -73,15 +48,7 @@ Enter commands one at a time directly in the terminal
 
 ![Presentation4 Img04]({{ site.baseurl }}/assets/images/presentation4-img04.png){: width="75%"}
 
-
-{% endcapture %}
-
-{% capture section_overview_5 %}
-Vim is a terminal-based text editor
-{% endcapture %}
-
-{% capture section_body_5 %}
-## **vim**
+## vim
 
 ### Key Points
 
@@ -121,14 +88,7 @@ Vim is a terminal-based text editor
 
 ![Presentation4 Img07]({{ site.baseurl }}/assets/images/presentation4-img07.png){: width="25%"}
 
-{% endcapture %}
-
-{% capture section_overview_6 %}
-Syntax is the set of rules for writing code
-{% endcapture %}
-
-{% capture section_body_6 %}
-## **Syntax**
+## Syntax
 
 ### Key Points
 
@@ -151,14 +111,7 @@ Syntax is the set of rules for writing code
 
 ![Presentation4 Img10]({{ site.baseurl }}/assets/images/presentation4-img10.png){: width="75%"}
 
-{% endcapture %}
-
-{% capture section_overview_7 %}
-Focuses on logic, not syntax
-{% endcapture %}
-
-{% capture section_body_7 %}
-## **Pseudo Code**
+## Pseudo Code
 
 ### Key Points
 
@@ -190,14 +143,7 @@ Output “my sequence”
 
 ![Presentation4 Img11]({{ site.baseurl }}/assets/images/presentation4-img11.png){: width="25%"}
 
-{% endcapture %}
-
-{% capture section_overview_8 %}
-Variables store values like text or numbers
-{% endcapture %}
-
-{% capture section_body_8 %}
-## **Variables**
+## Variables
 
 ### Key Points
 
@@ -258,14 +204,7 @@ set –euo pipefail
 
 ![Presentation4 Img17]({{ site.baseurl }}/assets/images/presentation4-img17.png){: width="75%"}
 
-{% endcapture %}
-
-{% capture section_overview_9 %}
-You can string together multiple commands using and/or logic
-{% endcapture %}
-
-{% capture section_body_9 %}
-## **Logic: and, or**
+## Logic: and, or
 
 ### Key Points
 
@@ -287,14 +226,7 @@ Command1 \|\| Command2
 
 ![Presentation4 Img20]({{ site.baseurl }}/assets/images/presentation4-img20.png){: width="75%"}
 
-{% endcapture %}
-
-{% capture section_overview_10 %}
-Bash if / then Statements
-{% endcapture %}
-
-{% capture section_body_10 %}
-## **Logic: if, then**
+## Logic: if, then
 
 ### Key Points
 
@@ -351,15 +283,7 @@ fi
 
 ![Presentation4 Img22]({{ site.baseurl }}/assets/images/presentation4-img22.png){: width="75%"}
 
-
-{% endcapture %}
-
-{% capture section_overview_11 %}
-if / else / fi handles yes-or-no decisions
-{% endcapture %}
-
-{% capture section_body_11 %}
-## **Logic: else, case**
+## Logic: else, case
 
 ### Key Points
 
@@ -395,14 +319,7 @@ esac
 
 ![Presentation4 Img26]({{ site.baseurl }}/assets/images/presentation4-img26.png){: width="75%"}
 
-{% endcapture %}
-
-{% capture section_overview_12 %}
-Bash does not do math by default
-{% endcapture %}
-
-{% capture section_body_12 %}
-## **Math**
+## Math
 
 ### Key Points
 
@@ -429,14 +346,7 @@ Bash does not do math by default
 
 ![Presentation4 Img28]({{ site.baseurl }}/assets/images/presentation4-img28.png){: width="75%"}
 
-{% endcapture %}
-
-{% capture section_overview_13 %}
-Loops repeat commands automatically
-{% endcapture %}
-
-{% capture section_body_13 %}
-## **Loops**
+## Loops
 
 ### Key Points
 
@@ -505,14 +415,7 @@ done
 
 ![Presentation4 Img32]({{ site.baseurl }}/assets/images/presentation4-img32.png){: width="75%"}
 
-{% endcapture %}
-
-{% capture section_overview_14 %}
-A nested loop is a loop inside another loop
-{% endcapture %}
-
-{% capture section_body_14 %}
-## **Nested Loops**
+## Nested Loops
 
 ### Key Points
 
@@ -545,14 +448,7 @@ Inner loop runs 2 time for each outer iteration
 
 Total executions: 3x2=6
 
-{% endcapture %}
-
-{% capture section_overview_15 %}
-Functions group related commands
-{% endcapture %}
-
-{% capture section_body_15 %}
-## **Functions**
+## Functions
 
 ### Key Points
 
@@ -579,14 +475,7 @@ Functions group related commands
 
 ![Presentation4 Img35]({{ site.baseurl }}/assets/images/presentation4-img35.png){: width="75%"}
 
-{% endcapture %}
-
-{% capture section_overview_16 %}
-Common Bash Errors
-{% endcapture %}
-
-{% capture section_body_16 %}
-## **Errors**
+## Errors
 
 ### Key Points
 
@@ -606,14 +495,7 @@ Common Bash Errors
     - Missing $ when referencing a variable
 - A good IDE can help with many of these syntax errors, because it will color code things, make suggestions about what might be common fixes
 
-{% endcapture %}
-
-{% capture section_overview_17 %}
-Start with Pseudocode!
-{% endcapture %}
-
-{% capture section_body_17 %}
-## **Debugging Bash scripts**
+## Debugging Bash scripts
 
 ### Key Points
 
@@ -629,14 +511,7 @@ Start with Pseudocode!
 
 ![Presentation4 Img36]({{ site.baseurl }}/assets/images/presentation4-img36.png){: width="75%"}
 
-{% endcapture %}
-
-{% capture section_overview_18 %}
-Standard Output (stdout)
-{% endcapture %}
-
-{% capture section_body_18 %}
-## **Standard Output and Standard Error**
+## Standard Output and Standard Error
 
 ### Key Points
 
@@ -659,14 +534,7 @@ Standard Output (stdout)
 - Example
 `command > output.txt 2> error.log`
 
-{% endcapture %}
-
-{% capture section_overview_19 %}
-Pipelines connect commands together
-{% endcapture %}
-
-{% capture section_body_19 %}
-## **Pipelines**
+## Pipelines
 
 ### Key Points
 
@@ -694,14 +562,7 @@ curate assembly fastas
 
 ![Presentation4 Img38]({{ site.baseurl }}/assets/images/presentation4-img38.png){: width="75%"}
 
-{% endcapture %}
-
-{% capture section_overview_20 %}
-Two common approaches
-{% endcapture %}
-
-{% capture section_body_20 %}
-## **Parallel processing**
+## Parallel processing
 
 ### Key Points
 
@@ -717,14 +578,7 @@ Two common approaches
     - Use flags like -t, -p, or –threads
     - `bwa mem -t 8 ref.fa reads.fq > aln.sam`
 
-{% endcapture %}
-
-{% capture section_overview_21 %}
-history : Show command history
-{% endcapture %}
-
-{% capture section_body_21 %}
-## **More useful tools and shortcuts**
+## More useful tools and shortcuts
 
 ### Key Points
 
@@ -764,14 +618,7 @@ Bash tip! Ctrl+r to SEARCH your history in command line!
 
 ![Presentation4 Img44]({{ site.baseurl }}/assets/images/presentation4-img44.png){: width="75%"}
 
-{% endcapture %}
-
-{% capture section_overview_22 %}
-Bash scripting differs from other coding languages
-{% endcapture %}
-
-{% capture section_body_22 %}
-## **Higher level coding languages**
+## Higher level coding languages
 
 ### Key Points
 
@@ -784,14 +631,7 @@ Bash scripting differs from other coding languages
 - Rich ecosystems and libraries
 - Built-in tools for data analysis, visualization, and networking
 
-{% endcapture %}
-
-{% capture section_overview_23 %}
-Group data and actions together
-{% endcapture %}
-
-{% capture section_body_23 %}
-## **Object oriented programming**
+## Object oriented programming
 
 ### Key Points
 
@@ -804,14 +644,7 @@ Group data and actions together
 - Bash: “Run commands on files”
 - Python/R: “Create objects, operate on data”
 
-{% endcapture %}
-
-{% capture section_overview_24 %}
-Logic becomes complex
-{% endcapture %}
-
-{% capture section_body_24 %}
-## **When to stop using BASH**
+## When to stop using BASH
 
 ### Key Points
 
@@ -831,14 +664,7 @@ Logic becomes complex
 - Better packages and libraries in Python and R
 - Other coding languages or packages exist to better handle specific use-cases (biopython, etc)
 
-{% endcapture %}
-
-{% capture section_overview_25 %}
-As workflows grow, reuse becomes important
-{% endcapture %}
-
-{% capture section_body_25 %}
-## **Packages and tools!**
+## Packages and tools!
 
 ### Key Points
 
@@ -853,30 +679,3 @@ As workflows grow, reuse becomes important
 - Others can install the same package and get the same results
 - Use Bash to orchestrate tools (in a pipeline)
 
-{% endcapture %}
-
-{% include activity.html variant="1" title="Part 1: Introduction to Bioinformatics Programming" overview=section_overview_1 content=section_body_1 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="2" title="Part 2: Disclaimer" overview=section_overview_2 content=section_body_2 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="3" title="Part 3: Module Objectives" overview=section_overview_3 content=section_body_3 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="1" title="Part 4: Bash Scripting" overview=section_overview_4 content=section_body_4 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="2" title="Part 5: vim" overview=section_overview_5 content=section_body_5 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="3" title="Part 6: Syntax" overview=section_overview_6 content=section_body_6 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="1" title="Part 7: Pseudo Code" overview=section_overview_7 content=section_body_7 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="2" title="Part 8: Variables" overview=section_overview_8 content=section_body_8 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="3" title="Part 9: Logic: and, or" overview=section_overview_9 content=section_body_9 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="1" title="Part 10: Logic: if, then" overview=section_overview_10 content=section_body_10 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="2" title="Part 11: Logic: else, case" overview=section_overview_11 content=section_body_11 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="3" title="Part 12: Math" overview=section_overview_12 content=section_body_12 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="1" title="Part 13: Loops" overview=section_overview_13 content=section_body_13 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="2" title="Part 14: Nested Loops" overview=section_overview_14 content=section_body_14 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="3" title="Part 15: Functions" overview=section_overview_15 content=section_body_15 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="1" title="Part 16: Errors" overview=section_overview_16 content=section_body_16 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="2" title="Part 17: Debugging Bash scripts" overview=section_overview_17 content=section_body_17 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="3" title="Part 18: Standard Output and Standard Error" overview=section_overview_18 content=section_body_18 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="1" title="Part 19: Pipelines" overview=section_overview_19 content=section_body_19 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="2" title="Part 20: Parallel processing" overview=section_overview_20 content=section_body_20 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="3" title="Part 21: More useful tools and shortcuts" overview=section_overview_21 content=section_body_21 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="1" title="Part 22: Higher level coding languages" overview=section_overview_22 content=section_body_22 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="2" title="Part 23: Object oriented programming" overview=section_overview_23 content=section_body_23 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="3" title="Part 24: When to stop using BASH" overview=section_overview_24 content=section_body_24 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
-{% include activity.html variant="1" title="Part 25: Packages and tools!" overview=section_overview_25 content=section_body_25 icon="/id-bioifx-workshop/assets/images/presentation4-img01.png" %}
