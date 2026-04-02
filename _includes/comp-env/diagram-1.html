@@ -1,0 +1,258 @@
+<div id="comp-env-diagram">
+
+<style>
+  #comp-env-diagram .sidebar-section { cursor:pointer; user-select:none; }
+  #comp-env-diagram .sidebar-section:hover .section-header rect { opacity:0.08; }
+  #comp-env-diagram .desc-text { transition:opacity 0.2s; }
+  #comp-env-diagram .node { cursor:pointer; }
+  #comp-env-diagram .node:hover { opacity:0.8; }
+  #comp-env-diagram .toggle-icon { font-size:11px; font-family:sans-serif; fill:var(--color-text-secondary,#888); }
+  #comp-env-diagram .nav-section { visibility: hidden; }
+  #comp-env-diagram .nav-section.active { visibility: visible; }
+  #comp-env-diagram .diag-nav { display:flex; align-items:center; gap:12px; margin-top:8px; font-family:sans-serif; font-size:20px; }
+  #comp-env-diagram .diag-nav button {
+    padding: 6px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid #185FA5;
+    background: #185FA5;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  #comp-env-diagram .diag-nav button:hover:not(:disabled) {
+    background: #0C447C;
+    border-color: #0C447C;
+  }
+  #comp-env-diagram .diag-nav button:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+</style>
+
+<svg id="main-svg" style="width:100%; max-width:100%; display:block;" viewBox="0 0 680 475" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+
+<g id="system-wide">
+    <rect x="90" y="95" width="150" height="105" rx="3" fill="#3B6D11" opacity="0.25"/>
+    <text x="145" y="108" font-size="10" font-family="sans-serif" fill="#3B6D11" font-weight="bold">System-wide</text>
+    <line x1="80" y1="88" x2="80" y2="104" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="80" y1="104" x2="90" y2="104" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="93" y="107" font-size="10" font-weight="500" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 usr</text>
+    <line x1="100" y1="112" x2="100" y2="124" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="100" y1="124" x2="110" y2="124" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="115" y="127" font-size="10" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 bin</text>
+    <line x1="122" y1="132" x2="122" y2="142" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="122" y1="142" x2="132" y2="142" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="135" y="145" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📄 python</text>
+    <line x1="122" y1="132" x2="122" y2="154" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="122" y1="154" x2="132" y2="154" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="135" y="157" font-size="10" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 lib</text>
+    <line x1="140" y1="162" x2="140" y2="172" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="140" y1="172" x2="150" y2="172" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="153" y="175" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📁 python</text>
+  </g>
+
+  <g id="user-specific">
+    <rect x="90" y="210" width="150" height="140" rx="3" fill="#633806" opacity="0.25"/>
+    <text x="145" y="223" font-size="10" font-family="sans-serif" fill="#633806" font-weight="bold">User-specific</text>
+    <line x1="80" y1="88" x2="80" y2="220" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="80" y1="220" x2="90" y2="220" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="93" y="223" font-size="10" fill="#633806" font-family="sans-serif">📁 home</text>
+    <line x1="100" y1="228" x2="100" y2="240" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="100" y1="240" x2="110" y2="240" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="115" y="243" font-size="10" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 $USER</text>
+    <line x1="122" y1="248" x2="122" y2="258" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="122" y1="258" x2="132" y2="258" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="135" y="261" font-size="10" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 .local</text>
+    <line x1="140" y1="266" x2="140" y2="276" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="140" y1="276" x2="150" y2="276" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="154" y="279" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📁 bin</text>
+    <line x1="160" y1="284" x2="160" y2="294" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="160" y1="294" x2="170" y2="294" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="170" y="297" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📄 script.py</text>
+    <line x1="140" y1="266" x2="140" y2="308" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="140" y1="308" x2="150" y2="308" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="154" y="311" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📁 lib</text>
+    <line x1="160" y1="316" x2="160" y2="326" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="160" y1="326" x2="170" y2="326" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="170" y="329" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📁 python</text>
+  </g>
+
+  <g id="virtual-env">
+    <rect x="270" y="60" width="150" height="125" rx="3" fill="#702963" opacity="0.25" stroke="#702963" stroke-width="1.5" stroke-dasharray="5 3"/>
+    <text x="275" y="65" font-size="15" font-family="sans-serif" fill="#702963" font-weight="bold">Virtual Environment</text>
+    <text x="280" y="92" font-size="10" font-weight="500" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 usr</text>
+    <line x1="287" y1="96" x2="287" y2="108" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="287" y1="108" x2="297" y2="108" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="300" y="110" font-size="10" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 bin</text>
+    <line x1="307" y1="114" x2="307" y2="126" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="307" y1="126" x2="317" y2="126" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="320" y="129" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📄 python</text>
+    <line x1="307" y1="114" x2="307" y2="138" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="307" y1="138" x2="317" y2="138" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="320" y="141" font-size="10" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 lib</text>
+    <line x1="325" y1="146" x2="325" y2="158" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="325" y1="158" x2="335" y2="158" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="338" y="160" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📁 python</text>
+
+    <line x1="200" y1="243" x2="280" y2="92" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2" stroke-dasharray="5 3"/>
+    <line x1="200" y1="120" x2="280" y2="92" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2" stroke-dasharray="5 3"/>
+  </g>
+
+
+</defs>
+
+  <g x="48" y="10" width="100">
+    <text font-size="10"></text>
+  </g>
+  
+
+  <!-- OS sidebar label -->
+  <g transform="translate(18,210) rotate(-90)">
+    <rect x="-110" y="-14" width="220" height="28" rx="6" fill="#A32D2D"/>
+    <text x="0" y="5" text-anchor="middle" font-size="10" font-weight="500" fill="#FCEBEB" font-family="sans-serif">Operating System</text>
+  </g>
+
+  <!-- Main dashed box -->
+  <rect x="48" y="36" width="390" height="350" rx="16" fill="none" stroke="var(--color-border-secondary,#ccc)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="140" y="40" text-anchor="middle" font-size="15" font-weight="750" fill="var(--color-text-primary,#1a1a1a)" font-family="sans-serif">Base Environment</text>
+
+  <!-- / (root) -->
+  <text x="75" y="86" font-size="10" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 / (root)</text>
+
+  <!-- Step 1: System-wide -->
+  <g id="nav-section-0" class="nav-section active">
+    <use href="#system-wide"/>
+    <foreignObject x="60" y="390" width="360" height="80">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:10px; color:var(--color-text-secondary,#555); font-family:sans-serif; line-height:1.5;">
+        System-wide dependencies, scripts, and libraries are installed under the root filesystem (e.g. <code>/usr/lib</code>, <code>/usr/bin</code>) and are shared across all users on the machine. Modifying them typically requires <code>sudo</code> or administrator privileges, meaning changes can affect every user and process on the system.
+      </div>
+    </foreignObject>
+  </g>
+
+  <!-- Step 2: User-specific -->
+  <g id="nav-section-1" class="nav-section">
+    <use href="#system-wide"/>
+    <use href="#user-specific"/>
+    <foreignObject x="60" y="390" width="360" height="80">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:10px; color:var(--color-text-secondary,#555); font-family:sans-serif; line-height:1.5;">
+        User-specific dependencies, scripts, and libraries are installed under the user's home directory (e.g. <code>~/.local/lib</code>, <code>~/.local/bin</code>) and are only accessible to that user. They do not typically require <code>sudo</code> or administrator privileges to install or modify. User-specific packages may depend on system-wide libraries or can be fully independent, depending on how they were installed.
+      </div>
+    </foreignObject>
+  </g>
+
+  <!-- Step 3: Virtual env -->
+  <g id="nav-section-2" class="nav-section">
+    <use href="#system-wide"/>
+    <use href="#user-specific"/>
+    <use href="#virtual-env"/>
+
+    <foreignObject x="60" y="390" width="360" height="80">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:10px; color:var(--color-text-secondary,#555); font-family:sans-serif; line-height:1.5;">
+        Virtual environments are isolated, self-contained directories that manage dependencies independent of both the system-wide and user-specific installations. This independence makes it easy to manage conflicting dependencies across projects. Environment directories may be managed either system wide or per user. </div>
+    </foreignObject>
+  </g>
+
+  <!-- === RIGHT LEGEND === -->
+  <foreignObject x="455" y="40" width="220" height="50">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:8px; color:#185FA5; font-family:sans-serif; line-height:1.5;">
+      <b>ℹ️ Expand the sections below to learn more about each element of the computing environment</b>
+    </div>
+  </foreignObject>
+
+  <g class="sidebar-section" id="sec-os" onclick="toggleSection('os')">
+    <g class="section-header">
+      <rect x="455" y="70" width="216" height="28" rx="6" fill="var(--color-text-primary,#1a1a1a)" opacity="0.04"/>
+      <text x="462" y="89" font-size="10" font-weight="500" fill="var(--color-text-primary,#1a1a1a)" font-family="sans-serif">Operating System</text>
+      <text id="tog-os" x="658" y="89" text-anchor="end" class="toggle-icon">▸</text>
+    </g>
+  </g>
+  <foreignObject id="desc-os" x="455" y="100" width="220" height="60" style="display:none">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:10px; color:var(--color-text-secondary,#555); font-family:sans-serif; line-height:1.5; padding: 4px 8px;">
+      Software that manages the computer hardware and resources (e.g. Ubuntu, macOS).
+    </div>
+  </foreignObject>
+  <line x1="450" y1="165" x2="676" y2="165" stroke="var(--color-border-tertiary,#ddd)" stroke-width="0.5"/>
+
+  <g class="sidebar-section" id="sec-dep" onclick="toggleSection('dep')">
+    <g class="section-header">
+      <rect x="455" y="173" width="216" height="28" rx="6" fill="var(--color-text-primary,#1a1a1a)" opacity="0.04"/>
+      <text x="462" y="192" font-size="10" font-weight="500" fill="var(--color-text-primary,#1a1a1a)" font-family="sans-serif">Dependencies</text>
+      <text id="tog-dep" x="658" y="192" text-anchor="end" class="toggle-icon">▸</text>
+    </g>
+  </g>
+  <foreignObject id="desc-dep" x="455" y="203" width="220" height="60" style="display:none">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:10px; color:var(--color-text-secondary,#555); font-family:sans-serif; line-height:1.5; padding: 4px 8px;">
+      Required software components needed to run other software (e.g. Java, Python, modules).
+    </div>
+  </foreignObject>
+  <line x1="450" y1="268" x2="676" y2="268" stroke="var(--color-border-tertiary,#ddd)" stroke-width="0.5"/>
+
+  <g class="sidebar-section" id="sec-lib" onclick="toggleSection('lib')">
+    <g class="section-header">
+      <rect x="455" y="276" width="216" height="28" rx="6" fill="var(--color-text-primary,#1a1a1a)" opacity="0.04"/>
+      <text x="462" y="295" font-size="10" font-weight="500" fill="var(--color-text-primary,#1a1a1a)" font-family="sans-serif">Library</text>
+      <text id="tog-lib" x="658" y="295" text-anchor="end" class="toggle-icon">▸</text>
+    </g>
+  </g>
+  <foreignObject id="desc-lib" x="455" y="306" width="220" height="60" style="display:none">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:10px; color:var(--color-text-secondary,#555); font-family:sans-serif; line-height:1.5; padding: 4px 8px;">
+      A collection of dependencies, often language or software specific (e.g. Python site-packages).
+    </div>
+  </foreignObject>
+  <line x1="450" y1="371" x2="676" y2="371" stroke="var(--color-border-tertiary,#ddd)" stroke-width="0.5"/>
+
+  <g class="sidebar-section" id="sec-sw" onclick="toggleSection('sw')">
+    <g class="section-header">
+      <rect x="455" y="379" width="216" height="28" rx="6" fill="var(--color-text-primary,#1a1a1a)" opacity="0.04"/>
+      <text x="462" y="398" font-size="10" font-weight="500" fill="var(--color-text-primary,#1a1a1a)" font-family="sans-serif">Software</text>
+      <text id="tog-sw" x="658" y="398" text-anchor="end" class="toggle-icon">▸</text>
+    </g>
+  </g>
+  <foreignObject id="desc-sw" x="455" y="409" width="220" height="60" style="display:none">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:10px; color:var(--color-text-secondary,#555); font-family:sans-serif; line-height:1.5; padding: 4px 8px;">
+      One or more executable scripts or programs that perform tasks.
+    </div>
+  </foreignObject>
+
+</svg>
+
+<text font-size="12px" fill="#185FA5" font-weight="500">
+  ℹ️ Navigate through each panel below to learn more about how dependencies are managed in computer environment.
+</text>
+
+<div class="diag-nav">
+  <button id="prev" onclick="navStep(-1)" disabled>◀</button>
+  <span id="counter">System-wide (1 / 3)</span>
+  <button id="next" onclick="navStep(1)">▶</button>
+</div>
+
+<script>
+  let current = 0;
+  const navSections = document.querySelectorAll('.nav-section');
+  const labels = ['System-wide', 'User-specific', 'Virtual Environment'];
+
+  function navStep(dir) {
+    navSections[current].classList.remove('active');
+    current = Math.max(0, Math.min(current + dir, navSections.length - 1));
+    navSections[current].classList.add('active');
+    document.getElementById('counter').textContent = `${labels[current]} (${current + 1} / ${navSections.length})`;
+    document.getElementById('prev').disabled = current === 0;
+    document.getElementById('next').disabled = current === navSections.length - 1;
+  }
+
+  function toggleSection(key) {
+    const desc = document.getElementById('desc-' + key);
+    const tog = document.getElementById('tog-' + key);
+    const isOpen = desc.style.display !== 'none';
+    desc.style.display = isOpen ? 'none' : '';
+    tog.textContent = isOpen ? '▸' : '▾';
+  }
+</script>
+</div>
