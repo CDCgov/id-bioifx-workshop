@@ -16,7 +16,7 @@ permalink: /lessons/faculty/
   </div>
   <div class="bio-text">
     <h3>Kristine Lacek <a href="https://www.cdc.gov/flu/index.html" class="affiliation cdc">CDC</a></h3>
-    <p>Kristine is an epidemiologist with the Influenza Division at the US Centers for Disease Control and Prevention. She specializes in molecular epidemiology and influenza surveillance, contributing to global efforts in pandemic preparedness and bioinformatics capacity building. Her work focuses on strengthening laboratory and analytical capabilities in public health settings worldwide.</p>
+    <p>Kristine is a bioinformatics scientist with the Influenza Division at the US Centers for Disease Control and Prevention. She specializes in molecular epidemiology and influenza surveillance, contributing to global efforts in pandemic preparedness and bioinformatics capacity building. Her work focuses on strengthening laboratory and analytical capabilities in public health settings worldwide.</p>
     <p class="bio-links">
       <a href="https://github.com/kristinelacek">GitHub</a> · <a href="https://orcid.org/0000-0002-6247-5082">ORCID</a>
     </p>

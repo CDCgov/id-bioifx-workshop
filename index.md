@@ -33,7 +33,7 @@ Introduction text here
   </span>
   <span class="team-member">
     <a href="https://github.com/logan-fink"><img src="https://github.com/logan-fink.png?s=200" alt="Logan Fink" width="100" height="100"></a>
-    <span>Logan Fink, PhD</span>
+    <span>Logan Fink, MS</span>
     <a href="https://www.aphl.org/Pages/default.aspx" class="affiliation aphl">APHL</a>
   </span>
   <span class="team-member">
@@ -58,7 +58,7 @@ Introduction text here
   </span>
   <span class="team-member">
     <img src="https://ui-avatars.com/api/?name=Alisa+Bochnowski&background=5097BA&color=fff&size=200&rounded=true" alt="Alisa Bochnowski" width="100" height="100">
-    <span>Alisa Bochnowski, PHD</span>
+    <span>Alisa Bochnowski, MS</span>
     <a href="https://www.aphl.org/Pages/default.aspx" class="affiliation aphl">APHL</a>
   </span>
 </div>
