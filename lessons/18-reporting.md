@@ -13,6 +13,7 @@ permalink: /lessons/18-reporting/
 ## Module Objectives
 
 - Understand the basics of Quarto
+- Learning how to develop, automate, and share Quarto reports
 
 ---
 
@@ -20,7 +21,7 @@ permalink: /lessons/18-reporting/
 
 Quarto is an open-source scientific and technical publishing system built on Markdown and HTML. It lets you create reports using code, producing HTML, PDF, and Word documents from a single source using [`pandoc`](https://pandoc.org).
 
-{: raw}
+{% raw %}
 
 <svg width="100%" viewBox="0 0 680 220">
 <defs>
@@ -52,7 +53,7 @@ Quarto is an open-source scientific and technical publishing system built on Mar
 
 </svg>
 
-{: end-raw}
+{% endraw %}
 
 Examples of the various document types that can be created by Quarto can be found in the [Quarto Gallery](https://quarto.org/docs/gallery/).
 
@@ -124,7 +125,7 @@ The equivalent code written in HTML format:
 
 #### Markdown
 
-```
+```markdown
 |  Species  | Subtype  |
 |-----------|----------|
 |Influenza A|  H1N1    |
@@ -194,7 +195,7 @@ Block quotes and callouts can be used to distinguish and emphasize specific text
 
 #### Markdown
 
-```
+```markdown
 <!-- Block Quote -->
 > Influenza B Yamagata may be *extinct*!
 
@@ -305,7 +306,7 @@ The equivalent code written in HTML format:
 
 #### Markdown
 
-````
+````markdown
 <!-- Code Block (Without Brackets) -->
 ```python
 print("Bioinformaticians rule, epis drool!")
@@ -375,3 +376,206 @@ The equivalent code written in HTML format:
 ---
 
 ## Code Chunks & Automation
+
+Code chunks can be used to automate reporting processes, creating reproducible and efficient reporting templates. The content below describes general use of code chunks for automation purposes.
+
+---
+
+### Execution Settings
+
+Execution settings control how and when code chunks run in a document. They determine whether code is evaluated, whether output (results, warnings, messages) is displayed, and how figures are rendered. These settings can be applied globally to affect the entire document or locally to override behavior for individual chunks.
+
+#### Common Execution Settings
+
+| Option | Behavior |
+|---|---|
+| `eval` | Run code |
+| `echo` | Show code |
+| `output` | Show code result |
+| `include` | Run code but hide all |
+| `warning` | Show code warnings |
+| `message` | Show code messages |
+| `error` | Show code errors |
+| `cache` | Cache execution result |
+
+#### Example Usage
+
+````markdown
+```{python}
+#| echo: false
+#| output: true
+
+print("Bioinformaticians rule, epis drool!")
+```
+````
+
+In this example, the result of the code execution (`Bioinformaticians rule, epis drool!`) would be rendered but the code (`print("Bioinformaticians rule, epis drool!")`) would not.
+
+Execution settings can also be applied globally in the front matter under the `execute` field, which sets the default behavior for all chunks in the document:
+
+```yaml
+execute:
+  echo: false
+  warning: false
+  message: false
+```
+
+Individual chunks can override global settings using the `#|` syntax shown above.
+
+---
+
+### Rendering Dataframes to Tables
+
+Structured data can be rendered into formatted tables automatically by Quarto using R or Python. For R, this is handled using the `kable` function from the `knitr` package. For Python, this is handled by the `pandas` module. Examples of each are shown below.
+
+#### R Dataframes with `kable`
+
+````markdown
+```{r}
+df <- read.csv("results.csv")
+knitr::kable(df)
+```
+````
+
+#### Python Dataframes with `pandas`
+
+````markdown
+```{python}
+import pandas as pd
+
+df = pd.read_csv("results.csv")
+df
+```
+````
+
+By default, R renders dataframes as formatted HTML tables automatically via `knitr`. Python displays dataframes as plain text unless Jupyter is used, in which case they render as HTML tables. To align Python's default behavior with R's, the `html` dataframe display option can be set in the document's YAML front matter.
+
+---
+
+### Multi-language Reports
+
+Multiple coding languages can be used in a single Quarto document, including Python, R, Bash, and SQL. By default, Quarto runs Python via R using the `reticulate` package, which allows objects created in an R chunk to be accessed in a subsequent Python chunk. To run Python natively without `reticulate`, set `python.reticulate = FALSE` in the chunk options — note that chunks running in native Python mode will not have access to objects created in R chunks.
+
+````markdown
+```{r}
+<!-- Step 1. Create a dataframe object in R -->
+df <- readr::read_csv("results.csv")
+```
+
+```{python}
+<!-- Step 2a. Preview the dataframe in Python (via reticulate — has access to df) -->
+df.head()
+```
+
+```{python, python.reticulate = FALSE}
+<!-- Step 2b. This will fail — native Python mode has no access to the R df object -->
+df.head()
+```
+````
+
+---
+
+## Front Matter
+
+Front matter defines global document configuration and metadata at the start of a Quarto document using YAML syntax, delimited by `---` at the top of the file. It controls everything from document appearance to execution behavior.
+
+{% raw %}
+```markdown
+---
+title: "Influenza Report"
+author:
+  - name: Jane Doe
+date: today
+format:
+  html:
+    embed-resources: true
+execute:
+  echo: false
+params:
+  species: Influenza A
+  subtype: H1N1
+---
+
+<!-- FRONT MATTER ENDS & REPORT BEGINS -->
+
+# Overview
+This report is about {{< meta params.species >}} {{< meta params.subtype >}} ...
+```
+{% endraw %}
+
+Front matter fields fall into three categories:
+
+- **Metadata** — fields like `title`, `author`, and `date` are automatically rendered at the top of the document.
+- **Global configs** — fields like `format` and `execute` control how the document is rendered and how code chunks behave throughout.
+- **Custom parameters** — the `params` field accepts user-defined values that can be referenced anywhere in the document using the {% raw %}`{{< meta params.field >}}`{% endraw %} shortcode syntax, making it easy to reuse the same template across different reporting scenarios.
+
+---
+
+## Report Rendering & Development
+
+### Interactive Development Environments
+
+IDEs are ideal for report development or for reports that require manual edits. Many options exist including RStudio, Positron, and Visual Studio Code (VS Code). All three support Quarto natively with features such as syntax highlighting, chunk execution, and live preview. The example below shows how you can edit and render Quarto reports in VS Code.
+
+!["quarto-img01"](../../assets/images/quarto-img01.png)
+
+---
+
+### Basic Command-line Usage
+
+While it is possible to render Quarto reports using a graphical user interface (GUI), rendering from the command line provides greater flexibility and is better suited for automation. The example below demonstrates the basic command for rendering a report from the command line.
+
+```bash
+quarto render \
+    -o $(date +"%Y-%m-%d")_report.html \
+    --execute-params params.yml \
+    report.qmd
+```
+
+The flags used in this command are described below:
+
+| Flag | Description |
+|---|---|
+| `-o` | Output file name |
+| `--execute-params` | Path to a YAML file containing parameter values |
+
+Parameters defined in the front matter can be overridden at render time using the `--execute-params` flag and a YAML file. This is useful for running the same template against different inputs without modifying the source document.
+
+```yaml
+# params.yml
+params:
+  input_file: "2026_results.csv"
+```
+
+The corresponding front matter and chunk that consumes the parameter:
+
+```markdown
+---
+params:
+  input_file: "results.csv"
+---
+```
+
+````markdown
+```{r}
+df <- read_csv(params$input_file)
+```
+````
+
+When rendered with `--execute-params params.yml`, the value `"2026_results.csv"` will override the default `"results.csv"` defined in the front matter.
+
+---
+
+### Sharing HTML Reports
+
+It is necessary to embed resources when sharing HTML documents created with Quarto to ensure consistent formatting and render behavior. This can be accomplished using the `embed-resources` parameter, as shown below.
+
+```yaml
+---
+format:
+  html:
+    embed-resources: true
+---
+```
+
+Additionally, the rendered HTML file itself must be shared directly — not a localhost URL (e.g., `http://localhost:7779/genome_report.html`). Since the document is not hosted on a server, a localhost link will only work on the machine that rendered it and will be inaccessible to others.
