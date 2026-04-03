@@ -22,7 +22,7 @@ Use the interactive diagram below to learn more about how software and their dep
 
 ## Environment Management Programs
 Managing software, dependencies, and environments on a single machine can quickly become complex, especially when different projects require different versions of the same package. Environment management programs help by creating and maintaining isolated environments, each with their own set of dependencies, so that changes in one project do not break another.
-Many environment managers are language-specific — for example, `venv` and `pip` for Python, `renv` for R, `Bundler` for Ruby, and `Maven` or Gradle for Java. Others are more language-agnostic and can manage dependencies across multiple ecosystems - e.g., `conda`, `mamba`, and `pixi`. This module will focus on `venv` for lightweight Python environment management, and `conda` / `mamba` / `pixi` for more flexible, cross-language environment management.
+Many environment managers are language-specific - for example, `venv` and `pip` for Python, `renv` for R, `Bundler` for Ruby, and `Maven` or `Gradle `for Java. Others are more language-agnostic and can manage dependencies across multiple ecosystems - e.g., `conda`, `mamba`, and `pixi`. This module will focus on `venv` for lightweight Python environment management, and `conda` / `mamba` / `pixi` for more flexible, cross-language environment management.
 
 ### Venv
 **Venv** is a lightweight, python-specific environment management tool that facilitates the **isolation of python libraries, NOT the python executable**.
