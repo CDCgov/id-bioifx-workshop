@@ -77,12 +77,15 @@ Removal of containers that are no longer running saves space your system, but pe
 ## OS Differences
 
 Containerization allows users to specify whatever operating system they would like to use within the container, whether that matches the host system or not
-(insert picture here)
+
+![Presentation9 Img01]({{ site.baseurl }}/assets/images/presentation9-img01.PNG){: width="75%"}
 
 ## Container Versioning
 
 - Versions are specified in container naming/tags as a convention for noting which version of a software is in that container
 - “Latest” tag is less useful than more specific semantic versioning of a container, i.e. 1.1.0 since this will be more easily trackable and revertable (“latest” must be assigned, and authors do not always keep track or update the latest track, which can lead to problems downstream)
+
+![Presentation9 Img02]({{ site.baseurl }}/assets/images/presentation9-img03.PNG){: width="75%"}
 
 ## Repositories
 
@@ -91,6 +94,8 @@ Containerization allows users to specify whatever operating system they would li
 
 It is important to use trusted sources of containers
 	- Reputable institutions ([StaPH-B](https://hub.docker.com/u/staphb), etc.)
+
+![Presentation9 Img03]({{ site.baseurl }}/assets/images/presentation9-img02.PNG){: width="75%"}
 
 ## Common Bioinformatic Tools
 
@@ -126,6 +131,8 @@ Dorado
 
 - Used for classifying reads to the most specific level of certainty within a taxonomic ranking scheme
 - Dependent on a database
+
+![Presentation9 Img04]({{ site.baseurl }}/assets/images/presentation9-img04.PNG){: width="75%"}
 
 ## SRA-ToolKit
 
