@@ -112,6 +112,14 @@ entries:
       url: /lessons/19-workflow-pipelines/
       output: web
 
+  - title: Extras
+    output: web
+    folderitems:
+
+    - title: Useful Links
+      url: /extras/useful-links/
+      output: web
+
   - title: Workshops
     output: web
     folderitems:
