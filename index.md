@@ -5,9 +5,6 @@ sidebar: workshop_sidebar
 topnav: topnav
 permalink: /
 ---
-
-Introduction text here
-
 ---
 
 
