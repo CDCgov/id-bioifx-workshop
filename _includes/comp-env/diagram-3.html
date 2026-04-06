@@ -1,0 +1,102 @@
+<div id="conda-diagram">
+<svg id="main-svg" style="width:100%; max-width:100%; display:block;" viewBox="0 0 680 250" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- System-wide -->
+  <g transform="translate(80, 20)">
+    <rect x="10" y="0" width="150" height="105" rx="3" fill="#3B6D11" opacity="0.25"/>
+    <text x="10" y="-1" font-size="12" font-family="sans-serif" font-weight="bold">System-wide</text>
+    <text x="13" y="19" font-size="10" font-weight="500" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 usr</text>
+    <line x1="20" y1="24" x2="20" y2="36" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="20" y1="36" x2="30" y2="36" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="35" y="39" font-size="10" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 bin</text>
+    <line x1="42" y1="44" x2="42" y2="54" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="42" y1="54" x2="52" y2="54" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="55" y="57" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📄 python</text>
+    <line x1="42" y1="44" x2="42" y2="66" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="42" y1="66" x2="52" y2="66" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="55" y="69" font-size="10" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 lib</text>
+    <line x1="60" y1="74" x2="60" y2="84" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="60" y1="84" x2="70" y2="84" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="73" y="87" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📁 python3.11</text>
+  </g>
+
+  <!-- Virtual Environment -->
+  <g transform="translate(380, 20)">
+    <rect x="10" y="0" width="200" height="215" rx="3" fill="#702963" opacity="0.25"/>
+    <text x="10" y="-1" font-size="12" font-family="sans-serif" font-weight="bold">Conda Environment</text>
+
+    <!-- miniconda3/envs/myenv -->
+    <text x="13" y="29" font-size="10" font-weight="500" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 ~/miniconda3/envs/myenv</text>
+
+    <!-- myenv -> bin -->
+    <line x1="20" y1="33" x2="20" y2="45" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="20" y1="45" x2="30" y2="45" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="35" y="48" font-size="10" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 bin</text>
+    <!-- bin -> python -->
+    <line x1="42" y1="52" x2="42" y2="62" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="42" y1="62" x2="52" y2="62" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="55" y="65" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📄 python</text>
+    <!-- bin -> samtools -->
+    <line x1="42" y1="52" x2="42" y2="74" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="42" y1="74" x2="52" y2="74" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="55" y="77" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📄 samtools</text>
+    <!-- bin -> bcftools -->
+    <line x1="42" y1="52" x2="42" y2="86" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="42" y1="86" x2="52" y2="86" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="55" y="89" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📄 bcftools</text>
+    <!-- bin -> ... -->
+    <line x1="42" y1="52" x2="42" y2="98" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="42" y1="98" x2="52" y2="98" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="55" y="101" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">...</text>
+
+    <!-- myenv -> lib -->
+    <line x1="20" y1="33" x2="20" y2="112" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="20" y1="112" x2="30" y2="112" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="35" y="115" font-size="10" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 lib</text>
+    <!-- lib -> libpython -->
+    <line x1="42" y1="119" x2="42" y2="129" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="42" y1="129" x2="52" y2="129" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="55" y="132" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📄 libpython3.11.so</text>
+    <!-- lib -> libz -->
+    <line x1="42" y1="119" x2="42" y2="141" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="42" y1="141" x2="52" y2="141" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="55" y="144" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📄 libz.so</text>
+    <!-- lib -> libssl -->
+    <line x1="42" y1="119" x2="42" y2="153" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="42" y1="153" x2="52" y2="153" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="55" y="156" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📄 libssl.so</text>
+    <!-- lib -> ... -->
+    <line x1="42" y1="119" x2="42" y2="165" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="42" y1="165" x2="52" y2="165" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="55" y="168" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">...</text>
+
+    <!-- myenv -> include -->
+    <line x1="20" y1="33" x2="20" y2="178" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="20" y1="178" x2="30" y2="178" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="35" y="181" font-size="10" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 include</text>
+
+    <!-- myenv -> share -->
+    <line x1="20" y1="33" x2="20" y2="190" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="20" y1="190" x2="30" y2="190" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="35" y="193" font-size="10" fill="var(--color-text-secondary,#555)" font-family="sans-serif">📁 share</text>
+
+    <!-- myenv -> conda-meta -->
+    <line x1="20" y1="33" x2="20" y2="202" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <line x1="20" y1="202" x2="30" y2="202" stroke="var(--color-border-primary,#aaa)" stroke-width="1.2"/>
+    <text x="35" y="205" font-size="10" fill="var(--color-text-tertiary,#888)" font-family="sans-serif">📁 conda-meta</text>
+  </g>
+
+  <g transform="translate(0, 0)">
+    <line x1="190" y1="75" x2="430" y2="80" stroke="#000" stroke-width="2" stroke-dasharray="6 3"/>
+    <rect x="270" y="65" width="90" height="25" rx="3" fill="white" stroke="#000" stroke-width="1"/>
+    <text x="282" y="82" font-size="12" font-weight="750" fill="black" font-family="sans-serif">DIFFERENT</text>
+  </g>
+
+  <g transform="translate(0, 0)">
+    <line x1="220" y1="105" x2="430" y2="150" stroke="#000" stroke-width="2" stroke-dasharray="6 3"/>
+    <rect x="275" y="115" width="90" height="25" rx="3" fill="white" stroke="#000" stroke-width="1"/>
+    <text x="287" y="132" font-size="12" font-weight="750" fill="black" font-family="sans-serif">DIFFERENT</text>
+  </g>
+
+</svg>
+</div>

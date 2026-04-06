@@ -19,3 +19,4 @@ __pycache__/
 # Output files
 parsed_questions.json
 _site
+assets/.DS_Store
