@@ -3,7 +3,7 @@ layout: page
 title: Containers and Registries
 sidebar: workshop_sidebar
 topnav: topnav
-permalink: /lessons/10-container-registries/
+permalink: /lessons/10-containers-registries/
 ---
 ## Introduction to Containers and Common Bioinformatic Tools
 
