@@ -136,6 +136,10 @@ entries:
       url: /extras/useful-links/
       output: web
 
+    - title: Workshop Presentations
+      url: /lessons/20-all-presentations/
+      output: web
+
   - title: Workshops
     output: web
     folderitems:
