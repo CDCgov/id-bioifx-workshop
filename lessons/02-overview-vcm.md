@@ -74,11 +74,11 @@ permalink: /lessons/02-overview-vcm/
     if (e.key === 'ArrowRight') onNextPage();
   });
 
-  pdfjsLib.getDocument('{{ site.baseurl }}/assets/pdfs/Presentation1_TrainingOverviewVCM.pdf').promise.then(function(pdfDoc_) {
+  pdfjsLib.getDocument('{{ site.baseurl }}/assets/pdfs/Presentation1_TrainingOverviewVCM.pdf?v=2').promise.then(function(pdfDoc_) {
     pdfDoc = pdfDoc_;
     document.getElementById('page-count').textContent = pdfDoc.numPages;
     renderPage(pageNum);
   });
 </script>
 
-[Download slides (PDF)]({{ site.baseurl }}/assets/pdfs/Presentation1_TrainingOverviewVCM.pdf)
+[Download slides (PDF)]({{ site.baseurl }}/assets/pdfs/Presentation1_TrainingOverviewVCM.pdf?v=2)
