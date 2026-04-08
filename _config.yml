@@ -78,6 +78,7 @@ exclude:
   - vendor
   - scripts
   - __pycache__
+  - WIP/genome_report/genome_report.qmd
 
 # Keep site deterministic
 future: false
