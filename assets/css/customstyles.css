@@ -680,6 +680,10 @@ ul#mysidebar {
     background-color: transparent;
 }
 
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:active {
+    background-color: transparent;
+}
+
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
     border-radius: 5px;
 }
