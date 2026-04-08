@@ -112,6 +112,14 @@ entries:
       url: /lessons/19-workflow-pipelines/
       output: web
 
+  - title: Practicals
+    output: web
+    folderitems:
+
+    - title: End-to-End Practical
+      url: /practical/end-to-end/
+      output: web
+
   - title: Extras
     output: web
     folderitems:
