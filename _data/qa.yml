@@ -267,3 +267,67 @@ practical_chmod_add_read:
   failure: "Not quite. Try again."
   explanation: "`chmod u+r` adds the read (r) permission for the user/owner (u)."
   show_hint_after: 2
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Genome Assembly Practical (11b-genome-assembly-practical.md)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+genome_fastq_lines:
+  question: "How many lines does a single read occupy in a FASTQ file?"
+  answers:
+    - "4"
+    - "four"
+  hint: "Think about the identifier, sequence, separator, and quality lines."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "Each FASTQ read has 4 lines: @identifier, sequence, +, and quality scores."
+  show_hint_after: 2
+
+genome_fastq_line3:
+  question: "What character appears on line 3 of every FASTQ record?"
+  answers:
+    - "+"
+  hint: "It's a single character that acts as a separator."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "Line 3 is always a `+` character, acting as a separator between the sequence and quality lines."
+
+genome_mkdir_day3:
+  question: "What two commands create `~/MIRA_NGS` and then `~/MIRA_NGS/day3` inside it?"
+  answers:
+    - "mkdir ~/MIRA_NGS && mkdir ~/MIRA_NGS/day3"
+    - "mkdir -p ~/MIRA_NGS/day3"
+    - "mkdir ~/MIRA_NGS; mkdir ~/MIRA_NGS/day3"
+  hint: "You can use `mkdir` twice, or use the `-p` flag to create parent directories."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "`mkdir -p ~/MIRA_NGS/day3` creates both directories in one command."
+  show_hint_after: 2
+
+genome_samplesheet_header:
+  question: "What is the header line for an Illumina MIRA-NF samplesheet?"
+  answers:
+    - "sample_id,sample_type"
+  hint: "It needs exactly two columns for Illumina data."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "Illumina samplesheets require `sample_id,sample_type` as the header."
+
+genome_experiment_flag:
+  question: "Which MIRA-NF flag specifies the experiment type (e.g., `Flu-Illumina`)?"
+  answers:
+    - "--e"
+  hint: "It's a double-dash flag followed by a single letter."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "The `--e` flag specifies the experiment type for MIRA-NF."
+
+genome_profile_flag:
+  question: "What Nextflow flag sets the compute environment profile (e.g., `docker,local`)?"
+  answers:
+    - "-profile"
+  hint: "It's a single-dash flag."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "The `-profile` flag tells Nextflow which compute environment to use."
+  show_hint_after: 2

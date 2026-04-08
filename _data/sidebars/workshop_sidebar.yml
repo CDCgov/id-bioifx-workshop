@@ -60,6 +60,10 @@ entries:
       url: /lessons/09-computer-environments/
       output: web
 
+    - title: Computer Environments Practical
+      url: /lessons/09b-comp-env-practical/
+      output: web
+
     - title: Containers and Registries
       url: /lessons/10-containers-registries/
       output: web
@@ -70,6 +74,10 @@ entries:
 
     - title: Genome Assembly
       url: /lessons/11-genome-assembly/
+      output: web
+
+    - title: Genome Assembly Practical
+      url: /lessons/11b-genome-assembly-practical/
       output: web
 
     - title: Sequence Alignment
