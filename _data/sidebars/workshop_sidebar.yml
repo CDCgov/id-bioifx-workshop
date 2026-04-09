@@ -12,6 +12,10 @@ entries:
       output: web
       type: homepage
 
+    - title: Faculty
+      url: /lessons/faculty/
+      output: web
+
     - title: Workshop Objectives
       url: /lessons/01-objectives/
       output: web
