@@ -55,7 +55,7 @@ permalink: /lessons/faculty/
   </div>
   <div class="bio-text">
     <h3>Logan Fink <a href="https://www.aphl.org/Pages/default.aspx" class="affiliation aphl">APHL</a></h3>
-    <p>lorem ipsum</p>
+    <p>-</p>
     <p class="bio-links">
       <a href="https://github.com/logan-fink">GitHub</a>
     </p>
@@ -68,7 +68,7 @@ permalink: /lessons/faculty/
   </div>
   <div class="bio-text">
     <h3>Jared Johnson <a href="https://www.aphl.org/Pages/default.aspx" class="affiliation aphl">APHL</a></h3>
-    <p>lorem ipsum</p>
+    <p>-</p>
     <p class="bio-links">
       <a href="https://github.com/DOH-JDJ0303">GitHub</a>
     </p>
@@ -81,7 +81,7 @@ permalink: /lessons/faculty/
   </div>
   <div class="bio-text">
     <h3>Maureen Sullivan <a href="https://www.aphl.org/Pages/default.aspx" class="affiliation aphl">APHL</a></h3>
-    <p>lorem ipsum</p>
+    <p>-</p>
   </div>
 </div>
 
@@ -95,7 +95,7 @@ permalink: /lessons/faculty/
   </div>
   <div class="bio-text">
     <h3>Becky Kondor <a href="https://www.cdc.gov/flu/index.html" class="affiliation cdc">CDC</a></h3>
-    <p>lorem ipsum</p>
+    <p>-</p>
   </div>
 </div>
 
@@ -105,7 +105,7 @@ permalink: /lessons/faculty/
   </div>
   <div class="bio-text">
     <h3>Alisa Bochnowski <a href="https://www.aphl.org/Pages/default.aspx" class="affiliation aphl">APHL</a></h3>
-    <p>lorem ipsum</p>
+    <p>-</p>
   </div>
 </div>
 
