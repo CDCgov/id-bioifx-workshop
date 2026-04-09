@@ -1516,3 +1516,28 @@ pre:hover .copy-btn {
 .btn-collapse-section i {
     margin-right: 3px;
 }
+
+/* Style details/summary "Possible Solution" toggles as buttons */
+details > summary.btn-solution {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #fff;
+    background-color: #337ab7;
+    border: 1px solid #2e6da4;
+    border-radius: 4px;
+    cursor: pointer;
+    list-style: none;
+}
+details > summary.btn-solution::-webkit-details-marker {
+    display: none;
+}
+details > summary.btn-solution:hover {
+    background-color: #286090;
+    border-color: #204d74;
+}
+details[open] > summary.btn-solution {
+    margin-bottom: 15px;
+}

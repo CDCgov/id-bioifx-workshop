@@ -371,6 +371,136 @@ Each sample also contains all **IRMA outputs** per sample.
 
 ---
 
+## SAM and BAM Files
+
+### SAM Files (Sequence Alignment/Map)
+
+SAM is a text-based alignment format that stores how reads align to a reference genome.
+
+- **Human-readable** — can be viewed and inspected directly
+- **Contains alignments + metadata** — read names, positions, flags, CIGAR strings, mapping quality
+- **Large file size** — not efficient for storage or sharing
+
+#### SAM Field Definitions
+
+| Col | Field | Type | Description |
+|---|---|---|---|
+| 1 | QNAME | String | Query template name |
+| 2 | FLAG | Int | Bitwise flag |
+| 3 | RNAME | String | Reference sequence name |
+| 4 | POS | Int | 1-based leftmost mapping position |
+| 5 | MAPQ | Int | Mapping quality |
+| 6 | CIGAR | String | CIGAR string |
+| 7 | RNEXT | String | Reference name of the mate/next read |
+| 8 | PNEXT | Int | Position of the mate/next read |
+| 9 | TLEN | Int | Observed template length |
+| 10 | SEQ | String | Segment sequence |
+| 11 | QUAL | String | ASCII of Phred-scaled base quality + 33 |
+
+![SAM file format]({{ site.baseurl }}/assets/images/genomeassembly-slide57-2.png){: width="75%"}
+
+---
+
+### CIGAR Strings
+
+CIGAR strings describe how a read aligns to the reference, encoding matches, mismatches, insertions, and deletions.
+
+- Stored in the SAM/BAM alignment record — one CIGAR string per aligned read
+- Format: **number + operation** — indicates length and type of alignment operation
+
+#### Common CIGAR Operations
+
+| Operation | Meaning |
+|---|---|
+| **M** | Alignment match/mismatch |
+| **I** | Insertion relative to reference |
+| **D** | Deletion relative to reference |
+| **S** | Soft clipping (read bases not aligned) |
+| **H** | Hard clipping (bases removed) |
+| **N** | Skipped region (e.g., introns) |
+
+**Example:** `10M2I5M1D20M`
+
+| Component | Meaning |
+|---|---|
+| `10M` | 10 aligned bases |
+| `2I` | 2 inserted bases |
+| `5M` | 5 aligned bases |
+| `1D` | 1 deleted base |
+| `20M` | 20 aligned bases |
+
+---
+
+### BAM Files (Binary Alignment/Map)
+
+BAM is the binary (compressed) version of SAM — same information, smaller size.
+
+- **Efficient for storage and analysis** — faster to read and write than SAM
+- **Requires sorting and indexing** — `.bai` index enables random access by genomic position and is necessary for viewing
+- **Standard input for downstream tools** — variant calling, visualization, QC
+
+---
+
+## samtools
+
+`samtools` is the standard command-line toolkit for SAM/BAM files, used across NGS workflows.
+
+### Key Operations
+
+| Command | Purpose |
+|---|---|
+| `samtools view` | View and convert SAM ↔ BAM (`-b` flag for BAM output) |
+| `samtools sort` | Sort alignments — required for many downstream tools |
+| `samtools index` | Create `.bai` index — enables random access |
+| `samtools flagstat` | Alignment summary statistics |
+| `samtools stats` | Detailed metrics |
+
+---
+
+## IGV: Integrative Genomics Viewer
+
+IGV is an interactive tool for visualizing read alignments against a reference genome.
+
+### Requirements
+
+- **Sorted and indexed BAM files** — `.bam` + corresponding `.bai` index
+
+### Key Features
+
+- **Visualize read alignments** — see how sequencing reads map across the genome
+- **Inspect alignment features** — coverage depth, mismatches, indels, soft clipping, alignment gaps
+- **Navigate interactively** — zoom from whole genome to single-base resolution; jump to coordinates or gene names
+
+![IGV alignment view]({{ site.baseurl }}/assets/images/genomeassembly-slide65-2.png){: width="75%"}
+
+### Common QC and Analysis Tasks in IGV
+
+- **Check alignment quality** — consistent coverage and correct orientation
+- **Validate variants** — confirm SNPs and indels are supported by reads
+- **Identify potential issues** — low coverage regions, misalignments, primer artifacts, DI (defective interfering) particles
+
+![IGV QC example]({{ site.baseurl }}/assets/images/genomeassembly-slide66-2.png){: width="75%"}
+
+---
+
+## Multiple Sequence Alignment (MSA)
+
+Multiple sequence alignment compares three or more sequences at once to identify conserved regions, variants, and evolutionary relationships. In influenza genomics, MSA is commonly used for:
+
+- Comparing assembled HA or NA segments across samples
+- Identifying gaps or insertions in assembled sequences
+- Preparing input for phylogenetic analysis
+
+A common command-line tool for MSA is **MAFFT**:
+
+```bash
+mafft input.fasta > aligned.fasta
+```
+
+{% include note.html content="Aligning sequences from different subtypes (e.g., H1 + H3 + H5 + B HA segments together) will produce a poor alignment because these segments are too divergent. Always align within a single subtype or gene." %}
+
+---
+
 ## Automating with Pipeline Scripts
 
 MIRA-NF can be integrated into larger automation pipelines:
