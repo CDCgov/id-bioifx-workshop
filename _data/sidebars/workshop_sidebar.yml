@@ -116,10 +116,6 @@ entries:
       url: /lessons/18-reporting/
       output: web
 
-    - title: Workflow Pipelines
-      url: /lessons/19-workflow-pipelines/
-      output: web
-
   - title: Practicals
     output: web
     folderitems:

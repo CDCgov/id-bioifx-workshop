@@ -113,7 +113,7 @@ Scores are encoded as ASCII characters and stored on line 4 of the FASTQ record.
 | Q30 | 1 in 1 000 (0.1%) | 99.9% |
 | Q40 | 1 in 10 000 (0.01%) | 99.99% |
 
-![Phred quality score table]({{ site.baseurl }}/assets/images/genomeassembly-slide19-2.png){: width="65%"}
+![Phred quality score table]({{ site.baseurl }}/assets/images/genomeassembly-slide19-2.png){: style="width:70%"}
 
 Figure credit: https://commons.wikimedia.org/wiki/File:ASCII-Table-wide.svg
 ---
@@ -471,7 +471,7 @@ IGV is an interactive tool for visualizing read alignments against a reference g
 - **Inspect alignment features** — coverage depth, mismatches, indels, soft clipping, alignment gaps
 - **Navigate interactively** — zoom from whole genome to single-base resolution; jump to coordinates or gene names
 
-![IGV alignment view]({{ site.baseurl }}/assets/images/genomeassembly-slide65-2.png){: width="75%"}
+![IGV alignment view]({{ site.baseurl }}/assets/images/genomeassembly-slide65-2.png){: style="width:25%"}
 
 ### Common QC and Analysis Tasks in IGV
 

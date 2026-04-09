@@ -43,7 +43,7 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 12. Extra practice: use VIM to create a bash file that lists all the files in a directory that end in .sh files and outputs a message that lists all bash files to stdout
 
 <details>
-<summary>Possible Solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>Open the “cores_incorrect.sh” file in VIM: <code>vim cores_incorrect.sh</code></li>
@@ -74,7 +74,7 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 #1. From a list of numbers, determine the mean
 
 <details>
-<summary>Possible solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>Count up the number of entries in the file and store that number as a variable (e.g., <code>total_entries</code>).</li>
@@ -88,7 +88,7 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 #2. Calculate the percentage of numbers in the file that are below 6
 
 <details>
-<summary>Possible solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>Instantiate two variables, <code>x</code> and <code>y</code>, and set both to zero (<code>x</code> = count of values below 6, <code>y</code> = count of values 6 or above).</li>
@@ -103,7 +103,7 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 #3. How many different flu subtypes appear in a list?
 
 <details>
-<summary>Possible solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>Create an empty list to hold unique subtype values (e.g., <code>unique_list</code>).</li>
@@ -117,7 +117,7 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 #4. Translate this DNA into its possible protein sequences (keeping in mind frames, coding and non-coding)
 
 <details>
-<summary>Possible solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>Obtain a codon table for converting DNA codons into amino acids.</li>
@@ -148,7 +148,7 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 6. Using the Random number generator file on github (random_number_generator.sh)
 
 <details>
-<summary>Possible solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>
@@ -194,7 +194,7 @@ cd "$thispath"</code></pre>
 5. Find the sick cat! (Hint: execute the files with shebangs!)
 
 <details>
-<summary>Possible solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>
@@ -243,7 +243,7 @@ done</code></pre>
 12. convert all the letters into uppercase
 
 <details>
-<summary>Possible solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>
