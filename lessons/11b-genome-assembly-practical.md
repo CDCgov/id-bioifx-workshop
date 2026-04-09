@@ -69,7 +69,7 @@ These exercises accompany the **Genome Assembly and MIRA-NF** module. They walk 
 {% include qa.html id="genome_mkdir_day3" %}
 
 <details>
-<summary>Possible Solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <pre><code>mkdir ~/MIRA_NGS
 mkdir ~/MIRA_NGS/day3
@@ -118,7 +118,7 @@ mv *.fastq.gz fastqs
 
    ```bash
    echo "sample_id,sample_type" > samplesheet.csv
-   ls fastqs | cut -f1-2 -d_ | uniq | sed "s/$/,Test/g" >> samplesheet.csv
+   ls fastqs | cut -f1 -d_ | uniq | sed "s/$/,Test/g" >> samplesheet.csv
    ```
 
 3. Verify the samplesheet looks correct with `cat samplesheet.csv`.
@@ -199,7 +199,7 @@ Your script should:
 </div>
 
 <details>
-<summary>Possible Solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <pre><code>#!/bin/bash
 
@@ -221,7 +221,7 @@ mv *.fastq.gz fastqs
 
 # Generate samplesheet
 echo "sample_id,sample_type" > samplesheet.csv
-ls fastqs | cut -f1-2 -d_ | uniq | sed "s/$/,Test/g" >> samplesheet.csv
+ls fastqs | cut -f1 -d_ | uniq | sed "s/$/,Test/g" >> samplesheet.csv
 
 # Run MIRA-NF
 nextflow run ~/MIRA-NF/main.nf \
@@ -252,7 +252,7 @@ After MIRA-NF completes, extend your wrapper script with one or more of the foll
 </div>
 
 <details>
-<summary>Hints</summary>
+<summary class="btn-solution">Possible Solutions</summary>
 
 <ul>
   <li><strong>Copy consensus:</strong> <code>cp outputs/aggregate_outputs/mira-reports/*amended_consensus.fasta ~/</code></li>
@@ -262,3 +262,95 @@ After MIRA-NF completes, extend your wrapper script with one or more of the foll
 </ul>
 
 </details>
+
+---
+
+### Exercise 7 — Samtools Practical
+{: .mt-4}
+
+<div class="exercise-block" markdown="1">
+
+Navigate to the MIRA output from your first run and perform the following tasks using `samtools`:
+
+1. View the first 10 lines of each `A_HA.bam` file across the three sample outputs. Approximately where in the gene are these reads?
+2. Do these BAM files need to be sorted?
+3. Remove the `A_HA.bam.bai` file, then re-index the HA BAM file with `samtools index`.
+4. Using `ls -lah`, how large is the `A_HA.bam` file? Using `samtools view` with redirect or the `-o` argument, convert `A_HA.bam` to `A_HA.sam`. How large is the SAM file?
+
+</div>
+
+{% include qa.html id="genome_samtools_sorted" %}
+
+<details>
+<summary class="btn-solution">Possible Solution</summary>
+
+<pre><code># View first 10 aligned reads
+samtools view A_HA_H1.bam | head -10
+
+# First reads all map to position 1 — the file is already sorted
+
+# Remove and recreate the index
+rm A_HA_H1.bam.bai
+samtools index A_HA_H1.bam
+
+# Convert BAM to SAM
+samtools view -o A_HA_H1.sam A_HA_H1.bam
+</code></pre>
+
+</details>
+
+---
+
+### Exercise 8 — Multiple Sequence Alignment Practical
+{: .mt-4}
+
+<div class="exercise-block" markdown="1">
+
+Using the MIRA output `amended_consensus.fasta`, perform the following:
+
+1. Extract the **H3 HA** segments and align them with MAFFT. Do any sequences have gaps in your MSA?
+2. Do the same for **A_PB2** segments.
+3. What happens if you try to align **all HA segments** (H1, H3, H5, and B) together?
+
+</div>
+
+{% include qa.html id="genome_msa_all_ha" %}
+
+<details>
+<summary class="btn-solution">Possible Solution</summary>
+
+<pre><code># Extract H3 HA segments and align
+grep -A1 HA_H3 aggregate_outputs/mira-reports/mira_pipeline_test_amended_consensus.fasta | sed "s/--//g" > H3.fasta
+mafft H3.fasta > aligned_h3.fasta
+</code></pre>
+
+</details>
+
+---
+
+### Exercise 9 — MSA Pipeline Extension
+{: .mt-4}
+
+<div class="exercise-block" markdown="1">
+
+Add to your MIRA wrapper shell script the commands for extracting and aligning pass-QC sequences for:
+
+- **HA:** A_HA_H1, B_HA, A_HA_H3
+- **NA:** B_NA, A_NA_N1, A_NA_N2
+
+</div>
+
+---
+
+### Exercise 10 — BLAST Practical
+{: .mt-4}
+
+<div class="exercise-block" markdown="1">
+
+1. Using **NCBI BLAST**, determine which season and region (Americas, Eurasia, Africa, Oceania) each HA segment most closely matches.
+2. Using **GISAID BLAST**, how do your results differ?
+3. **Discussion:** What are some factors that might influence your BLAST results?
+
+</div>
+
+{% include qa.html id="genome_blast_gisaid_vs_ncbi" %}

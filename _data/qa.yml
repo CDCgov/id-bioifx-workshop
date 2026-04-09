@@ -331,3 +331,41 @@ genome_profile_flag:
   failure: "Not quite. Try again."
   explanation: "The `-profile` flag tells Nextflow which compute environment to use."
   show_hint_after: 2
+
+genome_samtools_sorted:
+  question: "If the first reads in a BAM file all map to position 1, does the file need to be sorted?"
+  answers:
+    - "no"
+    - "No"
+    - "no, it is already sorted"
+    - "it is already sorted"
+  hint: "A sorted BAM file has reads ordered by their mapping position on the reference."
+  success: "Correct! ✅ The reads start at position 1 and increase — the file is already sorted."
+  failure: "Not quite. Think about what 'sorted' means for a BAM file."
+  explanation: "If reads are already ordered by mapping position (starting at 1), the BAM is already sorted. You can verify with `samtools view | head`."
+  show_hint_after: 2
+
+genome_msa_all_ha:
+  question: "What happens when you try to align H1, H3, H5, and B HA segments together with MAFFT?"
+  answers:
+    - "poor alignment"
+    - "bad alignment"
+    - "too divergent"
+    - "they are too different"
+    - "lots of gaps"
+    - "many gaps"
+  hint: "Think about how similar these subtypes are to each other."
+  success: "Correct! ✅ The subtypes are too divergent for a meaningful alignment."
+  failure: "Not quite. Consider the evolutionary distance between influenza subtypes."
+  explanation: "H1, H3, H5, and B HA segments are too divergent to align meaningfully. Always align within a single subtype."
+  show_hint_after: 1
+
+genome_blast_gisaid_vs_ncbi:
+  question: "For influenza, which BLAST database generally provides more complete results — NCBI or GISAID?"
+  answers:
+    - "GISAID"
+    - "gisaid"
+  hint: "Think about which database has more influenza-specific submissions."
+  success: "Correct! ✅ GISAID has a more comprehensive collection of influenza sequences."
+  failure: "Not quite. Consider which database specializes in influenza data."
+  explanation: "GISAID has access-controlled but more comprehensive influenza data, while NCBI GenBank is open source but may have fewer influenza-specific sequences."
