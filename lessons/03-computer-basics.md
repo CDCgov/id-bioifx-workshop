@@ -11,7 +11,7 @@ permalink: /lessons/03-computer-basics/
 
 Bioinformatics workflows often involve:
 - Processing **gigabytes to terabytes** of sequencing data
-- Running computationally intensive algorithms (alignment, assembly, variant calling)
+- Running computationally intensive algorithms)
 - Managing memory for large reference genomes and indices
 - Parallelizing tasks across multiple CPU cores
 
@@ -19,10 +19,10 @@ Understanding the underlying hardware helps you:
 
 | Scenario | Knowledge Applied |
 |----------|-------------------|
-| Pipeline runs slowly | Is it CPU-bound or I/O-bound? |
+| Pipeline runs slowly | Is it CPU-bound, Memory "swapping" or I/O-bound? |
 | "Out of memory" errors | How much RAM does the tool need? Can you use disk-based alternatives? |
 | Choosing cloud instances | How many cores? How much memory? SSD vs HDD? |
-| Optimizing tool parameters | Thread count, memory limits, temp directory location |
+| Optimizing tool parameters | CPU/Thread count, memory limits, temp directory location |
 
 <div class="alert alert-info">
 <strong>Key insight:</strong> Most bioinformatics bottlenecks come from either <strong>memory limitations</strong> (not enough RAM) or <strong>I/O bottlenecks</strong> (slow disk reads/writes), not CPU speed.
@@ -465,7 +465,6 @@ The diagram below shows the main components of a computer and how they interact:
 The CPU executes instructions — the fundamental operations that make up all software. For bioinformatics, this includes:
 - Comparing nucleotide sequences character by character
 - Calculating alignment scores
-- Traversing suffix arrays and BWT indices
 - Evaluating quality score thresholds
 
 ### 3.2 Cores and threads
@@ -526,9 +525,8 @@ sysctl -n hw.physicalcpu   # Physical cores
 
 RAM holds data that the CPU is actively working with:
 - The genome sequence being aligned against
-- Index structures (FM-index, hash tables)
+- Index structures (FM-index, hash tables, dataframes)
 - Reads currently being processed
-- Intermediate results
 
 When you load a reference genome into a tool like BWA, it gets loaded into RAM. The larger the reference or index, the more RAM required.
 
@@ -536,10 +534,9 @@ When you load a reference genome into a tool like BWA, it gets loaded into RAM. 
 
 | Task | Typical RAM needed |
 |------|-------------------|
-| Aligning to human genome (BWA-MEM2) | 8-16 GB |
-| *De novo* assembly (SPAdes, small genome) | 16-32 GB |
-| *De novo* assembly (SPAdes, large genome) | 64-256+ GB |
-| Variant calling (GATK) | 8-32 GB |
+| Mira-influenza | 8-16 GB |
+| Mira-sc2, Aligning to human genome (BWA-MEM2) | 16-32 GB |
+|BEAST phylogenetics,  *De novo* assembly (SPAdes, large genome) | 64-256+ GB |
 | Metagenomics classification (Kraken2) | 8-64 GB (depends on database) |
 
 ### 4.3 Virtual memory and swap
@@ -591,12 +588,12 @@ When RAM is limited:
 
 ### 5.1 Storage types
 
-| Type | Speed | Cost | Use case |
-|------|-------|------|----------|
-| **NVMe SSD** | 3,000-7,000 MB/s | $$$ | Operating system, active projects |
-| **SATA SSD** | 500-600 MB/s | $$ | General purpose, good balance |
-| **HDD** | 100-200 MB/s | $ | Archival storage, backups |
-| **Network storage** | Variable (1-1000 MB/s) | Variable | Shared data, depends on network |
+| Type | Speed | Cost | 
+|------|-------|------|
+| **NVMe SSD** | 3,000-7,000 MB/s | $$$ | 
+| **SATA SSD** | 500-600 MB/s | $$ | 
+| **HDD** | 100-200 MB/s | $ | 
+| **Network storage** | Variable (1-1000 MB/s) | Variable | 
 
 ### 5.2 Impact on bioinformatics
 
@@ -631,7 +628,7 @@ rm testfile
 ### 5.4 Storage best practices
 
 1. **Use SSDs for temp files** — Set `$TMPDIR` or tool-specific temp directories to SSD
-2. **Compress when possible** — Gzipped FASTQ takes 3-4x less space and often processes faster
+2. **Compress when possible** — Gzipped FASTQ takes 3-4x less space and often process faster
 3. **Clean up intermediate files** — BAM files from failed runs, temp files, etc.
 4. **Archive completed projects** — Move to cheaper HDD or tape storage
 
@@ -770,9 +767,9 @@ Consider external compute when:
 - You need specialized hardware (GPUs for ML)
 
 Common platforms:
-- **Institutional HPC clusters** — Often free for researchers
+- **Institutional HPC clusters** — Often "free" for researchers
 - **AWS, Google Cloud, Azure** — Pay per hour, flexible
-- **Galaxy, Terra, DNAnexus** — Bioinformatics-specific platforms
+
 
 ### 7.4 Summary checklist
 
