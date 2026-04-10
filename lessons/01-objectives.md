@@ -23,13 +23,14 @@ permalink: /lessons/01-objectives/
 
 ## 3. Inspect genome assembly
 
-- [Sequence Alignment Overview]({{ site.baseurl }}/lessons/12-sequence-alignment/)
 - [Genome Assembly and MIRA-NF]({{ site.baseurl }}/lessons/11-genome-assembly/)
+- [Sequence Alignment Overview]({{ site.baseurl }}/lessons/12-sequence-alignment/)
+
 
 ## 4. Perform informatic analyses (e.g., alignment, phylogenetics, variants) of influenza sequences
 
-- [BLAST Fundamentals]({{ site.baseurl }}/lessons/13-blast/)
 - [Identifying Genetic Markers]({{ site.baseurl }}/lessons/14-identifying-genetic-markers/)
+- [BLAST]({{ site.baseurl }}/lessons/13-blast/)
 - [Phylogenetics]({{ site.baseurl }}/lessons/15-phylogenetics/)
 
 ## 5. Generate genomic surveillance reports on circulating subtypes and clades
@@ -41,8 +42,9 @@ permalink: /lessons/01-objectives/
 
 - [Intro to Bioinformatics Programming]({{ site.baseurl }}/lessons/07-bifx-programming/)
 - [Bioinformatics Programming Exercises]({{ site.baseurl }}/lessons/08-bifx-programming-exercises/)
-- [Quality Management Systems]({{ site.baseurl }}/lessons/17-quality-management-systems/)
 - [Workflow Pipelines]({{ site.baseurl }}/lessons/19-workflow-pipelines/)
+- [Quality Management Systems]({{ site.baseurl }}/lessons/17-quality-management-systems/)
+
 
 ## 7. Submit timely, high-quality data to GISAID and NCBI
 
