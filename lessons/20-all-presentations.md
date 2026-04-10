@@ -17,7 +17,7 @@ Below are all the workshop presentations available for download.
     <tr><td>Training Overview</td><td><a href="{{ site.baseurl }}/presentations/Presentation1_TrainingOverviewVCM.pdf">Presentation1_TrainingOverviewVCM.pdf</a></td></tr>
     <tr><td>Computer OS</td><td><a href="{{ site.baseurl }}/presentations/Presentation2_ComputerOS.pdf">Presentation2_ComputerOS.pdf</a></td></tr>
     <tr><td>Introduction to BASH</td><td><a href="{{ site.baseurl }}/presentations/Presentation3_IntroBASH-FINAL.pdf">Presentation3_IntroBASH-FINAL.pdf</a></td></tr>
-    <tr><td>BASH command cheat sheet</td><td><a href="{{ site.baseurl }}/presentations/Presentation3_IntroBASH-FINAL.pdf">Bash_Command_EncyclopediaV2.pdf</a></td></tr>
+    <tr><td>BASH command cheat sheet</td><td><a href="{{ site.baseurl }}/presentations/Bash_Command_EncyclopediaV2.pdf">Bash_Command_EncyclopediaV2.pdf</a></td></tr>
     <tr><td colspan="2" style="text-align:center; font-weight:bold; background:#f0f0f0;">Day 2</td></tr>
     <tr><td>Bioinformatics Programming</td><td><a href="{{ site.baseurl }}/presentations/Presentation4_BifxProgramming.pdf">Presentation4_BifxProgramming.pdf</a></td></tr>
     <tr><td>Computer Environments</td><td><a href="{{ site.baseurl }}/presentations/Presentation5_APHL_computer_environments.pdf">Presentation5_APHL_computer_environments.pdf</a></td></tr>
