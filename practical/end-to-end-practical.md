@@ -8,9 +8,25 @@ permalink: /practical/end-to-end/
 
 ## End-to-End Influenza Bioinformatics Practical
 
-This hands-on practical challenges you to work through a complete influenza bioinformatics workflow — from downloading raw sequencing data through assembly, quality control, phylogenetic analysis, and reporting. Each section builds on skills learned in previous workshop lessons and maps to operational milestones defined in the [post-bfxwkshp-schema project](https://github.com/nbx0/post-bfxwkshp-schema/milestones).
+This hands-on practical challenges you to work through a complete influenza bioinformatics workflow — from downloading raw sequencing data through assembly, quality control, phylogenetic analysis, and reporting. Each section builds on skills learned in previous workshop lessons and maps to operational milestones defined in your institution's post-workshop tracker repository.
 
-You will **not** be given step-by-step commands. Instead, each part poses questions and challenges for you to solve using the skills and tools you've learned. Tool suggestions are provided where helpful.
+You will **not** be given step-by-step commands. Instead, each part poses questions and challenges for you to solve using the skills and tools you've learned.
+
+### Institution Tracker Repositories
+
+Each institution has a dedicated project tracker with milestones and issues that map directly to this practical. Find your institution's repository below:
+
+| Institution | Repository |
+|---|---|
+| Instituto De Salud Pública De Chile (ISP) | [post-bfxwkshp-isp-chile](https://github.com/cdcent/post-bfxwkshp-isp-chile) |
+| Laboratorio Nacional De Salud De Guatemala (LNS) | [post-bfxwkshp-lns-guatemala](https://github.com/cdcent/post-bfxwkshp-lns-guatemala) |
+| Instituto de Diagnóstico y Referencia Epidemiológicos (InDRE) | [post-bfxwkshp-indre-mexico](https://github.com/cdcent/post-bfxwkshp-indre-mexico) |
+| Ministerio De Salud Paraguay / Laboratorio Central De Salud Pública (LCSP) | [post-bfxwkshp-lcsp-paraguay](https://github.com/cdcent/post-bfxwkshp-lcsp-paraguay) |
+| Instituto Nacional De Salud Peru (INS) | [post-bfxwkshp-ins-peru](https://github.com/cdcent/post-bfxwkshp-ins-peru) |
+| Instituto Conmemorativo Gorgas de Estudios de la Salud (Gorgas) | [post-bfxwkshp-gorgas-panama](https://github.com/cdcent/post-bfxwkshp-gorgas-panama) |
+| Secretaría Nacional de Ciencia y Tecnología (SENACYT) | [post-bfxwkshp-senacyt-panama](https://github.com/cdcent/post-bfxwkshp-senacyt-panama) |
+
+{% include note.html content="The milestone numbers and issue numbers referenced throughout this practical are the same across all institution repositories. Navigate to your repository's <strong>Milestones</strong> and <strong>Issues</strong> tabs to track progress." %}
 
 ### Learning Objectives
 
@@ -26,25 +42,9 @@ By the end of this practical, you will be able to:
 
 ---
 
-## Prerequisites
-
-Before starting, ensure you have completed (or are comfortable with) these workshop modules:
-
-| Skill Area | Lesson |
-|---|---|
-| Command line basics | [Intro to CLI]({{ site.baseurl }}/lessons/05-cli-intro/) |
-| Bash scripting | [CLI Exercises]({{ site.baseurl }}/lessons/06-cli-intro-exercises/) |
-| Environments & containers | [Computer Environments]({{ site.baseurl }}/lessons/09-computer-environments/) / [Containers]({{ site.baseurl }}/lessons/10-containers-registries/) |
-| Genome assembly concepts | [Genome Assembly and MIRA-NF]({{ site.baseurl }}/lessons/11-genome-assembly/) |
-| Phylogenetics concepts | [Phylogenetics]({{ site.baseurl }}/lessons/15-phylogenetics/) |
-| Reporting | [Reporting with Quarto]({{ site.baseurl }}/lessons/18-reporting/) |
-| Workflow pipelines | [Workflow Pipelines]({{ site.baseurl }}/lessons/19-workflow-pipelines/) |
-
----
-
 ## Part 1 — Data Acquisition
 
-{% include tip.html content="This section relates to <a href='https://github.com/nbx0/post-bfxwkshp-schema/milestone/3'>Phase 2: Operational Readiness</a> — <a href='https://github.com/nbx0/post-bfxwkshp-schema/issues/11'>Issue #11: Identify sequence data sources</a>." %}
+{% include tip.html content="This section relates to <strong>Phase 2: Operational Readiness</strong> (Milestone 3) — <strong>Issue #11: Identify sequence data sources</strong> in your institution's tracker repository." %}
 
 Public sequencing data are available through NCBI's Sequence Read Archive (SRA). Your goal is to download paired-end FASTQ files for influenza samples under BioProject **PRJNA1437047** that match the pattern `H1_*`.
 
@@ -68,7 +68,7 @@ Public sequencing data are available through NCBI's Sequence Read Archive (SRA).
 
 ## Part 2 — File Renaming and Directory Setup
 
-{% include tip.html content="This section relates to <a href='https://github.com/nbx0/post-bfxwkshp-schema/milestone/1'>Phase 0: Governance &amp; Operations</a> — <a href='https://github.com/nbx0/post-bfxwkshp-schema/issues/5'>Issue #5: Define metadata standards and change management for pipelines</a>." %}
+{% include tip.html content="This section relates to <strong>Phase 0: Governance &amp; Operations</strong> (Milestone 1) — <strong>Issue #5: Define metadata standards and change management for pipelines</strong> in your institution's tracker repository." %}
 
 MIRA-NF expects input files to follow a specific naming convention tied to a **samplesheet**. The SRA-downloaded files are named by run accession (e.g., `SRR12345678_1.fastq`), but your lab tracks samples with internal IDs. You need to rename the files and prepare the directory structure MIRA-NF expects.
 
@@ -86,7 +86,7 @@ MIRA-NF expects input files to follow a specific naming convention tied to a **s
 
 5. What directory layout does MIRA-NF expect? Set up the working directory accordingly.
 
-{% include note.html content="Refer to the <a href='https://github.com/CDCgov/MIRA-NF'>MIRA-NF documentation</a> for samplesheet format requirements." %}
+{% include note.html content="Refer to the <a href='https://github.com/CDCgov/MIRA-NF?tab=readme-ov-file#usage'>MIRA-NF documentation</a> for samplesheet format requirements." %}
 
 <div class="bs-callout bs-callout-info">
 <strong>Checkpoint:</strong> Your samplesheet should list every sample with paths to both R1 and R2 FASTQ files. Each row should have three comma-separated fields.
@@ -96,7 +96,7 @@ MIRA-NF expects input files to follow a specific naming convention tied to a **s
 
 ## Part 3 — Genome Assembly with MIRA-NF
 
-{% include tip.html content="This section relates to <a href='https://github.com/nbx0/post-bfxwkshp-schema/milestone/2'>Phase 1: Setup &amp; Validation</a> — <a href='https://github.com/nbx0/post-bfxwkshp-schema/issues/9'>Issue #9: Configure computational environment</a> and <a href='https://github.com/nbx0/post-bfxwkshp-schema/issues/10'>Issue #10: Validate analysis pipeline</a>." %}
+{% include tip.html content="This section relates to <strong>Phase 1: Setup &amp; Validation</strong> (Milestone 2) — <strong>Issue #9: Configure computational environment</strong> and <strong>Issue #10: Validate analysis pipeline</strong> in your institution's tracker repository." %}
 
 [MIRA-NF](https://github.com/CDCgov/MIRA-NF) is the CDC's influenza genome assembly and QC pipeline built on Nextflow. It performs reference-based assembly and produces consensus sequences and quality metrics.
 
@@ -122,7 +122,7 @@ MIRA-NF expects input files to follow a specific naming convention tied to a **s
 
 ## Part 4 — MIRA QC: Pass vs. Fail
 
-{% include tip.html content="This section relates to <a href='https://github.com/nbx0/post-bfxwkshp-schema/milestone/3'>Phase 2: Operational Readiness</a> — <a href='https://github.com/nbx0/post-bfxwkshp-schema/issues/12'>Issue #12: Define acceptance/rejection criteria</a> and <a href='https://github.com/nbx0/post-bfxwkshp-schema/issues/4'>Issue #4: Implement continuous monitoring metrics</a>." %}
+{% include tip.html content="This section relates to <strong>Phase 2: Operational Readiness</strong> (Milestone 3) — <strong>Issue #12: Define acceptance/rejection criteria</strong> and <strong>Phase 0: Governance &amp; Operations</strong> (Milestone 1) — <strong>Issue #4: Implement continuous monitoring metrics</strong> in your institution's tracker repository." %}
 
 MIRA-NF generates quality metrics for each assembled segment. Your task is to determine which samples pass QC and which fail.
 
@@ -134,21 +134,17 @@ MIRA-NF generates quality metrics for each assembled segment. Your task is to de
 
 2. What thresholds would you use to define a "passing" assembly? Consider genome completeness, coverage depth, and ambiguous base counts. Justify your choices.
 
-3. Using bash text-processing tools, separate your samples into two lists: those that pass QC and those that fail. Save each list to a file.
+3. How many total reads did your negative control have and what percent of those reads matched influenza?
 
 4. How many samples passed? How many failed? Are there any patterns in the failures (e.g., specific segments, low input material)?
 
-{% include warning.html content="The specific column layout of the QC summary depends on your MIRA-NF version. Inspect the header row before writing any filtering commands." %}
 
-<div class="bs-callout bs-callout-info">
-<strong>Checkpoint:</strong> You should have two files listing sample IDs — one for passing samples and one for failing samples. Record these counts for your final report.
-</div>
 
 ---
 
 ## Part 5 — Extracting HA Sequences from MIRA Output
 
-{% include tip.html content="This section relates to <a href='https://github.com/nbx0/post-bfxwkshp-schema/milestone/3'>Phase 2: Operational Readiness</a> — <a href='https://github.com/nbx0/post-bfxwkshp-schema/issues/14'>Issue #14: Develop SOPs</a>." %}
+{% include tip.html content="This section relates to <strong>Phase 2: Operational Readiness</strong> (Milestone 3) — <strong>Issue #14: Develop SOPs</strong> in your institution's tracker repository." %}
 
 For phylogenetic analysis, you need only the **HA (hemagglutinin)** segment consensus sequences from samples that passed QC. HA is segment 4 for influenza A.
 
@@ -174,7 +170,7 @@ For phylogenetic analysis, you need only the **HA (hemagglutinin)** segment cons
 
 ## Part 6 — Phylogenetic Analysis with Nextstrain
 
-{% include tip.html content="This section relates to <a href='https://github.com/nbx0/post-bfxwkshp-schema/milestone/2'>Phase 1: Setup &amp; Validation</a> — <a href='https://github.com/nbx0/post-bfxwkshp-schema/issues/10'>Issue #10: Validate analysis pipeline</a> and <a href='https://github.com/nbx0/post-bfxwkshp-schema/milestone/3'>Phase 2: Operational Readiness</a> — <a href='https://github.com/nbx0/post-bfxwkshp-schema/issues/15'>Issue #15: Implement automated workflows</a>." %}
+{% include tip.html content="This section relates to <strong>Phase 1: Setup &amp; Validation</strong> (Milestone 2) — <strong>Issue #10: Validate analysis pipeline</strong> and <strong>Phase 2: Operational Readiness</strong> (Milestone 3) — <strong>Issue #15: Implement automated workflows</strong> in your institution's tracker repository." %}
 
 [Nextstrain](https://nextstrain.org/) provides tools for phylogenetic analysis and visualization of pathogen genomic data. The core command-line toolkit is [Augur](https://docs.nextstrain.org/projects/augur/), and interactive trees are viewed in [Auspice](https://auspice.us/).
 
@@ -206,7 +202,7 @@ For phylogenetic analysis, you need only the **HA (hemagglutinin)** segment cons
 
 ## Part 7 — Reporting with Quarto
 
-{% include tip.html content="This section relates to <a href='https://github.com/nbx0/post-bfxwkshp-schema/milestone/3'>Phase 2: Operational Readiness</a> — <a href='https://github.com/nbx0/post-bfxwkshp-schema/issues/17'>Issue #17: Define report templates</a>." %}
+{% include tip.html content="This section relates to <strong>Phase 2: Operational Readiness</strong> (Milestone 3) — <strong>Issue #17: Define report templates</strong> in your institution's tracker repository." %}
 
 [Quarto](https://quarto.org/) is a scientific publishing system for rendering reproducible reports from markdown and code. Your goal is to produce an HTML report summarizing the entire analysis.
 
@@ -238,36 +234,36 @@ For phylogenetic analysis, you need only the **HA (hemagglutinin)** segment cons
 
 ## Milestone Reference Summary
 
-The exercises in this practical map to the following milestones and issues in the [post-bfxwkshp-schema](https://github.com/nbx0/post-bfxwkshp-schema/milestones) project:
+The exercises in this practical map to the following milestones and issues in your institution's tracker repository (see the [Institution Tracker Repositories](#institution-tracker-repositories) table above):
 
-### [Phase 0: Governance & Operations](https://github.com/nbx0/post-bfxwkshp-schema/milestone/1)
-
-| Issue | Title | Practical Section |
-|-------|-------|-------------------|
-| [#1](https://github.com/nbx0/post-bfxwkshp-schema/issues/1) | Define turnaround time targets for analysis and reporting | Parts 3–7 (overall workflow timing) |
-| [#2](https://github.com/nbx0/post-bfxwkshp-schema/issues/2) | Define sample prioritization criteria | Part 4 (QC pass/fail triage) |
-| [#3](https://github.com/nbx0/post-bfxwkshp-schema/issues/3) | Define contingency plans for pipeline/infrastructure failure | Part 3 (pipeline execution) |
-| [#4](https://github.com/nbx0/post-bfxwkshp-schema/issues/4) | Implement continuous monitoring metrics | Part 4 (QC metrics review) |
-| [#5](https://github.com/nbx0/post-bfxwkshp-schema/issues/5) | Define metadata standards and change management for pipelines | Part 2 (file naming/metadata) |
-
-### [Phase 1: Setup & Validation](https://github.com/nbx0/post-bfxwkshp-schema/milestone/2)
+### Phase 0: Governance & Operations (Milestone 1)
 
 | Issue | Title | Practical Section |
 |-------|-------|-------------------|
-| [#6](https://github.com/nbx0/post-bfxwkshp-schema/issues/6) | Define computational infrastructure | Parts 1, 3 (tool setup) |
-| [#7](https://github.com/nbx0/post-bfxwkshp-schema/issues/7) | Implement reproducible environments | Part 3 (Nextflow profiles, containers) |
-| [#8](https://github.com/nbx0/post-bfxwkshp-schema/issues/8) | Establish version control | Part 2 (directory structure, traceability) |
-| [#9](https://github.com/nbx0/post-bfxwkshp-schema/issues/9) | Configure computational environment | Part 3 (MIRA-NF setup) |
-| [#10](https://github.com/nbx0/post-bfxwkshp-schema/issues/10) | Validate analysis pipeline | Parts 3–4 (assembly + QC validation) |
+| #1 | Define turnaround time targets for analysis and reporting | Parts 3–7 (overall workflow timing) |
+| #2 | Define sample prioritization criteria | Part 4 (QC pass/fail triage) |
+| #3 | Define contingency plans for pipeline/infrastructure failure | Part 3 (pipeline execution) |
+| #4 | Implement continuous monitoring metrics | Part 4 (QC metrics review) |
+| #5 | Define metadata standards and change management for pipelines | Part 2 (file naming/metadata) |
 
-### [Phase 2: Operational Readiness](https://github.com/nbx0/post-bfxwkshp-schema/milestone/3)
+### Phase 1: Setup & Validation (Milestone 2)
 
 | Issue | Title | Practical Section |
 |-------|-------|-------------------|
-| [#11](https://github.com/nbx0/post-bfxwkshp-schema/issues/11) | Identify sequence data sources | Part 1 (SRA data acquisition) |
-| [#12](https://github.com/nbx0/post-bfxwkshp-schema/issues/12) | Define acceptance/rejection criteria | Part 4 (QC pass/fail thresholds) |
-| [#13](https://github.com/nbx0/post-bfxwkshp-schema/issues/13) | Establish target sample throughput and define reporting period | Parts 3–4 (batch processing) |
-| [#14](https://github.com/nbx0/post-bfxwkshp-schema/issues/14) | Develop SOPs | Part 5 (HA extraction procedure) |
-| [#15](https://github.com/nbx0/post-bfxwkshp-schema/issues/15) | Implement automated workflows | Part 6 (Nextstrain pipeline) |
-| [#16](https://github.com/nbx0/post-bfxwkshp-schema/issues/16) | Develop submission SOPs | Part 7 (reporting deliverables) |
-| [#17](https://github.com/nbx0/post-bfxwkshp-schema/issues/17) | Define report templates | Part 7 (Quarto report template) |
+| #6 | Define computational infrastructure | Parts 1, 3 (tool setup) |
+| #7 | Implement reproducible environments | Part 3 (Nextflow profiles, containers) |
+| #8 | Establish version control | Part 2 (directory structure, traceability) |
+| #9 | Configure computational environment | Part 3 (MIRA-NF setup) |
+| #10 | Validate analysis pipeline | Parts 3–4 (assembly + QC validation) |
+
+### Phase 2: Operational Readiness (Milestone 3)
+
+| Issue | Title | Practical Section |
+|-------|-------|-------------------|
+| #11 | Identify sequence data sources | Part 1 (SRA data acquisition) |
+| #12 | Define acceptance/rejection criteria | Part 4 (QC pass/fail thresholds) |
+| #13 | Establish target sample throughput and define reporting period | Parts 3–4 (batch processing) |
+| #14 | Develop SOPs | Part 5 (HA extraction procedure) |
+| #15 | Implement automated workflows | Part 6 (Nextstrain pipeline) |
+| #16 | Develop submission SOPs | Part 7 (reporting deliverables) |
+| #17 | Define report templates | Part 7 (Quarto report template) |
