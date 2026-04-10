@@ -27,6 +27,7 @@ Below are all the workshop presentations available for download.
     <tr><td colspan="2" style="text-align:center; font-weight:bold; background:#f0f0f0;">Day 4</td></tr>
     <tr><td>Phylogenetics</td><td><a href="{{ site.baseurl }}/presentations/phylogenetics.pdf">phylogenetics.pdf</a></td></tr>
     <tr><td>Genomic Epidemiology</td><td><a href="{{ site.baseurl }}/presentations/Genomic_Epi.pdf">Genomic_Epi.pdf</a></td></tr>
+    <tr><td>Train the Trainer</td><td><a href="{{ site.baseurl }}/presentations/Train_the_trainer.pdf">Train_the_trainer.pdf</a></td></tr>
     <tr><td colspan="2" style="text-align:center; font-weight:bold; background:#f0f0f0;">Day 5</td></tr>
     <tr><td>Introduction to Quarto</td><td><a href="{{ site.baseurl }}/presentations/Presentation11_Intro_Quarto.pdf">Presentation11_Intro_Quarto.pdf</a></td></tr>
   </tbody>
