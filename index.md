@@ -7,6 +7,9 @@ permalink: /
 ---
 ---
 
+<div style="text-align: center; margin-bottom: 20px;">
+  <img src="{{ site.baseurl }}/assets/images/mira-cog-in-global-collaboration.png" alt="Bioinformatics in Global Collaboration" style="max-width: 100%; height: auto;">
+</div>
 
 <div class="team-section" markdown="0">
 
