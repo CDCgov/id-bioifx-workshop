@@ -8,6 +8,20 @@ company_name: US CDC Influenza Division
 url: "https://cdcgov.github.io"   # production org Pages root
 baseurl: "/id-bioifx-workshop"     # project repo name (keep if this is NOT cdcgov.github.io repo)
 
+# SEO settings
+lang: en
+locale: en_US
+author: CDC Influenza Division
+tagline: Bioinformatics Training for Public Health Laboratories
+logo: /assets/images/favicon.ico
+social:
+  name: CDC Influenza Division
+  links:
+    - https://github.com/cdcgov/id-bioifx-workshop
+
+twitter:
+  card: summary
+
 output: web
 
 github_editme_path: cdcgov/id-bioifx-workshop/blob/main/

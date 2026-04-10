@@ -355,6 +355,6 @@ python3 ./pt2_script.py
 `micromamba` warned us that installing `scanpy` would require updating to a new version of `pandas`. This allowed us to avoid silently breaking the `pandas v1.5.0` dependency of `pt2_script.py`.
 {% endcapture %}
 
-{% include answer.html id="3.10" content=answer_content %}
+{% include answer.html id="3.11" content=answer_content %}
 
 </div>
