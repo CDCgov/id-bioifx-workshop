@@ -211,8 +211,10 @@ Complete the following parts:
 
 Download, uncompress, and re-compress the following files:
 
-- `wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/2012704893_273083_v1_H3_PCR_original_R1_001.fastq.gz`
-- `wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/2012704893_273083_v1_H3_PCR_original_R2_001.fastq.gz`
+- ```bash
+  wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/2012704893_273083_v1_H3_PCR_original_R1_001.fastq.gz
+  wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/2012704893_273083_v1_H3_PCR_original_R2_001.fastq.gz
+  ```
 
 Use `ls -lah` (the `-h` flag makes file sizes human-readable) to display the file sizes **before and after** compression.
 
