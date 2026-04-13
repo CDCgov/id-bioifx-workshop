@@ -20,3 +20,6 @@ permalink: /extras/useful-links/
 ## Vaccine Recommendations
 
 - [WHO Recommendations for Influenza Vaccine Composition](https://www.who.int/teams/global-influenza-programme/vaccines/who-recommendations) - WHO Global Influenza Programme recommendations for seasonal influenza vaccine composition for northern and southern hemisphere seasons.
+
+## Laboratory 
+- [https://www.paho.org/en/topics/laboratory-systems#virtual-reality-laboratory](https://www.paho.org/en/topics/laboratory-systems#virtual-reality-laboratory) - Take a virtual laboratory tour!
