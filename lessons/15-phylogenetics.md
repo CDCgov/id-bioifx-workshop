@@ -84,3 +84,9 @@ permalink: /lessons/15-phylogenetics/
 [Download slides (PDF)]({{ site.baseurl }}/WIP/phylogenetics.pdf)
 
 ## Content and practical materials available [here](https://github.com/nhassell/seasonal-flu-demo/tree/master)
+
+Clone the practical materials with the following command:
+
+```{bash}
+git clone https://github.com/nhassell/seasonal-flu-demo.git
+```
