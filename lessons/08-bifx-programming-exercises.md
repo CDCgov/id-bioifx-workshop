@@ -148,7 +148,7 @@ wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main
 1. Using the ordinal number file on github (ordinal_check.sh)
 
 ```bash
-wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/vim_practical/ordinal_check.sh
+wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/logic_and_variable_practical/ordinal_check.sh
 
 ```
 
