@@ -30,8 +30,13 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 <div class="exercise-block" markdown="1">
 
 1. Students download the pre-built file from the github
+
+```bash
+wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/vim_practical/mem_incorrect.sh
+```
+
 2. Use VIM to navigate through it, chmod it, and modify it so that it can run and get the correct output
-3. Open the “cores_incorrect.sh” file in VIM
+3. Open the “mem_incorrect.sh” file in VIM
 4. Fix the shebang line to run a bash script
 5. Modify the “echo” command to fix the typo
 6. Delete the line that says “Delete this line”
@@ -43,7 +48,7 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 12. Extra practice: use VIM to create a bash file that lists all the files in a directory that end in .sh files and outputs a message that lists all bash files to stdout
 
 <details>
-<summary>Possible Solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>Open the “cores_incorrect.sh” file in VIM: <code>vim cores_incorrect.sh</code></li>
@@ -52,7 +57,7 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
   <li>Delete the line that says “Delete this line”: <code>dd</code></li>
   <li>Navigate to the next line and follow the instructions in the file.</li>
   <li>Delete <code>#</code> where instructed.</li>
-  <li>Copy the line with <code>vv</code>.</li>
+  <li>Copy the line with <code>yy</code>.</li>
   <li>Navigate to the end of the file with <code>G</code> and paste the line with <code>p</code>.</li>
   <li>Save the modified file: <code>:wq</code> + Enter.</li>
   <li>Make the file executable: <code>chmod +x mem</code>.</li>
@@ -74,7 +79,7 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 #1. From a list of numbers, determine the mean
 
 <details>
-<summary>Possible solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>Count up the number of entries in the file and store that number as a variable (e.g., <code>total_entries</code>).</li>
@@ -88,7 +93,7 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 #2. Calculate the percentage of numbers in the file that are below 6
 
 <details>
-<summary>Possible solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>Instantiate two variables, <code>x</code> and <code>y</code>, and set both to zero (<code>x</code> = count of values below 6, <code>y</code> = count of values 6 or above).</li>
@@ -103,7 +108,7 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 #3. How many different flu subtypes appear in a list?
 
 <details>
-<summary>Possible solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>Create an empty list to hold unique subtype values (e.g., <code>unique_list</code>).</li>
@@ -117,7 +122,7 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 #4. Translate this DNA into its possible protein sequences (keeping in mind frames, coding and non-coding)
 
 <details>
-<summary>Possible solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>Obtain a codon table for converting DNA codons into amino acids.</li>
@@ -141,6 +146,12 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 <div class="exercise-block" markdown="1">
 
 1. Using the ordinal number file on github (ordinal_check.sh)
+
+```bash
+wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/logic_and_variable_practical/ordinal_check.sh
+
+```
+
 2. Exercise 1: change the ordinal statement to execute as true if the number is greater than 50 and less than 100
 3. Exercise 2: change the ordinal statement to execute as true if the number is less than 25 or greater than 75
 4. Exercise 3: change the ordinal statement to execute as true if the number is greater than 1 and less than 10, or greater than or equal to 90 and less than 100
@@ -148,7 +159,7 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 6. Using the Random number generator file on github (random_number_generator.sh)
 
 <details>
-<summary>Possible solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>
@@ -187,6 +198,10 @@ cd "$thispath"</code></pre>
 
 <div class="exercise-block" markdown="1">
 
+```bash
+mkdir loops_practical && cd loops_practical; for ((i=1;i<=99;i++)); do wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/loops_practical/gato${i}; done
+```
+
 1. For every file in the loops_practical directory, if the file is not empty, print the name of the file to stout. (wc - -byte < filename can be used to give the size of a file)
 2. For each file in a directory, find out if the file contains a shebang line as the first line, if so, print the filename to stout
 3. Find the sick cat! (Hint: execute the files with shebangs!)
@@ -194,7 +209,7 @@ cd "$thispath"</code></pre>
 5. Find the sick cat! (Hint: execute the files with shebangs!)
 
 <details>
-<summary>Possible solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>
@@ -229,21 +244,23 @@ done</code></pre>
 
 <div class="exercise-block" markdown="1">
 
+```bash
+mkdir pipeline_practical && cd pipeline_practical; for i in decode_the_secret_message.txt flu_types.txt secret_message_key.txt; do wget https://github.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/pipeline_practical/${i} ; done
+
+```
+
 1. List the contents of a directory, pipe that output to word count to find how many files there are (may be helpful to use man wc to find out what wc can do)
-2. List the contents of a file, sort the contents and find a list of the unique values
+2. List the contents of the flu_types.txt file, sort the contents and find a list of the unique values
 3. Decode the secret message: 1%76q#948^4q5@23q2q492q07&/@i5#q#76
-4. Convert all the numbers into letters using the provided variable
-5. Reverse the order of the sequence
-6. Cut using “/” as delimiter, take the second field
-7. convert all the letters into uppercase
-8. List the contents of a directory, pipe that output to word count to find how many files there are (may be helpful to use man wc to find out what wc can do)
-9. List the contents of the /usr/bin directory, pipe that output to word count to find how many files there are (may be helpful to use “man wc” to find out what wc can do)
-10. List the contents of a file, sort the contents and find a list of the unique values (bonus: count the number of unique values and output to screen)
-11. Convert all the numbers into letters using the provided conversion
-12. convert all the letters into uppercase
+    a. Convert all the numbers into letters using the provided variable
+    b. Reverse the order of the sequence
+    c. Cut using “/” as delimiter, take the second field
+    d. Convert all the letters into uppercase
+    e. List the contents of a directory, pipe that output to word count to find how many files there are (may be helpful to use man wc to find out what wc can do)
+    f. List the contents of the /usr/bin directory, pipe that output to word count to find how many files there are (may be helpful to use “man wc” to find out what wc can do)
 
 <details>
-<summary>Possible solution</summary>
+<summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>
