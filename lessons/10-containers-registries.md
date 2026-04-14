@@ -175,3 +175,18 @@ Dorado
 
 - Softwares that run Docker containers
 - Based on the security restrictions, one container may be a better fit for a user’s organization
+
+## Installing software
+Use the command below to create a new environment with micromamba and install the software that will be used in future lessions.
+```bash
+# Create environment (bioconda + conda-forge channels)
+micromamba create -n flu_env \
+  -c bioconda \
+  -c conda-forge \
+  -c defaults \
+  sra-tools samtools nextflow nextstrain-cli \
+  --yes
+
+# Activate
+micromamba activate flu_env
+```
