@@ -36,7 +36,7 @@ wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main
 ```
 
 2. Use VIM to navigate through it, chmod it, and modify it so that it can run and get the correct output
-3. Open the “cores_incorrect.sh” file in VIM
+3. Open the “mem_incorrect.sh” file in VIM
 4. Fix the shebang line to run a bash script
 5. Modify the “echo” command to fix the typo
 6. Delete the line that says “Delete this line”
@@ -57,7 +57,7 @@ wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main
   <li>Delete the line that says “Delete this line”: <code>dd</code></li>
   <li>Navigate to the next line and follow the instructions in the file.</li>
   <li>Delete <code>#</code> where instructed.</li>
-  <li>Copy the line with <code>vv</code>.</li>
+  <li>Copy the line with <code>yy</code>.</li>
   <li>Navigate to the end of the file with <code>G</code> and paste the line with <code>p</code>.</li>
   <li>Save the modified file: <code>:wq</code> + Enter.</li>
   <li>Make the file executable: <code>chmod +x mem</code>.</li>
@@ -146,6 +146,12 @@ wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main
 <div class="exercise-block" markdown="1">
 
 1. Using the ordinal number file on github (ordinal_check.sh)
+
+```bash
+wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/vim_practical/ordinal_check.sh
+
+```
+
 2. Exercise 1: change the ordinal statement to execute as true if the number is greater than 50 and less than 100
 3. Exercise 2: change the ordinal statement to execute as true if the number is less than 25 or greater than 75
 4. Exercise 3: change the ordinal statement to execute as true if the number is greater than 1 and less than 10, or greater than or equal to 90 and less than 100
@@ -192,6 +198,10 @@ cd "$thispath"</code></pre>
 
 <div class="exercise-block" markdown="1">
 
+```bash
+mkdir loops_practical && cd loops_practical; for ((i=1;i<=99;i++)); do wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/loops_practical/gato${i}; done
+```
+
 1. For every file in the loops_practical directory, if the file is not empty, print the name of the file to stout. (wc - -byte < filename can be used to give the size of a file)
 2. For each file in a directory, find out if the file contains a shebang line as the first line, if so, print the filename to stout
 3. Find the sick cat! (Hint: execute the files with shebangs!)
@@ -233,6 +243,11 @@ done</code></pre>
 {: .mt-4}
 
 <div class="exercise-block" markdown="1">
+
+```bash
+mkdir pipeline_practical && cd pipeline_practical; for i in decode_the_secret_message.txt flu_types.txt secret_message_key.txt; do wget https://github.com/CDCgov/id-bioifx-workshop/blob/main/practical/bash_practical_exercises/pipeline_practical/${i} ; done
+
+```
 
 1. List the contents of a directory, pipe that output to word count to find how many files there are (may be helpful to use man wc to find out what wc can do)
 2. List the contents of a file, sort the contents and find a list of the unique values
