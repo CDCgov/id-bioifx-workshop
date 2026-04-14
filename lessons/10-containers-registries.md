@@ -184,7 +184,7 @@ micromamba create -n flu_env \
   -c bioconda \
   -c conda-forge \
   -c defaults \
-  sra-tools samtools nextflow nextstrain-cli \
+  sra-tools samtools nextflow \
   --yes
 
 # Activate
