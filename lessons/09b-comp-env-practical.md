@@ -190,9 +190,11 @@ This exercise shows how `pip` can silently alter already-installed packages.
 **3.1 Download the test script and data**
 
 ```bash
-wget https://github.com/CDCgov/id-bioifx-workshop/blob/36941cd352dc7282ad26583389322549c362e8ec/practical/computer_env/pt2_script.py
-wget https://github.com/CDCgov/id-bioifx-workshop/blob/36941cd352dc7282ad26583389322549c362e8ec/practical/computer_env/pt2_dataset-1.csv
-wget https://github.com/CDCgov/id-bioifx-workshop/blob/36941cd352dc7282ad26583389322549c362e8ec/practical/computer_env/pt2_dataset-2.csv
+wget https://github.com/CDCgov/id-bioifx-workshop/raw/36941cd352dc7282ad26583389322549c362e8ec/practical/computer_env/pt2_script.py
+wget https://github.com/CDCgov/id-bioifx-workshop/raw/refs/heads/lmc_jdj/practical/computer_env/pt2_dataset-1.csv
+wget https://github.com/CDCgov/id-bioifx-workshop/raw/refs/heads/lmc_jdj/practical/computer_env/pt2_dataset-2.csv
+
+
 
 ```
 
