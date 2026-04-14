@@ -190,9 +190,12 @@ This exercise shows how `pip` can silently alter already-installed packages.
 **3.1 Download the test script and data**
 
 ```bash
-curl https://github.com/DOH-JDJ0303/binfx-hub/raw/refs/heads/main/docs/presentations/2026/International_Influenza_Workshop/pt2_script.py -o pt2_script.py
-curl https://github.com/DOH-JDJ0303/binfx-hub/raw/refs/heads/main/docs/presentations/2026/International_Influenza_Workshop/pt2_data_1.csv -o pt2_data_1.csv
-curl https://github.com/DOH-JDJ0303/binfx-hub/raw/refs/heads/main/docs/presentations/2026/International_Influenza_Workshop/pt2_data_2.csv -o pt2_data_2.csv
+wget https://github.com/CDCgov/id-bioifx-workshop/raw/36941cd352dc7282ad26583389322549c362e8ec/practical/computer_env/pt2_script.py
+wget https://github.com/CDCgov/id-bioifx-workshop/raw/refs/heads/lmc_jdj/practical/computer_env/pt2_dataset-1.csv
+wget https://github.com/CDCgov/id-bioifx-workshop/raw/refs/heads/lmc_jdj/practical/computer_env/pt2_dataset-2.csv
+
+
+
 ```
 
 **3.2 Create and activate venv_test_2**
