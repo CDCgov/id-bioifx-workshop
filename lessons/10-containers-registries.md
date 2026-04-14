@@ -102,7 +102,8 @@ It is important to use trusted sources of containers
 
 - [Fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/), [multiqc](https://github.com/MultiQC/MultiQC)
 - [Kraken2](https://github.com/DerrickWood/kraken2)
-- [Apptainer](https://github.com/apptainer/apptainer) (formerly Singularity)
+- [Docker](https://docs.docker.com/engine/install/ubuntu/#prerequisites)
+- [Singularity](https://docs.sylabs.io/guides/4.1/user-guide/quick_start.html#quick-installation-steps)
 - [Nextflow](https://docs.seqera.io/nextflow/)
 - [Sra-toolkit](https://github.com/ncbi/sra-tools)
 - [Samtools](https://github.com/ncbi/sra-tools)
