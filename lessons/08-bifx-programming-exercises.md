@@ -199,7 +199,7 @@ cd "$thispath"</code></pre>
 <div class="exercise-block" markdown="1">
 
 ```bash
-mkdir loops_practical && cd loops_practical; for ((i=1;i<=99;i++)); do wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/loops_practical/gato{$i}; done
+mkdir loops_practical && cd loops_practical; for ((i=1;i<=99;i++)); do wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/loops_practical/gato${i}; done
 ```
 
 1. For every file in the loops_practical directory, if the file is not empty, print the name of the file to stout. (wc - -byte < filename can be used to give the size of a file)
