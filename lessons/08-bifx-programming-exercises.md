@@ -244,6 +244,11 @@ done</code></pre>
 
 <div class="exercise-block" markdown="1">
 
+```bash
+mkdir pipeline_practical && cd pipeline_practical; for i in decode_the_secret_message.txt flu_types.txt secret_message_key.txt; do wget https://github.com/CDCgov/id-bioifx-workshop/blob/main/practical/bash_practical_exercises/pipeline_practical/${i} ; done
+
+```
+
 1. List the contents of a directory, pipe that output to word count to find how many files there are (may be helpful to use man wc to find out what wc can do)
 2. List the contents of a file, sort the contents and find a list of the unique values
 3. Decode the secret message: 1%76q#948^4q5@23q2q492q07&/@i5#q#76
