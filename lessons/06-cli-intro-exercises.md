@@ -74,14 +74,19 @@ Complete the following steps in order:
 
 Download the samplesheet from the workshop website for the next practical.
 
-**Linux (wget):**
+**Linux/WSL (wget):**
 ```bash
 wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/samplesheet.csv
 ```
 
-**macOS / Unix (curl):**
+**macOS / Unix:**
+macOS does not come with `wget` pre-installed, but you can install it with [Homebrew](https://brew.sh/). Homebrew is a package manager for macOS that simplifies the installation of software.
 ```bash
-curl https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/samplesheet.csv > samplesheet.csv
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Install wget
+brew install wget
+wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/samplesheet.csv > samplesheet.csv
 ```
 
 </div>
@@ -157,13 +162,8 @@ curl https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main
 Download the influenza FASTA file:
 
 ```bash
-# Linux
 wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/influenza.fasta
-
-# macOS
-curl https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/influenza.fasta > influenza.fasta
 ```
-
 1. Using `grep` with a flag or piping into `wc`, how many times does the sequence `GGGGCGGGG` (4G 1C 4G) appear in your `influenza.fasta`?
 2. Using `grep` with the `-A` flag (`--help` if you don't recall what that does), output all the `A_HA_H1` sequences to a file called `H1_HA.fasta`.
 
@@ -231,13 +231,13 @@ Use `ls -lah` (the `-h` flag makes file sizes human-readable) to display the fil
 
 <div class="exercise-block" markdown="1">
 
-1. Using `wget` or `curl`, pull down `permissions.txt` at:  
+1. Using `wget`, pull down `permissions.txt` at:  
    `https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/permissions.txt`
 2. `cat permissions.txt`.
 3. Using `chmod`, **remove** read permissions for owner on `permissions.txt`.
 4. `cat permissions.txt` — what does it say now?
 5. Using `chmod` again, **add** read permissions back to `permissions.txt`.
-6. Using the up arrow to load your last `wget` or `curl` command, pull down `permissions.sh` by changing the command's final `.txt` to `.sh`.
+6. Using the up arrow to load your last `wget` command, pull down `permissions.sh` by changing the command's final `.txt` to `.sh`.
 
 </div>
 
