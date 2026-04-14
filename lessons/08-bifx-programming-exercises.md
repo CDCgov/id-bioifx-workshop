@@ -245,7 +245,7 @@ done</code></pre>
 <div class="exercise-block" markdown="1">
 
 ```bash
-mkdir pipeline_practical && cd pipeline_practical; for i in decode_the_secret_message.txt flu_types.txt secret_message_key.txt; do wget https://github.com/CDCgov/id-bioifx-workshop/blob/main/practical/bash_practical_exercises/pipeline_practical/${i} ; done
+mkdir pipeline_practical && cd pipeline_practical; for i in decode_the_secret_message.txt flu_types.txt secret_message_key.txt; do wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/blob/main/practical/bash_practical_exercises/pipeline_practical/${i} ; done
 
 ```
 
