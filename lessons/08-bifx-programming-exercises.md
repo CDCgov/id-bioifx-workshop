@@ -30,6 +30,11 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 <div class="exercise-block" markdown="1">
 
 1. Students download the pre-built file from the github
+
+```bash
+wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/vim_practical/mem_incorrect.sh
+```
+
 2. Use VIM to navigate through it, chmod it, and modify it so that it can run and get the correct output
 3. Open the “cores_incorrect.sh” file in VIM
 4. Fix the shebang line to run a bash script
