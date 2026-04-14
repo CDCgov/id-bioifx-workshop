@@ -1,0 +1,5 @@
+Accession,GenBank_RefSeq,Organism_Name,Species,Genotype,Segment,Length,Nuc_Completeness,Geo_Location,Host,Tissue_Specimen_Source,Submitters,Collection_Date,Release_Date,Molecule_type
+NC_002208.1,RefSeq,Influenza B virus (B/Lee/1940),Betainfluenzavirus influenzae,,5,1841,complete,,,,"Briedis,D.J., Tobin,M.",,1993-08-02,ssRNA(-)
+NC_002209.1,RefSeq,Influenza B virus (B/Lee/1940),Betainfluenzavirus influenzae,,6,1557,complete,,,,"Shaw,M.W., Choppin,P.W., Lamb,R.A., Erickson,B.W., Briedis,D.J.",,1993-08-02,ssRNA(-)
+NC_002210.1,RefSeq,Influenza B virus (B/Lee/1940),Betainfluenzavirus influenzae,,7,1191,complete,,,,"Briedis,D.J., Lamb,R.A., Choppin,P.W.",,1993-08-02,ssRNA(-)
+NC_002211.1,RefSeq,Influenza B virus (B/Lee/1940),Betainfluenzavirus influenzae,,8,1096,complete,,,,"Briedis,D.J., Lamb,R.A., Air,G.M., Hackett,J.A.",,1993-08-02,ssRNA(-)
