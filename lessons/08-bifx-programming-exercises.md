@@ -57,7 +57,7 @@ wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main
   <li>Delete the line that says “Delete this line”: <code>dd</code></li>
   <li>Navigate to the next line and follow the instructions in the file.</li>
   <li>Delete <code>#</code> where instructed.</li>
-  <li>Copy the line with <code>vv</code>.</li>
+  <li>Copy the line with <code>yy</code>.</li>
   <li>Navigate to the end of the file with <code>G</code> and paste the line with <code>p</code>.</li>
   <li>Save the modified file: <code>:wq</code> + Enter.</li>
   <li>Make the file executable: <code>chmod +x mem</code>.</li>
