@@ -190,3 +190,5 @@ micromamba create -n flu_env \
 # Activate
 micromamba activate flu_env
 ```
+
+Go to this link for [Nextstrain installation](https://docs.nextstrain.org/en/latest/install.html#installation-steps).
