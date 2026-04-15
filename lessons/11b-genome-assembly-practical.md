@@ -225,12 +225,17 @@ echo "sample_id,sample_type" > samplesheet.csv
 ls fastqs | cut -f1 -d_ | uniq | sed "s/$/,Test/g" >> samplesheet.csv
 
 # Run MIRA-NF
-nextflow run ~/MIRA-NF/main.nf \
-    -profile docker,local \
-    --input $(pwd)/samplesheet.csv \
-    --outdir $(pwd)/ \
-    --runpath $(pwd) \
-    --e Flu-Illumina
+docker run \
+    --privileged \
+    -v ${PWD}:/data \
+    cdcgov/mira-nf:v2.1.0 \
+    nextflow run /MIRA-NF/main.nf \
+        -profile mira_nf_container \
+        --input /data/samplesheet.csv \
+        --runpath /data \
+        --outdir /data/mira-output \
+        --e Flu-Illumina \
+        --nextclade true
 </code></pre>
 
 </details>
