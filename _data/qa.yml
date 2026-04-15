@@ -314,7 +314,7 @@ genome_samplesheet_header:
   explanation: "Illumina samplesheets require `sample_id,sample_type` as the header."
 
 genome_experiment_flag:
-  question: "Which MIRA-NF flag specifies the experiment type (e.g., `Flu-Illumina`)?"
+  question: "Which Mira-NF flag specifies the experiment type (e.g., `Flu-Illumina`)?"
   answers:
     - "--e"
   hint: "It's a double-dash flag followed by a single letter."
@@ -323,13 +323,13 @@ genome_experiment_flag:
   explanation: "The `--e` flag specifies the experiment type for MIRA-NF."
 
 genome_profile_flag:
-  question: "What Nextflow flag sets the compute environment profile (e.g., `docker,local`)?"
+  question: "What Nextflow flag sets the compute environment profile (e.g., `mira_nf_container`)?"
   answers:
     - "-profile"
   hint: "It's a single-dash flag."
   success: "Correct! ✅"
   failure: "Not quite. Try again."
-  explanation: "The `-profile` flag tells Nextflow which compute environment to use."
+  explanation: "The `-profile` flag tells Nextflow which compute environment to use. This argument will be adjusted if you are running on a cluster vs. locally."
   show_hint_after: 2
 
 genome_samtools_sorted:

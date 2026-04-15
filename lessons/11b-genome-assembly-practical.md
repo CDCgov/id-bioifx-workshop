@@ -103,25 +103,19 @@ mv *.fastq.gz fastqs
 
 ---
 
-### Exercise 3 — Clone MIRA-NF and Build a Samplesheet
+### Exercise 3 — Build a Samplesheet for MIRA-NF
 {: .mt-4}
 
 <div class="exercise-block" markdown="1">
 
-1. Clone the MIRA-NF repository:
-
-   ```bash
-   git clone https://github.com/CDCgov/MIRA-NF.git
-   ```
-
-2. Create a samplesheet using `echo`, `ls`, `cut`, `uniq`, and `sed`:
+1. Create a samplesheet using `echo`, `ls`, `cut`, `uniq`, and `sed`:
 
    ```bash
    echo "sample_id,sample_type" > samplesheet.csv
    ls fastqs | cut -f1 -d_ | uniq | sed "s/$/,Test/g" >> samplesheet.csv
    ```
 
-3. Verify the samplesheet looks correct with `cat samplesheet.csv`.
+2. Verify the samplesheet looks correct with `cat samplesheet.csv`.
 
 </div>
 
@@ -129,12 +123,12 @@ mv *.fastq.gz fastqs
 
 ---
 
-### Exercise 4 — Build a MIRA-NF Execution Statement
+### Exercise 4 — Build a Mira-NF Execution Statement
 {: .mt-4}
 
 <div class="exercise-block" markdown="1">
 
-Build a MIRA-NF run command. You can write it directly as a shell script (`.sh` file) to reuse in the future.
+Build a [Mira-NF Docker](https://hub.docker.com/r/cdcgov/mira-nf/tags) run command. You can write it directly as a shell script (`.sh` file) to reuse in the future.
 
 1. Create a file called `run_mira.sh` using `vim` or another editor.
 
@@ -142,12 +136,17 @@ Build a MIRA-NF run command. You can write it directly as a shell script (`.sh` 
 
    ```bash
    #!/bin/bash
-   nextflow run ~/MIRA-NF/main.nf \
-       -profile docker,local \
-       --input $(pwd)/samplesheet.csv \
-       --outdir $(pwd)/ \
-       --runpath $(pwd) \
-       --e Flu-Illumina
+docker run 
+    --privileged 
+    -v ${PWD}:/data 
+    cdcgov/mira-nf:v2.1.0 # The first time you run this, it will pull the image from Docker Hub, which may take a few minutes. Subsequent runs will be faster.
+    nextflow run /MIRA-NF/main.nf 
+        -profile mira_nf_container 
+        --input /data/samplesheet.csv 
+        --runpath /data 
+        --outdir /data/mira-output 
+        --e Flu-Illumina 
+        --nextclade true
    ```
 
 3. Make it executable and run:
@@ -270,7 +269,7 @@ After MIRA-NF completes, extend your wrapper script with one or more of the foll
 
 <div class="exercise-block" markdown="1">
 
-Navigate to the MIRA output from your first run and perform the following tasks using `samtools`:
+Navigate to the Mira output from your first run and perform the following tasks using `samtools`:
 
 1. View the first 10 lines of each `A_HA.bam` file across the three sample outputs. Approximately where in the gene are these reads?
 2. Do these BAM files need to be sorted?
@@ -306,7 +305,7 @@ samtools view -o A_HA_H1.sam A_HA_H1.bam
 
 <div class="exercise-block" markdown="1">
 
-Using the MIRA output `amended_consensus.fasta`, perform the following:
+Using the Mira output `amended_consensus.fasta`, perform the following:
 
 1. Extract the **H3 HA** segments and align them with MAFFT. Do any sequences have gaps in your MSA?
 2. Do the same for **A_PB2** segments.
@@ -333,7 +332,7 @@ mafft H3.fasta > aligned_h3.fasta
 
 <div class="exercise-block" markdown="1">
 
-Add to your MIRA wrapper shell script the commands for extracting and aligning pass-QC sequences for:
+Add to your Mira wrapper shell script the commands for extracting and aligning pass-QC sequences for:
 
 - **HA:** A_HA_H1, B_HA, A_HA_H3
 - **NA:** B_NA, A_NA_N1, A_NA_N2
