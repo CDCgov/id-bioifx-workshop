@@ -130,6 +130,8 @@ mv *.fastq.gz fastqs
 
 Build a [Mira-NF Docker](https://hub.docker.com/r/cdcgov/mira-nf/tags) run command. You can write it directly as a shell script (`.sh` file) to reuse in the future.
 
+- _The first time you run this, it will pull the image from Docker Hub, which may take a few minutes. Subsequent runs will be faster._
+
 1. Create a file called `run_mira.sh` using `vim` or another editor.
 
 2. Add the following content, adjusting paths to match your setup:
@@ -139,7 +141,7 @@ Build a [Mira-NF Docker](https://hub.docker.com/r/cdcgov/mira-nf/tags) run comma
 docker run 
     --privileged 
     -v ${PWD}:/data 
-    cdcgov/mira-nf:v2.1.0 # The first time you run this, it will pull the image from Docker Hub, which may take a few minutes. Subsequent runs will be faster.
+    cdcgov/mira-nf:v2.1.0
     nextflow run /MIRA-NF/main.nf 
         -profile mira_nf_container 
         --input /data/samplesheet.csv 
