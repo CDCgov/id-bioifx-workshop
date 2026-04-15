@@ -138,16 +138,16 @@ Build a [Mira-NF Docker](https://hub.docker.com/r/cdcgov/mira-nf/tags) run comma
 
    ```bash
    #!/bin/bash
-docker run 
-    --privileged 
-    -v ${PWD}:/data 
-    cdcgov/mira-nf:v2.1.0
-    nextflow run /MIRA-NF/main.nf 
-        -profile mira_nf_container 
-        --input /data/samplesheet.csv 
-        --runpath /data 
-        --outdir /data/mira-output 
-        --e Flu-Illumina 
+docker run \
+    --privileged \
+    -v ${PWD}:/data \
+    cdcgov/mira-nf:v2.1.0 \
+    nextflow run /MIRA-NF/main.nf \
+        -profile mira_nf_container \
+        --input /data/samplesheet.csv \ 
+        --runpath /data \
+        --outdir /data/mira-output \
+        --e Flu-Illumina \
         --nextclade true
    ```
 
