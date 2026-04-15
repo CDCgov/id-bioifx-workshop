@@ -144,7 +144,7 @@ docker run \
     cdcgov/mira-nf:v2.1.0 \
     nextflow run /MIRA-NF/main.nf \
         -profile mira_nf_container \
-        --input /data/samplesheet.csv \ 
+        --input /data/samplesheet.csv \
         --runpath /data \
         --outdir /data/mira-output \
         --e Flu-Illumina \
