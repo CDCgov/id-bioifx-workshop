@@ -101,11 +101,13 @@ You should have a single FASTA file containing one HA consensus sequence per QC-
 7. Explore the interactive tree. What relationships, clusters, or outliers do you see among your samples?
 
 
-## Step 7 — Reporting with Quarto
+## Step 7 — Reporting
 
 {% include tip.html content="This section relates to <strong>Milestone 3: Operational Readiness</strong> — <strong>Issue #17: Define report templates</strong> in your institution's tracker repository." %}
 
-1. Modify the provided Quarto report template to include your institution's name, logo, and any specific sections relevant to your reporting needs.
+**Suggested tools:** Markdown, `pandoc`, `quarto`
+
+1. Modify the provided report template to include your institution's name, logo, and any specific sections relevant to your reporting needs.
 
 2. Populate the report with your analysis results, including a description of the samples analyzed and the phylogenetic tree visualizations.
 
