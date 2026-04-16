@@ -116,12 +116,12 @@ entries:
       url: /lessons/17-quality-management-systems/
       output: web
 
-    - title: Reporting with Quarto
-      url: /lessons/18-reporting/
-      output: web
-
     - title: Git Basics with VS Code
       url: /lessons/19-git-basics/
+      output: web
+
+    - title: Reporting
+      url: /lessons/18-reporting/
       output: web
 
   - title: Post-Workshop
