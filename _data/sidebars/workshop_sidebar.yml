@@ -116,6 +116,10 @@ entries:
       url: /lessons/17-quality-management-systems/
       output: web
 
+    - title: Common Problems
+      url: /lessons/17b-common-problems/
+      output: web
+
     - title: Git Basics with VS Code
       url: /lessons/19-git-basics/
       output: web
