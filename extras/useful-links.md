@@ -23,3 +23,6 @@ permalink: /extras/useful-links/
 
 ## Laboratory 
 - [PAHO - Virtual Reality Laboratory](https://www.paho.org/en/topics/laboratory-systems#virtual-reality-laboratory) - Take a virtual laboratory tour!
+
+## Submission guidance
+- [PAHO Technical Notes for Influenza Virus Nomenclature](https://www.paho.org/sites/default/files/2023-01/nomenclatura-influenza.pdf)
