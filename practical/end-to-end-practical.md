@@ -1,18 +1,18 @@
 ---
 layout: page
-title: End-to-End Practical
+title: Post Bioinformatics Workshop Expectations
 sidebar: workshop_sidebar
 topnav: topnav
 permalink: /practical/end-to-end/
 ---
 
-## End-to-End Influenza Bioinformatics Practical
+After the workshop, you are expected to apply the concepts and tools covered to your laboratory's real influenza sequencing data. This practical will walk you through repeating the entire workflow on a set of publicly available samples. You should complete the exercises in this practical using your institution's computational environment and resources. The goal is to gain confidence in executing the workflow end-to-end and to identify any gaps or challenges specific to your setup.
 
-This hands-on practical challenges you to work through a complete influenza bioinformatics workflow — from downloading raw sequencing data through assembly, quality control, phylogenetic analysis, and reporting. Each section builds on skills learned in previous workshop lessons and maps to operational milestones defined in your institution's post-workshop tracker repository.
+---
 
-You will **not** be given step-by-step commands. Instead, each part poses questions and challenges for you to solve using the skills and tools you've learned.
+<span style="color: #0077B6;">**Post-workshop deliverables include completing the end-to-end workflow on your institution's influenza sequencing data and reporting the results back to CDC and APHL. We expect two reports during your country's upcoming influenza season, one mid-season and one post-season.**</span>
 
-### Institution Tracker Repositories
+---
 
 Each institution has a dedicated project tracker with milestones and issues that map directly to this practical. Find your institution's repository below:
 
@@ -26,217 +26,94 @@ Each institution has a dedicated project tracker with milestones and issues that
 | Instituto Conmemorativo Gorgas de Estudios de la Salud (Gorgas) | [post-bfxwkshp-gorgas-panama](https://github.com/cdcent/post-bfxwkshp-gorgas-panama) |
 | Secretaría Nacional de Ciencia y Tecnología (SENACYT) | [post-bfxwkshp-senacyt-panama](https://github.com/cdcent/post-bfxwkshp-senacyt-panama) |
 
-{% include note.html content="The milestone numbers and issue numbers referenced throughout this practical are the same across all institution repositories. Navigate to your repository's <strong>Milestones</strong> and <strong>Issues</strong> tabs to track progress." %}
-
-### Learning Objectives
-
-By the end of this practical, you will be able to:
-
-- Download FASTQ data from NCBI SRA
-- Manipulate filenames and organize a working directory using bash
-- Run an influenza genome assembly pipeline
-- Interpret QC results to separate passing and failing samples
-- Extract specific gene segment sequences from assembly output
-- Perform phylogenetic analysis and visualize results
-- Generate a reproducible summary report
-
 ---
 
-## Part 1 — Data Acquisition
+## Step 1 — Download Test Data
 
-{% include tip.html content="This section relates to <strong>Phase 2: Operational Readiness</strong> (Milestone 3) — <strong>Issue #11: Identify sequence data sources</strong> in your institution's tracker repository." %}
+Public sequencing data are available through NCBI's Sequence Read Archive (SRA). Your goal is to download paired-end FASTQ files for influenza samples under BioProject [**PRJNA1437047**](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1437047) that match the pattern `H1_*`.
 
-Public sequencing data are available through NCBI's Sequence Read Archive (SRA). Your goal is to download paired-end FASTQ files for influenza samples under BioProject **PRJNA1437047** that match the pattern `H1_*`.
+**Suggested tools:** `sra-toolkit` (`prefetch`, `fasterq-dump`), Entrez Direct (`esearch`, `efetch`), [SRA Run Selector](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA1437047&o=acc_s%3Aa)
 
-**Suggested tools:** `sra-toolkit` (`prefetch`, `fasterq-dump`), Entrez Direct (`esearch`, `efetch`), [SRA Run Selector](https://www.ncbi.nlm.nih.gov/Traces/study/)
 
-### Questions & Challenges
+## Step 2 — File Renaming and Directory Setup
 
-1. How can you identify which SRA run accessions belong to BioProject PRJNA1437047 and have sample names matching `H1_*`? Consider both browser-based and command-line approaches.
 
-2. Once you have an accession list, how would you download paired-end FASTQ files for all of them? Think about what flag controls paired-end splitting.
+Mira expects input files to follow a specific naming convention tied to a **samplesheet**. The SRA-downloaded files are named by run accession (e.g., `SRR12345678_1.fastq`), but Mira expects the more standard Illumina naming convention (`_R1`/`_R2`). You need to rename the files and prepare the directory structure Mira expects.
 
-3. How would you verify that every accession was successfully downloaded with both read files present?
+You also need to create the expected directory structure for Mira and the correctly formatted samplesheet.csv.
 
-{% include note.html content="Record the number of accessions found and the total number of FASTQ files downloaded. You will need these counts later." %}
+**Suggested tools:** bash loops (`while`, `for`), `mv`, I/O redirection (`>`, `>>`), `cut`
 
-<div class="bs-callout bs-callout-info">
-<strong>Checkpoint:</strong> You should have two FASTQ files per SRA accession (forward and reverse reads). Confirm the count matches 2× the number of accessions in your list.
-</div>
 
----
+## Step 3 — Genome Assembly with Mira
 
-## Part 2 — File Renaming and Directory Setup
+{% include tip.html content="This section relates to <strong>Milestone 2: Setup &amp; Validation</strong> — <strong>Issue #9: Configure computational environment</strong> and <strong>Issue #10: Validate analysis pipeline</strong> in your institution's tracker repository." %}
 
-{% include tip.html content="This section relates to <strong>Phase 0: Governance &amp; Operations</strong> (Milestone 1) — <strong>Issue #5: Define metadata standards and change management for pipelines</strong> in your institution's tracker repository." %}
+[Mira-nf](https://github.com/CDCgov/MIRA-NF) is the CDC's influenza genome assembly and QC pipeline built on Nextflow. It can be run locally or on a cluster, and it uses containerized environments for reproducibility. For HPC environments, you may need to configure Nextflow profiles to specify resource requirements and execution parameters. CDC is here to help you configure it for your specific setup.
 
-MIRA-NF expects input files to follow a specific naming convention tied to a **samplesheet**. The SRA-downloaded files are named by run accession (e.g., `SRR12345678_1.fastq`), but your lab tracks samples with internal IDs. You need to rename the files and prepare the directory structure MIRA-NF expects.
 
-**Suggested tools:** bash loops (`while`, `for`), `mv`, `read`, I/O redirection, `basename`, `realpath`
 
-### Questions & Challenges
+## Step 4 — Mira QC: Pass vs. Fail
 
-1. Design a mapping between SRA accessions and your desired sample IDs. What file format would be easy to parse in a bash loop? How would you structure it?
+{% include tip.html content="This section relates to <strong>Milestone 3: Operational Readiness</strong> — <strong>Issue #12: Define acceptance/rejection criteria</strong> and <strong>Milestone 1: Governance &amp; Operations</strong> — <strong>Issue #4: Implement continuous monitoring metrics</strong> in your institution's tracker repository." %}
 
-2. Write a bash loop that reads your mapping file and renames both the R1 and R2 FASTQ files for each accession. How can you handle the case where an expected file is missing?
+Mira generates quality metrics for each assembled segment and determines whether the assembly passes or fails based on predefined thresholds. You need to review the QC summary output, understand the metrics reported and document them. You should be confident in explaining to your supervisors and colleagues why Mira's quality thresholds are set where they are, and how to interpret the results. You should also be able to identify any patterns in the QC failures that may indicate issues with specific segments or samples.
 
-3. After renaming, how would you confirm that no SRR-prefixed files remain and all files have the new names?
+1. Locate and examine the QC summary output from Mira. What columns/metrics are reported? What does each metric tell you about assembly quality?
 
-4. MIRA-NF requires a CSV samplesheet with columns `sample`, `fastq_1`, `fastq_2`. How would you generate this programmatically from your renamed files? Think about what path format (relative vs. absolute) the pipeline expects.
-
-5. What directory layout does MIRA-NF expect? Set up the working directory accordingly.
-
-{% include note.html content="Refer to the <a href='https://github.com/CDCgov/MIRA-NF?tab=readme-ov-file#usage'>MIRA-NF documentation</a> for samplesheet format requirements." %}
-
-<div class="bs-callout bs-callout-info">
-<strong>Checkpoint:</strong> Your samplesheet should list every sample with paths to both R1 and R2 FASTQ files. Each row should have three comma-separated fields.
-</div>
-
----
-
-## Part 3 — Genome Assembly with MIRA-NF
-
-{% include tip.html content="This section relates to <strong>Phase 1: Setup &amp; Validation</strong> (Milestone 2) — <strong>Issue #9: Configure computational environment</strong> and <strong>Issue #10: Validate analysis pipeline</strong> in your institution's tracker repository." %}
-
-[MIRA-NF](https://github.com/CDCgov/MIRA-NF) is the CDC's influenza genome assembly and QC pipeline built on Nextflow. It performs reference-based assembly and produces consensus sequences and quality metrics.
-
-**Suggested tools:** `nextflow`, [MIRA-NF](https://github.com/CDCgov/MIRA-NF), container runtime (`docker` or `singularity`)
-
-### Questions & Challenges
-
-1. What are the prerequisites for running a Nextflow pipeline? Verify that the required tools are available in your environment.
-
-2. What are the key input parameters MIRA-NF needs? How do you specify the samplesheet, output directory, and execution profile?
-
-3. Run MIRA-NF on your samples. Which `-profile` is appropriate for your compute environment?
-
-4. Once the pipeline completes, explore the output directory. What types of files were generated? Identify where the consensus sequences, QC metrics, and any summary reports are located.
-
-{% include important.html content="Assembly may take several minutes per sample. Monitor pipeline progress as it runs." %}
-
-<div class="bs-callout bs-callout-info">
-<strong>Checkpoint:</strong> The pipeline should complete successfully for all samples. Note any samples that caused errors during execution.
-</div>
-
----
-
-## Part 4 — MIRA QC: Pass vs. Fail
-
-{% include tip.html content="This section relates to <strong>Phase 2: Operational Readiness</strong> (Milestone 3) — <strong>Issue #12: Define acceptance/rejection criteria</strong> and <strong>Phase 0: Governance &amp; Operations</strong> (Milestone 1) — <strong>Issue #4: Implement continuous monitoring metrics</strong> in your institution's tracker repository." %}
-
-MIRA-NF generates quality metrics for each assembled segment. Your task is to determine which samples pass QC and which fail.
-
-**Suggested tools:** `awk`, `grep`, `cut`, `sort`, standard bash text processing
-
-### Questions & Challenges
-
-1. Locate and examine the QC summary output from MIRA-NF. What columns/metrics are reported? What does each metric tell you about assembly quality?
-
-2. What thresholds would you use to define a "passing" assembly? Consider genome completeness, coverage depth, and ambiguous base counts. Justify your choices.
+2. What thresholds does Mira use to define a "passing" assembly? Consider genome completeness, coverage depth, and ambiguous base counts. 
 
 3. How many total reads did your negative control have and what percent of those reads matched influenza?
 
 4. How many samples passed? How many failed? Are there any patterns in the failures (e.g., specific segments, low input material)?
 
 
+## Step 5 — Extracting HA Sequences from Mira Output
 
----
+{% include tip.html content="This section relates to <strong>Milestone 3: Operational Readiness</strong> — <strong>Issue #14: Develop SOPs</strong> in your institution's tracker repository." %}
 
-## Part 5 — Extracting HA Sequences from MIRA Output
+The **HA (hemagglutinin)** segment is most commonly used for phylogenetic analysis. You need to extract the HA consensus sequences from samples that passed QC. HA is segment 4 for influenza A.
 
-{% include tip.html content="This section relates to <strong>Phase 2: Operational Readiness</strong> (Milestone 3) — <strong>Issue #14: Develop SOPs</strong> in your institution's tracker repository." %}
+You should have a single FASTA file containing one HA consensus sequence per QC-passing sample.
 
-For phylogenetic analysis, you need only the **HA (hemagglutinin)** segment consensus sequences from samples that passed QC. HA is segment 4 for influenza A.
+**Suggested bash tools:** `grep`,`>>`
 
-**Suggested tools:** `grep`, `awk`, `find`, FASTA-aware text parsing
+## Step 6 — Phylogenetic Analysis with Nextstrain
 
-### Questions & Challenges
-
-1. How does MIRA-NF organize its consensus FASTA output — per-segment files, per-sample files, or a combined multi-segment FASTA? Explore the results directory to find out.
-
-2. Examine the FASTA headers. What naming convention is used? How can you identify HA sequences from the headers?
-
-3. Extract only the HA consensus sequences from QC-passing samples into a single FASTA file. Consider how to handle multi-line FASTA format when filtering by header.
-
-4. Validate the extracted sequences. How many HA sequences do you have? What is the expected length for a full-length H1 HA coding sequence (~1,701 nt)? Are any sequences suspiciously short?
-
-{% include note.html content="HA full-length coding sequences are approximately 1,701 nucleotides for H1. Sequences significantly shorter may indicate incomplete assembly." %}
-
-<div class="bs-callout bs-callout-info">
-<strong>Checkpoint:</strong> You should have a single FASTA file containing one HA consensus sequence per QC-passing sample.
-</div>
-
----
-
-## Part 6 — Phylogenetic Analysis with Nextstrain
-
-{% include tip.html content="This section relates to <strong>Phase 1: Setup &amp; Validation</strong> (Milestone 2) — <strong>Issue #10: Validate analysis pipeline</strong> and <strong>Phase 2: Operational Readiness</strong> (Milestone 3) — <strong>Issue #15: Implement automated workflows</strong> in your institution's tracker repository." %}
+{% include tip.html content="This section relates to <strong>Milestone 2: Setup &amp; Validation</strong> — <strong>Issue #10: Validate analysis pipeline</strong> and <strong>Milestone 3: Operational Readiness</strong> — <strong>Issue #15: Implement automated workflows</strong> in your institution's tracker repository." %}
 
 [Nextstrain](https://nextstrain.org/) provides tools for phylogenetic analysis and visualization of pathogen genomic data. The core command-line toolkit is [Augur](https://docs.nextstrain.org/projects/augur/), and interactive trees are viewed in [Auspice](https://auspice.us/).
 
 **Suggested tools:** `augur` (align, tree, refine, ancestral, translate, export), `auspice`
 
-### Questions & Challenges
+1. Create a metadata TSV for your samples with strain names, collection dates, and geographic info.
 
-1. **Metadata:** Nextstrain workflows require a metadata TSV. What fields are needed at minimum? Create a metadata file for your samples with appropriate strain names, collection dates, and geographic info.
+2. Download a global reference dataset of H1 HA sequences from GISAID or GenBank to provide context for your samples.
 
-2. **Reference sequence:** You need an HA reference for alignment. What is a suitable reference strain for H1N1pdm09? Where can you obtain the reference FASTA and GenBank annotation?
+3. Align your HA sequences against the reference using `augur align`.
 
-3. **Alignment:** Align your HA sequences against the reference. Which `augur` subcommand handles this? What options control gap handling?
+4. Build a phylogenetic tree with `augur tree`, then refine it with temporal information using `augur refine --timetree`.
 
-4. **Tree building:** Generate a phylogenetic tree from the alignment. How do you build a raw tree and then refine it with temporal information? What does the `--timetree` option do?
+5. *(Optional)* Reconstruct ancestral sequences and translate mutations onto the tree with `augur ancestral` and `augur translate`.
 
-5. **Annotation (optional):** Can you reconstruct ancestral sequences and translate mutations onto the tree? What additional inputs does this require?
+6. Export the tree for visualization with `augur export` and view it in [Auspice](https://auspice.us/).
 
-6. **Export and visualization:** Export the tree for Auspice viewing. What is the output format? How do you launch Auspice locally, or alternatively, use the hosted viewer at [auspice.us](https://auspice.us/)?
+7. Explore the interactive tree. What relationships, clusters, or outliers do you see among your samples?
 
-7. Explore the interactive tree. What can you learn about the relationships between your samples? Are there any obvious outliers or clusters?
 
-{% include important.html content="You will need an HA reference sequence and GenBank annotation file. For H1N1pdm09, a common reference is A/California/07/2009." %}
+## Step 7 — Reporting with Quarto
 
-<div class="bs-callout bs-callout-info">
-<strong>Checkpoint:</strong> You should be able to view an interactive phylogenetic tree of your H1 HA sequences with branch lengths, mutations, and metadata annotations.
-</div>
+{% include tip.html content="This section relates to <strong>Milestone 3: Operational Readiness</strong> — <strong>Issue #17: Define report templates</strong> in your institution's tracker repository." %}
 
----
+1. Modify the provided Quarto report template to include your institution's name, logo, and any specific sections relevant to your reporting needs.
 
-## Part 7 — Reporting with Quarto
-
-{% include tip.html content="This section relates to <strong>Phase 2: Operational Readiness</strong> (Milestone 3) — <strong>Issue #17: Define report templates</strong> in your institution's tracker repository." %}
-
-[Quarto](https://quarto.org/) is a scientific publishing system for rendering reproducible reports from markdown and code. Your goal is to produce an HTML report summarizing the entire analysis.
-
-**Suggested tools:** `quarto`, `.qmd` format
-
-### Questions & Challenges
-
-1. Create a Quarto document (`.qmd`) that serves as your analysis report. What YAML front matter fields control the title, author, output format, and table of contents?
-
-2. Your report should include sections covering:
-   - **Data acquisition:** How many samples were downloaded? From which BioProject?
-   - **Assembly:** What pipeline was used? What were the key parameters?
-   - **QC summary:** How many passed/failed? Include a summary table.
-   - **HA extraction:** How many HA sequences were obtained?
-   - **Phylogenetics:** Describe the analysis and include a screenshot or embedded visualization of the tree.
-   - **Conclusions:** Key findings, notable mutations, QC failure patterns, phylogenetic observations.
-
-3. How do you include bash code chunks in a Quarto document? How do `echo` and `eval` options control what appears in the rendered output?
-
-4. Render the report to HTML. Review and iterate on the content.
-
-{% include note.html content="Quarto code chunks can be set to <code>eval: true</code> to execute live during rendering (requires all data to be present) or <code>eval: false</code> for a static template." %}
-
-<div class="bs-callout bs-callout-info">
-<strong>Checkpoint:</strong> You should have a rendered HTML report that documents the full end-to-end workflow and results.
-</div>
-
----
+2. Populate the report with your analysis results, including a description of the samples analyzed and the phylogenetic tree visualizations.
 
 ## Milestone Reference Summary
 
 The exercises in this practical map to the following milestones and issues in your institution's tracker repository (see the [Institution Tracker Repositories](#institution-tracker-repositories) table above):
 
-### Phase 0: Governance & Operations (Milestone 1)
+### Milestone 1: Governance & Operations
 
 | Issue | Title | Practical Section |
 |-------|-------|-------------------|
@@ -246,17 +123,17 @@ The exercises in this practical map to the following milestones and issues in yo
 | #4 | Implement continuous monitoring metrics | Part 4 (QC metrics review) |
 | #5 | Define metadata standards and change management for pipelines | Part 2 (file naming/metadata) |
 
-### Phase 1: Setup & Validation (Milestone 2)
+### Milestone 2: Setup & Validation
 
 | Issue | Title | Practical Section |
 |-------|-------|-------------------|
 | #6 | Define computational infrastructure | Parts 1, 3 (tool setup) |
 | #7 | Implement reproducible environments | Part 3 (Nextflow profiles, containers) |
 | #8 | Establish version control | Part 2 (directory structure, traceability) |
-| #9 | Configure computational environment | Part 3 (MIRA-NF setup) |
+| #9 | Configure computational environment | Part 3 (Mira setup) |
 | #10 | Validate analysis pipeline | Parts 3–4 (assembly + QC validation) |
 
-### Phase 2: Operational Readiness (Milestone 3)
+### Milestone 3: Operational Readiness
 
 | Issue | Title | Practical Section |
 |-------|-------|-------------------|

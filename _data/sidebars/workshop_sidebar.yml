@@ -120,7 +120,11 @@ entries:
       url: /lessons/18-reporting/
       output: web
 
-  - title: Practicals
+    - title: Git Basics with VS Code
+      url: /lessons/19-git-basics/
+      output: web
+
+  - title: Post-Workshop
     output: web
     folderitems:
 
