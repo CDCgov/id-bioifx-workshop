@@ -9,3 +9,5 @@ topnav:
       url: /extras/useful-links/
     - title: GitHub
       external_url: https://github.com/cdcgov/id-bioifx-workshop
+    - title: Email us for support
+      external_url: mailto:idseqsupport@cdc.gov
