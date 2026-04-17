@@ -35,3 +35,9 @@ permalink: /extras/useful-links/
 - [H3N2](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_HA/blob/main/.auto-generated/subclades.md)
 - [H1N1](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_HA/blob/main/.auto-generated/subclades.md)
 - [BVic](https://github.com/influenza-clade-nomenclature/seasonal_B-Vic_HA/blob/main/.auto-generated/subclades.md)
+- [Clade Nomenclature GitHub Org](https://github.com/influenza-clade-nomenclature)
+
+## Nextstrain Documentation
+- [Augur (bioinformatics toolkit)](https://docs.nextstrain.org/projects/augur/en/stable/index.html)
+- [Auspice (tree viewer)](https://docs.nextstrain.org/projects/auspice/en/stable/index.html)
+- [Nexstrain main website](https://nextstrain.org/)
