@@ -6,6 +6,8 @@ topnav: topnav
 permalink: /lessons/16-genomic-epi/
 ---
 
+Content developed by Norman Hassell with slides adapted from presentations by Rebecca Kondor.
+
 ## Slides
 
 <div id="pdf-viewer" style="text-align: center;">
@@ -81,4 +83,4 @@ permalink: /lessons/16-genomic-epi/
   });
 </script>
 
-[Download slides (PDF)]({{ site.baseurl }}/WIP/Genomic_Epi.pdf)
+<a href="{{ site.baseurl }}/WIP/Genomic_Epi.pdf" download>Click to Download Slides (PDF)</a>
