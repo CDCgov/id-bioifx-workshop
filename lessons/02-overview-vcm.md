@@ -5,7 +5,7 @@ sidebar: workshop_sidebar
 topnav: topnav
 permalink: /lessons/02-overview-vcm/
 ---
-
+<p style="color: #015CAE; font-size: 19px;">Content developed by Ben Rambo-Martin</p>
 ## Slides
 
 <div id="pdf-viewer" style="text-align: center;">

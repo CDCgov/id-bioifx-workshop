@@ -8,7 +8,7 @@ permalink: /lessons/05-cli-intro/
 ## Introduction to BASH
 
 ### A tour of command line navigation and 100 BASH commands.
-
+<p style="color: #015CAE; font-size: 19px;">Content developed by Kristine Lacek</p>
 ## Module Objectives
 
 - Define fundamental terminal definitions, present 100 essential bash command encyclopedia

@@ -11,7 +11,7 @@ permalink: /lessons/10-containers-registries/
 
 Dockerhub and Quay.io, using containers to run programs, and learning basic tools
 
-Logan Fink
+<p style="color: #015CAE; font-size: 19px;">Content developed by Logan Fink</p>
 
 ## Module Objectives
 

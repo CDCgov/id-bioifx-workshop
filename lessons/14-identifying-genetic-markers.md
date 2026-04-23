@@ -7,6 +7,7 @@ permalink: /lessons/14-identifying-genetic-markers/
 ---
 
 ---
+<p style="color: #015CAE; font-size: 19px;">Content developed by Kristine Lacek</p>
 
 ## Genetic Markers in Influenza
 

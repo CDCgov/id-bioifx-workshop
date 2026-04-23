@@ -22,8 +22,9 @@ permalink: /lessons/08-bifx-programming-exercises/
 
 These exercises accompany the **Intro to Bioinformatics Programming** module. They alternate between hands-on practice and knowledge checks.
 
----
 
+---
+<p style="color: #015CAE; font-size: 19px;">Exercises developed by Kristine Lacek and Logan Fink</p>
 ### Exercise 1 — Vim practical
 {: .mt-4}
 

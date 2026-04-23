@@ -5,6 +5,7 @@ sidebar: workshop_sidebar
 topnav: topnav
 permalink: /lessons/13-blast/
 ---
+<p style="color: #015CAE; font-size: 19px;">Content developed by Kristine Lacek</p>
 ## BLAST (Basic Local Alignment Search Tool)
 
 - Finds regions of similarity between sequences

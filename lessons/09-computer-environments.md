@@ -9,7 +9,7 @@ permalink: /lessons/09-computer-environments/
 {: title}
 
 ---
-
+<p style="color: #015CAE; font-size: 19px;">Content developed by Jared Johnson</p>
 ## Module Objectives
 - Understand the fundamentals of virtual environments
 - Understand basic use of environment management software (`venv` and `conda` / `mamba` / `pixi`)

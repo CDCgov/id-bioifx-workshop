@@ -6,7 +6,7 @@ topnav: topnav
 permalink: /lessons/16-genomic-epi/
 ---
 
-Content developed by Norman Hassell with slides adapted from presentations by Rebecca Kondor.
+<p style="color: #015CAE; font-size: 19px;">Content developed by Norman Hassell with slides adapted from presentations by Rebecca Kondor.</p>
 
 ## Slides
 

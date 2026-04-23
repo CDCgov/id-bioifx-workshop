@@ -6,7 +6,7 @@ topnav: topnav
 permalink: /lessons/15-phylogenetics/
 ---
 
-Content developed by Norman Hassell.
+<p style="color: #015CAE; font-size: 19px;">Content developed by Norman Hassell.</p>
 
 ## Slides
 

@@ -23,6 +23,7 @@ permalink: /lessons/11b-genome-assembly-practical/
 These exercises accompany the **Genome Assembly and MIRA-NF** module. They walk you through downloading FASTQ files from SRA, preparing samplesheets, running MIRA-NF, and building a complete wrapper script.
 
 ---
+<p style="color: #015CAE; font-size: 19px;">Exercises developed by Kristine Lacek</p>
 
 ### Exercise 1 — FASTQ Knowledge Check
 {: .mt-4}
