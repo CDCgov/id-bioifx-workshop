@@ -23,6 +23,7 @@ permalink: /lessons/06-cli-intro-exercises/
 These exercises accompany the **Introduction to BASH** module. They alternate between hands-on practice and knowledge checks.
 
 ---
+<p style="color: #015CAE; font-size: 19px;">Exercises developed by Kristine Lacek</p>
 
 ### Exercise 1 — Manual, Flags, and Arguments
 {: .mt-4}

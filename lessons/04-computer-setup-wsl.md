@@ -5,6 +5,7 @@ sidebar: workshop_sidebar
 topnav: topnav
 permalink: /lessons/04-computer-setup-wsl/
 ---
+<p style="color: #015CAE; font-size: 19px;">Content developed by Ben Rambo-Martin and Kristine Lacek</p>
 ## Prerequisites
 
 ### 1.1 Check your Windows version

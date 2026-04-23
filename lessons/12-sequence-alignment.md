@@ -5,6 +5,7 @@ sidebar: workshop_sidebar
 topnav: topnav
 permalink: /lessons/12-sequence-alignment/
 ---
+<p style="color: #015CAE; font-size: 19px;">Content developed by Kristine Lacek</p>
 ## Global Sequence Alignment
 - Aligns sequences end to end
 - Forces alignment across the full length of both sequences

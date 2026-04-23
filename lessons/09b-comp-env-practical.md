@@ -23,7 +23,7 @@ permalink: /lessons/09b-comp-env-practical/
 These exercises accompany the **Computer Environments** module. They walk you through installing `venv` and `micromamba`, exploring environment isolation, and observing how package managers can silently alter dependencies.
 
 ---
-
+<p style="color: #015CAE; font-size: 19px;">Exercises developed by Jared Johnson</p>
 ### Exercise 1 — Installing Micromamba and Venv
 {: .mt-4}
 

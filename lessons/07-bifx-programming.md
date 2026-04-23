@@ -6,7 +6,7 @@ topnav: topnav
 permalink: /lessons/07-bifx-programming/
 ---
 ## Introduction to Bioinformatics Programming
-
+<p style="color: #015CAE; font-size: 19px;">Content developed by Kristine Lacek</p>
 ### Key Points
 
 Bioinformatics programming basics, scripting, and functionality

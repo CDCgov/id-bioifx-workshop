@@ -9,7 +9,7 @@ permalink: /lessons/19-git-basics/
 This exercise walks you through the basic Git workflow using VS Code's **Source Control** tab and GitHub's web interface. By the end, you will have cloned a repository, created a branch, made changes, and merged them back.
 
 ---
-
+<p style="color: #015CAE; font-size: 19px;">Content developed by Ben Rambo-Martin</p>
 ## Prerequisites
 
 - [VS Code](https://code.visualstudio.com/) installed

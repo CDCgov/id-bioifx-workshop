@@ -6,7 +6,7 @@ topnav: topnav
 permalink: /lessons/03-computer-basics/
 ---
 ## Why Computer Architecture Matters for Bioinformatics
-
+<p style="color: #015CAE; font-size: 19px;">Content developed by Ben Rambo-Martin and Kristine Lacek</p>
 
 
 Bioinformatics workflows often involve:
