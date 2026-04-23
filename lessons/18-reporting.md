@@ -9,7 +9,7 @@ permalink: /lessons/18-reporting/
 {: title}
 
 ---
-<p style="color: #015CAE; font-size: 19px;">Content developed by Jared Johnson</p>
+<p style="color: #015CAE; font-size: 19px;">Content developed by Jared Johnson and Ben Rambo-Martin</p>
 ## Module Objectives
 
 - Understand the basics of Markdown
