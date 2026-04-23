@@ -7,7 +7,7 @@ permalink: /lessons/11-genome-assembly/
 ---
 
 ---
-<p style="color: #015CAE; font-size: 19px;">Content developed by Kristine Lacek</p>
+<p style="color: #015CAE; font-size: 19px;">Content developed by Kristine Lacek and Ben Rambo-Martin</p>
 ## Module Objectives
 
 - Understand NGS file formats
