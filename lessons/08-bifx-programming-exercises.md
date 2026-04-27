@@ -25,54 +25,9 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 
 ---
 <p style="color: #015CAE; font-size: 19px;">Exercises developed by Kristine Lacek and Logan Fink</p>
-### Exercise 1 — Vim practical
-{: .mt-4}
 
-<div class="exercise-block" markdown="1">
 
-1. Students download the pre-built file from the github
-
-```bash
-wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/vim_practical/mem_incorrect.sh
-```
-
-2. Use VIM to navigate through it, chmod it, and modify it so that it can run and get the correct output
-3. Open the “mem_incorrect.sh” file in VIM
-4. Fix the shebang line to run a bash script
-5. Modify the “echo” command to fix the typo
-6. Delete the line that says “Delete this line”
-7. Navigate to the next line, follow the instructions in the file
-8. Navigate to the end of the file
-9. Save the modified file as
-10. Make the file executable
-11. Run the script
-12. Extra practice: use VIM to create a bash file that lists all the files in a directory that end in .sh files and outputs a message that lists all bash files to stdout
-
-<details>
-<summary class="btn-solution">Possible Solution</summary>
-
-<ol>
-  <li>Open the “cores_incorrect.sh” file in VIM: <code>vim cores_incorrect.sh</code></li>
-  <li>Fix the shebang line to run a bash script: <code>#!/bin/MISTAKE</code> → <code>#!/bin/bash</code> (i, esc)</li>
-  <li>Modify the <code>echo</code> command to fix the typo: <code>eecho</code> → <code>echo</code> (navigate using arrows or letter keys, i, esc)</li>
-  <li>Delete the line that says “Delete this line”: <code>dd</code></li>
-  <li>Navigate to the next line and follow the instructions in the file.</li>
-  <li>Delete <code>#</code> where instructed.</li>
-  <li>Copy the line with <code>yy</code>.</li>
-  <li>Navigate to the end of the file with <code>G</code> and paste the line with <code>p</code>.</li>
-  <li>Save the modified file: <code>:wq</code> + Enter.</li>
-  <li>Make the file executable: <code>chmod +x mem</code>.</li>
-  <li>Run the script: <code>./mem_incorrect.sh</code>.</li>
-  <li>Extra practice: create a bash file that lists all <code>.sh</code> files in a directory and outputs a message listing bash files to stdout.</li>
-</ol>
-
-</details>
-
-</div>
-
----
-
-### Exercise 2 — Pseudo Code Practical
+### Exercise 1 — Pseudo Code Practical
 {: .mt-4}
 
 <div class="exercise-block" markdown="1">
@@ -141,7 +96,7 @@ wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main
 
 ---
 
-### Exercise 3 — Logic and Variables Practical
+### Exercise 2 — Logic and Variables Practical
 {: .mt-4}
 
 <div class="exercise-block" markdown="1">
@@ -194,7 +149,7 @@ cd "$thispath"</code></pre>
 
 ---
 
-### Exercise 4 — Loops Practical
+### Exercise 3 — Loops Practical
 {: .mt-4}
 
 <div class="exercise-block" markdown="1">
@@ -240,7 +195,7 @@ done</code></pre>
 
 ---
 
-### Exercise 5 — Pipeline practical
+### Exercise 4 — Pipeline practical
 {: .mt-4}
 
 <div class="exercise-block" markdown="1">
