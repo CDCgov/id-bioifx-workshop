@@ -48,45 +48,6 @@ Enter commands one at a time directly in the terminal
 
 ![Presentation4 Img04]({{ site.baseurl }}/assets/images/presentation4-img04.png){: width="75%"}
 
-## vim
-
-### Key Points
-
-Vim is a terminal-based text editor
-
-
-- Vim is a terminal-based text editor
-- Common on servers, HPC systems, and remote machines
-- Designed for speed and efficiency
-- Keyboard-driven (mouse won’t work!)
-- Uses different modes
-- Commands behave differently depending on the mode
-- Highlights syntax usefully
-- Vim demo
-- Start and exit
-    -   `vim file.txt` — open a file
-    -   `:w` save
-    - `:q` quit
-    - `:wq` save & quit
-    - `q!` quit without saving
-- Modes
-    - `i` — insert (edit text)
-    - `Esc` — return to normal mode
-- Navigation
-    - Arrow keys or `h j k l`
-    - `gg` top of file
-    - `G` bottom of file
-    - `:<number>`go to line number
-- Editing
-    - `dd` delete line
-    - `yy` copy line
-    - `p` paste
-    - `u` undo
-- Search
-    - `/text` search forward
-    - `n` next match
-
-![Presentation4 Img07]({{ site.baseurl }}/assets/images/presentation4-img07.png){: width="25%"}
 
 ## Syntax
 
@@ -141,7 +102,7 @@ Reverse the translated “my sequence”
 
 Output “my sequence”
 
-![Presentation4 Img11]({{ site.baseurl }}/assets/images/presentation4-img11.png){: width="25%"}
+<img src="{{ site.baseurl }}/assets/images/presentation4-img11.png" style="width: 50%; height: auto;" alt="Presentation4 Img11">
 
 ## Variables
 
@@ -342,7 +303,7 @@ esac
 - Math is often used for counters
 - Loops, file counts, and simple logic
 
-![Presentation4 Img27]({{ site.baseurl }}/assets/images/presentation4-img27.png){: width="25%"}
+<img src="{{ site.baseurl }}/assets/images/presentation4-img27.png" style="width: 25%; height: auto;" alt="Presentation4 Img27">
 
 ![Presentation4 Img28]({{ site.baseurl }}/assets/images/presentation4-img28.png){: width="75%"}
 
@@ -407,7 +368,7 @@ done
 - Ctrl + C to interrupt
 - Test with echo before running real commands
 
-![Presentation4 Img29]({{ site.baseurl }}/assets/images/presentation4-img29.png){: width="25%"}
+<img src="{{ site.baseurl }}/assets/images/presentation4-img29.png" style="width: 25%; height: auto;" alt="Presentation4 Img29">
 
 ![Presentation4 Img30]({{ site.baseurl }}/assets/images/presentation4-img30.png){: width="75%"}
 
@@ -469,7 +430,7 @@ Functions group related commands
 - You define the arguments for a function, so it is useful to remember the variables you have already used and make sure not to overwrite them or cause logic errors in the script
 - Can define the output of a function as a variable, output to screen, or even a logic evaluation (true/false)
 
-![Presentation4 Img33]({{ site.baseurl }}/assets/images/presentation4-img33.png){: width="25%"}
+<img src="{{ site.baseurl }}/assets/images/presentation4-img33.png" style="width: 25%; height: auto;" alt="Presentation4 Img33">
 
 ![Presentation4 Img34]({{ site.baseurl }}/assets/images/presentation4-img34.png){: width="75%"}
 
