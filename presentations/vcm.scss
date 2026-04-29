@@ -1,0 +1,703 @@
+/*-- scss:defaults --*/
+
+// CDC-inspired palette
+$body-bg: #ffffff;
+$body-color: #1f1f1f;
+$link-color: #00578a;
+
+$presentation-heading-color: #003366;
+$presentation-heading-font-weight: 600;
+$presentation-font-size-root: 26px;
+$presentation-h1-font-size: 1.9em;
+$presentation-h2-font-size: 1.35em;
+$presentation-h3-font-size: 1.05em;
+
+/*-- scss:rules --*/
+
+// ---------------- Title slide ----------------
+.reveal section.title-slide {
+  text-align: left;
+  background-color: #003366 !important;
+}
+
+.reveal section.title-slide h1.title,
+.reveal section.title-slide .subtitle,
+.reveal section.title-slide .quarto-title-author-name,
+.reveal section.title-slide .quarto-title-author-affiliations,
+.reveal section.title-slide p,
+.reveal section.title-slide a {
+  color: #ffffff !important;
+}
+
+.reveal section.title-slide h1.title {
+  font-size: 1.8em;
+  line-height: 1.1;
+  border-bottom: 4px solid #ffd54f;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.4em;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.reveal section.title-slide .subtitle {
+  font-size: 1.1em;
+  font-style: italic;
+  margin-bottom: 1.2em;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+// ---------------- Headings ----------------
+.reveal h1, .reveal h2, .reveal h3 {
+  color: #003366;
+  letter-spacing: -0.005em;
+}
+
+.reveal h2 {
+  border-bottom: 3px solid #00578a;
+  padding-bottom: 0.18em;
+  margin-bottom: 0.5em;
+  font-size: 1.35em;
+}
+
+.reveal .center-title h2 {
+  text-align: center;
+  border-bottom: none;
+  color: #003366;
+}
+
+// ---------------- Disclaimer slide ----------------
+.reveal .disclaimer-slide {
+  font-size: 0.75em;
+  line-height: 1.5;
+}
+
+.reveal .disclaimer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  margin-bottom: 0.6em;
+  border-bottom: 2px solid #8a3300;
+  padding-bottom: 0.2em;
+}
+
+.reveal .disclaimer-title {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #8a3300;
+}
+
+.reveal .disclaimer-header .cdc-logo {
+  max-height: 56px;
+  width: auto;
+  margin: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.reveal .disclaimer-art {
+  display: block;
+  margin: 0.6em auto 0;
+  max-width: 92%;
+  max-height: 320px;
+  height: auto;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+// ---------------- Why slide ----------------
+.reveal .why-slide h2 {
+  display: none;
+}
+
+// ---------------- Section divider ----------------
+.reveal .section-divider {
+  background: linear-gradient(135deg, #003366 0%, #00578a 100%);
+}
+
+.reveal .section-divider h2 {
+  color: #ffffff;
+  border-bottom-color: #ffd54f;
+}
+
+// Image used on a section-divider slide: cap height so it stays on-slide
+.reveal .section-divider-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 96%;
+  max-height: 600px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+// ---------------- Big callout ----------------
+.reveal .big-callout {
+  background: #fff3cd;
+  border-left: 6px solid #d4a017;
+  padding: 1em 1.2em;
+  margin-top: 1.5em;
+  font-size: 1.1em;
+  border-radius: 4px;
+}
+
+// ---------------- Subtitle line ----------------
+.reveal .subtitle-line {
+  font-size: 0.85em;
+  color: #555;
+  font-style: italic;
+  margin-top: -0.6em;
+  margin-bottom: 0.6em;
+}
+
+// ---------------- Footnotes ----------------
+// Anchor footnotes to the bottom of the *slide* (not just the bottom of
+// the content stack). Reveal.js renders each slide as <section> sized to
+// its content; we use :has() to only stretch sections that actually have
+// a footnote, leaving every other slide's layout untouched.
+.reveal .slides section:has(> .footnotes) {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.reveal .slides section:has(> .footnotes) > .footnotes {
+  margin-top: auto;
+}
+
+.reveal .footnotes {
+  font-size: 0.55em;
+  color: #555;
+  line-height: 1.3;
+  border-top: 1px solid #ddd;
+  padding-top: 0.3em;
+  margin: 0;
+}
+
+.reveal .footnotes p { margin: 0.1em 0; }
+
+// ---------------- Two-column layout ----------------
+.reveal .columns {
+  display: flex;
+  gap: 1.0em;
+  align-items: flex-start;
+}
+
+.reveal .columns > .column { min-width: 0; }
+
+.reveal .clean-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 4px;
+}
+
+// Constrain the antigenic-drift figure so it fits inside the slide
+.reveal .drift-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 540px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 4px;
+}
+
+// Generic full-slide image: fits inside the slide content area, leaving
+// room for the heading and footnote. The deck is 1280x720; after a ~70px
+// heading and ~40px footnote ~600px of vertical space remains.
+.reveal .fit-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 96%;
+  max-height: 580px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 4px;
+}
+
+// Image inside a .columns column (legend on the side); slightly tighter
+// height cap because the column may be narrower.
+.reveal .fit-image-col {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 560px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 4px;
+}
+
+// ---------------- Training Objectives ----------------
+.reveal .training-objectives ul li {
+  margin: 0.5em 0;
+}
+
+// ---------------- VCM five-column overview ----------------
+.reveal .vcm-overview .vcm-goal {
+  background: #003366;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.4em 0.6em;
+  margin: 0.4em 0 0.7em;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+.reveal .vcm-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+.reveal .vcm-col {
+  background: #eaf2f8;
+  border-top: 5px solid #00578a;
+  padding: 0.6em 0.65em;
+  font-size: 0.7em;
+  line-height: 1.35;
+  border-radius: 3px 3px 0 0;
+}
+
+// Per-column accent colors (5-step process palette)
+.reveal .vcm-grid > .vcm-col:nth-child(1) {
+  background: #e3f0fa;
+  border-top-color: #1976d2; // blue — surveillance
+}
+.reveal .vcm-grid > .vcm-col:nth-child(1) > p:first-child,
+.reveal .vcm-grid > .vcm-col:nth-child(1) p:first-child strong { color: #0d47a1; }
+
+.reveal .vcm-grid > .vcm-col:nth-child(2) {
+  background: #e8f5e9;
+  border-top-color: #2e7d32; // green — lab data
+}
+.reveal .vcm-grid > .vcm-col:nth-child(2) > p:first-child,
+.reveal .vcm-grid > .vcm-col:nth-child(2) p:first-child strong { color: #1b5e20; }
+
+.reveal .vcm-grid > .vcm-col:nth-child(3) {
+  background: #fff3e0;
+  border-top-color: #ef6c00; // orange — data sharing
+}
+.reveal .vcm-grid > .vcm-col:nth-child(3) > p:first-child,
+.reveal .vcm-grid > .vcm-col:nth-child(3) p:first-child strong { color: #b34700; }
+
+.reveal .vcm-grid > .vcm-col:nth-child(4) {
+  background: #f3e5f5;
+  border-top-color: #7b1fa2; // purple — human serology
+}
+.reveal .vcm-grid > .vcm-col:nth-child(4) > p:first-child,
+.reveal .vcm-grid > .vcm-col:nth-child(4) p:first-child strong { color: #4a148c; }
+
+.reveal .vcm-grid > .vcm-col:nth-child(5) {
+  background: #ffebee;
+  border-top-color: #c62828; // red — CVV availability
+}
+.reveal .vcm-grid > .vcm-col:nth-child(5) > p:first-child,
+.reveal .vcm-grid > .vcm-col:nth-child(5) p:first-child strong { color: #8e1c1c; }
+
+.reveal .vcm-col p:first-child strong,
+.reveal .vcm-col > p:first-child {
+  color: #003366;
+  display: block;
+  font-size: 1.05em;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  padding-bottom: 0.25em;
+  margin-bottom: 0.4em;
+}
+
+.reveal .vcm-col em {
+  color: #555;
+  display: block;
+  margin: 0.3em 0 0.15em;
+}
+
+.reveal .vcm-col ul {
+  margin: 0.2em 0 0.4em 0.9em;
+  padding: 0;
+}
+
+.reveal .vcm-col li { margin: 0.15em 0; }
+
+.reveal .vcm-col.vcm-highlight {
+  background: #ffeb99;
+  border-top-color: #d4a017;
+  box-shadow: 0 2px 8px rgba(212,160,23,0.35);
+}
+
+.reveal .vcm-col.vcm-dim {
+  opacity: 0.55;
+  filter: saturate(0.6);
+}
+
+// ---------------- Tables ----------------
+.reveal table {
+  font-size: 0.55em;
+  border-collapse: collapse;
+  margin: 0.3em auto;
+}
+
+.reveal table th, .reveal table td {
+  padding: 0.25em 0.5em;
+  border: 1px solid #c5d6e3;
+}
+
+.reveal table thead th {
+  background: #003366;
+  color: #fff;
+}
+
+.reveal table tbody tr:nth-child(even) {
+  background: #f3f7fb;
+}
+
+.reveal .hi-table table {
+  font-size: 0.5em;
+  border-collapse: collapse;
+}
+
+.reveal .hi-table th, .reveal .hi-table td {
+  padding: 0.18em 0.35em;
+}
+
+// Column outlines for HI table
+// Blue: col 2 (Cell Cro/10136RV), cols 4-5 (Cell Syd/1359 + Egg Sing/GP20238)
+// Red: cols 6-7 (Cell Dar/1415 + Egg Dar/1454)
+$hi-blue: #1f77b4;
+$hi-red: #d62728;
+$hi-border: 2.5px;
+
+.reveal .hi-table tr > :nth-child(2) {
+  border-left: #{$hi-border} solid $hi-blue;
+  border-right: #{$hi-border} solid $hi-blue;
+}
+.reveal .hi-table tr > :nth-child(4) {
+  border-left: #{$hi-border} solid $hi-blue;
+}
+.reveal .hi-table tr > :nth-child(5) {
+  border-right: #{$hi-border} solid $hi-blue;
+}
+.reveal .hi-table thead tr > :nth-child(2),
+.reveal .hi-table thead tr > :nth-child(4),
+.reveal .hi-table thead tr > :nth-child(5) {
+  border-top: #{$hi-border} solid $hi-blue;
+}
+.reveal .hi-table tbody tr:last-child > :nth-child(2),
+.reveal .hi-table tbody tr:last-child > :nth-child(4),
+.reveal .hi-table tbody tr:last-child > :nth-child(5) {
+  border-bottom: #{$hi-border} solid $hi-blue;
+}
+
+.reveal .hi-table tr > :nth-child(6) {
+  border-left: #{$hi-border} solid $hi-red;
+}
+.reveal .hi-table tr > :nth-child(7) {
+  border-right: #{$hi-border} solid $hi-red;
+}
+.reveal .hi-table thead tr > :nth-child(6),
+.reveal .hi-table thead tr > :nth-child(7) {
+  border-top: #{$hi-border} solid $hi-red;
+}
+.reveal .hi-table tbody tr:last-child > :nth-child(6),
+.reveal .hi-table tbody tr:last-child > :nth-child(7) {
+  border-bottom: #{$hi-border} solid $hi-red;
+}
+
+.reveal .legend-note {
+  font-size: 0.7em;
+  color: #555;
+  margin-top: 0.4em;
+}
+
+// ---------------- Orange-highlighted tables (slide 26 NT tables) ----------------
+.reveal .orange-table {
+  text-align: left;
+}
+.reveal .orange-table table {
+  border: 2.5px solid #e67e22;
+  background: #fff4e6;
+  margin-left: 0;
+  margin-right: auto;
+}
+.reveal .orange-table th {
+  background: #f6b26b;
+  color: #5a3a00;
+}
+.reveal .orange-table td {
+  border-color: #f1c79b;
+}
+.reveal .orange-table p,
+.reveal .orange-table > p:first-of-type {
+  color: #b8530a;
+}
+
+// ---------------- Phylogeo legend ----------------
+.legend-dot {
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+  margin-right: 0.4em;
+  vertical-align: middle;
+}
+
+.sw {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 2px;
+  margin-right: 0.4em;
+  vertical-align: middle;
+  border: 1px solid #999;
+}
+
+.subclade-legend ul, .reveal .subclade-legend ul { list-style: none; padding: 0; }
+.subclade-legend li { margin: 0.25em 0; }
+
+// ---------------- Cartography legend ----------------
+.reveal .cart-legend {
+  font-size: 0.55em;
+  background: #f3f7fb;
+  padding: 0.5em 0.8em;
+  border-left: 3px solid #00578a;
+  margin-top: 0.6em;
+}
+
+// ---------------- Genotype/phenotype thumbnails ----------------
+.reveal .geno-pheno-thumbs {
+  display: flex;
+  gap: 0.6em;
+  align-items: center;
+  background: #f3f7fb;
+  padding: 0.4em;
+  border-radius: 3px;
+  margin: 0.5em 0;
+  flex-wrap: wrap;
+}
+
+.reveal .geno-pheno-thumbs .thumb {
+  max-height: 60px;
+  width: auto;
+  border: 1px solid #b0c5db;
+  border-radius: 2px;
+}
+
+// ---------------- Subclade cards ----------------
+.reveal .subclade-row {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0.5em;
+  margin: 0.4em 0 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reveal .subclade-row > .subclade-card {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 0;
+  background: #f3f7fb;
+  border-top: 4px solid #00578a;
+  padding: 0.4em 0.5em;
+  text-align: center;
+  font-size: 0.45em;
+  line-height: 1.25;
+  border-radius: 3px 3px 0 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reveal .subclade-row .sc-title,
+.reveal .subclade-row .sc-sub,
+.reveal .subclade-row .sc-clade {
+  display: block;
+  width: 100%;
+}
+
+.reveal .subclade-row .sc-title { margin-bottom: 0.1em; }
+.reveal .subclade-row .sc-sub   { margin-bottom: 0.2em; color: #555; }
+.reveal .subclade-row .sc-clade { margin-top: 0.2em; }
+
+.reveal .subclade-row .subclade-thumb {
+  display: block;
+  margin: 0.25em auto;
+  max-height: 200px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  flex: 0 1 auto;
+}
+
+.reveal .subclade-row .emerged {
+  display: block;
+  width: 100%;
+  background: #ffeb99;
+  color: #6b4d00;
+  padding: 0.15em 0.3em;
+  margin-top: auto;
+  font-size: 0.95em;
+  border-radius: 2px;
+  font-style: italic;
+  box-sizing: border-box;
+}
+
+// ---------------- Criteria box ----------------
+.reveal .criteria-box {
+  background: #f3f7fb;
+  border-left: 4px solid #00578a;
+  padding: 0.6em 0.8em;
+  margin: 0.6em 0;
+  font-size: 0.85em;
+}
+
+// ---------------- CVV pipeline ----------------
+.reveal .cvv-pipeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  margin: 0.8em 0;
+  flex-wrap: nowrap;
+}
+
+.reveal .cvv-step {
+  flex: 1 1 0;
+  min-width: 0;
+  text-align: center;
+  background: #eaf2f8;
+  border-top: 4px solid #00578a;
+  padding: 0.5em 0.4em;
+  font-size: 0.45em;
+  line-height: 1.25;
+  border-radius: 3px;
+}
+
+.reveal .cvv-icon {
+  display: block;
+  margin: 0 auto 0.3em;
+  max-height: 60px;
+  width: auto;
+}
+
+.reveal .cvv-step strong {
+  color: #003366;
+  display: block;
+  margin-bottom: 0.2em;
+  font-size: 1.15em;
+}
+
+.reveal .cvv-arrow {
+  flex: 0 0 auto;
+  color: #00578a;
+  font-size: 1.6em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0 0.1em;
+}
+
+.reveal .cvv-loop {
+  text-align: center;
+  margin: 0.3em 0 0.6em;
+  color: #8a3300;
+  font-size: 0.6em;
+}
+
+// ---------------- Specimens slide legend ----------------
+.reveal .legend-row {
+  font-size: 0.7em;
+  margin-top: 0.4em;
+  color: #333;
+}
+
+// ---------------- Thank you ----------------
+.reveal .thank-you h2 {
+  color: #003366;
+  text-align: center;
+  font-size: 1.6em;
+  border-bottom: 3px solid #ffd54f;
+}
+
+.reveal .gisaid-ack {
+  margin-top: 0.6em;
+  font-size: 0.7em;
+  background: #f3f7fb;
+  padding: 0.6em 0.8em;
+  border-left: 4px solid #00578a;
+  border-radius: 3px;
+  font-style: italic;
+}
+
+// ---------------- Reveal slide-number / footer ----------------
+.reveal .slide-number {
+  background: rgba(0, 51, 102, 0.7);
+}
+
+.reveal .footer {
+  color: #00578a !important;
+  font-size: 0.5em;
+}
+
+// ---------------- Callouts ----------------
+.reveal .callout {
+  margin: 0.5em 0;
+  font-size: 0.7em;
+}
+
+.reveal .callout-title {
+  font-size: 1em;
+}
+
+// Constrain images inside the .fit-slide column so they never overflow the
+// slide. The deck is 1280x720, so usable content height is ~600px. Two
+// stacked figures get a hard pixel cap; this works regardless of fullscreen
+// since reveal scales the whole slide uniformly.
+.reveal .fit-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4em;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.reveal .fit-slide > p,
+.reveal .fit-slide > .quarto-figure,
+.reveal .fit-slide > figure {
+  margin: 0;
+  text-align: center;
+  max-width: 100%;
+}
+
+.reveal .fit-slide img {
+  display: block;
+  margin: 0 auto !important;
+  max-width: 100% !important;
+  max-height: 300px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 4px;
+}
+
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: auto auto;
+  gap: 1em;
+}
