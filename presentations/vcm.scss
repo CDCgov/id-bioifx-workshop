@@ -418,6 +418,22 @@ $hi-border: 2.5px;
   margin-top: 0.4em;
 }
 
+// ---------------- Larger, left-aligned tables (slides 5, 6) ----------------
+.reveal .bigtable {
+  text-align: left;
+}
+.reveal .bigtable table {
+  font-size: 0.85em;
+  margin-left: 0;
+  margin-right: auto;
+  width: auto;
+}
+.reveal .bigtable th,
+.reveal .bigtable td {
+  text-align: left !important;
+  padding: 0.35em 0.7em;
+}
+
 // ---------------- Orange-highlighted tables (slide 26 NT tables) ----------------
 .reveal .orange-table {
   text-align: left;
