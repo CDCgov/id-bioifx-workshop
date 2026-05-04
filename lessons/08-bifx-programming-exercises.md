@@ -28,6 +28,10 @@ These exercises accompany the **Intro to Bioinformatics Programming** module. Th
 
 
 ### Exercise 1 — Pseudo Code Practical
+Open a new .sh file for each of these problems and write out logical pseudo code as comments (`#`). This is to practice approaching a coding problem step by step, so there is no need to worry about syntax.
+
+Think about what variables you might need to initiate or logic gates to use.
+
 {: .mt-4}
 
 <div class="exercise-block" markdown="1">
