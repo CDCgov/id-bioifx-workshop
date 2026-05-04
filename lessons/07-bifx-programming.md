@@ -48,6 +48,45 @@ Enter commands one at a time directly in the terminal
 
 ![Presentation4 Img04]({{ site.baseurl }}/assets/images/presentation4-img04.png){: width="75%"}
 
+## vim
+
+### Key Points
+
+Vim is a terminal-based text editor
+
+
+- Vim is a terminal-based text editor
+- Common on servers, HPC systems, and remote machines
+- Designed for speed and efficiency
+- Keyboard-driven (mouse won’t work!)
+- Uses different modes
+- Commands behave differently depending on the mode
+- Highlights syntax usefully
+- Vim demo
+- Start and exit
+    -   `vim file.txt` — open a file
+    -   `:w` save
+    - `:q` quit
+    - `:wq` save & quit
+    - `q!` quit without saving
+- Modes
+    - `i` — insert (edit text)
+    - `Esc` — return to normal mode
+- Navigation
+    - Arrow keys or `h j k l`
+    - `gg` top of file
+    - `G` bottom of file
+    - `:<number>`go to line number
+- Editing
+    - `dd` delete line
+    - `yy` copy line
+    - `p` paste
+    - `u` undo
+- Search
+    - `/text` search forward
+    - `n` next match
+
+<img src="{{ site.baseurl }}/assets/images/presentation4-img07.png" style="width: 25%; height: auto;" alt="Presentation4 Img07">
 
 ## Syntax
 
