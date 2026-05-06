@@ -15,6 +15,7 @@ __pycache__/
 .idea/
 *.swp
 *.swo
+.Rhistory
 
 # Output files
 parsed_questions.json
