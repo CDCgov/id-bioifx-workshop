@@ -3,16 +3,15 @@ layout: page
 title: Containers and Registries
 sidebar: workshop_sidebar
 topnav: topnav
-permalink: /lessons/10-container-registries/
+permalink: /lessons/10-containers-registries/
 ---
-<<<<<<< HEAD
 ## Introduction to Containers and Common Bioinformatic Tools
 
 ### Key Points
 
 Dockerhub and Quay.io, using containers to run programs, and learning basic tools
 
-Logan Fink
+<p style="color: #015CAE; font-size: 19px;">Content developed by Logan Fink</p>
 
 ## Module Objectives
 
@@ -33,12 +32,26 @@ Containerization is a way to allocate resources on a system in a very compartmen
 	- Reproducible environment
 	- “Works on my machine”
 
+## Virtualization
+
+![Presentation10 Img01]({{ site.baseurl }}/assets/images/presentation10-img01.PNG){: width="75%"}
+
+## Containerization
+
+![Presentation10 Img02]({{ site.baseurl }}/assets/images/presentation10-img02.PNG){: width="75%"}
+
+## OS Differences
+
+Containerization allows users to specify whatever operating system they would like to use within the container, as long as it is compatible with the host system's kernel functionality
+
+![Presentation10 Img03]({{ site.baseurl }}/assets/images/presentation10-img03.PNG){: width="75%"}
+
 ## Containerization Software
 
 Different containerization software exists to run containers
 
 - Docker
-- Apptainer (Formerly Singularity)
+- Apptainer/Singularity
 - ECR
 - Podman
 
@@ -48,7 +61,18 @@ There are advantages and disadvantages to each
 
 Running Docker requires root access
 Depending on the IT restrictions available at your site, access to certain container software may be limited 
-Root privileges are not required by Apptainer, and Podman 
+Root privileges are not required by Apptainer/Singularity, and Podman 
+
+## Running a Container
+$ docker <span style="color: teal;">run</span> <span style="color: red;">-v $PWD:/data</span> <span style="color: purple;">staphb/fastp:</span><span style="color green;">1.3.1</span> <span style="color: blue;">fastp</span> <span style="color: orange;">-i in.fq -o out.fq</span>
+
+Container software
+<span style="color: teal;">Container software command</span>
+<span style="color: red;">Container software command flags</span>
+<span style="color: purple;">Container</span>
+<span style="color: green;">Container Version</span>
+<span style="color: blue;">Container command</span>
+<span style="color: orange;">Container command flags</span>
 
 ## User Groups
 
@@ -75,18 +99,21 @@ Containers can be run in interactive mode
 Containers can be called and given a specific command to run
 Removal of containers that are no longer running saves space your system, but persistent containers can be called and used again, and any changes that were made during that session will remain
 
-## OS Differences
-
-Containerization allows users to specify whatever operating system they would like to use within the container, whether that matches the host system or not
-
-![Presentation9 Img01]({{ site.baseurl }}/assets/images/presentation9-img01.PNG){: width="75%"}
-
 ## Container Versioning
 
 - Versions are specified in container naming/tags as a convention for noting which version of a software is in that container
 - “Latest” tag is less useful than more specific semantic versioning of a container, i.e. 1.1.0 since this will be more easily trackable and revertable (“latest” must be assigned, and authors do not always keep track or update the latest track, which can lead to problems downstream)
 
-![Presentation9 Img02]({{ site.baseurl }}/assets/images/presentation9-img03.PNG){: width="75%"}
+![Presentation10 Img04]({{ site.baseurl }}/assets/images/presentation10-img04.PNG){: width="75%"}
+
+## Singularity
+
+-Singularity was built specifically for research-oriented HPC environments
+-Singularity creates SIF (singularity image format) files, which are meant to encapsulate container environments into a single, portable file
+-Simple, portable, reproducible for any environment from local machine to large cluster
+-Transportable and shareable
+-Same user inside the container as outside, and cannot gain additional privilege on the host system
+-Singularity cache makes running containers faster, but uses memory
 
 ## Repositories
 
@@ -96,14 +123,13 @@ Containerization allows users to specify whatever operating system they would li
 It is important to use trusted sources of containers
 	- Reputable institutions ([StaPH-B](https://hub.docker.com/u/staphb), etc.)
 
-![Presentation9 Img03]({{ site.baseurl }}/assets/images/presentation9-img02.PNG){: width="75%"}
+![Presentation10 Img05]({{ site.baseurl }}/assets/images/presentation10-img05.PNG){: width="75%"}
 
 ## Common Bioinformatic Tools
 
 - [Fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/), [multiqc](https://github.com/MultiQC/MultiQC)
 - [Kraken2](https://github.com/DerrickWood/kraken2)
-- [Docker](https://docs.docker.com/engine/install/ubuntu/#prerequisites)
-- [Singularity](https://docs.sylabs.io/guides/4.1/user-guide/quick_start.html#quick-installation-steps)
+- [Apptainer](https://github.com/apptainer/apptainer) (formerly Singularity)
 - [Nextflow](https://docs.seqera.io/nextflow/)
 - [Sra-toolkit](https://github.com/ncbi/sra-tools)
 - [Samtools](https://github.com/ncbi/sra-tools)
@@ -134,7 +160,7 @@ Dorado
 - Used for classifying reads to the most specific level of certainty within a taxonomic ranking scheme
 - Dependent on a database
 
-![Presentation9 Img04]({{ site.baseurl }}/assets/images/presentation9-img04.PNG){: width="75%"}
+![Presentation10 Img06]({{ site.baseurl }}/assets/images/presentation10-img06.PNG){: width="75%"}
 
 ## SRA-ToolKit
 
@@ -177,153 +203,20 @@ Dorado
 
 - Softwares that run Docker containers
 - Based on the security restrictions, one container may be a better fit for a user’s organization
-=======
 
-{: title}
-
----
-
-## Module Objectives
-- Understand the fundamentals of virtual environments
-- Understand basic use of environment management software (`venv` and `conda` / `mamba` / `pixi`)
-
-## Computer Environment Basics
-Use the interactive diagram below to learn more about how software and their dependencies are managed in a typical computing environment.
-<div style="border: 1px solid #ccc; border-radius: 6px; padding: 12px;">
-  {% include comp-env/diagram-1.html %}
-</div>
-
-## Environment Management Programs
-Managing software, dependencies, and environments on a single machine can quickly become complex, especially when different projects require different versions of the same package. Environment management programs help by creating and maintaining isolated environments, each with their own set of dependencies, so that changes in one project do not break another.
-Many environment managers are language-specific - for example, `venv` and `pip` for Python, `renv` for R, `Bundler` for Ruby, and `Maven` or `Gradle `for Java. Others are more language-agnostic and can manage dependencies across multiple ecosystems - e.g., `conda`, `mamba`, and `pixi`. This module will focus on `venv` for lightweight Python environment management, and `conda` / `mamba` / `pixi` for more flexible, cross-language environment management.
-
-### Venv
-**Venv** is a lightweight, python-specific environment management tool that facilitates the **isolation of python libraries, NOT the python executable**.
-
-As shown in the diagram below, the `venv` does not change which Python executable is used. Instead, it changes the path to the Python module library.
-<div style="border: 1px solid #ccc; border-radius: 6px; padding: 12px;">
-  {% include comp-env/diagram-2.html %}
-</div>
-
-#### Basic Usage
-The code below shows an example of basic `venv` use on the command line.
+## Installing software
+Use the command below to create a new environment with micromamba and install the software that will be used in future lessions.
 ```bash
-# Create and activate environment
-python -m venv myenv
-source myenv/bin/activate
-# Install modules
-pip install numpy<2 pandas=1.5.0
+# Create environment (bioconda + conda-forge channels)
+micromamba create -n flu_env \
+  -c bioconda \
+  -c conda-forge \
+  -c defaults \
+  sra-tools samtools nextflow \
+  --yes
 
-# Run script
-Python script.py
-
-# Deactivate (close) environment
-deactivate
+# Activate
+micromamba activate flu_env
 ```
 
-#### Sharing environments
-Environments can be recreated with `venv` using `pip freeze`. This creates a list of module requirements that can be reinstalled with `pip`. See the example below:
-```bash
-# Create sharable requirements file
-pip freeze > requirements.txt
-
-# Install via requirements file
-pip install –r requirements.txt
-```
-
-<br>
-Example of `requirements.txt`:
-```
-numpy==1.18
-pandas==1.5.0
-```
-
-
-### Conda / Mamba / Pixi
-Conda, Mamba, and Pixi support multiple languages (Python, Java, C++, etc.,) and binaries. Manage **BOTH** the executables and their dependencies.
-
-
-As shown in the diagram below, `conda` (also `mamba` and `pixi`) changes both the Python executable and module library that is used, thus providing a more *isolated* environment.
-<div style="border: 1px solid #ccc; border-radius: 6px; padding: 12px;">
-  {% include comp-env/diagram-3.html %}
-</div>
-
-#### Conda vs Mamba vs Pixi
-The tables below outlines key differences between each management tool.
-
-| Feature | Conda | Mamba | Pixi |
-|---|---|---|---|
-| Initial release date | 2012 | 2019 | 2023 |
-| Ecosystem | Conda | Conda | Conda + PyPI |
-| Solver speed | Slow | Fast | Fast |
-| Environment scope | Global / named | Global / named | Project-local |
-| Config format | environment.yml | environment.yml | pixi.toml |
-| Reproducibility | Medium | Medium | High |
-| Drop-in replacement for Conda | — | Sometimes | No |
-
-| Feature | Conda | Miniconda | Mamba | Micromamba |
-|---|---|---|---|---|
-| Drop-in replacement for Conda | — | Yes | Yes | No |
-| Packages included | 600+ | 130+ | 89 | 0 |
-| Approx. install size (GB) | 9.7 | 0.9 | 0.4 | 0.05 |
-
-- Miniconda is Conda but with fewer base packages
-- Micromamba is an executable binary of Mamba with no base packages
-- **Micromamba is recommended for most applications**
-
-#### Micromamba Shell Configuration
-Conda, Mamba, and Miniconda are not compiled — they rely on a Python interpreter and run in the current shell. Micromamba, on the other hand, is a compiled binary executable that requires no interpreter and runs in a subshell. **The subshell output must be interpreted by the current shell for changes to be applied to the environment!** Micromamba solves this by wrapping the binary in shell functions.
-
-Add this to your `.bashrc` file to make this occur on login:
-```
-eval "$(micromamba shell hook --shell bash)“
-```
-
-#### Basic Usage
-The code below shows an example of basic `conda` use on the command line. The same general approach also applies for `mamba` and `pixi`.
-```
-# Create and activate environment
-conda create \
-    -n myenv \
-    python=3.10
-
-conda activate myenv
-
-# Install binaries & libraries
-conda install \
-    -c conda-forge \
-    -c bioconda \
-     samtools numpy pandas
-
-# Run script
-Python script.py
-samtools view alignment.bam
-
-# Deactivate (close) environment
-deactivate
-```
-#### Sharing environments
-Conda environments are shared via a yaml file that outlines all conda-managed packages and dependencies.
-```
-# Create sharable environment file
-conda env export -n myenv > environment.yml
-
-# Install via environment file
-conda create -f environment.yml 
-```
-
-Example of `environment.yml`:
-```
-name: myenv
-channels:
-  - bioconda
-  - conda-forge
-dependencies:
-samtools=1.18=hd87286a_0
-numpy=1.26.4=py311h64a7726_0
-pandas=2.2.3=py311h7db5c69_1
-```
-
-## Practical
-Click [here](../09b-comp-env-practical/) to navigate to the `Computer Environment` practical.
->>>>>>> main
+Go to this link for [Nextstrain installation](https://docs.nextstrain.org/en/latest/install.html#installation-steps).
