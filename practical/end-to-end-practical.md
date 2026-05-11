@@ -18,13 +18,19 @@ Each institution has a dedicated project tracker with milestones and issues that
 
 | Institution | Repository |
 |---|---|
-| Instituto De Salud Pública De Chile (ISP) | [post-bfxwkshp-isp-chile](https://github.com/cdcent/post-bfxwkshp-isp-chile) |
-| Laboratorio Nacional De Salud De Guatemala (LNS) | [post-bfxwkshp-lns-guatemala](https://github.com/cdcent/post-bfxwkshp-lns-guatemala) |
-| Instituto de Diagnóstico y Referencia Epidemiológicos (InDRE) | [post-bfxwkshp-indre-mexico](https://github.com/cdcent/post-bfxwkshp-indre-mexico) |
-| Ministerio De Salud Paraguay / Laboratorio Central De Salud Pública (LCSP) | [post-bfxwkshp-lcsp-paraguay](https://github.com/cdcent/post-bfxwkshp-lcsp-paraguay) |
-| Instituto Nacional De Salud Peru (INS) | [post-bfxwkshp-ins-peru](https://github.com/cdcent/post-bfxwkshp-ins-peru) |
-| Instituto Conmemorativo Gorgas de Estudios de la Salud (Gorgas) | [post-bfxwkshp-gorgas-panama](https://github.com/cdcent/post-bfxwkshp-gorgas-panama) |
-| Secretaría Nacional de Ciencia y Tecnología (SENACYT) | [post-bfxwkshp-senacyt-panama](https://github.com/cdcent/post-bfxwkshp-senacyt-panama) |
+| 🇨🇱 Instituto De Salud Pública De Chile (ISP) | [post-bfxwkshp-isp-chile](https://github.com/cdcent/post-bfxwkshp-isp-chile) |
+| 🇬🇹 Laboratorio Nacional De Salud De Guatemala (LNS) | [post-bfxwkshp-lns-guatemala](https://github.com/cdcent/post-bfxwkshp-lns-guatemala) |
+| 🇲🇽 Instituto de Diagnóstico y Referencia Epidemiológicos (InDRE) | [post-bfxwkshp-indre-mexico](https://github.com/cdcent/post-bfxwkshp-indre-mexico) |
+| 🇵🇾 Ministerio De Salud Paraguay / Laboratorio Central De Salud Pública (LCSP) | [post-bfxwkshp-lcsp-paraguay](https://github.com/cdcent/post-bfxwkshp-lcsp-paraguay) |
+| 🇵🇪 Instituto Nacional De Salud Peru (INS) | [post-bfxwkshp-ins-peru](https://github.com/cdcent/post-bfxwkshp-ins-peru) |
+| 🇵🇦 Instituto Conmemorativo Gorgas de Estudios de la Salud (Gorgas) | [post-bfxwkshp-gorgas-panama](https://github.com/cdcent/post-bfxwkshp-gorgas-panama) |
+| 🇵🇦 Secretaría Nacional de Ciencia y Tecnología (SENACYT) | [post-bfxwkshp-senacyt-panama](https://github.com/cdcent/post-bfxwkshp-senacyt-panama) |
+| 🇮🇩 Balai Besar Laboratorium Biologi Kesehatan (BBLBK) | [post-bfxwkshp-bblbk-indonesia](https://github.com/cdcent/post-bfxwkshp-bblbk-indonesia) |
+| 🇻🇳 Pasteur Institute Ho Chi Minh City | [post-bfxwkshp-pihcmc-vietnam](https://github.com/cdcent/post-bfxwkshp-pihcmc-vietnam) |
+| 🇧🇩 International Centre for Diarrhoeal Disease Research, Bangladesh (icddr,b) | [post-bfxwkshp-icddrb-bangladesh](https://github.com/cdcent/post-bfxwkshp-icddrb-bangladesh) |
+| 🇵🇭 Research Institute for Tropical Medicine (RITM) | [post-bfxwkshp-ritm-philippines](https://github.com/cdcent/post-bfxwkshp-ritm-philippines) |
+| 🇧🇩 Institute of Epidemiology, Disease Control and Research (IEDCR) | [post-bfxwkshp-iedcr-bangladesh](https://github.com/cdcent/post-bfxwkshp-iedcr-bangladesh) |
+| 🇹🇭 Thai National Influenza Center (TNIC) | [post-bfxwkshp-tnic-thailand](https://github.com/cdcent/post-bfxwkshp-tnic-thailand) |
 
 ---
 
