@@ -5,6 +5,7 @@ last_form_id.txt
 
 # Python virtual environment
 venv/
+.venv/
 __pycache__/
 *.pyc
 *.pyo
@@ -16,6 +17,9 @@ __pycache__/
 *.swp
 *.swo
 .Rhistory
+
+# Search cache (extracted text from PDFs/PPTX)
+_search/cache/
 
 # Output files
 parsed_questions.json
