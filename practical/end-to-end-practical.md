@@ -31,6 +31,7 @@ Each institution has a dedicated project tracker with milestones and issues that
 | 🇵🇭 Research Institute for Tropical Medicine (RITM) | [post-bfxwkshp-ritm-philippines](https://github.com/cdcent/post-bfxwkshp-ritm-philippines) |
 | 🇧🇩 Institute of Epidemiology, Disease Control and Research (IEDCR) | [post-bfxwkshp-iedcr-bangladesh](https://github.com/cdcent/post-bfxwkshp-iedcr-bangladesh) |
 | 🇹🇭 Thai National Influenza Center (TNIC) | [post-bfxwkshp-tnic-thailand](https://github.com/cdcent/post-bfxwkshp-tnic-thailand) |
+| 🇮🇳 ICMR-National Institute of Virology (NIV) | [post-bfxwkshp-niv-india](https://github.com/cdcent/post-bfxwkshp-niv-india) |
 
 ---
 
