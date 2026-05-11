@@ -47,7 +47,7 @@ jobs:
           node-version: '20'
 
       - name: Configure Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Extract text from local documents
         run: python scripts/extract_local.py
