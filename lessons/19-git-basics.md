@@ -22,101 +22,77 @@ This exercise walks you through the basic Git workflow using VS Code's **Source 
 
 1. Open VS Code.
 2. Click the **Source Control** tab in the left sidebar (the icon that looks like a branching graph).
+   ![VS Code Source Control tab on the left sidebar displaying the Clone Repository button, with the interface ready for repository cloning](../../assets/images/vscode-git-source-control.png)
 3. If no folder is open, you will see a **Clone Repository** button. Click it.
-4. Paste your institute's repository URL (e.g., `https://github.com/your-org/your-repo.git`) into the input box that appears at the top of the window.
-5. Choose a local folder to clone into and click **Select as Repository Destination**.
-6. When prompted, click **Open** to open the cloned repository in VS Code.
-
-<!-- TODO: Screenshot of Source Control tab showing "Clone Repository" button -->
-
-<!-- TODO: Screenshot of repository URL input box at top of VS Code -->
-
+   ![VS Code Source Control tab showing the Clone Repository button](../../assets/images/vscode-git-source-control-clone.png)
+4. Paste your institute's repository URL (e.g., `https://github.com/cdcent/your-repo.git`) into the input box that appears at the top of the window.
+   ![](../../assets/images/vscode-git-source-control-clone-repo.png)
+5. Choose a local folder to clone into and click **Select as Repository Destination**. Below, I have created a folder on my Desktop called github-repos to store all my cloned repositories.
+   ![](../../assets/images/vscode-git-source-control-clone-repo-location.png)
+6. When prompted, click **Open** to open the cloned repository in VS Code. It will ask you if you trust the publisher of the repository — click **Yes, I trust the authors**.
+   ![](../../assets/images/vscode-git-source-control-clone-repo-landing.png)
 ---
 
 ## 2. Create a Branch
 
-1. In the **Source Control** tab, click the **...** (more actions) menu at the top of the panel.
-2. Navigate to **Branch** > **Create Branch...**.
-3. Name your branch something descriptive, e.g., `update-readme-yourname`.
-4. Press **Enter** — VS Code will create the branch and switch to it automatically.
-5. You can confirm the active branch by looking at the bottom-left corner of the VS Code status bar.
+1. In the **Source Control** tab, click the "branch" icon beside "main" at the top of the **REPOSITORIES** panel.
+   ![](../../assets/images/vscode-git-source-control-branch.png)
+2. Your cursor will move to the input box at the top of the window. Type in a name for your new branch, hit `Enter`.
+   ![](../../assets/images/vscode-git-source-control-branch-create.png)
+3.  VS Code will create the branch and switch to it automatically. "Publish" the branch to GitHub by clicking the **Publish Branch** button that appears in the status bar at the bottom of the window.
+   ![](../../assets/images/vscode-git-source-control-branch-publish.png)
 
-<!-- TODO: Screenshot of Source Control "..." menu with Branch > Create Branch highlighted -->
-
-<!-- TODO: Screenshot of branch name input box -->
-
-<!-- TODO: Screenshot of status bar showing new branch name -->
-
----
+------
 
 ## 3. Edit the README
 
 1. Click the **Explorer** tab in the left sidebar to view your files.
-2. Open the `README.md` file.
-3. Add a line with your name and today's date, for example:
+2. Click the `README.md` file to open it.
+3. Make a change in the file, for example:
+   ![](../../assets/images/vscode-git-source-control-branch-edit-readme1.png)
+   
 
-   ```markdown
-   ## Contributors
-   - Your Name (2026-04-16)
-   ```
+   | Line 16: "Scientist Maintainers" to "Chilean Scientists"
+   | Line 23: "CDC Collaborators" to "CDC Scientists"
+
+   ![](../../assets/images/vscode-git-source-control-branch-edit-readme2.png)
 
 4. Save the file (`Ctrl+S` / `Cmd+S`).
 
-<!-- TODO: Screenshot of edited README in VS Code editor -->
-
 ---
 
-## 4. Stage and Commit
+## 4. Stage, Commit, and Push Changes
 
 1. Click the **Source Control** tab in the left sidebar.
-2. You should see `README.md` listed under the **Changes** section.
+2. You should see `README.md` listed under the **Changes** section. Clicking on this file will display a "diff" view showing your changes. Red highlights indicate removed text, and green highlights indicate added text.
 3. Hover over `README.md` and click the **+** (Stage Changes) icon to move it to the **Staged Changes** section.
-4. Type a commit message in the **Message** text box at the top of the Source Control panel, e.g., `Add contributor name to README`.
+4. Type a commit message in the **Message** text box at the top of the Source Control panel, e.g., `updated heading of local and cdc contributors`.
 5. Click the **Commit** button (checkmark icon) to commit your staged changes.
-
-<!-- TODO: Screenshot of Source Control tab showing README.md under "Changes" with the + icon highlighted -->
-
-<!-- TODO: Screenshot of Source Control tab with README.md under "Staged Changes" and a commit message entered -->
-
----
-
-## 5. Push to GitHub
-
-1. After committing, the **Commit** button in the Source Control tab will change to **Publish Branch** (since this is a new branch).
-2. Click **Publish Branch** to push your branch to GitHub.
-3. If prompted, authenticate with GitHub and select the remote to publish to.
-
-<!-- TODO: Screenshot of "Publish Branch" button in Source Control tab -->
+   ![](../../assets/images/vscode-git-source-control-branch-commit.png)
+6. The blue button will now say **Sync Changes**. Click it to push your commit to GitHub. You may be prompted to sign in to GitHub if you haven't already.
+   ![](../../assets/images/vscode-git-source-control-branch-commit-push.png)
 
 ---
 
-## 6. Create a Pull Request and Merge (GitHub Website)
+## 5. Create a Pull Request and Merge (GitHub Website, not VS Code)
 
-1. Open your repository on [github.com](https://github.com).
-2. You should see a banner saying your branch was recently pushed. Click **Compare & pull request**.
+1. Open your web browser and navigate to your repository on [github.com](https://github.com).
+2. Click on the **Branches** tab, then find your branch in the list and click the three dots next to it and click **New pull request**.
+   ![](../../assets/images/github-branches-link.png)
+   ![](../../assets/images/github-branches-link-pull-request.png)
 3. Review the changes, add a title and description if needed, then click **Create pull request**.
-4. Once the pull request is created and any reviewers have approved, click **Merge pull request**.
-5. Click **Confirm merge**.
-6. Optionally, delete the branch on GitHub by clicking **Delete branch**.
-
-<!-- TODO: Screenshot of "Compare & pull request" banner on GitHub -->
-
-<!-- TODO: Screenshot of "Create pull request" page -->
-
-<!-- TODO: Screenshot of "Merge pull request" button -->
+   ![](../../assets/images/github-branches-link-pull-request-create.png)
+4. For these workshop repos, CDC administrators will complete the merge.
 
 ---
 
 ## 7. Pull the Merged Changes Locally
 
-1. In VS Code, click the **Source Control** tab.
-2. Click the **...** menu and navigate to **Branch** > **Checkout to...**, then select `main`.
-3. Click the **...** menu again and select **Pull** to pull the latest changes from GitHub.
-4. Your local `main` branch now includes the merged changes.
-
-<!-- TODO: Screenshot of "Checkout to..." menu showing main branch -->
-
-<!-- TODO: Screenshot of Pull option in Source Control "..." menu -->
+1. Back in VS Code, click the **Source Control** tab. Click the "branch" icon at the top of the **REPOSITORIES** panel to switch branches. Select `main` to switch back to the main branch.
+   ![](../../assets/images/vscode-git-source-control-branch-main.png)
+2. Click **Sync Changes** to pull the latest changes from GitHub, which will include the merged changes from your branch. 
+   ![](../../assets/images/vscode-git-source-control-branch-main-sync.png)
+> Tip: Click the "sync" icon regularly to keep your local repository up to date with GitHub, especially if others are also making changes.
 
 ---
 
