@@ -369,6 +369,25 @@ $presentation-h3-font-size: 1.05em;
   padding: 0.18em 0.35em;
 }
 
+// QC-results table: larger text, tight padding, all 16 rows on one slide
+.reveal .qc-table table {
+  font-size: 0.62em;
+  width: 100%;
+  margin: 0.15em auto;
+  table-layout: auto;
+}
+
+.reveal .qc-table th, .reveal .qc-table td {
+  padding: 0.05em 0.35em;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.reveal .qc-table th {
+  font-size: 0.95em;
+}
+
+
 // Column outlines for HI table
 // Blue: col 2 (Cell Cro/10136RV), cols 4-5 (Cell Syd/1359 + Egg Sing/GP20238)
 // Red: cols 6-7 (Cell Dar/1415 + Egg Dar/1454)
