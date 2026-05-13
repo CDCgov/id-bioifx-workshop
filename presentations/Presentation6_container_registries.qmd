@@ -1,0 +1,359 @@
+---
+title: "Software Containers & Registries"
+subtitle: "Using reproducible environments in bioinformatics"
+author:
+  - name: "Ben Rambo-Martin, PhD"
+    affiliations:
+      - "Bioinformatics Activity Lead<br/>Virology, Surveillance and Diagnosis Branch<br/>Influenza Division<br/>US Centers for Disease Control and Prevention"
+format:
+  revealjs:
+    theme: [default, vcm.scss]
+    slide-number: true
+    chalkboard: false
+    incremental: false
+    width: 1280
+    height: 720
+    fig-align: center
+    transition: fade
+    controls: true
+    progress: true
+    history: true
+    embed-resources: true
+    logo: ../assets/images/presentations/p1/image3.png
+title-slide-attributes:
+  data-background-image: "../assets/images/containers-title-slide.png"
+  data-background-size: cover
+  data-background-position: center
+execute:
+  echo: true
+---
+
+## Learning Objectives {background-image="../assets/images/containers-objectives-slide.png" background-size="80%" background-position="center"}
+
+By the end of this session, you will:
+
+- Understand what software containers are
+- Know why containers are important in bioinformatics
+- Recognize common container registries
+
+## The Problem {background-image="../assets/images/containers-problem.png" background-size="70%" background-position="center"}
+
+Bioinformatics often involves:
+
+- Complex software stacks
+- Conflicting dependencies
+- Version mismatches
+- "Works on my machine" issues
+
+Result:
+
+- Hard-to-reproduce analyses
+- Time lost debugging environments
+
+## What Is a Container? {background-image="../assets/images/containers-portable.png" background-size="50%" background-position="right bottom"}
+
+A **container** is:
+
+- A lightweight, portable environment
+- Includes software, dependencies, and runtime
+
+Think of it as:
+
+> A self-contained package that runs the same anywhere.
+
+## Containers vs Virtual Machines
+
+:::: {.columns}
+
+::: {.column width="40%"}
+**Containers:**
+
+- Lightweight
+- Fast startup
+- Share the host operating system kernel
+
+**Virtual machines:**
+
+- Heavier
+- Full operating system per instance
+- Slower startup
+
+
+:::
+
+::: {.column width="60%"}
+![](../assets/images/containers-vs-vm.png)
+:::
+
+::::
+
+## Why Containers in Bioinformatics?
+
+:::: columns
+::: {.column width="40%"}
+- Reproducibility across systems
+- Easier sharing of tools and workflows
+- Fewer dependency conflicts
+- Usable on HPC, cloud, and local machines
+:::
+::: {.column width="60%"}
+![](../assets/images/containers-meditating.png)
+:::
+::::
+## Images vs Containers
+
+:::: {.columns}
+
+::: {.column width="40%"}
+- **Image** = blueprint, usually read-only
+- **Container** = running instance of an image
+
+::: {.callout-tip}
+You *run* containers from images.
+:::
+:::
+
+::: {.column width="60%"}
+![](../assets/images/containers-images-pull.png)
+![](../assets/images/containers-images.png)
+![](../assets/images/containers-images-container.png)
+:::
+
+::::
+
+## Popular Container Tools
+
+:::: {.columns}
+
+::: {.column width="40%"}
+- **Docker**
+  - Requires root (admin) access
+- **Podman**
+  - Rootless "drop-in" replacement for Docker
+- **Singularity / Apptainer**
+  - Designed for HPC
+  - Works on shared systems
+:::
+
+::: {.column width="70%"}
+![](../assets/images/containers-popular-brands.png)
+:::
+
+::::
+
+## The Open Container Initiative (OCI)
+
+The **OCI** defines open standards for containers:
+
+- **Image Spec** — how images are built
+- **Runtime Spec** — how containers run
+- **Distribution Spec** — how registries share images
+
+Why it matters:
+
+- The same image works across Docker, Podman, and Apptainer
+- No vendor lock-in
+- Apptainer can pull images from Docker Hub because they all follow OCI
+
+Be cautious of non-OCI formats:
+
+- Singularity-only `.sif` files with no OCI source — hard to audit or rebuild
+- Tarball "containers" with no manifest or recipe
+- VM images (`.ova`, `.vmdk`) — these are virtual machines, not containers
+
+## You find container images on **container registries**
+
+A **container registry** is a storage location for container images.
+
+- Share tools easily
+- Access pre-built environments
+- Version control for software stacks
+- Support reproducible workflows
+
+:::: {.columns}
+
+::: {.column width="25%"}
+![Docker Hub](../assets/images/containers-dockerhub.png)
+:::
+
+::: {.column width="25%"}
+![Quay.io](../assets/images/containers-quay.jpg)
+:::
+
+::: {.column width="25%"}
+![GitHub Container Registry](../assets/images/containers-ghcr.png)
+:::
+
+::: {.column width="25%"}
+![Amazon ECR](../assets/images/containers-ecr.png)
+:::
+
+::::
+
+## Typical Workflow
+
+:::: columns
+
+::: {.column width="50%"}
+1. Find a container in a registry
+2. Pull or download the image
+3. Run analysis using the container
+![](../assets/images/containers-dockerhub-cdcgov.png)
+:::
+::: {.column width="50%"}
+
+![](../assets/images/containers-images-pull.png)
+![](../assets/images/containers-images.png)
+![](../assets/images/containers-images-container.png)
+:::
+::::
+
+## Workflow Integration
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Containers are standard in modern pipelines:
+
+- Nextflow
+- Snakemake
+- CWL / WDL
+
+**Nextflow** automatically pulls containers and runs each step in its own environment.
+:::
+
+::: {.column width="60%"}
+![](../assets/images/containers-workflow.png)
+:::
+
+::::
+
+## Versioning
+
+Images are tagged, for example:
+
+  - `cdcgov/mira-nf:v2.1.0`
+  - `cdcgov/irma-core:v0.9.1`
+  - `cdcgov/IRMA:v1.3.2`
+  - `cdcgov/DAIS-ribosome:v1.7.0`
+  - `cdcgov/mira-oxide:v1.5.4`
+  - `cdcgov/nextclade:v3.21.2`
+
+::: {.callout-warning}
+**Avoid `latest` — pin a specific version for reproducible work.**
+:::
+
+## Container Security Matters
+
+:::: {.columns}
+
+::: {.column width="55%"}
+Why think about security?
+
+- Containers can run arbitrary code
+- Images may include unknown or outdated software
+- Risks are higher in shared environments such as HPC or cloud systems
+
+::: {.callout-important}
+Treat containers like executable software.
+:::
+:::
+
+::: {.column width="45%"}
+![](../assets/images/containers-security.png)
+:::
+
+::::
+
+## Use Trusted Sources
+
+Good sources:
+
+- Official tool images
+- BioContainers
+- CDCgov Docker Hub
+
+::: {.callout-important}
+Look for clear versioning, documentation, and active maintenance.
+:::
+Red flags:
+
+- No documentation
+- Only `latest` tags
+- Unknown publishers
+- Images requiring unnecessary privileges
+
+## Root vs Rootless Containers
+
+:::: {.columns}
+
+::: {.column width="55%"}
+**Root** (default Docker): elevated privileges; risky on shared systems.
+
+**Rootless** (e.g. Apptainer): runs as a normal user; safer for HPC and shared environments.
+
+HPC systems usually restrict root access — this is why Apptainer is common in research computing.
+:::
+
+::: {.column width="45%"}
+![](../assets/images/whoami-sudo.png)
+:::
+
+::::
+
+## Best Practices for Users
+
+- Use trusted registries, such as CDCgov Docker Hub or BioContainers
+- Prefer rootless on shared systems
+- Pin versions
+- Avoid `latest` tags in workflows
+- Be cautious with unknown images
+- Understand where your data are mounted: `--volume` or `-v` flags
+
+## Example: Docker and Apptainer
+
+:::: {.columns}
+
+::: {.column width="55%"}
+Run a trusted container with **Docker**:
+
+```{.bash code-line-numbers="true"}
+docker run \
+--rm \                           
+ --user $(id -u):$(id -g) \           
+ -v ${PWD}:/data \                    
+ cdcgov/mira-nf:v2.1.0 \              
+ nextflow run /MIRA-NF/main.nf \      
+     -profile mira_nf_container \     
+     --input /data/samplesheet.csv \  
+     --runpath /data \                
+     --outdir /data/mira-output \     
+     --e Flu-Illumina \               
+     --nextclade true                 
+```
+:::
+
+::: {.column width="45%"}
+#### Lines:
+1. Run a container
+2. Remove it after it exits with `--rm`
+4. Run as your user ID — avoids root-owned output files
+5. Mount the current directory into `/data` inside the container
+5. Pinned image version from CDCgov Docker Hub
+6. Execute the MIRA-NF Nextflow pipeline inside the container
+7. -12 Pipeline arguments: samplesheet, input/output paths, assay type, and Nextclade flag
+:::
+
+::::
+
+## Summary
+
+- **Containers** — reproducibility, portability, ease of use
+- **Registries** — access, sharing, versioning
+- **Security** — use trusted sources, pin versions, prefer rootless
+
+Do not install everything manually. Use **trusted, secure containers**.
+
+## Questions
+
+**Questions?**
