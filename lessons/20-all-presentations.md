@@ -14,6 +14,7 @@ Below are all the workshop presentations available for download.
   </thead>
   <tbody>
     <tr><td colspan="2" style="text-align:center; font-weight:bold; background:#f0f0f0;">Day 1</td></tr>
+    <tr><td>Introduction to Git and Markdown in VSCode</td><td><a href="{{ site.baseurl }}/presentations/Presentation0_git-vscode-markdown-FINAL.pdf">Presentation0_git-vscode-markdown.pdf</a></td></tr>
     <tr><td>Training Overview</td><td><a href="{{ site.baseurl }}/presentations/Presentation1_TrainingOverviewVCM.pdf">Presentation1_TrainingOverviewVCM.pdf</a></td></tr>
     <tr><td>Computer OS</td><td><a href="{{ site.baseurl }}/presentations/Presentation2_ComputerOS.pdf">Presentation2_ComputerOS.pdf</a></td></tr>
     <tr><td>Introduction to BASH</td><td><a href="{{ site.baseurl }}/presentations/Presentation3_IntroBASH-FINAL.pdf">Presentation3_IntroBASH-FINAL.pdf</a></td></tr>
