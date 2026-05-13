@@ -32,12 +32,26 @@ Containerization is a way to allocate resources on a system in a very compartmen
 	- Reproducible environment
 	- “Works on my machine”
 
+## Virtualization
+
+![Presentation10 Img01]({{ site.baseurl }}/assets/images/presentation10-img01.PNG){: width="75%"}
+
+## Containerization
+
+![Presentation10 Img02]({{ site.baseurl }}/assets/images/presentation10-img02.PNG){: width="75%"}
+
+## OS Differences
+
+Containerization allows users to specify whatever operating system they would like to use within the container, as long as it is compatible with the host system's kernel functionality
+
+![Presentation10 Img03]({{ site.baseurl }}/assets/images/presentation10-img03.PNG){: width="75%"}
+
 ## Containerization Software
 
 Different containerization software exists to run containers
 
 - Docker
-- Apptainer (Formerly Singularity)
+- Apptainer/Singularity
 - ECR
 - Podman
 
@@ -47,7 +61,18 @@ There are advantages and disadvantages to each
 
 Running Docker requires root access
 Depending on the IT restrictions available at your site, access to certain container software may be limited 
-Root privileges are not required by Apptainer, and Podman 
+Root privileges are not required by Apptainer/Singularity, and Podman 
+
+## Running a Container
+$ docker <span style="color: teal;">run</span> <span style="color: red;">-v $PWD:/data</span> <span style="color: purple;">staphb/fastp:</span><span style="color green;">1.3.1</span> <span style="color: blue;">fastp</span> <span style="color: orange;">-i in.fq -o out.fq</span>
+
+Container software
+<span style="color: teal;">Container software command</span>
+<span style="color: red;">Container software command flags</span>
+<span style="color: purple;">Container</span>
+<span style="color: green;">Container Version</span>
+<span style="color: blue;">Container command</span>
+<span style="color: orange;">Container command flags</span>
 
 ## User Groups
 
@@ -74,18 +99,21 @@ Containers can be run in interactive mode
 Containers can be called and given a specific command to run
 Removal of containers that are no longer running saves space your system, but persistent containers can be called and used again, and any changes that were made during that session will remain
 
-## OS Differences
-
-Containerization allows users to specify whatever operating system they would like to use within the container, whether that matches the host system or not
-
-![Presentation9 Img01]({{ site.baseurl }}/assets/images/presentation9-img01.PNG){: width="75%"}
-
 ## Container Versioning
 
 - Versions are specified in container naming/tags as a convention for noting which version of a software is in that container
 - “Latest” tag is less useful than more specific semantic versioning of a container, i.e. 1.1.0 since this will be more easily trackable and revertable (“latest” must be assigned, and authors do not always keep track or update the latest track, which can lead to problems downstream)
 
-![Presentation9 Img02]({{ site.baseurl }}/assets/images/presentation9-img03.PNG){: width="75%"}
+![Presentation10 Img04]({{ site.baseurl }}/assets/images/presentation10-img04.PNG){: width="75%"}
+
+## Singularity
+
+-Singularity was built specifically for research-oriented HPC environments
+-Singularity creates SIF (singularity image format) files, which are meant to encapsulate container environments into a single, portable file
+-Simple, portable, reproducible for any environment from local machine to large cluster
+-Transportable and shareable
+-Same user inside the container as outside, and cannot gain additional privilege on the host system
+-Singularity cache makes running containers faster, but uses memory
 
 ## Repositories
 
@@ -95,7 +123,7 @@ Containerization allows users to specify whatever operating system they would li
 It is important to use trusted sources of containers
 	- Reputable institutions ([StaPH-B](https://hub.docker.com/u/staphb), etc.)
 
-![Presentation9 Img03]({{ site.baseurl }}/assets/images/presentation9-img02.PNG){: width="75%"}
+![Presentation10 Img05]({{ site.baseurl }}/assets/images/presentation10-img05.PNG){: width="75%"}
 
 ## Common Bioinformatic Tools
 
@@ -132,7 +160,7 @@ Dorado
 - Used for classifying reads to the most specific level of certainty within a taxonomic ranking scheme
 - Dependent on a database
 
-![Presentation9 Img04]({{ site.baseurl }}/assets/images/presentation9-img04.PNG){: width="75%"}
+![Presentation10 Img06]({{ site.baseurl }}/assets/images/presentation10-img06.PNG){: width="75%"}
 
 ## SRA-ToolKit
 
