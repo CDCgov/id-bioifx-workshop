@@ -6,7 +6,7 @@ topnav: topnav
 permalink: /lessons/10b-tool-installation/
 ---
 
-<p style="color: #015CAE; font-size: 19px;">Content developed by Jared Johnson and Ben Rambo-Martin</p>
+<p style="color: #015CAE; font-size: 19px;">Content developed by Jared Johnson</p>
 
 ## Module Objectives
 - Install Docker and Nextstrain
