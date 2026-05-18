@@ -17,7 +17,7 @@ permalink: /lessons/18-basic-reporting/
 
 ## What is Pandoc?
 
-[Pandoc](https://pandoc.org) is a command-line tool that converts documents between a wide range of formats — including Markdown, HTML, PDF, and Word. It is the universal converter that powers Quarto, RMarkdown, and Jupyter Book under the hood, and can be used directly on its own.
+<a href="https://pandoc.org" target="_blank"><code>Pandoc</code></a> is a command-line tool that converts documents between a wide range of formats — including Markdown, HTML, PDF, and Word. It is the universal converter that powers Quarto, RMarkdown, and Jupyter Book under the hood, and can be used directly on its own.
 
 For routine reporting, Pandoc lets you write a report once in plain Markdown and render it to any format you need — without reformatting or copying content between tools.
 
@@ -25,26 +25,36 @@ For routine reporting, Pandoc lets you write a report once in plain Markdown and
 
 A Pandoc Markdown report is a plain text file (`.md`) with two parts: 
 
-1. **Front Matter:** A YAML block at the very top of the file, enclosed in triple dashes (`---`) that defines metadata used by Pandoc.
+### Front Matter
+Front matter is a YAML block at the very top of the file, enclosed in triple dashes (`---`) that defines metadata used by Pandoc.
 
-2. **Markdown Content:** The main report content including headers, paragraphs, tables, lists, code blocks, and images.
+<pre><code class="language-yaml">
+---
+title: "Weekly Influenza Surveillance Report"
+author: "Your Name"
+date: "2025-01-01"
+---
+</code></pre>
 
-An example of both sections is shown below:
+### Markdown Content
+The markdown content is the main report including the headers, paragraphs, tables, lists, code blocks, and images.
 
 <pre><code class="language-markdown">
-&lt;!-- front matter content starts here --&gt;
+## Overview
+This is a report for ...
+</code></pre>
+
+Below is an example of these two sections shown in the same report document:
+<pre><code class="language-markdown">
 ---
 title: "Weekly Influenza Surveillance Report"
 author: "Your Name"
 date: "2025-01-01"
 ---
 
-&lt;!-- main report (markdown) content starts here --&gt;
 ## Overview
 This is a report for ...
 </code></pre>
-
-
 
 ## Rendering Markdown with Pandoc
 
@@ -93,8 +103,6 @@ pandoc genome-report.md \
 
 Because relative image paths are resolved from the location of the Markdown file, the same `genome-report.md` that renders to HTML will also render to PDF with no changes — Pandoc finds `media/tree.png` in both cases.
 
----
-
 ## Example: The Genome Report Template
 
 A ready-to-use surveillance report template is provided for this workshop:
@@ -119,8 +127,6 @@ pandoc genome-report.md --pdf-engine=xelatex --toc \
 </code></pre>
 
 5. Open the resulting files and confirm the figure appears in both.
-
----
 
 ## Extending Markdown with Quarto
 
@@ -158,6 +164,6 @@ With Quarto, the `genome-report.md` workflow extends naturally to an automated r
 - **Regenerate** figures (phylogenetic trees, coverage plots) as part of the render.
 - **Output** the same document as HTML, PDF, or Word without changing the source.
 
-A fully automated Quarto version of the template (`genome_report.qmd`) is available under `WIP/genome_report/` in this repository for reference.
+A fully automated Quarto version of the template (`genome_report.qmd`) is available under `../../practical/report_automation/genome_report/` in this repository for reference.
 
 Pandoc is the foundation; Quarto is what you reach for when the report needs to run itself.
