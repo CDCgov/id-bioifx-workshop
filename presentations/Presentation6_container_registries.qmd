@@ -40,6 +40,7 @@ By the end of this session, you will:
 
 Bioinformatics often involves:
 
+- Predominantly linux-based tools
 - Complex software stacks
 - Conflicting dependencies
 - Version mismatches
@@ -100,12 +101,54 @@ Think of it as:
 ![](../assets/images/containers-meditating.png)
 :::
 ::::
+## Key Definitions
+
+**Kernel** — the core of an operating system; manages processes, memory, files, networking, and hardware. Containers share the host's kernel, which is why they are lightweight. Linux containers need a Linux kernel (macOS/Windows use a hidden Linux VM).
+
+**Daemon** — a background process that runs continuously, waiting for requests. Docker runs a daemon (`dockerd`); Podman and Apptainer are *daemonless* and run containers directly.
+
+**Runtime** — the software that actually starts and runs a container.
+
+- **High-level runtime** (e.g., containerd) — manages the full lifecycle: pulling images, storage, networking, then delegates to a low-level runtime
+- **Low-level runtime** (e.g., runc, crun, Apptainer runtime) — talks to the kernel to create the isolated container process
+
+## Core Components of a Container System
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Container Engine** — user-facing CLI/API
+
+- Docker, Podman, Apptainer
+
+**High-level Runtime** — daemon managing lifecycle (pull, store, run)
+
+- containerd (used by Docker), Podman (daemonless)
+
+**Low-level Runtime** — spawns the actual container process
+
+- runc, crun, Apptainer runtime
+
+**Linux VM layer** (macOS/Windows only)
+
+- Lima, Docker Desktop VM, Podman Machine, WSL2
+- Provides the Linux kernel containers need
+
+:::
+
+::: {.column width="50%"}
+![](../assets/images/containers-compnent-layers.png){width="60%"}
+:::
+
+::::
+
+
 ## Images vs Containers
 
 :::: {.columns}
 
 ::: {.column width="40%"}
-- **Image** = blueprint, usually read-only
+- **Image** = blueprint, binary snapshot 
 - **Container** = running instance of an image
 
 ::: {.callout-tip}
@@ -198,6 +241,7 @@ A **container registry** is a storage location for container images.
 1. Find a container in a registry
 2. Pull or download the image
 3. Run analysis using the container
+
 ![](../assets/images/containers-dockerhub-cdcgov.png)
 :::
 ::: {.column width="50%"}
@@ -207,6 +251,26 @@ A **container registry** is a storage location for container images.
 ![](../assets/images/containers-images-container.png)
 :::
 ::::
+
+## How Containers Run
+
+**Ephemeral** (most common in bioinformatics)
+
+- Container starts, runs a task, then is automatically removed
+- `docker run --rm` — the `--rm` flag deletes the container when it exits
+- Ideal for pipelines: each step gets a fresh, clean environment
+
+**Interactive**
+
+- You get a shell inside the container to explore or debug
+- `docker run -it ubuntu bash` — opens a terminal session inside the container
+- Useful for testing tools, inspecting files, or troubleshooting
+
+**Background (detached)**
+
+- Container runs as a long-lived service (e.g., a database or web server)
+- `docker run -d nginx` — starts the container and returns you to your terminal
+- Less common in bioinformatics, but used for shared services like Galaxy or JupyterHub
 
 ## Workflow Integration
 
@@ -290,9 +354,12 @@ Red flags:
 ::: {.column width="55%"}
 **Root** (default Docker): elevated privileges; risky on shared systems.
 
-**Rootless** (e.g. Apptainer): runs as a normal user; safer for HPC and shared environments.
+**Rootless:**
 
-HPC systems usually restrict root access — this is why Apptainer is common in research computing.
+- **Podman** — rootless by default; drop-in replacement for Docker commands
+- **Apptainer** — rootless by design; runs containers as simple user-space processes
+
+HPC systems usually restrict root access — this is why Apptainer and Podman are preferred in research computing.
 :::
 
 ::: {.column width="45%"}
