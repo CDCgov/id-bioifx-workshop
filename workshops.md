@@ -18,5 +18,6 @@ Below are scheduled workshops.
 </ul>
 
 <div style="text-align: center;">
-  <img src="{{ '/assets/images/DSCF3295-Mejorado-NR.jpg' | relative_url }}" alt="Workshop photo" style="max-width: 80%; height: auto;">
+  <img src="{{ '/assets/images/DSCF3295-Mejorado-NR.jpg' | relative_url }}" alt="Workshop photo from Santiago, Chile training" style="max-width: 80%; height: auto;">
+  <p><em>International Influenza Bioinformatics Workshop — Santiago, Chile (April 2026)</em></p>
 </div>
