@@ -36,7 +36,7 @@ Think about what variables you might need to initiate or logic gates to use.
 
 <div class="exercise-block" markdown="1">
 
-#1. From a list of numbers, determine the mean
+#1. If you had a file that was a list of numbers, determine the mean
 
 <details>
 <summary class="btn-solution">Possible Solution</summary>
@@ -50,7 +50,7 @@ Think about what variables you might need to initiate or logic gates to use.
 </details>
 
 
-#2. Calculate the percentage of numbers in the file that are below 6
+#2. Using the same file from question 1, calculate the percentage of numbers that are below 6
 
 <details>
 <summary class="btn-solution">Possible Solution</summary>
@@ -65,7 +65,7 @@ Think about what variables you might need to initiate or logic gates to use.
 
 </details>
 
-#3. How many different flu subtypes appear in a list?
+#3. If you had a file containing all of the flu samples tested over the course of a year, determine how many different flu subtypes appear in that list?
 
 <details>
 <summary class="btn-solution">Possible Solution</summary>
@@ -79,7 +79,7 @@ Think about what variables you might need to initiate or logic gates to use.
 
 </details>
 
-#4. Translate this DNA into its possible protein sequences (keeping in mind frames, coding and non-coding)
+#4. Translate a DNA sequence into its possible protein sequences (keeping in mind reading frames, both coding and non-coding)
 
 <details>
 <summary class="btn-solution">Possible Solution</summary>
@@ -105,46 +105,38 @@ Think about what variables you might need to initiate or logic gates to use.
 
 <div class="exercise-block" markdown="1">
 
-1. Using the ordinal number file on github (ordinal_check.sh)
+Retrieve the ordinal number file from github (ordinal_check.sh) to complete the following exercises:
 
 ```bash
 wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/logic_and_variable_practical/ordinal_check.sh
 
 ```
 
-2. Exercise 1: change the ordinal statement to execute as true if the number is greater than 50 and less than 100
-3. Exercise 2: change the ordinal statement to execute as true if the number is less than 25 or greater than 75
-4. Exercise 3: change the ordinal statement to execute as true if the number is greater than 1 and less than 10, or greater than or equal to 90 and less than 100
-5. Set a variable to be the current working directory. Change directory to the top level directory. Navigate back to the directory you were in using the variable
-6. Using the Random number generator file on github (random_number_generator.sh)
+1. Change the ordinal statement to execute as true if the number is greater than 50 and less than 100
+2. Change the ordinal statement to execute as true if the number is less than 25 or greater than 75
+3. Change the ordinal statement to execute as true if the number is greater than 1 and less than 10, or greater than or equal to 90 and less than 100
 
 <details>
 <summary class="btn-solution">Possible Solution</summary>
 
 <ol>
   <li>
-    Exercise 1: change the ordinal statement to execute as true if the number is greater than 50 and less than 100.
+    Change the ordinal statement to execute as true if the number is greater than 50 and less than 100.
     <pre><code>if [ "$n" -gt 50 ] && [ "$n" -lt 100 ]; then
   # amend echo statements to reflect exercise instructions
 fi</code></pre>
   </li>
   <li>
-    Exercise 2: change the ordinal statement to execute as true if the number is less than 25 or greater than 75.
+    Change the ordinal statement to execute as true if the number is less than 25 or greater than 75.
     <pre><code>if [ "$n" -lt 25 ] || [ "$n" -gt 75 ]; then
   # amend echo statements to reflect exercise instructions
 fi</code></pre>
   </li>
   <li>
-    Exercise 3: change the ordinal statement to execute as true if the number is greater than 1 and less than 10, or greater than or equal to 90 and less than 100.
+    Change the ordinal statement to execute as true if the number is greater than 1 and less than 10, or greater than or equal to 90 and less than 100.
     <pre><code>if { [ "$n" -gt 1 ] && [ "$n" -lt 10 ]; } || { [ "$n" -ge 90 ] && [ "$n" -lt 100 ]; }; then
   # amend echo statements to reflect exercise instructions
 fi</code></pre>
-  </li>
-  <li>
-    Set a variable to the current working directory, change to the top-level directory, then return using the variable.
-    <pre><code>thispath="$(pwd)"
-cd
-cd "$thispath"</code></pre>
   </li>
 </ol>
 </details>
@@ -158,15 +150,15 @@ cd "$thispath"</code></pre>
 
 <div class="exercise-block" markdown="1">
 
+You'll need to make a directory that contains a series of files for the next exercise.  Use the directions to below to create the directory and download the files.
+
 ```bash
-mkdir loops_practical && cd loops_practical; for ((i=1;i<=99;i++)); do wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/loops_practical/gato${i}; done
+mkdir loops_practical && cd loops_practical; for ((i=1;i<=99;i++)); do wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/loops_practical/cat${i}; done
 ```
 
-1. For every file in the loops_practical directory, if the file is not empty, print the name of the file to stout. (wc - -byte < filename can be used to give the size of a file)
+1. For every file in the loops_practical directory, if the file is not empty, print the name of the file to stout. (wc --byte < filename can be used to give the size of a file)
 2. For each file in a directory, find out if the file contains a shebang line as the first line, if so, print the filename to stout
 3. Find the sick cat! (Hint: execute the files with shebangs!)
-4. For every file in the loops_practical directory, if the file is not empty, print the name of the file to stout. (“wc - -byte < filename” can be used to give the size of a file)
-5. Find the sick cat! (Hint: execute the files with shebangs!)
 
 <details>
 <summary class="btn-solution">Possible Solution</summary>
@@ -191,6 +183,11 @@ done</code></pre>
     fi
   fi
 done</code></pre>
+    A less elegant way to find the sick cat would be to execute every file in the directory, and scroll through the outputs.
+    <pre><code>for i in *; do
+    echo "$i"
+    bash "$i"
+done</code></pre>
   </li>
 </ol>
 </details>
@@ -204,23 +201,20 @@ done</code></pre>
 
 <div class="exercise-block" markdown="1">
 
+Download the files "flu_types.txt", "decode_the_secret_message.txt", and "secret_message_key.txt" into a directory called "pipeline_practical" using the following instructions.
+
 ```bash
 mkdir pipeline_practical && cd pipeline_practical; for i in decode_the_secret_message.txt flu_types.txt secret_message_key.txt; do wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/blob/main/practical/bash_practical_exercises/pipeline_practical/${i} ; done
 
 ```
 
 1. List the contents of a directory, pipe that output to word count to find how many files there are (may be helpful to use man wc to find out what wc can do)
-2. List the contents of a file, sort the contents and find a list of the unique values
-3. Decode the secret message: 1%76q#948^4q5@23q2q492q07&/@i5#q#76
-4. Convert all the numbers into letters using the provided variable
-5. Reverse the order of the sequence
-6. Cut using “/” as delimiter, take the second field
-7. convert all the letters into uppercase
-8. List the contents of a directory, pipe that output to word count to find how many files there are (may be helpful to use man wc to find out what wc can do)
-9. List the contents of the /usr/bin directory, pipe that output to word count to find how many files there are (may be helpful to use “man wc” to find out what wc can do)
-10. List the contents of a file, sort the contents and find a list of the unique values (bonus: count the number of unique values and output to screen)
-11. Convert all the numbers into letters using the provided conversion
-12. convert all the letters into uppercase
+2. In one line, sort the contents of flu_types and output a list of the unique values
+3. Using the following instructions, decode the secret message (see if you can do it in a one-liner): 1%76q#948^4q5@23q2q492q07&/@i5#q#76
+--Convert all the numbers into letters using the provided variable
+--Reverse the order of the sequence
+--Cut using “/” as delimiter, take the second field
+--Convert all the letters into uppercase (Hint: you can translate <code>[:lower:]</code> into <code>[:upper:]</code>)
 
 <details>
 <summary class="btn-solution">Possible Solution</summary>
