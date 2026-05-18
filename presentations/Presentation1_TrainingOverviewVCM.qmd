@@ -69,6 +69,8 @@ Trainees should be able to
 - Causes seasonal epidemics and occasional pandemics
 - Infects the respiratory tract; spreads via droplets and aerosols
 
+![](../assets/images/presentation1_influenza_intro.png){fig-align="center"}
+
 ::: {.callout-note}
 Type A infects humans, birds, pigs, and more — giving it broad pandemic potential.
 :::
@@ -123,6 +125,8 @@ Type A infects humans, birds, pigs, and more — giving it broad pandemic potent
 
 ## Virion Structure
 
+:::::: columns
+::: {.column width="55%"}
 The influenza virion has three main layers:
 
 ::: {.bigtable}
@@ -138,9 +142,21 @@ The influenza virion has three main layers:
 - **HA** — binds host cell receptors
 - **NA** — releases new virions from the host cell
 - **PB1/PB2/PA** — replicate and transcribe the viral genome
+:::
+
+::: {.column width="45%"}
+![](../assets/images/presentation1_influenza_intro_virion.svg){.clean-img fig-alt="Influenza virion structure diagram"}
+:::
+::::::
+
+::: footnotes
+Source: [ViralZone — Influenza A](https://viralzone.expasy.org/6), Swiss Institute of Bioinformatics
+:::
 
 ## The Genome
 
+:::::: columns
+::: {.column width="55%"}
 Influenza A carries **8 segments of negative-sense, single-stranded RNA**, each encoding key proteins:
 
 ::: {.bigtable}
@@ -156,6 +172,16 @@ Influenza A carries **8 segments of negative-sense, single-stranded RNA**, each 
 :::
 
 > Subtypes are named by HA & NA combination — e.g., **H1N1**, **H3N2**, **H5N1**
+:::
+
+::: {.column width="45%"}
+![](../assets/images/presentation1_influenza_intro_genome.svg){.clean-img fig-alt="Influenza A genome segment diagram"}
+:::
+::::::
+
+::: footnotes
+Source: [ViralZone — Influenza A](https://viralzone.expasy.org/6), Swiss Institute of Bioinformatics
+:::
 
 ## ¿Why? {.why-slide background-color="#ffffff"}
 
@@ -194,6 +220,10 @@ Influenza A carries **8 segments of negative-sense, single-stranded RNA**, each 
 - Can trigger **pandemics** (e.g., 2009 H1N1)
 :::
 :::
+
+![](../assets/images/presentation1_influenza_intro_driftshift.png){.clean-img fig-alt="Antigenic drift and shift diagram" fig-align="center"}
+
+
 
 ## Vaccine strain is chosen \~8 months before flu season
 
@@ -974,6 +1004,7 @@ The data supported recommending a cell-propagated **A/Darwin/1415/2025 (H3N2)-li
 *Slide credit: Dr. Becky Kondor*
 :::
 
+<!--
 ## Specimens Received at CDC
 
 ::: subtitle-line
@@ -1000,6 +1031,7 @@ Thank you for submitting influenza virus positive specimens to **WHO CC at CDC**
 ::: footnotes
 *Slide credit: Dr. Becky Kondor*
 :::
+-->
 
 ## Seasonal Influenza Specimen Shipping Guidelines for CDC {.smaller}
 
