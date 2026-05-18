@@ -160,6 +160,8 @@ mkdir loops_practical && cd loops_practical; for ((i=1;i<=99;i++)); do wget http
 2. For each file in a directory, find out if the file contains a shebang line as the first line, if so, print the filename to stout
 3. Find the sick cat! (Hint: execute the files with shebangs!)
 
+{% include qa.html id="practical_sick_cat" %}
+
 <details>
 <summary class="btn-solution">Possible Solution</summary>
 
