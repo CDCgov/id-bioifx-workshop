@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Report Automation with Quarto
+title: "Advanced Reporting: Automation with Quarto"
 sidebar: workshop_sidebar
 topnav: topnav
-permalink: /lessons/18b-report-automation/
+permalink: /lessons/18b-advanced-reporting
 ---
 
 {: title}
@@ -103,7 +103,7 @@ The example below shows the general anatomy of a code chunk. The key difference 
 #| echo: false
 #| output: true
 
-print("Bioinformaticians rule, epis drool!")
+print("Bioinformaticians rule!")
 ```
 </code></pre>
 
@@ -122,7 +122,7 @@ Execution settings control how and when code chunks run in a document. They dete
 | `error`   | Show code errors            |
 | `cache`   | Cache execution result      |
 
-In the example above, the result of code execution (`Bioinformaticians rule, epis drool!`) would be rendered, but the code itself (`print(...)`) would not.
+In the example above, the result of code execution (`Bioinformaticians rule`) would be rendered, but the code itself (`print(...)`) would not.
 
 ### Execution Engines
 
