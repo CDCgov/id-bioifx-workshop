@@ -1,0 +1,408 @@
+---
+title: "Advanced Reporting: Automation with Quarto"
+author: "Jared Johnson"
+format:
+  revealjs:
+    theme: moon
+    slide-number: true
+    toc: true
+    toc-depth: 1
+    code-block-height: 250px
+    embed-resources: true # output file is self-contained and sharable
+    smaller: true
+    scrollable: true
+
+execute:
+  echo: true
+  eval: false
+---
+
+```{=html}
+<style>
+/* Table layout */
+.reveal table,
+.reveal section table {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  border-collapse: collapse !important;
+  width: 100% !important;
+  font-size: 0.82em !important;
+  border: none !important;
+}
+
+/* Cell styling */
+.reveal table th,
+.reveal table td,
+.reveal section table th,
+.reveal section table td {
+  text-align: left !important;
+  padding: 7px 12px !important;
+  border: none !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  vertical-align: top !important;
+  line-height: 1.4 !important;
+}
+
+/* Header row */
+.reveal table thead th,
+.reveal section table thead th {
+  background-color: #f1f5f9 !important;
+  color: #1e293b !important;
+  font-weight: 600 !important;
+  border-bottom: 2px solid #cbd5e1 !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Zebra striping */
+.reveal table tbody tr:nth-child(even),
+.reveal section table tbody tr:nth-child(even) {
+  background-color: #f8fafc !important;
+}
+
+/* Hover highlight */
+.reveal table tbody tr:hover,
+.reveal section table tbody tr:hover {
+  background-color: #eff6ff !important;
+}
+
+/* Remove border on last row */
+.reveal table tbody tr:last-child td,
+.reveal section table tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* Scrollable side-by-side containers */
+.scroll-panel {
+  height: 420px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5em 0.75em;
+  font-size: 0.8em;
+}
+.scroll-panel pre {
+  margin: 0;
+}
+.two-col-scroll {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin-top: 0.5em;
+}
+</style>
+```
+
+## Module Objectives
+
+- Understand how Quarto can be used to automate routine reports
+
+## What is Quarto?
+
+[Quarto](https://quarto.org) is an open-source publishing system that extends Markdown with the ability to **execute code inside the document at render time**.
+
+- A Quarto document (`.qmd`) is a Markdown file with embedded Python, R, or Bash chunks
+- When Quarto renders the document, it runs each chunk and inserts the computed output directly into the report
+- Output includes: summary statistics, tables, plots
+
+# Rendering Reports
+
+## Rendering Options
+
+### VS Code
+The Quarto extension provides a preview button and render command directly in the editor.
+
+### RStudio
+Built-in Quarto support, including a visual editor and **Render** button.
+
+### Command Line
+
+````bash
+quarto render document.qmd --to html,pdf
+````
+
+# Front Matter
+
+## Document Formatting
+
+Document formatting can be applied globally or to specific document types (HTML, PDF, etc.,):
+
+````yaml
+---
+# applied to all formats (global)
+toc: true
+callout-appearance: simple
+
+# applied to specific formats
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: report
+    margin-left: 1in
+---
+````
+
+## Code Chunk Execution
+
+Code chunk parameters can be defined globally in the front matter - these will be used as defaults unless overridden in an individual code block:
+
+````yaml
+---
+execute:
+  echo: false
+  warning: false
+  cache: true
+---
+````
+
+## Custom Parameters
+
+Use `params` to parameterize inputs — useful when the same report is run against different datasets:
+
+````yaml
+---
+params:
+  tree_file: /path/to/tree.nwk
+  mira_summary: /path/to/mira-summary.csv
+---
+````
+
+- Reference in code chunks via `params$tree_file` (R) or `params['tree_file']` (Python).
+
+- Override from the command line with `--execute-params`.
+
+# Code Chunks
+
+## Anatomy of a Code Chunk
+
+The key difference between a **code block** and a **code chunk** are the brackets (`{}`) around the language:
+
+```{{python}}
+#| echo: false
+#| output: true
+
+print("Bioinformaticians rule!")
+```
+
+Execution settings can be set in `{}` or using the `#|` format shown above.
+
+## Common Execution Settings
+
+| Option    | Behavior                     |
+|-----------|------------------------------|
+| `eval`    | Run code                     |
+| `echo`    | Show code                    |
+| `output`  | Show code result             |
+| `include` | Run code but hide all output |
+| `warning` | Show code warnings           |
+| `message` | Show code messages           |
+| `error`   | Show code errors             |
+| `cache`   | Cache execution result       |
+
+## Execution Engines
+
+- **R and Bash** → [Knitr](https://yihui.org/knitr/) (default)
+- **Python** → [Jupyter](https://jupyter.org) (default)
+- **Python via Knitr** → [reticulate](https://rstudio.github.io/reticulate/) package
+
+With `reticulate`, R and Python chunks can share objects.
+
+## Execution Engines: Example
+
+_step 1_
+```{{r}}
+# create object in R
+df <- readr::read_csv("results.csv")
+```
+_step 2_
+```{{python}}
+# access in Python via reticulate
+df.head()                              
+```
+
+## Importing Packages and Modules
+
+Consolidate all imports into a single "dependency chunk" at the top of the document:
+
+```{{python}}
+#| include: false
+import numpy as np
+import pandas as pd
+```
+
+Once imported, dependencies are available to all subsequent code chunks.
+
+::: {.callout-warning}
+Bash chunks are executed as independent subprocesses — variables defined in one Bash chunk are **not** available to subsequent Bash chunks.
+:::
+
+---
+
+# Common Usage
+
+## Dataframes and Tables
+
+::: {.columns}
+::: {.column width="50%"}
+**R**
+```{{r}}
+df <- read.csv("data.csv")
+knitr::kable(df)
+```
+:::
+::: {.column width="50%"}
+**Python**
+```{{python}}
+import pandas as pd
+
+df = pd.read_csv("data.csv")
+df
+```
+:::
+:::
+
+**Example output:**
+
+```{=html}
+<table>
+  <thead>
+    <tr><th>sample_id</th><th>organism</th><th>coverage</th><th>qc_pass</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>SRR001</td><td>Influenza A</td><td>142.3</td><td>TRUE</td></tr>
+    <tr><td>SRR002</td><td>Influenza B</td><td>98.7</td><td>TRUE</td></tr>
+    <tr><td>SRR003</td><td>SARS-CoV-2</td><td>34.1</td><td>FALSE</td></tr>
+    <tr><td>SRR004</td><td>SARS-CoV-2</td><td>201.5</td><td>TRUE</td></tr>
+  </tbody>
+</table>
+```
+
+## Figures
+
+::: {.columns}
+::: {.column width="50%"}
+**R**
+```{{r}}
+plot(df$x, df$y)
+
+ggplot(df, aes(x = x, y = y)) +
+  geom_point()
+```
+:::
+::: {.column width="50%"}
+**Python**
+```{{python}}
+import plotly.express as px
+
+fig = px.scatter(df, x="x", y="y")
+fig.show()
+```
+:::
+:::
+
+**Example output:**
+
+```{=html}
+<div style="background:#fff; border:1px solid #e2e8f0; border-radius:6px; padding:0.75em; display:inline-block;">
+  <svg width="320" height="200" xmlns="http://www.w3.org/2000/svg">
+    <!-- axes -->
+    <line x1="40" y1="10" x2="40" y2="165" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="40" y1="165" x2="310" y2="165" stroke="#94a3b8" stroke-width="1.5"/>
+    <!-- y axis labels -->
+    <text x="34" y="168" text-anchor="end" font-size="10" fill="#64748b">0</text>
+    <text x="34" y="128" text-anchor="end" font-size="10" fill="#64748b">25</text>
+    <text x="34" y="88"  text-anchor="end" font-size="10" fill="#64748b">50</text>
+    <text x="34" y="48"  text-anchor="end" font-size="10" fill="#64748b">75</text>
+    <!-- x axis labels -->
+    <text x="40"  y="178" text-anchor="middle" font-size="10" fill="#64748b">0</text>
+    <text x="108" y="178" text-anchor="middle" font-size="10" fill="#64748b">25</text>
+    <text x="175" y="178" text-anchor="middle" font-size="10" fill="#64748b">50</text>
+    <text x="243" y="178" text-anchor="middle" font-size="10" fill="#64748b">75</text>
+    <text x="310" y="178" text-anchor="middle" font-size="10" fill="#64748b">100</text>
+    <!-- axis titles -->
+    <text x="175" y="195" text-anchor="middle" font-size="11" fill="#475569">x</text>
+    <text x="10"  y="90"  text-anchor="middle" font-size="11" fill="#475569" transform="rotate(-90,10,90)">y</text>
+    <!-- data points -->
+    <circle cx="56"  cy="148" r="5" fill="#3b82f6" fill-opacity="0.75"/>
+    <circle cx="75"  cy="138" r="5" fill="#3b82f6" fill-opacity="0.75"/>
+    <circle cx="94"  cy="130" r="5" fill="#3b82f6" fill-opacity="0.75"/>
+    <circle cx="116" cy="118" r="5" fill="#3b82f6" fill-opacity="0.75"/>
+    <circle cx="135" cy="108" r="5" fill="#3b82f6" fill-opacity="0.75"/>
+    <circle cx="158" cy="95"  r="5" fill="#3b82f6" fill-opacity="0.75"/>
+    <circle cx="180" cy="82"  r="5" fill="#3b82f6" fill-opacity="0.75"/>
+    <circle cx="200" cy="68"  r="5" fill="#3b82f6" fill-opacity="0.75"/>
+    <circle cx="225" cy="55"  r="5" fill="#3b82f6" fill-opacity="0.75"/>
+    <circle cx="250" cy="40"  r="5" fill="#3b82f6" fill-opacity="0.75"/>
+    <circle cx="275" cy="28"  r="5" fill="#3b82f6" fill-opacity="0.75"/>
+    <circle cx="295" cy="18"  r="5" fill="#3b82f6" fill-opacity="0.75"/>
+  </svg>
+</div>
+```
+
+Alternatively, export a figure and embed it with standard Markdown: `![](path/to/figure.jpg)`
+
+## Inline Text
+
+Integrate computed values directly into narrative text:
+
+| Language | Syntax | 
+|----------|--------|
+| Python | ```{{python}} len(df)``` |
+| R | ```r nrow(df)``` |
+
+**Example:**
+
+> This report includes ```{{python}} len(df)``` samples.
+
+**Rendered:**
+
+> This report includes 100 samples.
+
+Python requires curly brackets for inline references; R does not.
+
+# Example Report
+
+An example report can be found [here](https://github.com/CDCgov/id-bioifx-workshop/blob/main/practical/report_automation/genome_report/). 
+
+## Example Report Description
+
+```{=html}
+<div class="two-col-scroll">
+  <div class="scroll-panel">
+    <strong>Structure</strong>
+    <pre>
+├── _quarto.yml
+├── data
+│   ├── mira
+│   │   ├── mira_example_mira_output_2_summary-2.csv
+│   │   └── mira_example_mira_output_summary-2.csv
+│   └── samplesheet.csv
+├── genome_report.html
+├── genome_report.qmd
+└── src
+    └── report
+        ├── __init__.py
+        ├── config.py
+        ├── data.py
+        ├── display.py
+        ├── io_ops.py
+        ├── map.py
+        ├── timeline.py
+        └── tree.py
+    </pre>
+  </div>
+  <div class="scroll-panel">
+    <strong>Key Files</strong>
+    <table style="width:100%; border-collapse:collapse; margin-top:0.5em;">
+      <thead><tr><th style="border-bottom:1px solid #ccc; padding:4px 6px;">File / Directory</th><th style="border-bottom:1px solid #ccc; padding:4px 6px;">Description</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:4px 6px; vertical-align:top;"><a href="../../practical/report_automation/genome_report/genome_report.html" target="_blank"><code>genome_report.html</code></a></td><td style="padding:4px 6px;">Rendered output of <code>quarto_report.qmd</code> in HTML format. This is the final report that would be shared.</td></tr>
+        <tr><td style="padding:4px 6px; vertical-align:top;"><a href="https://github.com/CDCgov/id-bioifx-workshop/blob/main/practical/report_automation/genome_report/genome_report.qmd" target="_blank"><code>genome_report.qmd</code></a></td><td style="padding:4px 6px;">Quarto markdown file containing the markdown and Quarto syntax used to create the rendered report. Relies on <code>data/</code>, <code>src/</code>, and <code>_quarto.yml</code>.</td></tr>
+        <tr><td style="padding:4px 6px; vertical-align:top;"><a href="https://github.com/CDCgov/id-bioifx-workshop/blob/main/practical/report_automation/genome_report/data/" target="_blank"><code>data/</code></a></td><td style="padding:4px 6px;">Sample data used to generate the report: samplesheet, MIRA output, and a tree file. This data would typically change each run.</td></tr>
+        <tr><td style="padding:4px 6px; vertical-align:top;"><a href="https://github.com/CDCgov/id-bioifx-workshop/blob/main/practical/report_automation/genome_report/src/" target="_blank"><code>src/</code></a></td><td style="padding:4px 6px;">Custom Python code imported as a module within the report script and executed within code chunks.</td></tr>
+        <tr><td style="padding:4px 6px; vertical-align:top;"><a href="https://github.com/CDCgov/id-bioifx-workshop/blob/main/practical/report_automation/genome_report/_quarto.yml" target="_blank"><code>_quarto.yml</code></a></td><td style="padding:4px 6px;">Config file for front matter parameters updated each run. Used as: <code>quarto render genome_report.qmd --execute-params _quarto.yml</code>.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+```

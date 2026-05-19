@@ -72,6 +72,10 @@ entries:
       url: /lessons/10-containers-registries/
       output: web
 
+    - title: Tool Installation
+      url: /lessons/10b-tool-installation/
+      output: web
+
   - title: Genomics & Analysis
     output: web
     folderitems:
@@ -124,8 +128,12 @@ entries:
       url: /lessons/19-git-basics/
       output: web
 
-    - title: Reporting
-      url: /lessons/18-reporting/
+    - title: Basic Reporting
+      url: /lessons/18-basic-reporting/
+      output: web
+
+    - title: Advanced Reporting
+      url: /lessons/18b-advanced-reporting/
       output: web
 
   - title: Post-Workshop
