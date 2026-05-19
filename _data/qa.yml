@@ -269,6 +269,23 @@ practical_chmod_add_read:
   show_hint_after: 2
 
 # ═══════════════════════════════════════════════════════════════════════════════
+# BIFX Programming Exercises (08-bifx-programming-exercises.md)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Exercise 3 — For loops, 3. sick cat
+practical_sick_cat:
+  question: "What is the number of the sick cat?"
+  answers:
+    - "22"
+    - "twenty two"
+    - "twenty-two"
+  hint: "It's one of the executable files in the loops practical directory."
+  success: "Correct! ✅"
+  failure: "Not quite. Try again."
+  explanation: "If you execute the files of the directory, cat 22 should output 'the sick cat' to screen."
+  show_hint_after: 2
+
+# ═══════════════════════════════════════════════════════════════════════════════
 # Genome Assembly Practical (11b-genome-assembly-practical.md)
 # ═══════════════════════════════════════════════════════════════════════════════
 
