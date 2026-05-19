@@ -32,7 +32,7 @@ micromamba create -n flu_env \
   -c conda-forge \
   -c defaults \
   "sra-tools=3.4.1" \
-  "samtools=1.23.1" \
+  "samtools=1.1" \
   "nextflow=26.04.1" \
   --yes
 </code></pre>
