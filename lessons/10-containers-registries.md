@@ -37,11 +37,7 @@ permalink: /lessons/10-containers-registries/
 
 These exercises walk you through installing Docker Desktop, configuring resources, running containers in different modes, and learning how volumes work.
 
-All `docker` commands are run from a **terminal**:
-
-- **Windows** — WSL2 Ubuntu shell (Windows Terminal)
-- **macOS** — Terminal.app or iTerm2
-- **Linux** — any terminal emulator
+All `docker` commands can be run from the terminal in VS Code.
 
 ---
 
