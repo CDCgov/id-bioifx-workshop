@@ -206,7 +206,7 @@ done</code></pre>
 Download the files "flu_types.txt", "decode_the_secret_message.txt", and "secret_message_key.txt" into a directory called "pipeline_practical" using the following instructions.
 
 ```bash
-mkdir pipeline_practical && cd pipeline_practical; for i in decode_the_secret_message.txt flu_types.txt secret_message_key.txt; do wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/blob/main/practical/bash_practical_exercises/pipeline_practical/${i} ; done
+mkdir pipeline_practical && cd pipeline_practical; for i in decode_the_secret_message.txt flu_types.txt secret_message_key.txt; do wget https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/practical/bash_practical_exercises/pipeline_practical/${i} ; done
 
 ```
 
