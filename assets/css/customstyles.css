@@ -1541,3 +1541,50 @@ details > summary.btn-solution:hover {
 details[open] > summary.btn-solution {
     margin-bottom: 15px;
 }
+
+/* Styled collapsible sections (agendas, OS-specific instructions) */
+details.collapsible-md,
+details.os-select {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 0.5rem 0;
+    background: #f9f9f9;
+}
+details.collapsible-md > summary,
+details.os-select > summary {
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    font-weight: bold;
+    font-size: 1.05rem;
+    background: #e8f0fe;
+    border-radius: 6px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+details.collapsible-md > summary::before,
+details.os-select > summary::before {
+    content: "\25B6";
+    font-size: 0.75rem;
+    transition: transform 0.2s;
+}
+details.collapsible-md[open] > summary::before,
+details.os-select[open] > summary::before {
+    content: "\25BC";
+}
+details.collapsible-md > summary::-webkit-details-marker,
+details.os-select > summary::-webkit-details-marker {
+    display: none;
+}
+details.collapsible-md > summary:hover,
+details.os-select > summary:hover {
+    background: #d2e3fc;
+}
+details.collapsible-md > div,
+details.collapsible-md > p,
+details.collapsible-md > table,
+details.os-select > div,
+details.os-select > p {
+    padding: 0.75rem 1rem;
+}
