@@ -107,13 +107,27 @@ You should see output referencing your Linux distribution (or the Docker VM) and
 <details class="os-select" markdown="1">
 <summary><strong>Windows (WSL2)</strong></summary>
 
-Docker Desktop on WSL2 shares memory and CPU with the WSL2 VM. To control this, edit (or create) the WSL config file **from PowerShell or cmd**:
+Docker Desktop on WSL2 shares memory and CPU with the WSL2 VM.
+
+First, check how much RAM and how many CPUs your host machine has. Open **PowerShell** and run:
+
+```powershell
+# Total physical memory (GB)
+[math]::Round((Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory / 1GB)
+
+# Total logical processors
+(Get-CimInstance Win32_ComputerSystem).NumberOfLogicalProcessors
+```
+
+Use these numbers to calculate \~80% for each (e.g., 16 GB → 13 GB, 8 CPUs → 6).
+
+Now edit (or create) the WSL config file **from PowerShell or cmd**:
 
 ```
 notepad %USERPROFILE%\.wslconfig
 ```
 
-Add the following (adjust values to \~80% of your system):
+Add the following (replace the values with your \~80% calculations):
 
 ```ini
 [wsl2]
