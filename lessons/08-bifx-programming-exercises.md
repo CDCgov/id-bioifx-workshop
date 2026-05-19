@@ -213,10 +213,10 @@ mkdir pipeline_practical && cd pipeline_practical; for i in decode_the_secret_me
 1. List the contents of a directory, pipe that output to word count to find how many files there are (may be helpful to use man wc to find out what wc can do)
 2. In one line, sort the contents of flu_types and output a list of the unique values
 3. Using the following instructions, decode the secret message (see if you can do it in a one-liner): 1%76q#948^4q5@23q2q492q07&/@i5#q#76
---Convert all the numbers into letters using the provided variable
---Reverse the order of the sequence
---Cut using “/” as delimiter, take the second field
---Convert all the letters into uppercase (Hint: you can translate <code>[:lower:]</code> into <code>[:upper:]</code>)
+  - Convert all the numbers into letters using the provided variable
+  - Reverse the order of the sequence
+  - Cut using “/” as delimiter, take the second field
+  - Convert all the letters into uppercase (Hint: you can translate <code>[:lower:]</code> into <code>[:upper:]</code>)
 
 <details>
 <summary class="btn-solution">Possible Solution</summary>
