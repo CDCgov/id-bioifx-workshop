@@ -9,17 +9,10 @@ permalink: /lessons/10b-tool-installation/
 <p style="color: #015CAE; font-size: 19px;">Content developed by Jared Johnson</p>
 
 ## Module Objectives
-- Install Docker and Nextstrain
-- Install tools used in later modules into a single Micromamba environment
-
-## Docker
-### Install
-Follow the instructions at the links below to install Docker on your system:
-- <a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank">Ubuntu</a>
-- <a href="https://docs.docker.com/desktop/setup/install/mac-install/" target="_blank">macOS (Docker Desktop)</a>
+- Install Nextstrain
+- Install all other tools used in later modules into a single Micromamba environment
 
 ## Nextstrain
-### Install
 Install Nextstrain following the `Conda` runtime instructions on the <a href="https://docs.nextstrain.org/en/latest/install.html#installation-steps" target="_blank">docs page</a>.
 
 ## Other Software
