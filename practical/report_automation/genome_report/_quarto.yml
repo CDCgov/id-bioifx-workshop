@@ -1,0 +1,41 @@
+params:
+  # -------------------------
+  # Report metadata
+  # -------------------------
+  title: National Influenza Genomic Surveillance Report
+  institution: "National Influenza Center / Genomic Surveillance Unit"
+  email: nora.jones@mail.com
+  phone: 1+ 555-123-4567
+  date: today                         # "today" resolves to the render date
+
+  # Use definite: true to prepend "the" when used in a sentence
+  # e.g. "the United States" vs "Brazil"
+  country:
+    name: United States
+    definite: true
+
+  season: 2026 Northern Hemisphere    # Influenza season label
+  period:
+    start: 2026-01-01                 # Reporting period start (YYYY-MM-DD)
+    end: 2026-12-31                   # Reporting period end (YYYY-MM-DD)
+
+  # -------------------------
+  # Input data
+  # -------------------------
+  samplesheet: data/samplesheet.csv   # Sample metadata (see SAMPLESHEET_COLS)
+  mira: data/mira/                    # Directory of MIRA output CSVs (see MIRA_COLS)
+
+  # Phylogenetic trees — one entry per subtype
+  # path: Newick tree file, meta: tip metadata CSV
+  tree:
+    - subtype: H1
+      path: path/to/tree.nwk
+      meta: path/to/tree.csv
+
+  # -------------------------
+  # Narrative content
+  # -------------------------
+  conclusion:
+    - "**Update this in _quarto.yml!** Genomic surveillance during the 2026 influenza season demonstrated ....,
+      supporting national and global influenza risk assessment and vaccine
+      strain selection processes."

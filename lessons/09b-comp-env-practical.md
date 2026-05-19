@@ -75,6 +75,7 @@ python3 -m venv --help
 
 ```bash
 micromamba create -n py311_env python=3.11
+micromamba activate py311_env
 ```
 
 </div>
