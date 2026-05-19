@@ -25,7 +25,7 @@ Quarto documents can be rendered through several tools depending on your workflo
 
 **VS Code** — The Quarto extension for VS Code provides a preview button and render command directly in the editor. You can preview the output in a side panel as you write and render to any format defined in the front matter without leaving the editor.
 
-**RStudio** — RStudio has built-in Quarto support. A **Render** button appears at the top of the editor when a `.qmd` file is open, replacing the familiar Knit button from R Markdown. RStudio also provides a visual editor mode for Quarto documents if you prefer a word-processor-style interface.
+**RStudio** — RStudio has built-in Quarto support. A **Render** button appears at the top of the editor when a `.qmd` file is open. RStudio also provides a visual editor mode for Quarto documents if you prefer a word-processor-style interface.
 
 **Command Line** — Any Quarto document can be rendered from the terminal using the `quarto render` command:
 

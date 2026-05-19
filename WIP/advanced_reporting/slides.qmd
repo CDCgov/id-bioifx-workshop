@@ -1,0 +1,224 @@
+---
+title: "Advanced Reporting: Automation with Quarto"
+author: "Jared Johnson"
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    toc: true
+    toc-depth: 1
+    code-block-height: 400px
+execute:
+  echo: true
+  eval: false
+---
+
+## Module Objectives
+
+- Understand how Quarto can be used to automate routine reports
+
+## What is Quarto?
+
+[Quarto](https://quarto.org) is an open-source publishing system that extends Markdown with the ability to **execute code inside the document at render time**.
+
+- A Quarto document (`.qmd`) is a Markdown file with embedded Python, R, or Bash chunks
+- When Quarto renders the document, it runs each chunk and inserts the computed output directly into the report
+- Output includes: summary statistics, tables, plots
+
+# Rendering Reports
+
+## Rendering Options
+
+### VS Code
+The Quarto extension provides a preview button and render command directly in the editor.
+
+### RStudio
+Built-in Quarto support, including a visual editor and **Render** button.
+
+### Command Line
+
+````bash
+quarto render document.qmd --to html,pdf
+````
+
+# Front Matter
+
+## Document Formatting
+
+Document formatting can be applied globally or to specific document types (HTML, PDF, etc.,):
+
+````yaml
+---
+# applied to all formats (global)
+toc: true
+callout-appearance: simple
+
+# applied to specific formats
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: report
+    margin-left: 1in
+---
+````
+
+## Code Chunk Execution
+
+Code chunk parameters can be defined globally in the front matter - these will be used as defaults unless overridden in an individual code block:
+
+````yaml
+---
+execute:
+  echo: false
+  warning: false
+  cache: true
+---
+````
+## Custom Parameters
+
+Use `params` to parameterize inputs — useful when the same report is run against different datasets:
+
+````yaml
+---
+params:
+  tree_file: /path/to/tree.nwk
+  mira_summary: /path/to/mira-summary.csv
+---
+````
+
+- Reference in code chunks via `params$tree_file` (R) or `params['tree_file']` (Python).
+
+- Override from the command line with `--execute-params`.
+
+# Code Chunks
+
+## Anatomy of a Code Chunk
+
+The key difference between a **code block** and a **code chunk** are the brackets (`{}`) around the language:
+
+```{{python}}
+#| echo: false
+#| output: true
+
+print("Bioinformaticians rule!")
+```
+
+Execution settings can be set in `{}` or using the `#|` format shown above.
+
+## Common Execution Settings
+
+| Option    | Behavior                     |
+|-----------|------------------------------|
+| `eval`    | Run code                     |
+| `echo`    | Show code                    |
+| `output`  | Show code result             |
+| `include` | Run code but hide all output |
+| `warning` | Show code warnings           |
+| `message` | Show code messages           |
+| `error`   | Show code errors             |
+| `cache`   | Cache execution result       |
+
+## Execution Engines
+
+- **R and Bash** → [Knitr](https://yihui.org/knitr/) (default)
+- **Python** → [Jupyter](https://jupyter.org) (default)
+- **Python via Knitr** → [reticulate](https://rstudio.github.io/reticulate/) package
+
+With `reticulate`, R and Python chunks can share objects:
+
+_step 1_
+```{{r}}
+# create object in R
+df <- readr::read_csv("results.csv")
+```
+_step 2_
+```{{python}}
+# access in Python via reticulate
+df.head()                              
+```
+
+## Importing Packages and Modules
+
+Consolidate all imports into a single "dependency chunk" at the top of the document:
+
+```{{python}}
+#| include: false
+import numpy as np
+import pandas as pd
+```
+
+Once imported, dependencies are available to all subsequent code chunks.
+
+::: {.callout-warning}
+Bash chunks are executed as independent subprocesses — variables defined in one Bash chunk are **not** available to subsequent Bash chunks.
+:::
+
+---
+
+# Common Usage
+
+## Dataframes and Tables
+
+::: {.columns}
+::: {.column width="50%"}
+**R**
+```{{r}}
+df <- read.csv("data.csv")
+knitr::kable(df)
+```
+:::
+::: {.column width="50%"}
+**Python**
+```{{python}}
+import pandas as pd
+
+df = pd.read_csv("data.csv")
+df
+```
+:::
+:::
+
+## Figures
+
+::: {.columns}
+::: {.column width="50%"}
+**R**
+```{{r}}
+plot(df$x, df$y)
+
+ggplot(df, aes(x = x, y = y)) +
+  geom_point()
+```
+:::
+::: {.column width="50%"}
+**Python**
+```{{python}}
+import plotly.express as px
+
+fig = px.scatter(df, x="x", y="y")
+fig.show()
+```
+:::
+:::
+
+Alternatively, export a figure and embed it with standard Markdown: `![](path/to/figure.jpg)`
+
+## Inline Text
+
+Integrate computed values directly into narrative text:
+
+| Language | Syntax | 
+|----------|--------|
+| Python | ```{{python}} len(df)``` |
+| R | ```r nrow(df)``` |
+
+**Example:**
+
+> This report includes ```{{python}} len(df)``` samples.
+
+**Rendered:**
+
+> This report includes 100 samples.
+
+Python requires curly brackets for inline references; R does not.
