@@ -143,7 +143,7 @@ docker run \
     --privileged \
     --user $(id -u):$(id -g) \
     -v ${PWD}:/data \
-    cdcgov/mira-nf:v2.1.0 \
+    cdcgov/mira-nf:v2.1.1 \
     nextflow run /MIRA-NF/main.nf \
         -profile mira_nf_container \
         --input /data/samplesheet.csv \
@@ -231,7 +231,7 @@ docker run \
     --privileged \
     -v ${PWD}:/data \
     --user $(id -u):$(id -g) \
-    cdcgov/mira-nf:v2.1.0 \
+    cdcgov/mira-nf:v2.1.1 \
     nextflow run /MIRA-NF/main.nf \
         -profile mira_nf_container \
         --input /data/samplesheet.csv \
