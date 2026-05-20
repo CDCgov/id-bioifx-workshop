@@ -60,11 +60,16 @@ This is a report for ...
 
 ### Installation
 
+##### macOS
 <pre><code class="language-bash">
-# macOS
 brew install pandoc
 
-# Ubuntu / Debian / WSL
+# For PDF output, a LaTeX engine is also required
+brew install --cask basictex
+</code></pre>
+
+##### Ubuntu / Debian / WSL
+<pre><code class="language-bash">
 sudo apt install pandoc
 
 # For PDF output, a LaTeX engine is also required
