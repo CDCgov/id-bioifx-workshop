@@ -93,6 +93,7 @@ exclude:
   - scripts
   - __pycache__
   - WIP/genome_report/genome_report.qmd
+  - practical/advanced_reporting/genome_report.txt
 
 # Keep site deterministic
 future: false
