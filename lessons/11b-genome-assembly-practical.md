@@ -141,7 +141,6 @@ Build a [Mira-NF Docker](https://hub.docker.com/r/cdcgov/mira-nf/tags) run comma
    #!/bin/bash
 docker run \
     --privileged \
-    --user $(id -u):$(id -g) \
     -v ${PWD}:/data \
     cdcgov/mira-nf:v2.1.1 \
     nextflow run /MIRA-NF/main.nf \
@@ -230,7 +229,6 @@ ls fastqs | cut -f1 -d_ | uniq | sed "s/$/,Test/g" >> samplesheet.csv
 docker run \
     --privileged \
     -v ${PWD}:/data \
-    --user $(id -u):$(id -g) \
     cdcgov/mira-nf:v2.1.1 \
     nextflow run /MIRA-NF/main.nf \
         -profile mira_nf_container \
