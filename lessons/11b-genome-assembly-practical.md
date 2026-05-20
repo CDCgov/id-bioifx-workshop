@@ -272,6 +272,7 @@ After MIRA-NF completes, extend your wrapper script with one or more of the foll
 
 ---
 
+<!--
 ### Exercise 7 — Samtools Practical
 {: .mt-4}
 
@@ -307,6 +308,7 @@ samtools view -o A_HA_H1.sam A_HA_H1.bam
 </details>
 
 ---
+-->
 
 ### Exercise 8 — Multiple Sequence Alignment Practical
 {: .mt-4}
