@@ -79,7 +79,21 @@ def load_inputs(params: dict) -> pd.DataFrame:
 
     df_joined = df_sh.merge(df_mira, on="sample_id", how="left")
 
-    return df_joined
+    tree_files = {}
+    for rec in params.get("tree", {}):
+        subtype = rec.get("subtype")
+        tree_f  = rec.get("path")
+        meta_f  = rec.get("meta")
+
+        if not subtype or not tree_f:
+            continue
+
+        tree_files[subtype] = {
+            "path": tree_f,
+            "meta": meta_f
+        }
+
+    return df_joined, tree_files
     
 def uniq(df, col: str) -> list:
     s = df.get(col)

@@ -114,6 +114,11 @@ $presentation-h3-font-size: 1.05em;
   background: linear-gradient(135deg, #003366 0%, #00578a 100%);
 }
 
+.reveal .section-divider h1 {
+  color: #ffffff;
+  border-bottom-color: #ffd54f;
+}
+
 .reveal .section-divider h2 {
   color: #ffffff;
   border-bottom-color: #ffd54f;
@@ -451,6 +456,22 @@ $hi-border: 2.5px;
 .reveal .bigtable td {
   text-align: left !important;
   padding: 0.35em 0.7em;
+}
+
+// ---------------- Medium, left-aligned tables (slides 5, 6) ----------------
+.reveal .medtable {
+  text-align: left;
+}
+.reveal .medtable table {
+  font-size: 0.7em;
+  margin-left: 0;
+  margin-right: auto;
+  width: auto;
+}
+.reveal .medtable th,
+.reveal .medtable td {
+  text-align: left !important;
+  padding: 0.28em 0.55em;
 }
 
 // ---------------- Orange-highlighted tables (slide 26 NT tables) ----------------

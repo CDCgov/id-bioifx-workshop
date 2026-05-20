@@ -6,7 +6,6 @@ params:
   institution: "National Influenza Center / Genomic Surveillance Unit"
   email: nora.jones@mail.com
   phone: 1+ 555-123-4567
-  date: today                         # "today" resolves to the render date
 
   # Use definite: true to prepend "the" when used in a sentence
   # e.g. "the United States" vs "Brazil"
@@ -29,8 +28,7 @@ params:
   # path: Newick tree file, meta: tip metadata CSV
   tree:
     - subtype: H1
-      path: path/to/tree.nwk
-      meta: path/to/tree.csv
+      path: data/h1.nwk
 
   # -------------------------
   # Narrative content

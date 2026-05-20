@@ -1,7 +1,7 @@
 import pandas as pd
 from IPython.display import HTML, display
 
-from src.report import data
+from src.report import data, tree
 
 
 def _display_table(rows, cols: list[str] | None = None) -> str:
@@ -184,3 +184,7 @@ def sequence_submissions(df: pd.DataFrame) -> None:
     passed.columns = columns
     
     return _display_table(passed, cols=columns)
+
+def render_tree(newick_file):
+    fig = tree.plot_tree(newick_file)
+    fig.show()

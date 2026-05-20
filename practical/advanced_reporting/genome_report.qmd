@@ -25,8 +25,11 @@ execute:
 #| label: config
 #| include: false
 
+from datetime import date
 from src.report import data, config, display
 from IPython.display import Markdown
+
+today = date.today().strftime("%Y-%m-%d")
 
 # ---- config & params -----
 cfg = config.load_config("_quarto.yml")
@@ -44,7 +47,7 @@ okabe_ito = [
   "#999999"  # grey
 ]
 
-df = data.load_inputs(params)
+df, tree_files = data.load_inputs(params)
 ```
 
 <!-- Title / Header -->
@@ -59,7 +62,7 @@ df = data.load_inputs(params)
 :::
 
 ::: {.column width="50%"}
-**Date of Report**: {{< meta params.date >}} \
+**Date of Report**: `{python} today` \
 **Reporting period**: {{< meta params.period.start >}} – {{< meta params.period.end >}}
 :::
 ::::
@@ -148,10 +151,10 @@ The H275Y substitution is associated with reduced susceptibility to oseltamivir.
 - **Gene(s) analyzed:** ☐ HA ☐ NA ☐ Whole genome
 
 ### 7.2 Phylogenetic Tree Summary
-
-- Circulating viruses clustered primarily with **[reference clade/strain]**
-- No major divergent clusters were observed ☐ / Divergent clusters were observed ☐
-- Genetic diversity was **[low / moderate / high]**
+```{python}
+for clade, files in tree_files.items():
+    display.render_tree(files.get("path"))
+```
 
 ---
 
