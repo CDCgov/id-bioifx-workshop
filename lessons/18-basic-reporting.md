@@ -59,21 +59,19 @@ This is a report for ...
 ## Rendering Markdown with Pandoc
 
 ### Installation
-
-##### macOS
+We will install Pandoc by installing a related tool called Quarto.
 <pre><code class="language-bash">
-brew install pandoc
+# Create environment and install Quarto
+micromamba create -n reports \
+    -c conda-forge \
+    quarto=1.4.550 librsvg=2.62.1 \
+    -y
 
-# For PDF output, a LaTeX engine is also required
-brew install --cask basictex
-</code></pre>
+# Activate the environment
+micromamba activate reports
 
-##### Ubuntu / Debian / WSL
-<pre><code class="language-bash">
-sudo apt install pandoc
-
-# For PDF output, a LaTeX engine is also required
-sudo apt install texlive-xetex
+# Install TinyTeX for PDF output
+quarto install tinytex
 </code></pre>
 
 ### Rendering to HTML
@@ -118,10 +116,11 @@ The template includes the sections you typically need in a national genomic surv
 
 ### Try It
 
-1. Download `genome-report.md` into a new folder.
-2. Create a `media/` subfolder and place a figure (e.g., `tree.png`) inside.
-3. Fill in the placeholder values for your reporting period.
-4. Render to HTML and PDF:
+1. Go to [https://nextstrain.org/seasonal-flu/h3n2/ha/2y](https://nextstrain.org/seasonal-flu/h3n2/ha/2y) and download figures as an SVG using **DOWNLOAD DATA** at the bottom of the page.
+2. Create a new directory called `media/`.
+3. Move the downloaded SVG into `media/` and rename it `tree.svg`.
+4. Fill in the placeholder values for your reporting period.
+5. Render to HTML and PDF:
 
 <pre><code class="language-bash">
 pandoc genome-report.md --standalone --embed-resources --toc \
@@ -131,7 +130,7 @@ pandoc genome-report.md --pdf-engine=xelatex --toc \
   -o genome-report.pdf
 </code></pre>
 
-5. Open the resulting files and confirm the figure appears in both.
+6. Open the resulting files and confirm the figure appears in both.
 
 ## Extending Markdown with Quarto
 

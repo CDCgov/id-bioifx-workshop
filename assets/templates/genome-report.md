@@ -1,4 +1,10 @@
-# National Influenza Genomic Surveillance Report
+---
+title: National Influenza Genomic Surveillance Report
+header-includes: |
+  <style>
+    body { max-width: 100% !important; margin: 0; padding: 2rem; }
+  </style>
+---
 
 **Country:** \
 **Influenza season:** \
