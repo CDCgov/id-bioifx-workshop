@@ -112,7 +112,7 @@ The H275Y substitution is associated with reduced susceptibility to oseltamivir.
 
 ### 7.2 Phylogenetic Tree
 
-![Phylogenetic tree of circulating influenza A(H3N2) viruses.](media/tree.png)
+![Phylogenetic tree of circulating influenza A(H3N2) viruses.](media/tree.svg)
 
 - Circulating viruses clustered primarily with **[reference clade/strain]**.
 - Genetic diversity was **[low / moderate / high]**.
