@@ -1,4 +1,10 @@
-# National Influenza Genomic Surveillance Report
+---
+title: National Influenza Genomic Surveillance Report
+header-includes: |
+  <style>
+    body { max-width: 100% !important; margin: 0; padding: 2rem; }
+  </style>
+---
 
 **Country:** \
 **Influenza season:** \
@@ -106,7 +112,7 @@ The H275Y substitution is associated with reduced susceptibility to oseltamivir.
 
 ### 7.2 Phylogenetic Tree
 
-![Phylogenetic tree of circulating influenza A(H3N2) viruses.](media/tree.png)
+![Phylogenetic tree of circulating influenza A(H3N2) viruses.](media/tree.svg)
 
 - Circulating viruses clustered primarily with **[reference clade/strain]**.
 - Genetic diversity was **[low / moderate / high]**.

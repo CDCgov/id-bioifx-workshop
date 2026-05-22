@@ -103,7 +103,7 @@ params:
 
 - Reference in code chunks via `params$tree_file` (R) or `params['tree_file']` (Python).
 
-- Override from the command line with `--execute-params`.
+- Override from the command line using an external config file: `quarto render document.md -M config.yml`.
 
 # Code Chunks {.section-divider}
 
@@ -295,50 +295,4 @@ Python requires curly brackets for inline references; R does not.
 
 > This report includes 100 samples.
 
-:::
-
-# Example Report {.section-divider}
-
-## Example Report Description
-
-An example report can be found [here](https://github.com/CDCgov/id-bioifx-workshop/blob/main/practical/report_automation/genome_report/).
-
-::: {.columns}
-::: {.column width="35%" style="border: 2px solid #00578a; border-radius: 6px; padding: 0.8em 1em;"}
-**Structure**
-```
-├── _quarto.yml
-├── data
-│   ├── mira
-│   │   ├── mira_output-1.csv
-│   │   └── mira_output-2.csv
-│   ├── h1.nwk
-│   └── samplesheet.csv
-├── genome_report.html
-├── genome_report.qmd
-└── src
-    └── report
-        ├── __init__.py
-        ├── config.py
-        ├── data.py
-        ├── display.py
-        ├── io_ops.py
-        ├── map.py
-        ├── timeline.py
-        └── tree.py
-```
-:::
-::: {.column width="65%" style="border: 2px solid #00578a; border-radius: 6px; padding: 0.8em 1em;"}
-**Key Files**
-
-::: {.medtable}
-| File / Directory | Description |
-|-----------------|-------------|
-| [`genome_report.html`](https://htmlpreview.github.io/?https://github.com/CDCgov/id-bioifx-workshop/blob/main/practical/report_automation/genome_report/genome_report.html) | Rendered HTML output — the final report that would be shared. |
-| [`genome_report.qmd`](https://github.com/CDCgov/id-bioifx-workshop/blob/main/practical/report_automation/genome_report/genome_report.qmd) | Quarto source file. Relies on `data/`, `src/`, and `_quarto.yml`. |
-| [`data/`](https://github.com/CDCgov/id-bioifx-workshop/tree/main/practical/report_automation/genome_report/data) | Sample data used each run: samplesheet, MIRA output, tree file. |
-| [`src/`](https://github.com/CDCgov/id-bioifx-workshop/tree/main/practical/report_automation/genome_report/src) | Custom Python module imported and executed within code chunks. |
-| [`_quarto.yml`](https://github.com/CDCgov/id-bioifx-workshop/blob/main/practical/report_automation/genome_report/_quarto.yml) | Params config updated each run, passed via `--execute-params`. |
-:::
-:::
 :::
