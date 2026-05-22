@@ -110,7 +110,7 @@ Because relative image paths are resolved from the location of the Markdown file
 
 A ready-to-use surveillance report template is provided for this workshop:
 
-- Download: [genome-report.md]({{ site.baseurl }}/assets/templates/genome-report.md)
+- Download: [genome-report.md](https://raw.githubusercontent.com/CDCgov/id-bioifx-workshop/refs/heads/main/assets/templates/genome-report.md)
 
 The template includes the sections you typically need in a national genomic surveillance report — executive summary, specimen collection, subtype distribution, sequencing output, clade distribution, resistance markers, phylogenetic analysis, data sharing, limitations, and conclusions — all using only the Markdown syntax covered above.
 
