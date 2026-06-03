@@ -106,6 +106,8 @@ pandoc genome-report.md \
 
 Because relative image paths are resolved from the location of the Markdown file, the same `genome-report.md` that renders to HTML will also render to PDF with no changes — Pandoc finds `media/tree.png` in both cases.
 
+> **Tip:** If you get the error `xelatex not found. Please select a different --pdf-engine or install xelatex`, run `quarto check` and find the path to `xelatex` in the output. Then add that directory to your `$PATH` in your `~/.bash_profile` (e.g., `export PATH="/path/to/xelatex/directory:$PATH"`) and restart your shell session.
+
 ## Example: The Genome Report Template
 
 A ready-to-use surveillance report template is provided for this workshop:
