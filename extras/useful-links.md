@@ -16,6 +16,7 @@ permalink: /extras/useful-links/
 
 - [MIRA-NF (Nextflow Pipeline)](https://github.com/CDCgov/MIRA-NF/tree/master) - A Nextflow pipeline for Influenza, SARS-CoV-2, and RSV genome assembly and curation, designed for HPC and cloud environments.
 - [MIRA (Documentation)](https://cdcgov.github.io/MIRA/index.html) - Documentation and getting started guides for MIRA, a portable application for high-quality Influenza, SARS-CoV-2, and RSV genome assembly, annotation, and curation.
+- [Nextstrain (Documentation)](https://docs.nextstrain.org/en/latest/)
 
 ## Vaccine Recommendations
 
@@ -29,6 +30,7 @@ permalink: /extras/useful-links/
 
 ## Coding references
 - [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet/) - Website guide for formatting and writing documents in Markdown
+- <a href="{{ site.baseurl }}/assets/pdfs/Markdown Cheat Sheet.pdf" download>Markdown Cheatsheet PDF</a>
 - [Regex101](https://regex101.com) - Website for checking and building Regular Expressions
 
 ## Influenza Clade and Subclade Definitions
