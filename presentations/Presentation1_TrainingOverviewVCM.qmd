@@ -2,9 +2,9 @@
 title: "NIC Data to Global Vaccine Decisions"
 subtitle: "The Role of CDC in Vaccine Strain Selection"
 author:
-  - name: "Ben Rambo-Martin, PhD"
+  - name: "Virology, Surveillance and Diagnosis Branch"
     affiliations:
-      - "Bioinformatics Activity Lead<br/>Virology, Surveillance and Diagnosis Branch<br/>Influenza Division<br/>US Centers for Disease Control and Prevention"
+      - "Influenza Division<br/>US Centers for Disease Control and Prevention"
 format:
   revealjs:
     theme: [default, vcm.scss]
