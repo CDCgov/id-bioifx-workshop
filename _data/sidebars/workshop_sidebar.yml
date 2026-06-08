@@ -156,6 +156,10 @@ entries:
       url: /lessons/20-all-presentations/
       output: web
 
+    - title: NGS QC Knowledge Check
+      url: /lessons/qc-practical/
+      output: web
+
   - title: Workshops
     output: web
     folderitems:
