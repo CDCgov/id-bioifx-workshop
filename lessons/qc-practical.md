@@ -13,9 +13,9 @@ permalink: /lessons/qc-practical/
   background: var(--c-bg-alt, #f9fafb);
   padding: 1.25rem 1.25rem 1rem;
   margin: 1.5rem 0;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
-.quiz-question h4 { margin-top: 0; font-size: 1.3rem; }
+.quiz-question h4 { margin-top: 0; font-size: 1.8rem; }
 .quiz-question label {
   display: block;
   padding: 0.4rem 0.6rem;
